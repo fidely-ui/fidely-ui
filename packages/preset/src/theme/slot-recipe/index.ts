@@ -10,6 +10,7 @@ import { switchSlotRecipe } from './switch.recipe'
 import { tableSlotRecipe } from './table.recipe'
 import { pinInputSlotRecipe } from './pinInput.recipe'
 import { checkboxSlotRecipe } from './checkbox.recipe'
+import { selectSlotRecipe } from './select.recipe'
 
 export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
   accordionSlotRecipe,
@@ -19,6 +20,7 @@ export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
   clipboardSlotRecipe,
   fieldSlotRecipe,
   pinInputSlotRecipe,
+  selectSlotRecipe,
   switchSlotRecipe,
   tabsSlotRecipe,
   tableSlotRecipe,

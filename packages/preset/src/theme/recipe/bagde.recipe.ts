@@ -30,8 +30,8 @@ export const badgeRecipes = defineRecipe({
     },
     size: {
       sm: {
-        textStyle: 'sm',
-        px: '2.3',
+        textStyle: 'xs',
+        px: '2.5',
         h: '5',
       },
       md: {

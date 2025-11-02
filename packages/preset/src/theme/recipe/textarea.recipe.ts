@@ -15,6 +15,7 @@ export const textareaRecipe = defineRecipe({
     width: '100%',
     minWidth: '0',
     textAlign: 'start',
+    transition: 'border-color 0.2s, box-shadow 0.2s',
     _disabled: {
       opacity: 0.3,
       cursor: 'not-allowed',
