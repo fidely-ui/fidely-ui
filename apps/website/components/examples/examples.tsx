@@ -14,6 +14,7 @@ import { Checkbox } from '@snaps-ui/react/checkbox'
 import { Spinner } from '@snaps-ui/react/spinner'
 import { FaPlus } from 'react-icons/fa6'
 import { InputGroup } from '@snaps-ui/react/input-group'
+import { InputAddon } from '@snaps-ui/react/input-addon'
 import { Switch } from '@snaps-ui/react/switch'
 import { Persona } from '@snaps-ui/react/persona'
 import { BiSearch, BiUser } from 'react-icons/bi'
@@ -224,8 +225,14 @@ export const MoreComponents = () => {
             <Input placeholder="@justicechimobi_" />
           </InputGroup>
 
-          <InputGroup startAddon={<BiSearch />} endAddon="23 results">
+          <InputGroup>
+            <InputAddon placement={'left'} bg={'bg.emphasized'}>
+              <BiSearch />
+            </InputAddon>
             <Input placeholder="search..." />
+            <InputAddon placement={'right'} bg={'bg.emphasized'}>
+              23 results
+            </InputAddon>
           </InputGroup>
         </VStack>
 

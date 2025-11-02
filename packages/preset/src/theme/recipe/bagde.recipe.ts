@@ -30,7 +30,7 @@ export const badgeRecipes = defineRecipe({
     },
     size: {
       sm: {
-        textStyle: 'sm',
+        textStyle: 'xs',
         px: '2.3',
         h: '5',
       },
