@@ -10,6 +10,7 @@ import { Grid, GridItem } from '@snaps-ui/react/grid'
 import { IconButton } from '@snaps-ui/react/icon-button'
 import { Input } from '@snaps-ui/react/input'
 import { InputGroup } from '@snaps-ui/react/input-group'
+import { InputAddon } from '@snaps-ui/react/input-addon'
 import { Persona } from '@snaps-ui/react/persona'
 import { Table } from '@snaps-ui/react/table'
 import { Typography } from '@snaps-ui/react/typography'
@@ -104,7 +105,10 @@ export const DashboardNavBar = ({ onSearchChange }: DashboardNavBarProps) => {
   return (
     <Flex padding={'10px'}>
       <Box width={'80%'}>
-        <InputGroup startAddon={<BiSearch />}>
+        <InputGroup>
+          <InputAddon bg={'bg.emphasized'}>
+            <BiSearch />
+          </InputAddon>
           <Input
             placeholder="search dashboard..."
             onChange={handleInputChange}
@@ -193,7 +197,7 @@ export const DashboardMain = ({ searchValue }: DashboardMainProps) => {
                         name={d.user.name}
                         title={d.user.email}
                         img={d.user.avatar}
-                        imgSize="xs"
+                        imgSize="md"
                       />
                     </Table.Cell>
                     <Table.Cell>{d.revenue}</Table.Cell>
