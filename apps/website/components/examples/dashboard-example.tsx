@@ -1,3 +1,6 @@
+'use client'
+
+import * as React from 'react'
 import { Avatar } from '@snaps-ui/react/avatar'
 import { Badge } from '@snaps-ui/react/badge'
 import { Box } from '@snaps-ui/react/box'
@@ -23,6 +26,8 @@ import {
 } from '~/constant/example-contants'
 
 export const DashboardExample = () => {
+  const [searchValue, setSearchValue] = React.useState('')
+
   return (
     <Box
       height={'auto'}
@@ -42,9 +47,9 @@ export const DashboardExample = () => {
       </Box>
 
       <Box width={{ base: '100%', md: '80%' }}>
-        <DashboardNavBar />
+        <DashboardNavBar onSearchChange={setSearchValue} />
 
-        <DashboardMain />
+        <DashboardMain searchValue={searchValue} />
       </Box>
     </Box>
   )
@@ -87,12 +92,23 @@ export const DashboardSideBar = () => {
   )
 }
 
-export const DashboardNavBar = () => {
+interface DashboardNavBarProps {
+  onSearchChange: (value: string) => void
+}
+
+export const DashboardNavBar = ({ onSearchChange }: DashboardNavBarProps) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onSearchChange(e.target.value)
+  }
+
   return (
     <Flex padding={'10px'}>
       <Box width={'80%'}>
         <InputGroup startAddon={<BiSearch />}>
-          <Input placeholder="search dashboard..." />
+          <Input
+            placeholder="search dashboard..."
+            onChange={handleInputChange}
+          />
         </InputGroup>
       </Box>
 
@@ -110,7 +126,22 @@ export const DashboardNavBar = () => {
   )
 }
 
-export const DashboardMain = () => {
+interface DashboardMainProps {
+  searchValue: string
+}
+
+export const DashboardMain = ({ searchValue }: DashboardMainProps) => {
+  const filteredUsers = React.useMemo(() => {
+    const query = searchValue.toLocaleLowerCase().trim()
+    if (!query) return exampleUsersData
+
+    return exampleUsersData.filter((d) =>
+      [d.user.name, d.user.email].some((field) =>
+        field.toLocaleLowerCase().includes(query)
+      )
+    )
+  }, [searchValue])
+
   return (
     <Box padding={'10px'}>
       <Grid
@@ -128,7 +159,7 @@ export const DashboardMain = () => {
                 >
                   <VStack gap={'2'}>
                     <Typography variant={'subtitle2'}>{data.name}</Typography>
-                    <Typography variant={'body2'}>₦{data.numbers}</Typography>
+                    <Typography variant={'body2'}>{data.numbers}</Typography>
                   </VStack>
 
                   <Box>
@@ -147,37 +178,48 @@ export const DashboardMain = () => {
             <Table.Header>
               <Table.Row>
                 <Table.HeadCell>Users</Table.HeadCell>
-                <Table.HeadCell minWidth="200px">Revenue</Table.HeadCell>
-                <Table.HeadCell minWidth="200px">Status</Table.HeadCell>
-                <Table.HeadCell minWidth="200px">Visits</Table.HeadCell>
+                <Table.HeadCell>Revenue</Table.HeadCell>
+                <Table.HeadCell>Status</Table.HeadCell>
+                <Table.HeadCell>Visits</Table.HeadCell>
                 <Table.HeadCell></Table.HeadCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {exampleUsersData.map((d) => (
-                <Table.Row key={d.id}>
-                  <Table.Cell>
-                    <Persona
-                      name={d.user.name}
-                      title={d.user.email}
-                      img={d.user.avatar}
-                      imgSize="xs"
-                    />
-                  </Table.Cell>
-                  <Table.Cell minWidth="200px">{d.revenue}</Table.Cell>
-                  <Table.Cell>
-                    <Badge colorPalette={d.status === 'Done' ? 'green' : ''}>
-                      {d.status}
-                    </Badge>
-                  </Table.Cell>
-                  <Table.Cell minWidth="200px">{d.id}</Table.Cell>
-                  <Table.Cell>
-                    <IconButton variant={'ghost'} size={'sm'}>
-                      <HiOutlineDotsHorizontal />
-                    </IconButton>
+              {filteredUsers.length > 0 ? (
+                filteredUsers.map((d) => (
+                  <Table.Row key={d.id}>
+                    <Table.Cell>
+                      <Persona
+                        name={d.user.name}
+                        title={d.user.email}
+                        img={d.user.avatar}
+                        imgSize="xs"
+                      />
+                    </Table.Cell>
+                    <Table.Cell>{d.revenue}</Table.Cell>
+                    <Table.Cell>
+                      <Badge
+                        size={'sm'}
+                        colorPalette={d.status === 'Done' ? 'green' : ''}
+                      >
+                        {d.status}
+                      </Badge>
+                    </Table.Cell>
+                    <Table.Cell>{d.id}</Table.Cell>
+                    <Table.Cell>
+                      <IconButton variant={'ghost'} size={'sm'}>
+                        <HiOutlineDotsHorizontal />
+                      </IconButton>
+                    </Table.Cell>
+                  </Table.Row>
+                ))
+              ) : (
+                <Table.Row>
+                  <Table.Cell colSpan={5} textAlign="center">
+                    No matching users found.
                   </Table.Cell>
                 </Table.Row>
-              ))}
+              )}
             </Table.Body>
           </Table.Root>
         </Table.ScrollArea>
