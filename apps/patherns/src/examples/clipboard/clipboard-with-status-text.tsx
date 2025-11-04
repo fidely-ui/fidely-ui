@@ -1,6 +1,6 @@
 import { Button, Clipboard } from '@snaps-ui/react'
 
-export default function ClipboardWithStatusText() {
+export const ClipboardWithStatusText = () => {
   return (
     <Clipboard.Root value="https://snaps-ui.vercel.app/">
       <Clipboard.Control>

@@ -1,7 +1,7 @@
 import { Accordion } from '@snaps-ui/react/accordion'
 import { BiChevronDown } from 'react-icons/bi'
 
-export default function AccordionMultiple() {
+export const AccordionMultiple = () => {
   return (
     <Accordion.Root defaultValue={['React']} multiple>
       {items.map((item) => (

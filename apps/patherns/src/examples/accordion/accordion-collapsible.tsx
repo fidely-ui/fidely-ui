@@ -1,7 +1,7 @@
 import { Accordion } from '@snaps-ui/react/accordion'
 import { BiChevronDown } from 'react-icons/bi'
 
-export default function AccordionCollapsible() {
+export const AccordionCollapsible = () => {
   return (
     <Accordion.Root defaultValue={['React']} collapsible>
       {['React', 'Solid', 'Vue', 'Svelte'].map((item) => (

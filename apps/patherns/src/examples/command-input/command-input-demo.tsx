@@ -2,7 +2,7 @@
 
 import { CommandInput } from '@snaps-ui/react/command-input'
 
-export default function CommandInputDemo() {
+export const CommandInputDemo = () => {
   return (
     <CommandInput
       placeholder="Search...."

@@ -2,7 +2,7 @@
 
 import { CommandInput } from '@snaps-ui/react/command-input'
 
-export default function CommandInputShortcut() {
+export const CommandInputShortcut = () => {
   return (
     <CommandInput
       onOpen={() => console.log('Shortcut triggered')}

@@ -1,6 +1,6 @@
 import { Persona } from '@snaps-ui/react/persona'
 
-export default function PersonaHorinzontal() {
+export const PersonaHorizontal = () => {
   return (
     <Persona
       name="Leanne Graham"

@@ -18,6 +18,7 @@ export default defineConfig({
     './src/**/*.{js,jsx,ts,tsx}',
     './pages/**/*.{js,jsx,ts,tsx}',
     './stories/**/*.{js,jsx,ts,tsx}',
+    '../patherns/src/examples/**/*.{js,jsx,ts,tsx}',
   ],
   // Files to exclude
   exclude: [],

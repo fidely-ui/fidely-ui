@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Switch } from '@snaps-ui/react/switch'
 
-export default function SwitchWithControl() {
+export const SwitchWithControl = () => {
   const [checked, setChecked] = useState(false)
 
   return (

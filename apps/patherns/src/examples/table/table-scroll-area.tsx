@@ -1,6 +1,6 @@
 import { Table } from '@snaps-ui/react/table'
 
-export default function TableStrollArea() {
+export const TableScrollArea = () => {
   return (
     <Table.ScrollArea>
       <Table.Root>

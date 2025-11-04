@@ -1,7 +1,7 @@
 import { Accordion } from '@snaps-ui/react/accordion'
 import { BiChevronDown } from 'react-icons/bi'
 
-export default function AccordionDefaultValue() {
+export const AccordionDefaultValue = () => {
   return (
     <Accordion.Root defaultValue={['React']}>
       {['React', 'Solid', 'Vue', 'Svelte'].map((item) => (

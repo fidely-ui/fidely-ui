@@ -1,7 +1,7 @@
 import { Accordion, Stack, Typography } from '@snaps-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 
-export default function AccordioVariant() {
+export const AccordionVariant = () => {
   return (
     <Stack gap="8">
       {variants.map((variant) => (

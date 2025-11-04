@@ -49,7 +49,7 @@ export const TabContent = withSlotContext<HTMLDivElement, TabContentProps>(
 
 // -------------------- indicator --------------------
 export interface TabIndicatorProps
-  extends Assign<HTMLStyledProps<'div'>, ArkTabs.ContentBaseProps> {}
+  extends Assign<HTMLStyledProps<'div'>, ArkTabs.IndicatorBaseProps> {}
 
 export const TabIndicator = withSlotContext<HTMLDivElement, TabIndicatorProps>(
   ArkTabs.Indicator,
@@ -74,4 +74,4 @@ export const TabTrigger = withSlotContext<HTMLButtonElement, TabTriggerProps>(
   'trigger'
 )
 
-export { TabsContext } from '@ark-ui/react/tabs'
+export const TabsContext = ArkTabs.Context

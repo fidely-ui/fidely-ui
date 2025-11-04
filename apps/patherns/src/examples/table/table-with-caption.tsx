@@ -1,6 +1,6 @@
 import { Table } from '@snaps-ui/react/table'
 
-export default function TableWithCaption() {
+export const TableWithCaption = () => {
   return (
     <Table.Root>
       <Table.Caption captionSide={'bottom'}>

@@ -2,7 +2,7 @@
 
 import { Button, useClipboard } from '@snaps-ui/react'
 
-export default function ClipboardWithStore() {
+export const ClipboardWithStore = () => {
   const clipboard = useClipboard({ value: 'https://snaps-ui.vercel.app/' })
 
   return (

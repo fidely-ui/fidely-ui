@@ -8,6 +8,11 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
 
+    "customConditions": ["dev"],
+    "paths": {
+      "patherns/*": ["../../apps/patherns/src/*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -24,5 +29,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "../../apps/patherns",
+    "../../apps/patherns/src/examples/**.tsx"
+  ]
 }

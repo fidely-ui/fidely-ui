@@ -1,6 +1,6 @@
 import { Typography } from '@snaps-ui/react/typography'
 
-export default function TypographyWithVariants() {
+export const TypographyWithVariants = () => {
   return (
     <>
       <Typography variant="h1">Heading 1</Typography>
@@ -14,6 +14,7 @@ export default function TypographyWithVariants() {
       <Typography variant="body1">Body text 1</Typography>
       <Typography variant="body2">Body text 2</Typography>
       <Typography variant="caption">Caption text</Typography>
+      <br />
       <Typography variant="overline">OVERLINE TEXT</Typography>
     </>
   )

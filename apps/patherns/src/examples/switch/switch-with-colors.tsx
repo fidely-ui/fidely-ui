@@ -1,6 +1,6 @@
 import { HStack, Stack, Switch, Typography } from '@snaps-ui/react'
 
-export default function SwitchWithColors() {
+export const SwitchWithColors = () => {
   return (
     <Stack gap={5}>
       <HStack gap={6} alignItems="center">

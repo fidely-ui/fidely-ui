@@ -1,6 +1,6 @@
 import { FormatByte, Stack, Typography } from '@snaps-ui/react'
 
-export default function FormatBytes() {
+export const FormatBytes = () => {
   return (
     <Stack gap={2}>
       <Typography>
