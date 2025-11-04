@@ -7,7 +7,7 @@ import { Typography } from '@snaps-ui/react/typography'
 export const Banner = () => {
   return (
     <Box
-      bg="linear-gradient(90deg, #ff8a76, #ffb476)"
+      bg="linear-gradient(90deg, #f76b15, #ec9455)"
       p="2"
       boxShadow="md"
       border="1px solid"

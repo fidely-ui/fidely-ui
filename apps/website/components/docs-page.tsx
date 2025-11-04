@@ -138,7 +138,7 @@ function Sidebar() {
 
 const Badge = () => {
   return (
-    <SnapsBadge colorPalette={'accent'} size={'sm'}>
+    <SnapsBadge colorPalette={'orange'} size={'sm'}>
       Beta
     </SnapsBadge>
   )

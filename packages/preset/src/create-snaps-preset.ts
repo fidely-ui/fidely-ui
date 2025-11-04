@@ -13,7 +13,6 @@ import { createRadii } from './utils/createRadii'
 import { recipes } from './theme/recipe'
 import { slotRecipes } from './theme/slot-recipe'
 import red from './colors/red'
-import snaps from './colors/snaps'
 import blue from './colors/blue'
 import green from './colors/green'
 import purple from './colors/purple'
@@ -53,7 +52,6 @@ export const createSnapsPreset = (options: PresetsOptions) => {
             green: green.tokens,
             purple: purple.tokens,
             orange: orange.tokens,
-            snaps: snaps.tokens,
             gray: grayColor.tokens ?? {},
             [accentColor.name]: accentColor.tokens,
           },
@@ -67,7 +65,6 @@ export const createSnapsPreset = (options: PresetsOptions) => {
             green: green.semanticTokens,
             purple: purple.semanticTokens,
             orange: orange.semanticTokens,
-            snaps: snaps.semanticTokens,
             gray: normalizeNeutralTokens(grayColor.semanticTokens),
             [accentColor.name]: accentColor.semanticTokens,
             radii: createRadii(radius),

@@ -55,7 +55,7 @@ export const HeroSection = () => {
             variant="h1"
             fontSize={{ base: '30px', md: '65px' }}
             textAlign="center"
-            color={'accent.default'}
+            color={'orange.9'}
             lineHeight={'1.4em'}
           >
             Build modern apps with speed and flexibility
@@ -64,7 +64,7 @@ export const HeroSection = () => {
           <Typography
             variant="subtitle1"
             my={'10px'}
-            color={'accent.contrast'}
+            color={'fg.subtle'}
             textAlign={'center'}
             lineHeight={'1.7em'}
           >
@@ -79,7 +79,13 @@ export const HeroSection = () => {
             mt={'25px'}
             mb={'5px'}
           >
-            <Button variant={'solid'} size={'xl'} bg={'#ff8976'} asChild ripple>
+            <Button
+              variant={'solid'}
+              size={'xl'}
+              colorPalette={'orange'}
+              asChild
+              ripple
+            >
               <Link href={'/docs/getting-started'}>Get Started</Link>
             </Button>
 

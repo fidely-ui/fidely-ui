@@ -30,7 +30,7 @@ export const BillingAddress = () => {
       </Stack>
 
       <Stack mb={'4'}>
-        <Checkbox.Root size={'sm'} colorPalette={'accent'} defaultChecked>
+        <Checkbox.Root size={'sm'} colorPalette={'orange'} defaultChecked>
           <Checkbox.HiddenInput />
           <Checkbox.Control>
             <Checkbox.Indicator />
@@ -52,15 +52,10 @@ export const BillingAddress = () => {
         </Field.Root>
 
         <HStack gap={3}>
-          <Button colorPalette={'accent'} ripple>
+          <Button colorPalette={'orange'} ripple>
             Submit
           </Button>
-          <Button
-            variant={'outline'}
-            borderColor={'accent.default'}
-            colorPalette={'accent'}
-            ripple
-          >
+          <Button variant={'outline'} colorPalette={'orange'} ripple>
             Cancel
           </Button>
         </HStack>
@@ -142,7 +137,7 @@ export const TeamMembers = () => {
             Invite your team to collaborate on this project.
           </Typography>
 
-          <Button colorPalette={'accent'}>
+          <Button colorPalette={'orange'}>
             <FaPlus /> Invite Member
           </Button>
         </Stack>
@@ -204,7 +199,7 @@ export const ProcessingCard = () => {
 
           <Typography>Please wait while we process your payment</Typography>
 
-          <Button colorPalette={'accent'} width={'auto'}>
+          <Button colorPalette={'orange'} width={'auto'}>
             Stop processing
           </Button>
         </Stack>
