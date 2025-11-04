@@ -18,4 +18,4 @@ export { AccordionCollapsible as Collapsible } from 'patherns/examples/accordion
 export { AccordionDefaultValue as DefaultValue } from 'patherns/examples/accordion/accordion-default-value'
 export { AccordionMultiple as Multiple } from 'patherns/examples/accordion/accordion-multiple'
 export { AccordionSize as Sizes } from 'patherns/examples/accordion/accordion-size'
-export { AccordioVariant as Variants } from 'patherns/examples/accordion/accordion-variant'
+export { AccordionVariant as Variants } from 'patherns/examples/accordion/accordion-variant'

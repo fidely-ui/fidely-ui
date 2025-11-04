@@ -14,5 +14,5 @@ export default {
 } satisfies Meta
 
 export { KbdBasics as Basics } from 'patherns/examples/kbd/kbd-basics'
-export { KbdSizes as Sizes } from 'patherns/examples/kbd/kbd-size'
-export { KbdVarinats as Varinats } from 'patherns/examples/kbd/kbd-variant'
+export { KbdSize as Sizes } from 'patherns/examples/kbd/kbd-size'
+export { KbdVariant as Varinats } from 'patherns/examples/kbd/kbd-variant'

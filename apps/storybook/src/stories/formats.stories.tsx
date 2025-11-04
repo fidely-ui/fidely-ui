@@ -15,4 +15,4 @@ export default {
 
 export { FormatBytes as Bytes } from 'patherns/examples/format/format-bytes'
 export { FormatNumber as Number } from 'patherns/examples/format/format-number'
-export { FormatRelativeTimeExample as RelativeTime } from 'patherns/examples/format/format-relative-time'
+export { FormatRelativeTime as RelativeTime } from 'patherns/examples/format/format-relative-time'

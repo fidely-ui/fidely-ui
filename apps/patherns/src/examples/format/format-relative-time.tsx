@@ -4,7 +4,7 @@ import {
   Typography,
 } from '@snaps-ui/react'
 
-export const FormatRelativeTimeExample = () => {
+export const FormatRelativeTime = () => {
   const now = new Date()
 
   return (
