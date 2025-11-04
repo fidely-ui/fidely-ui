@@ -47,6 +47,14 @@ export const tabsSlotRecipe = defineSlotRecipe({
       },
       _vertical: { justifyContent: 'flex-start' },
     },
+    indicator: {
+      width: 'var(--width)',
+      height: 'var(--height)',
+      borderRadius: 's2',
+      bg: 'colorPalette.subtle',
+      shadow: 'shadow.xs',
+      zIndex: -1,
+    },
   },
 
   variants: {

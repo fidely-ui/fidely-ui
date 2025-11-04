@@ -2,7 +2,7 @@
 
 import { Clipboard, useClipboard } from '@snaps-ui/react'
 
-export default function ClipboardRootProvider() {
+export const ClipboardRootProvider = () => {
   const clipboard = useClipboard({ value: 'https://snaps-ui.vercel.app/' })
 
   return (

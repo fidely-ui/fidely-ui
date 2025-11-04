@@ -1,7 +1,7 @@
 import { Accordion, Stack, Typography } from '@snaps-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 
-export default function AccordionSize() {
+export const AccordionSize = () => {
   return (
     <Stack gap="8">
       {sizes.map((size) => (

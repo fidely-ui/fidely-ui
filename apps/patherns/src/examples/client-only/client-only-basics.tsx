@@ -1,6 +1,6 @@
 import { ClientOnly } from '@snaps-ui/react/client-only'
 
-export default function ClientOnlyBasics() {
+export const ClientOnlyBasics = () => {
   return (
     <ClientOnly>
       <div>This content is only rendered on the client side.</div>

@@ -1,6 +1,6 @@
 import { Stack, Table, Typography, VStack } from '@snaps-ui/react'
 
-export default function TableSizes() {
+export const TableSizes = () => {
   const sizes = ['sm', 'md', 'lg'] as const
 
   return (

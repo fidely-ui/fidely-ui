@@ -1,6 +1,6 @@
 import { Flex, Kbd } from '@snaps-ui/react'
 
-export default function PaperVariant() {
+export const KbdVariant = () => {
   return (
     <Flex gap={2}>
       <Kbd variant={'subtle'}>F12</Kbd>

@@ -1,6 +1,6 @@
 import { HStack, Switch } from '@snaps-ui/react'
 
-export default function SwitchSizes() {
+export const SwitchSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg'] as const
 
   return (

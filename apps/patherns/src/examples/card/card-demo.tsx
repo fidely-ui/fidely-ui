@@ -1,6 +1,6 @@
 import { Avatar, Button, Card } from '@snaps-ui/react'
 
-export default function CardDemo() {
+export const CardDemo = () => {
   return (
     <Card.Root width={{ base: 'full', md: '340px' }}>
       <Card.Body gap="2">

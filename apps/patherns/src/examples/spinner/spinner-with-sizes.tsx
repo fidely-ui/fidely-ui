@@ -1,6 +1,6 @@
 import { HStack, Spinner } from '@snaps-ui/react'
 
-export default function SpinnerWithSizes() {
+export const SpinnerWithSizes = () => {
   return (
     <HStack gap="5">
       <Spinner size="xs" />

@@ -1,5 +1,5 @@
 import { Spinner } from '@snaps-ui/react/spinner'
 
-export default function SpinnerBasics() {
+export const SpinnerBasics = () => {
   return <Spinner />
 }

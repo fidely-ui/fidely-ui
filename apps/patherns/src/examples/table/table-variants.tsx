@@ -1,6 +1,6 @@
 import { Stack, Table, Typography, VStack } from '@snaps-ui/react'
 
-export default function TableVariants() {
+export const TableVariants = () => {
   const variants = ['subtle', 'outline', 'striped'] as const
 
   return (

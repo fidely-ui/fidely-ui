@@ -1,5 +1,5 @@
 import { CloseButton as SnapsCloseButton } from '@snaps-ui/react/close-button'
 
-export default function CloseButton() {
+export const CloseButton = () => {
   return <SnapsCloseButton />
 }

@@ -1,6 +1,6 @@
 import { Kbd, Flex } from '@snaps-ui/react'
 
-export default function PaperElevation() {
+export const KbdSize = () => {
   return (
     <Flex gap={2}>
       <Kbd size={'sm'}>F12</Kbd>

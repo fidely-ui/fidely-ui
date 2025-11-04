@@ -2,7 +2,7 @@ import { Clipboard, IconButton, Input } from '@snaps-ui/react'
 import { FaCheckDouble } from 'react-icons/fa6'
 import { IoCopyOutline } from 'react-icons/io5'
 
-export default function ClipboardWithInput() {
+export const ClipboardWithInput = () => {
   return (
     <Clipboard.Root value="https://snaps-ui.vercel.app/">
       <Clipboard.Label>Copy this link</Clipboard.Label>

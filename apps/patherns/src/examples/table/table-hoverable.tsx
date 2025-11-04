@@ -1,6 +1,6 @@
 import { Table } from '@snaps-ui/react/table'
 
-export default function TableHoverable() {
+export const TableHoverable = () => {
   return (
     <Table.Root hoverable>
       <Table.Header>

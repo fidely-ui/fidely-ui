@@ -1,6 +1,6 @@
 import { Persona, Tabs } from '@snaps-ui/react'
 
-export default function PersonaSizes() {
+export const PersonaSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const
 
   return (
