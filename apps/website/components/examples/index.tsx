@@ -33,7 +33,7 @@ export const ExampleSection = () => {
             <Tabs.Trigger
               key={tab}
               value={tab}
-              _selected={{ color: 'accent.default' }}
+              _selected={{ color: 'orange.9' }}
             >
               {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </Tabs.Trigger>

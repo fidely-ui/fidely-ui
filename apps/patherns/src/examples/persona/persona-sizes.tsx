@@ -10,7 +10,7 @@ export const PersonaSizes = () => {
           <Tabs.Trigger
             key={size}
             value={size}
-            _selected={{ color: 'accent.default' }}
+            _selected={{ color: 'orange.9' }}
           >
             {size}
           </Tabs.Trigger>

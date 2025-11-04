@@ -19,7 +19,7 @@ export const AuthenticationExample = () => {
     >
       <Box
         width={'50%'}
-        bg={'accent.subtle'}
+        bg={'orange.4'}
         padding={'10px'}
         display={{ base: 'none', md: 'block' }}
       >
@@ -47,16 +47,30 @@ export const AuthenticationExample = () => {
                 <Field.Label>
                   Email <Field.RequiredIndicator />
                 </Field.Label>
-                <Input placeholder="mail@example.com" variant={'subtle'} />
+                <Input
+                  placeholder="mail@example.com"
+                  variant={'subtle'}
+                  _focus={{
+                    borderColor: 'orange.9',
+                    boxShadow: 'none',
+                  }}
+                />
               </Field.Root>
 
               <Field.Root>
                 <Field.Label>Password</Field.Label>
-                <Input placeholder="*********" variant={'subtle'} />
+                <Input
+                  placeholder="*********"
+                  variant={'subtle'}
+                  _focus={{
+                    borderColor: 'orange.9',
+                    boxShadow: 'none',
+                  }}
+                />
               </Field.Root>
 
               <Stack gap={3}>
-                <Button colorPalette={'accent'}>Sign up with Email </Button>
+                <Button colorPalette={'orange'}>Sign up with Email </Button>
 
                 <Typography
                   variant={'subtitle1'}

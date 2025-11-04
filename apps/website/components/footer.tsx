@@ -33,7 +33,7 @@ export const Footer = () => {
       px={{ base: '6', md: '12' }}
       py="12"
       mt="16"
-      color={'accent.contrast'}
+      color={'fg.subtle'}
     >
       <Flex flexDirection={{ base: 'column-reverse', md: 'row' }}>
         <Stack
@@ -52,12 +52,12 @@ export const Footer = () => {
             Maintained by{' '}
             <Typography
               variant="body2"
-              color={'accent.default'}
+              color={'orange.9'}
               as={'span'}
               transition="color 0.2s ease"
               fontWeight="bolder"
               _hover={{
-                color: 'accent.emphasized',
+                color: 'orange.10',
               }}
             >
               <Link
