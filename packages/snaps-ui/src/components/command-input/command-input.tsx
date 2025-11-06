@@ -96,3 +96,5 @@ export const CommandInput = React.forwardRef<
     </Group>
   )
 })
+
+CommandInput.displayName = 'CommandInput'

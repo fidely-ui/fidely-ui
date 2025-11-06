@@ -4,7 +4,6 @@ export const asideComponentLinks = [
     items: [
       { name: 'Box', new: false, linkUrl: 'box' },
       { name: 'Center', new: false, linkUrl: 'center' },
-      { name: 'Circle', new: false, linkUrl: 'circle' },
       { name: 'Container', new: false, linkUrl: 'container' },
       { name: 'Flex', new: false, linkUrl: 'flex' },
       { name: 'Grid', new: false, linkUrl: 'grid' },

@@ -1,0 +1,107 @@
+---
+title: Installation
+description: Learn how to install and set up Snaps UI in your project.
+---
+
+## Getting Started
+
+Snaps UI is built on top of **Panda CSS** and **Ark UI**, designed to help you build fast, consistent, and beautiful interfaces.  
+Follow the steps below to get started.
+
+---
+
+### 1. Install Panda CSS
+
+Before installing Snaps UI, make sure you have **Panda CSS** set up in your project.  
+Follow the official Panda CSS installation guide for your framework:
+
+👉 [Panda CSS Installation Guide](https://panda-css.com/docs/overview/getting-started#installation)
+
+---
+
+### 2. Install Snaps UI
+
+Once Panda CSS is installed, add Snaps UI and its peer dependencies using your preferred package manager:
+
+```bash
+# npm
+npm install @snaps-ui/react @snaps-ui/panda-preset
+
+# pnpm
+pnpm add @snaps-ui/react @snaps-ui/panda-preset
+
+# yarn
+yarn add @snaps-ui/react @snaps-ui/panda-preset
+
+# bun
+bun add @snaps-ui/react @snaps-ui/panda-preset
+
+```
+
+### 3. Configure Panda with Snaps UI Preset
+
+After installation, update your **panda.config.ts** file to include the Snaps UI preset.
+This preset automatically adds design tokens, colors, and component recipes optimized for Snaps UI.
+
+```tsx
+import { defineConfig } from '@pandacss/dev'
+import { createSnapsPreset } from '@snaps-ui/panda-preset'
+import neutral from '@snaps-ui/panda-preset/colors/neutral'
+
+export default defineConfig({
+  presets: [
+    '@pandacss/preset-panda',
+    createSnapsPreset({
+      accentColor: neutral,
+      grayColor: neutral,
+      radius: 'sm',
+    }),
+  ],
+
+  // Whether to use css reset
+  preflight: true,
+
+  // Specify where Panda should look for your CSS declarations
+  include: [
+    './app/**/*.{js,jsx,ts,tsx}', // Replace with your app source directory
+  ],
+
+  importMap: '@snaps-ui/styled-system',
+  // The output directory for your css system
+  outdir: 'styled-system',
+  jsxFramework: 'react',
+  staticCss: {
+    recipes: '*',
+  },
+  theme: {
+    extend: {},
+  },
+  globalCss: {
+    extend: {},
+  },
+})
+```
+
+### 4. Try Snaps UI in action
+
+Now that you’ve set everything up, create a new React component and try using a Snaps UI component!
+
+```tsx
+import { Button } from '@snaps-ui/react'
+
+export default function Index() {
+  return <Button variant="solid">I am a Snaps Button</Button>
+}
+```
+
+You should now see your first Snaps UI button rendered beautifully in your app. 🎉
+
+---
+
+## Development Mode Notice
+
+Snaps UI is currently in Beta 🚀
+
+Expect frequent updates, new components, and an official CLI to make installation and customization even smoother.
+
+[⭐ Star Snaps UI on GitHub →](https://github.com/snaps-ui/snaps-ui)

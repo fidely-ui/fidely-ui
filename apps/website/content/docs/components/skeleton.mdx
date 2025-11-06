@@ -1,0 +1,21 @@
+---
+title: Skeleton
+description: Used to render a placeholder while the content is loading.
+---
+
+<ExampleTabs name="skeleton-basic" scope="skeleton" />
+
+## Usage
+
+```tsx
+import { Skeleton, SkeletonText } from '@chakra-ui/react'
+```
+
+```tsx
+<Stack gap="6" maxW="xs">
+  <HStack width="full">
+    <SkeletonText noOfLines={3} />
+  </HStack>
+  <Skeleton height="200px" />
+</Stack>
+```
