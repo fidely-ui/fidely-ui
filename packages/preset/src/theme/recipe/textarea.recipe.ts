@@ -15,13 +15,10 @@ export const textareaRecipe = defineRecipe({
     width: '100%',
     minWidth: '0',
     textAlign: 'start',
+    transition: 'border-color 0.2s, box-shadow 0.2s',
     _disabled: {
       opacity: 0.3,
       cursor: 'not-allowed',
-    },
-    _focus: {
-      borderColor: 'colorPalette.default',
-      boxShadow: '0 0 0 1px var(--colors-color-palette-default)',
     },
     _invalid: {
       borderColor: 'fg.error',
@@ -35,15 +32,29 @@ export const textareaRecipe = defineRecipe({
     variant: {
       outline: {
         bg: 'bg.surface',
+        _focus: {
+          borderColor: 'colorPalette.default',
+          boxShadow: '0 0 0 1px var(--colors-color-palette-default)',
+        },
       },
       flushed: {
         borderRadius: '0',
         borderTop: '0',
         borderLeft: '0',
         borderRight: '0',
+        _focus: {
+          borderTop: '0',
+          borderLeft: '0',
+          borderRight: '0',
+          borderColor: 'colorPalette.default',
+        },
       },
       subtle: {
         bg: 'bg.subtle',
+        _focus: {
+          borderColor: 'colorPalette.default',
+          boxShadow: '0 0 0 1px var(--colors-color-palette-default)',
+        },
       },
     },
     size: {

@@ -17,11 +17,19 @@ import { ClientOnly } from '@snaps-ui/react'
 
 ### Basic
 
-<ExampleTabs name="client-only-basics" scope="client-only" />
+```tsx
+<ClientOnly>
+  <div>This content is only rendered on the client side.</div>
+</ClientOnly>
+```
 
 ### With Fallback
 
-<ExampleTabs name="client-only-fallback" scope="client-only" />
+```tsx
+<ClientOnly fallback={<Skeleton noOfLines={1} />}>
+  <div>This content is only rendered on the client side.</div>
+</ClientOnly>
+```
 
 ## Props
 
