@@ -13,7 +13,7 @@ import { AppLogo } from '~/components/logo'
 const resources = [
   { href: '/docs/getting-started', label: 'Documentations' },
   { href: '/docs/components', label: 'Components' },
-  { href: '/blogs', label: 'Blog' },
+  // { href: '/blogs', label: 'Blog' },
 ]
 
 const community = [

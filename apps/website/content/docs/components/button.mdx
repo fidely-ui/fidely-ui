@@ -76,3 +76,19 @@ Use the **spinnerPlacement** prop to set the placement of the spinner.
 Use the **spinner** prop to change the spinner.
 
 <ExampleTabs name="button-custom-spinner" scope="button" />
+
+## Props
+
+### Button
+
+| Prop               | Default | Type                                                           | Description                                                                                         |
+| ------------------ | ------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `spinnerPlacement` | `start` | `'start' \| 'end' \| undefined`                                | The placement of the spinner.                                                                       |
+| `colorPalette`     | `gray`  | `"red" \| "blue" \| "green" \| "purple" \| "orange" \| "gray"` | The color palette of the component.                                                                 |
+| `size`             | `md`    | `'2xs' \| 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'`       | The size of the button.                                                                             |
+| `variant`          | `solid` | `'solid' \| 'subtle' \| 'outline' \| 'ghost' \| 'plain'`       | The variant that defines the button's visual style.                                                 |
+| `loading`          | —       | `boolean \| undefined`                                         | If `true`, the button will display a loading spinner.                                               |
+| `loadingText`      | —       | `React.ReactNode \| undefined`                                 | The text to display while the button is loading.                                                    |
+| `spinner`          | —       | `React.ReactNode \| undefined`                                 | The spinner element to render while loading.                                                        |
+| `as`               | —       | `React.ElementType`                                            | The underlying element to render.                                                                   |
+| `asChild`          | `false` | `boolean`                                                      | Use the provided child element as the default rendered element, combining their props and behavior. |

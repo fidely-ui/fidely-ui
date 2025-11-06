@@ -1,0 +1,50 @@
+---
+title: Input Group
+description: A composable input container that supports icons, add-ons, — perfect for building search bars etc.
+---
+
+<ExampleTabs name="input-group-basics" scope="input-group" />
+
+## Usage
+
+```tsx
+import { InputGroup, Input } from '@snaps-ui/react'
+```
+
+```tsx
+<InputGroup>
+  <Input />
+</InputGroup>
+```
+
+## End Addon
+
+<ExampleTabs name="input-group-end-addon" scope="input-group" />
+
+## Both Addons
+
+<ExampleTabs name="input-group-both-addon" scope="input-group" />
+
+## Using Addon Component
+
+When using **InputGroup** with **InputAddon** component pass the palcement props **left** or **right** default to **left**
+
+<ExampleTabs name="input-group-comp-addon" scope="input-group" />
+
+## Styling Addon
+
+<ExampleTabs name="input-group-style-addon" scope="input-group" />
+
+### Kbd
+
+<ExampleTabs name="input-group-with-kbd" scope="input-group" />
+
+## Props
+
+### InputGroup
+
+| Prop         | Default | Type                        | Description                                        |
+| ------------ | ------- | --------------------------- | -------------------------------------------------- |
+| `startAddon` | `-`     | `React.ReactNode \| string` | start icon displayed inside the input group.       |
+| `startAddon` | —       | `React.ReactNode \| string` | end icon displayed inside the input group..        |
+| `unstyled`   | `false` | `boolean`                   | Whether to remove the component's default styling. |
