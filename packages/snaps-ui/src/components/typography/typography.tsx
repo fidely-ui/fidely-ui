@@ -17,7 +17,7 @@ const defaultElement = {
   subtitle2: 'h6',
   body1: 'p',
   body2: 'p',
-  caption: 'span',
+  caption: 'p',
   overline: 'span',
 } as const
 

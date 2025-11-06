@@ -38,3 +38,5 @@ export const Group = React.forwardRef<HTMLDivElement, GroupProps>(
     )
   }
 )
+
+Group.displayName = 'Group'

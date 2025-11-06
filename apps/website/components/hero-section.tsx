@@ -72,7 +72,7 @@ export const HeroSection = () => {
             lineHeight={'1.7em'}
           >
             Snaps UI is a modern UI library with reusable, intuitive components
-            that help you ship products faster. Create beautiful, consistent
+            that help you ship products faster to create beautiful, consistent
             interfaces with customizable, production-ready building blocks.
           </Typography>
 

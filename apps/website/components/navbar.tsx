@@ -19,7 +19,7 @@ export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: '/docs/getting-started', label: 'Docs' },
+    { href: '/docs/getting-started/introduction', label: 'Docs' },
     { href: '/docs/components/accordion', label: 'Components' },
     // { href: '#', label: 'Blogs' },
   ]

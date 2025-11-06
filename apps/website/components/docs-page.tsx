@@ -56,7 +56,19 @@ function Sidebar() {
           <Typography variant={'body1'} color={'fg.default'}>
             Getting Started
           </Typography>
-          <Link href="/docs/getting-started" style={{ marginLeft: '6px' }}>
+          <Link
+            href="/docs/getting-started/introduction"
+            style={{ marginLeft: '6px' }}
+          >
+            <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
+              Introduction
+            </Typography>
+          </Link>
+
+          <Link
+            href="/docs/getting-started/installation"
+            style={{ marginLeft: '6px' }}
+          >
             <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
               Installation
             </Typography>

@@ -26,7 +26,7 @@ export const BillingAddress = () => {
     <Paper width={'full'} height="min-content">
       <Stack gap={2} mb={'15px'}>
         <Typography variant={'subtitle1'}>Billing Address</Typography>
-        <Typography variant={'subtitle2'}>
+        <Typography variant={'body1'}>
           The billing address associated with your payment method
         </Typography>
       </Stack>
