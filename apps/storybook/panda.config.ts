@@ -22,6 +22,7 @@ export default defineConfig({
   ],
   // Files to exclude
   exclude: [],
+  importMap: '@snaps-ui/styled-system',
   // The output directory for your css system
   outdir: 'styled-system',
   staticCss: {

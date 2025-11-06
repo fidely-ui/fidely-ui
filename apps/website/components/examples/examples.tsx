@@ -19,6 +19,8 @@ import { Switch } from '@snaps-ui/react/switch'
 import { Persona } from '@snaps-ui/react/persona'
 import { BiSearch, BiUser } from 'react-icons/bi'
 
+import { useToggleTheme } from '~/hooks/useToggleTheme'
+
 export const BillingAddress = () => {
   return (
     <Paper width={'full'} height="min-content">
@@ -209,6 +211,8 @@ export const ProcessingCard = () => {
 }
 
 export const MoreComponents = () => {
+  const { theme, toggleTheme } = useToggleTheme()
+
   return (
     <Paper width={'full'} height="min-content">
       <Stack gap={4} mb={'15px'}>
@@ -236,12 +240,18 @@ export const MoreComponents = () => {
             Switch
           </Typography>
 
-          <Switch.Root colorPalette={'green'} defaultChecked>
+          <Switch.Root
+            colorPalette={'orange'}
+            defaultChecked
+            onCheckedChange={toggleTheme}
+          >
             <Switch.HiddenInput />
             <Switch.Control>
               <Switch.Thumb />
             </Switch.Control>
-            <Switch.Label>Allow for auto renew payments</Switch.Label>
+            <Switch.Label>
+              Switch {theme === 'light' ? 'Dark' : 'Light'} mode
+            </Switch.Label>
           </Switch.Root>
         </VStack>
 

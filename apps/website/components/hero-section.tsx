@@ -4,14 +4,17 @@ import Link from 'next/link'
 import { Box } from '@snaps-ui/react/box'
 import { Container } from '@snaps-ui/react/container'
 import { Center } from '@snaps-ui/react/center'
+import { Clipboard } from '@snaps-ui/react/clipboard'
 import { Button } from '@snaps-ui/react/button'
 import { Flex } from '@snaps-ui/react/flex'
+import { IconButton } from '@snaps-ui/react/icon-button'
+import { Input } from '@snaps-ui/react/input'
 import { Stack } from '@snaps-ui/react/stack'
 import { Typography } from '@snaps-ui/react/typography'
+
 import { SiArkecosystem } from 'react-icons/si'
 import { IoLogoReact } from 'react-icons/io5'
 import { SiTypescript } from 'react-icons/si'
-import { FaTerminal } from 'react-icons/fa'
 import { SiFoodpanda } from 'react-icons/si'
 
 const Logos = [
@@ -75,6 +78,7 @@ export const HeroSection = () => {
 
           <Stack
             flexDirection={{ base: 'column', sm: 'row' }}
+            alignItems={'center'}
             gap="3"
             mt={'25px'}
             mb={'5px'}
@@ -89,22 +93,18 @@ export const HeroSection = () => {
               <Link href={'/docs/getting-started'}>Get Started</Link>
             </Button>
 
-            <Center
-              as="pre"
-              minH="13.5"
-              shadow="inset"
-              bg={'bg.muted'}
-              color="fg.default"
-              textStyle="sm"
-              fontWeight="semibold"
-              ps="4"
-              pe="6"
-              rounded="l2"
-              gap="2.5"
-            >
-              <FaTerminal />
-              npm i @snaps-ui/react
-            </Center>
+            <Clipboard.Root value={'npm i @snaps-ui/react'} width={'100%'}>
+              <Clipboard.Control>
+                <Clipboard.Input asChild>
+                  <Input />
+                </Clipboard.Input>
+                <Clipboard.Trigger asChild>
+                  <IconButton variant="outline">
+                    <Clipboard.Indicator />
+                  </IconButton>
+                </Clipboard.Trigger>
+              </Clipboard.Control>
+            </Clipboard.Root>
           </Stack>
 
           <Box mt="2rem" opacity={0.7}>

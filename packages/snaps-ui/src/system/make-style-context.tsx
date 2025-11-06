@@ -12,14 +12,14 @@ type RecipeFn = {
   splitVariantProps: (props: GenericProps) => [GenericProps, GenericProps]
 }
 type SlotKey<R extends RecipeFn> = keyof ReturnType<R>
-type ForwardOptions = { allowProps?: string[] }
+type ForwardOptions = { forwardProps?: string[] }
 
 const canForward = (
   prop: string,
   variantKeys: string[],
   opts: ForwardOptions = {}
 ) =>
-  opts.allowProps?.includes(prop) ||
+  opts.forwardProps?.includes(prop) ||
   (!variantKeys.includes(prop) && !isCssProperty(prop))
 
 /**
