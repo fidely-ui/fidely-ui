@@ -32,7 +32,8 @@ export interface PinInputRootProps
 
 export const PinInputRoot = withSlotProvider<HTMLDivElement, PinInputRootProps>(
   ArkPinInput.Root,
-  'root'
+  'root',
+  { forwardProps: ['mask'] }
 )
 
 export interface PinInputLabelProps

@@ -1,23 +1,20 @@
 'use client'
 
-import { useTheme } from 'next-themes'
 import { ClientOnly } from '@snaps-ui/react/client-only'
 import { IconButton } from '@snaps-ui/react/icon-button'
 import { Skeleton } from '@snaps-ui/react/skeleton'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { FaMoon } from 'react-icons/fa6'
 
-export const ColorModeButton = () => {
-  const { theme, setTheme } = useTheme()
+import { useToggleTheme } from '~/hooks/useToggleTheme'
 
-  const handleChageTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-  }
+export const ColorModeButton = () => {
+  const { theme, toggleTheme } = useToggleTheme()
 
   return (
     <ClientOnly fallback={<Skeleton boxSize="8" />}>
       <IconButton
-        onClick={handleChageTheme}
+        onClick={toggleTheme}
         size="xs"
         color="inherit"
         variant="ghost"

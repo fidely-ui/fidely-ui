@@ -1,6 +1,5 @@
 {
   "name": "@snaps-ui/styled-system",
-  "private": true,
   "scripts": {
     "preprepare": "pnpm -F @snaps-ui/panda-preset build",
     "prepare": "panda codegen"
