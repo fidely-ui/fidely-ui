@@ -22,7 +22,7 @@ export default function NotFound() {
           <Image asChild>
             <NextImage
               src="/app-logo.png"
-              alt="snaps ui logo"
+              alt="snaps ui app logo"
               width={400}
               height={450}
             />
@@ -40,7 +40,7 @@ export default function NotFound() {
 
         <Box mt={'20px'}>
           <Button colorPalette={'orange'} asChild>
-            <Link href={'/'}>Back Home</Link>
+            <Link href="/">Back Home</Link>
           </Button>
         </Box>
       </Box>

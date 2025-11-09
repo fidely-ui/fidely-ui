@@ -206,7 +206,7 @@ export const ProcessingCard = () => {
 }
 
 export const MoreComponents = () => {
-  const { theme, toggleTheme } = useToggleTheme()
+  const { toggleTheme } = useToggleTheme()
 
   return (
     <Paper width={'full'} height="min-content">
