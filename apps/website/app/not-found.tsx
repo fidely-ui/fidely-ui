@@ -1,12 +1,11 @@
-import NextImage from 'next/image'
 import Link from 'next/link'
 import { Box } from '@snaps-ui/react/box'
 import { Button } from '@snaps-ui/react/button'
 import { Center } from '@snaps-ui/react/center'
 import { Flex } from '@snaps-ui/react/flex'
-import { Image } from '@snaps-ui/react/image'
 import { Heading } from '@snaps-ui/react/heading'
 import { Text } from '@snaps-ui/react/text'
+import { Image } from '@snaps-ui/react/image'
 
 export default function NotFound() {
   return (
@@ -19,14 +18,7 @@ export default function NotFound() {
           flexDirection={'column'}
           mb={'10px'}
         >
-          <Image asChild>
-            <NextImage
-              src="/app-logo.png"
-              alt="snaps ui app logo"
-              width={400}
-              height={450}
-            />
-          </Image>
+          <Image src="/app-logo.png" alt="Snaps UI Logo" w="350px" />
         </Flex>
 
         <Box mb={'15px'}>
