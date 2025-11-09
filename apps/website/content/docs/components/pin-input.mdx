@@ -1,0 +1,130 @@
+---
+title: Pin Input
+description: Used to capture a pin code or otp from the user
+---
+
+<ExampleTabs name="pin-input-basics" scope="pin-input" />
+
+## Usage
+
+```tsx
+import { PinInput } from '@snaps-ui/react'
+```
+
+```tsx
+<PinInput.Root>
+  <PinInput.HiddenInput />
+  <PinInput.Control>
+    <PinInput.Input />
+  </PinInput.Control>
+</PinInput.Root>
+```
+
+## Examples
+
+### Sizes
+
+Pass the **size** prop to the **PinInput.Root** component to change the size of the pin input component
+
+<ExampleTabs name="pin-input-sizes" scope="pin-input" />
+
+### OTP
+
+Pass the **otp** prop to the **PinInput.Root** component to indicate that the input is for a one-time password (OTP).
+
+<ExampleTabs name="pin-input-otp" scope="pin-input" />
+
+### Placeholder
+
+Pass the **placeholder** prop to the **PinInput.Root** component to define placeholder text for each input field.
+
+<ExampleTabs name="pin-input-placeholder" scope="pin-input" />
+
+### Mask
+
+Pass the **mask** prop to the **PinInput.Root** component to mask the input value (e.g., for sensitive codes).
+
+<ExampleTabs name="pin-input-mask" scope="pin-input" />
+
+### Blur on complete
+
+By default, the last input remains focused after the user fills all fields, and the **onValueComplete** callback is invoked.
+
+To automatically blur the input after completion, set **blurOnComplete** to true.
+
+<ExampleTabs name="pin-input-blur" scope="pin-input" />
+
+### With Field
+
+The **Field** component helps manage form-related state and accessibility attributes of a pin input.
+
+It includes handling ARIA labels, helper text, and error text to ensure proper accessibility.
+
+<ExampleTabs name="pin-input-field" scope="pin-input" />
+
+### With alphanumeric
+
+Pass the type prop to the **PinInput.Root** component to allow the user to enter alphanumeric characters.
+
+Values can be either **alphanumeric**, **numeric**, or **alphabetic**
+
+<ExampleTabs name="pin-input-alphanumeric" scope="pin-input" />
+
+### With Controlled
+
+Pass the **value** and **onValueChange** props to the **PinInPut.Root** component to control the value of the pin input
+
+<ExampleTabs name="pin-input-controlled" scope="pin-input" />
+
+## Props
+
+### `Root`
+
+| Prop              | Type                                                                                                             | Default     | Description                                                                               |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------- |
+| `placeholder`     | `string`                                                                                                         | `o`         | The placeholder text for each input.                                                      |
+| `type`            | `'numeric' \| 'alphabetic' \| 'alphanumeric'`                                                                    | `'numeric'` | The type of value the pin input should allow.                                             |
+| `colorPalette`    | `"red" \| "blue" \| "green" \| "purple" \| "orange" \| "gray"`                                                   | -           | The color palette of the component.                                                       |
+| `size`            | `'2xs' \| 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'`                                                         | `'md'`      | The size of the component.                                                                |
+| `variant`         | `'outline' \| 'subtle' \| 'flushed'`                                                                             | `'outline'` | The visual variant of the component.                                                      |
+| `as`              | `React.ElementType`                                                                                              | `-`         | The underlying element to render.                                                         |
+| `asChild`         | `boolean`                                                                                                        | `false`     | Use the provided child element as the rendered element, merging their props and behavior. |
+| `unstyled`        | `boolean`                                                                                                        | `false`     | Removes all default styling from the component.                                           |
+| `autoFocus`       | `boolean`                                                                                                        | `false`     | Automatically focuses the first input on mount.                                           |
+| `blurOnComplete`  | `boolean`                                                                                                        | `false`     | Whether to blur the input when all fields are filled.                                     |
+| `count`           | `number`                                                                                                         | `4`         | Number of input fields to render.                                                         |
+| `defaultValue`    | `string[]`                                                                                                       | `[]`        | The initial value of the pin input when uncontrolled.                                     |
+| `disabled`        | `boolean`                                                                                                        | `false`     | Disables all inputs when set to true.                                                     |
+| `form`            | `string`                                                                                                         | `-`         | The associated form of the underlying input element.                                      |
+| `id`              | `string`                                                                                                         | `-`         | The unique identifier for the pin input root.                                             |
+| `ids`             | `Partial<{ root: string; hiddenInput: string; label: string; control: string; input: (id: string) => string; }>` | `-`         | Custom IDs for pin input elements. Useful for advanced composition.                       |
+| `invalid`         | `boolean`                                                                                                        | `false`     | Marks the input as invalid.                                                               |
+| `mask`            | `boolean`                                                                                                        | `false`     | If `true`, input values are masked (e.g., password dots).                                 |
+| `name`            | `string`                                                                                                         | `-`         | The name of the input element for form submission.                                        |
+| `onValueChange`   | `(details: ValueChangeDetails) => void`                                                                          | `-`         | Called when any input value changes.                                                      |
+| `onValueComplete` | `(details: ValueChangeDetails) => void`                                                                          | `-`         | Called when all input fields have valid values.                                           |
+| `onValueInvalid`  | `(details: ValueInvalidDetails) => void`                                                                         | `-`         | Called when an invalid value is entered.                                                  |
+| `otp`             | `boolean`                                                                                                        | `false`     | Enables `autocomplete="one-time-code"` for OTP entry.                                     |
+| `pattern`         | `string`                                                                                                         | `-`         | A regular expression pattern the value must match.                                        |
+| `readOnly`        | `boolean`                                                                                                        | `false`     | Makes all inputs read-only.                                                               |
+| `required`        | `boolean`                                                                                                        | `false`     | Marks the input as required.                                                              |
+| `selectOnFocus`   | `boolean`                                                                                                        | `false`     | Automatically selects the input’s value when focused.                                     |
+| `translations`    | `IntlTranslations`                                                                                               | `-`         | Provides localized strings for accessibility and internationalization.                    |
+| `value`           | `string[]`                                                                                                       | `[]`        | The controlled value of the pin input.                                                    |
+
+---
+
+### `Input`
+
+| Prop      | Type      | Default | Description                                                                                         |
+| --------- | --------- | ------- | --------------------------------------------------------------------------------------------------- |
+| `index`   | `number`  | -       | The index of the current input (0-based).                                                           |
+| `asChild` | `boolean` | `false` | Use the provided child element as the default rendered element, combining their props and behavior. |
+
+---
+
+### `Control` and `Label`
+
+| Prop      | Type      | Default | Description                                                                                         |
+| --------- | --------- | ------- | --------------------------------------------------------------------------------------------------- |
+| `asChild` | `boolean` | `false` | Use the provided child element as the default rendered element, combining their props and behavior. |

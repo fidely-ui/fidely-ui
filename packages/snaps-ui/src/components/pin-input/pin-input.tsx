@@ -3,20 +3,19 @@
 import type { Assign } from '@ark-ui/react'
 import { PinInput as ArkPinInput } from '@ark-ui/react/pin-input'
 import {
-  pinInputSlotRecipe,
-  type PinInputSlotRecipeVariantProps,
+  pinInput,
+  type PinInputVariantProps,
 } from '@snaps-ui/styled-system/recipes'
 import { HTMLStyledProps } from '@snaps-ui/styled-system/types'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
-const { withSlotProvider, withSlotContext } =
-  makeStyleContext(pinInputSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(pinInput)
 
 export interface PinInputRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkPinInput.RootProviderBaseProps>,
-    PinInputSlotRecipeVariantProps
+    PinInputVariantProps
   > {}
 
 export const PinInputRootProvider = withSlotProvider<
@@ -27,12 +26,13 @@ export const PinInputRootProvider = withSlotProvider<
 export interface PinInputRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkPinInput.RootBaseProps>,
-    PinInputSlotRecipeVariantProps
+    PinInputVariantProps
   > {}
 
 export const PinInputRoot = withSlotProvider<HTMLDivElement, PinInputRootProps>(
   ArkPinInput.Root,
-  'root'
+  'root',
+  { forwardProps: ['mask'] }
 )
 
 export interface PinInputLabelProps

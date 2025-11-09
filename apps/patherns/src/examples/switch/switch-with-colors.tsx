@@ -1,12 +1,12 @@
-import { HStack, Stack, Switch, Typography } from '@snaps-ui/react'
+import { HStack, Stack, Switch, Text } from '@snaps-ui/react'
 
-export default function SwitchWithColors() {
+export const SwitchWithColors = () => {
   return (
     <Stack gap={5}>
       <HStack gap={6} alignItems="center">
-        <Typography fontWeight="medium" textTransform="capitalize">
+        <Text fontWeight="medium" textTransform="capitalize">
           green
-        </Typography>
+        </Text>
 
         <Switch.Root colorPalette={'green'} defaultChecked>
           <Switch.HiddenInput />
@@ -15,9 +15,9 @@ export default function SwitchWithColors() {
           </Switch.Control>
         </Switch.Root>
 
-        <Typography fontWeight="medium" textTransform="capitalize">
+        <Text fontWeight="medium" textTransform="capitalize">
           orange
-        </Typography>
+        </Text>
 
         <Switch.Root colorPalette={'orange'} defaultChecked>
           <Switch.HiddenInput />

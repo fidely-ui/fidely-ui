@@ -5,7 +5,8 @@ import { Box } from '@snaps-ui/react/box'
 import { Card } from '@snaps-ui/react/card'
 import { Grid, GridItem } from '@snaps-ui/react/grid'
 import { Flex } from '@snaps-ui/react/flex'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
+import { Heading } from '@snaps-ui/react/heading'
 import { Persona } from '@snaps-ui/react/persona'
 import { FaLinkedin } from 'react-icons/fa'
 
@@ -21,13 +22,18 @@ export const Testimonials = () => {
         mx={'auto'}
         colorPalette={'red'}
       >
-        <Typography variant="h4" color={'fg.muted'}>
+        <Heading
+          as="h4"
+          textStyle={{ base: '2xl', md: '3xl' }}
+          color={'fg.muted'}
+          mb={'5px'}
+        >
           Trusted by developers, startups, and enterprises
-        </Typography>
+        </Heading>
 
-        <Typography variant="body1" color={'fg.muted'}>
+        <Text color={'fg.muted'}>
           Join thousands of developers and companies around the world.
-        </Typography>
+        </Text>
       </Box>
 
       <Grid

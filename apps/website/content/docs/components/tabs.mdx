@@ -1,0 +1,112 @@
+---
+title: Tabs
+description: A component used to display multiple views or sections of related content using tabbed navigation.
+---
+
+<ExampleTabs name="tabs-basics" scope="tabs" />
+
+## Usage
+
+```tsx
+import { Tabs } from '@snaps-ui/react'
+```
+
+```tsx
+<Tabs.Root>
+  <Tabs.List>
+    <Tabs.Trigger />
+    <Tabs.Indicator />
+  </Tabs.List>
+  <Tabs.Content />
+</Tabs.Root>
+```
+
+## Examples
+
+### Variants
+
+Use the **variant** prop to change the visual style of the tabs.
+
+<ExampleTabs name="tabs-variants" scope="tabs" />
+
+### Sizes
+
+Use the **size** prop to adjust the spacing and font size of the tabs.
+
+<ExampleTabs name="tabs-sizes" scope="tabs" />
+
+### Disabled
+
+Set the **disabled** prop on the **Tabs.Trigger** component to disable a tab
+
+<ExampleTabs name="tabs-disabled" scope="tabs" />
+
+### Manual Activation
+
+By default, tabs are automatically selected when navigated with arrow keys.
+
+Set **activationBehavior** prop to **manual** on **Tabs.Root** to disable this behavior — tabs will only activate when clicked or when pressing Enter.
+
+<ExampleTabs name="tabs-manual" scope="tabs" />
+
+### Store (State Managed)
+
+An alternative way to control the **Tabs** is to use the **RootProvider** component and the **useTabs** store hook.
+
+This way you can access the tabs state and methods from outside the tabs.
+
+<ExampleTabs name="tabs-store" scope="tabs" />
+
+### Controlled Tabs
+
+Use the **value** and **onValueChange** prop to control the active tab.
+
+<ExampleTabs name="tabs-controlled" scope="tabs" />
+
+### With Links
+
+Pass the **asChild** to the **Tabs.Trigger** component to render a link as a tab. When a tab is clicked, the link will be navigated to.
+
+<ExampleTabs name="tabs-links" scope="tabs" />
+
+## Props
+
+### Root
+
+| Prop             | Type                      | Default     | Description                                                                                                                                                                              |
+| ---------------- | ------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `defaultValue`   | `string`                  | `—`         | The tab value to activate by default.                                                                                                                                                    |
+| `activationMode` | `"automatic" \ "manual"`  | `automatic` | The activation mode of the tabs. Can be `manual` or `automatic` - `manual`: Tabs are activated when clicked or press `enter` key. - `automatic`: Tabs are activated when receiving focus |
+| `value`          | `string`                  | `—`         | The controlled value of the active tab..                                                                                                                                                 |
+| `onValueChange`  | `(value: string) => void` | `—`         | Callback fired when a tab value changes..                                                                                                                                                |
+| `lazyMount`      | `boolean`                 | `false`     | Whether to enable lazy mounting.                                                                                                                                                         |
+| `loopFocus`      | `boolean`                 | `false`     | Whether the keyboard navigation will loop from last tab to first, and vice versa.                                                                                                        |
+
+---
+
+### Tabs.List
+
+| Prop      | Type      | Default | Description                             |
+| --------- | --------- | ------- | --------------------------------------- |
+| `asChild` | `boolean` | `false` | Passes props to a custom child element. |
+
+---
+
+### Tabs.Trigger
+
+| Prop       | Type      | Default | Description                                             |
+| ---------- | --------- | ------- | ------------------------------------------------------- |
+| `value`    | `string`  | `—`     | The value associated with this tab trigger.             |
+| `disabled` | `boolean` | `false` | Disables interaction with the tab.                      |
+| `asChild`  | `boolean` | `false` | Renders a custom element instead of the default button. |
+
+---
+
+### Tabs.Content
+
+| Prop      | Type      | Default | Description                                                |
+| --------- | --------- | ------- | ---------------------------------------------------------- |
+| `value`   | `string`  | `-`     | The value associated with this content panel.              |
+| `asChild` | `boolean` | false   | Renders a custom element instead of the default container. |
+
+---

@@ -3,7 +3,7 @@
 import { CommandInput } from '@snaps-ui/react/command-input'
 import { LuUserRoundSearch } from 'react-icons/lu'
 
-export default function CommandInputDemo() {
+export const CommandInputIcon = () => {
   return (
     <CommandInput
       placeholder="Search docs...."

@@ -3,11 +3,11 @@
 import * as React from 'react'
 import { ark } from '@ark-ui/react/factory'
 import { styled } from '@snaps-ui/styled-system/jsx'
-import { groupRecipe } from '@snaps-ui/styled-system/recipes'
+import { group } from '@snaps-ui/styled-system/recipes'
 import { type ComponentProps } from '@snaps-ui/styled-system/types'
 import { cx } from '@snaps-ui/styled-system/css'
 
-const StyledGroup = styled(ark.div, groupRecipe)
+const StyledGroup = styled(ark.div, group)
 
 type GroupBaseProps = ComponentProps<typeof StyledGroup>
 
@@ -38,3 +38,5 @@ export const Group = React.forwardRef<HTMLDivElement, GroupProps>(
     )
   }
 )
+
+Group.displayName = 'Group'

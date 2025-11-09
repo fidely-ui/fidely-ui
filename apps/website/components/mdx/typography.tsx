@@ -43,7 +43,6 @@ export const H1 = (props: BoxProps) => {
         marginBottom: '0.8em',
         lineHeight: '1.2em',
         fontWeight: 'medium',
-        scrollMarginTop: 'calc(var(--header-height) + 1.5em)',
       }}
       {...props}
     />
@@ -62,7 +61,6 @@ export const H2 = (props: BoxProps) => {
         marginBottom: '0.8em',
         lineHeight: '1.4em',
         fontWeight: 'semibold',
-        scrollMarginTop: 'calc(var(--header-height) + 1.5em)',
         '& code': { fontSize: '0.9em' },
         '& + *': { marginTop: '0' },
         '& a': { font: 'inherit!' },
@@ -84,7 +82,6 @@ export const H3 = (props: BoxProps) => {
         marginBottom: '0.4em',
         fontWeight: 'semibold',
         lineHeight: '1.5em',
-        scrollMarginTop: 'calc(var(--header-height) + 1.5em)',
         '& code': { fontSize: '0.9em' },
         '& + *': { marginTop: '0' },
         '& a': { font: 'inherit!' },
@@ -105,7 +102,6 @@ export const H4 = (props: BoxProps) => {
         letterSpacing: '-0.01em',
         fontWeight: 'semibold',
         lineHeight: '1.5em',
-        scrollMarginTop: 'calc(var(--header-height) + 1.5em)',
         '& + *': { marginTop: '0' },
         '& a': { font: 'inherit!' },
       }}

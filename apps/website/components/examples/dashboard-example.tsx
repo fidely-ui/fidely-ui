@@ -1,3 +1,6 @@
+'use client'
+
+import * as React from 'react'
 import { Avatar } from '@snaps-ui/react/avatar'
 import { Badge } from '@snaps-ui/react/badge'
 import { Box } from '@snaps-ui/react/box'
@@ -7,11 +10,12 @@ import { Grid, GridItem } from '@snaps-ui/react/grid'
 import { IconButton } from '@snaps-ui/react/icon-button'
 import { Input } from '@snaps-ui/react/input'
 import { InputGroup } from '@snaps-ui/react/input-group'
+import { InputAddon } from '@snaps-ui/react/input-addon'
 import { Persona } from '@snaps-ui/react/persona'
 import { Table } from '@snaps-ui/react/table'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
+import { Heading } from '@snaps-ui/react/heading'
 import { VStack } from '@snaps-ui/react/stack'
-
 import { BiSearch } from 'react-icons/bi'
 import { FaArrowTrendUp } from 'react-icons/fa6'
 import { HiOutlineDotsHorizontal } from 'react-icons/hi'
@@ -23,6 +27,8 @@ import {
 } from '~/constant/example-contants'
 
 export const DashboardExample = () => {
+  const [searchValue, setSearchValue] = React.useState('')
+
   return (
     <Box
       height={'auto'}
@@ -42,9 +48,9 @@ export const DashboardExample = () => {
       </Box>
 
       <Box width={{ base: '100%', md: '80%' }}>
-        <DashboardNavBar />
+        <DashboardNavBar onSearchChange={setSearchValue} />
 
-        <DashboardMain />
+        <DashboardMain searchValue={searchValue} />
       </Box>
     </Box>
   )
@@ -54,14 +60,14 @@ export const DashboardSideBar = () => {
   return (
     <Box position={'relative'} height={'100vh'}>
       <Box padding={'10px'} borderBottom={'0.6px solid white'}>
-        <Typography fontWeight={'bold'} variant={'h5'}>
+        <Heading fontWeight={'bold'} as={'h3'} textStyle={'2xl'}>
           Snaps Inc.
-        </Typography>
+        </Heading>
       </Box>
 
       <Box mt={'15px'}>
         {asideItems.map((nav) => (
-          <Typography
+          <Text
             padding={'12px'}
             _hover={{ bg: 'bg.subtle' }}
             cursor={'pointer'}
@@ -71,7 +77,7 @@ export const DashboardSideBar = () => {
             gap={'2'}
           >
             <nav.icon /> {nav.label}
-          </Typography>
+          </Text>
         ))}
       </Box>
 
@@ -87,12 +93,26 @@ export const DashboardSideBar = () => {
   )
 }
 
-export const DashboardNavBar = () => {
+interface DashboardNavBarProps {
+  onSearchChange: (value: string) => void
+}
+
+export const DashboardNavBar = ({ onSearchChange }: DashboardNavBarProps) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onSearchChange(e.target.value)
+  }
+
   return (
     <Flex padding={'10px'}>
       <Box width={'80%'}>
-        <InputGroup startAddon={<BiSearch />}>
-          <Input placeholder="search dashboard..." />
+        <InputGroup>
+          <InputAddon bg={'bg.emphasized'}>
+            <BiSearch />
+          </InputAddon>
+          <Input
+            placeholder="search dashboard..."
+            onChange={handleInputChange}
+          />
         </InputGroup>
       </Box>
 
@@ -110,7 +130,22 @@ export const DashboardNavBar = () => {
   )
 }
 
-export const DashboardMain = () => {
+interface DashboardMainProps {
+  searchValue: string
+}
+
+export const DashboardMain = ({ searchValue }: DashboardMainProps) => {
+  const filteredUsers = React.useMemo(() => {
+    const query = searchValue.toLocaleLowerCase().trim()
+    if (!query) return exampleUsersData
+
+    return exampleUsersData.filter((d) =>
+      [d.user.name, d.user.email].some((field) =>
+        field.toLocaleLowerCase().includes(query)
+      )
+    )
+  }, [searchValue])
+
   return (
     <Box padding={'10px'}>
       <Grid
@@ -127,8 +162,8 @@ export const DashboardMain = () => {
                   alignItems={'flex-start'}
                 >
                   <VStack gap={'2'}>
-                    <Typography variant={'subtitle2'}>{data.name}</Typography>
-                    <Typography variant={'body2'}>₦{data.numbers}</Typography>
+                    <Heading as={'h5'}>{data.name}</Heading>
+                    <Text textStyle={'md'}>{data.numbers}</Text>
                   </VStack>
 
                   <Box>
@@ -147,37 +182,48 @@ export const DashboardMain = () => {
             <Table.Header>
               <Table.Row>
                 <Table.HeadCell>Users</Table.HeadCell>
-                <Table.HeadCell minWidth="200px">Revenue</Table.HeadCell>
-                <Table.HeadCell minWidth="200px">Status</Table.HeadCell>
-                <Table.HeadCell minWidth="200px">Visits</Table.HeadCell>
+                <Table.HeadCell>Revenue</Table.HeadCell>
+                <Table.HeadCell>Status</Table.HeadCell>
+                <Table.HeadCell>Visits</Table.HeadCell>
                 <Table.HeadCell></Table.HeadCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {exampleUsersData.map((d) => (
-                <Table.Row key={d.id}>
-                  <Table.Cell>
-                    <Persona
-                      name={d.user.name}
-                      title={d.user.email}
-                      img={d.user.avatar}
-                      imgSize="xs"
-                    />
-                  </Table.Cell>
-                  <Table.Cell minWidth="200px">{d.revenue}</Table.Cell>
-                  <Table.Cell>
-                    <Badge colorPalette={d.status === 'Done' ? 'green' : ''}>
-                      {d.status}
-                    </Badge>
-                  </Table.Cell>
-                  <Table.Cell minWidth="200px">{d.id}</Table.Cell>
-                  <Table.Cell>
-                    <IconButton variant={'ghost'} size={'sm'}>
-                      <HiOutlineDotsHorizontal />
-                    </IconButton>
+              {filteredUsers.length > 0 ? (
+                filteredUsers.map((d) => (
+                  <Table.Row key={d.id}>
+                    <Table.Cell>
+                      <Persona
+                        name={d.user.name}
+                        title={d.user.email}
+                        img={d.user.avatar}
+                        imgSize="md"
+                      />
+                    </Table.Cell>
+                    <Table.Cell>{d.revenue}</Table.Cell>
+                    <Table.Cell>
+                      <Badge
+                        size={'sm'}
+                        colorPalette={d.status === 'Done' ? 'green' : ''}
+                      >
+                        {d.status}
+                      </Badge>
+                    </Table.Cell>
+                    <Table.Cell>{d.id}</Table.Cell>
+                    <Table.Cell textAlign={'right'}>
+                      <IconButton variant={'ghost'} size={'sm'}>
+                        <HiOutlineDotsHorizontal />
+                      </IconButton>
+                    </Table.Cell>
+                  </Table.Row>
+                ))
+              ) : (
+                <Table.Row>
+                  <Table.Cell colSpan={5} textAlign="center">
+                    No matching users found.
                   </Table.Cell>
                 </Table.Row>
-              ))}
+              )}
             </Table.Body>
           </Table.Root>
         </Table.ScrollArea>

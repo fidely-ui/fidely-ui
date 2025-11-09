@@ -1,5 +1,5 @@
 import { Box } from '@snaps-ui/react/box'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
 
 interface CalloutProps {
   type?: 'info' | 'warning' | 'tip' | 'danger'
@@ -31,10 +31,10 @@ export const Callout = ({ type = 'info', children }: CalloutProps) => {
       rounded="md"
       my={4}
     >
-      <Typography fontWeight="bold" mb={1}>
+      <Text fontWeight="bold" mb={1}>
         {type.toUpperCase()}
-      </Typography>
-      <Typography>{children}</Typography>
+      </Text>
+      <Text>{children}</Text>
     </Box>
   )
 }

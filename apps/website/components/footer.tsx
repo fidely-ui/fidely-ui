@@ -4,21 +4,25 @@ import Link from 'next/link'
 import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { Stack } from '@snaps-ui/react/stack'
-import { Typography } from '@snaps-ui/react/typography'
+import { Heading } from '@snaps-ui/react/heading'
+import { Text } from '@snaps-ui/react/text'
+
 import { Grid, GridItem } from '@snaps-ui/react/grid'
 import { IoLogoVercel } from 'react-icons/io5'
 
 import { AppLogo } from '~/components/logo'
+import { Span } from '@snaps-ui/react'
 
-const resources = [
-  { href: '/docs/getting-started', label: 'Documentations' },
-  { href: '/docs/components', label: 'Components' },
-  { href: '/blogs', label: 'Blog' },
+const documentation = [
+  { href: '/docs/getting-started/installation', label: 'Getting Started' },
+  { href: '/docs/components/accordion', label: 'Components' },
+  { href: '/docs/theming', label: 'Theming' },
+  // { href: '/blogs', label: 'Blog' },
 ]
 
 const community = [
   { href: '#', label: 'Discord' },
-  { href: '#', label: 'Twitter' },
+  { href: 'https://x.com/SnapsUi', label: 'Twitter' },
   { href: 'https://github.com/snaps-ui/snaps-ui', label: 'Github' },
 ]
 
@@ -33,31 +37,30 @@ export const Footer = () => {
       px={{ base: '6', md: '12' }}
       py="12"
       mt="16"
-      color={'accent.contrast'}
+      color={'fg.subtle'}
     >
       <Flex flexDirection={{ base: 'column-reverse', md: 'row' }}>
         <Stack
           gap={4}
           width={{ base: '100%', md: '50%' }}
           mt={{ base: '35px', md: '0px' }}
+          color={'fg.subtle'}
         >
           <AppLogo />
 
-          <Typography variant="body2">
+          <Text>
             Build beautiful, accessible UIs with ease and Craft stunning
             interfaces, faster.
-          </Typography>
+          </Text>
 
-          <Typography variant="body2">
+          <Text>
             Maintained by{' '}
-            <Typography
-              variant="body2"
-              color={'accent.default'}
-              as={'span'}
+            <Span
+              color={'orange.9'}
               transition="color 0.2s ease"
               fontWeight="bolder"
               _hover={{
-                color: 'accent.emphasized',
+                color: 'orange.10',
               }}
             >
               <Link
@@ -67,14 +70,14 @@ export const Footer = () => {
               >
                 Justice Chimobi
               </Link>
-            </Typography>{' '}
+            </Span>{' '}
             and contributors
-          </Typography>
+          </Text>
 
           <Flex alignItems="center" gap={2} fontSize="13px">
-            <Typography variant="body2">Deployed on</Typography>
+            <Text>Deployed on</Text>
             <IoLogoVercel />
-            <Typography variant="body2">Vercel</Typography>
+            <Text>Vercel</Text>
           </Flex>
         </Stack>
         <Grid
@@ -84,22 +87,21 @@ export const Footer = () => {
         >
           {/* Resources */}
           <GridItem>
-            <Typography variant="body1" mb={4}>
-              Resources
-            </Typography>
+            <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
+              Documentation
+            </Heading>
             <Stack gap={3}>
-              {resources.map(({ href, label }) => (
+              {documentation.map(({ href, label }) => (
                 <Link key={label} href={href}>
-                  <Typography
-                    variant="body2"
+                  <Text
                     transition="color 0.2s ease"
+                    color={'fg.subtle'}
                     _hover={{
-                      color: 'fg.subtle',
-                      _dark: { color: 'fg.muted' },
+                      color: 'fg.muted',
                     }}
                   >
                     {label}
-                  </Typography>
+                  </Text>
                 </Link>
               ))}
             </Stack>
@@ -107,9 +109,9 @@ export const Footer = () => {
 
           {/* Community */}
           <GridItem>
-            <Typography variant="body1" mb={4}>
+            <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
               Community
-            </Typography>
+            </Heading>
             <Stack gap={3}>
               {community.map(({ href, label }) => (
                 <Link
@@ -118,16 +120,15 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Typography
-                    variant="body2"
+                  <Text
                     transition="color 0.2s ease"
+                    color={'fg.subtle'}
                     _hover={{
-                      color: 'fg.subtle',
-                      _dark: { color: 'fg.muted' },
+                      color: 'fg.muted',
                     }}
                   >
                     {label}
-                  </Typography>
+                  </Text>
                 </Link>
               ))}
             </Stack>

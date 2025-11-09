@@ -1,6 +1,6 @@
 import { Persona, Tabs } from '@snaps-ui/react'
 
-export default function PersonaSizes() {
+export const PersonaSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const
 
   return (
@@ -10,7 +10,7 @@ export default function PersonaSizes() {
           <Tabs.Trigger
             key={size}
             value={size}
-            _selected={{ color: 'accent.default' }}
+            _selected={{ color: 'orange.9' }}
           >
             {size}
           </Tabs.Trigger>

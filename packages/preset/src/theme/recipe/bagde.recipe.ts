@@ -31,7 +31,7 @@ export const badgeRecipes = defineRecipe({
     size: {
       sm: {
         textStyle: 'xs',
-        px: '2.5',
+        px: '2.3',
         h: '5',
       },
       md: {

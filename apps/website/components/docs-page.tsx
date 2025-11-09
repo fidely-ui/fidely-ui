@@ -5,8 +5,9 @@ import * as React from 'react'
 import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { Stack } from '@snaps-ui/react/stack'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
 import { Badge as SnapsBadge } from '@snaps-ui/react/badge'
+import { Span } from '@snaps-ui/react/span'
 
 import {
   asideComponentLinks,
@@ -53,33 +54,41 @@ function Sidebar() {
     >
       <Stack gap="6">
         <Stack gap="3">
-          <Typography variant={'body1'} color={'fg.default'}>
-            Getting Started
-          </Typography>
-          <Link href="/docs/getting-started" style={{ marginLeft: '6px' }}>
-            <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
+          <Text color={'fg.default'}>Getting Started</Text>
+          <Link
+            href="/docs/getting-started/introduction"
+            style={{ marginLeft: '6px' }}
+          >
+            <Span color={'fg.muted'} fontSize={'13px'}>
+              Introduction
+            </Span>
+          </Link>
+
+          <Link
+            href="/docs/getting-started/installation"
+            style={{ marginLeft: '6px' }}
+          >
+            <Span color={'fg.muted'} fontSize={'13px'}>
               Installation
-            </Typography>
+            </Span>
           </Link>
         </Stack>
 
         <Stack gap="3">
-          <Typography variant={'body1'} color={'fg.default'}>
+          <Text color={'fg.default'} fontSize={'14px'}>
             Theming
-          </Typography>
+          </Text>
           <Link href="/docs/theming" style={{ marginLeft: '6px' }}>
-            <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
+            <Span color={'fg.muted'} fontSize={'13px'}>
               customization
-            </Typography>
+            </Span>
           </Link>
         </Stack>
 
         <Stack gap="3">
           {asideComponentLinks.map((section, index: number) => (
             <React.Fragment key={index}>
-              <Typography variant={'body2'} fontSize={'14px'}>
-                {section.section}
-              </Typography>
+              <Text fontSize={'14px'}>{section.section}</Text>
 
               {section.items.map((item) => (
                 <Link
@@ -89,14 +98,9 @@ function Sidebar() {
                     marginLeft: '6px',
                   }}
                 >
-                  <Typography
-                    variant={'body2'}
-                    color={'fg.muted'}
-                    as={'span'}
-                    fontSize={'13px'}
-                  >
+                  <Span color={'fg.muted'} fontSize={'13px'}>
                     {item.name} {item.new ? <Badge /> : ''}
-                  </Typography>
+                  </Span>
                 </Link>
               ))}
             </React.Fragment>
@@ -106,9 +110,7 @@ function Sidebar() {
         <Stack gap="3">
           {asideUtilLinks.map((section, index: number) => (
             <React.Fragment key={index}>
-              <Typography variant={'body2'} fontSize={'14px'}>
-                {section.section}
-              </Typography>
+              <Text fontSize={'14px'}>{section.section}</Text>
 
               {section.items.map((item) => (
                 <Link
@@ -118,14 +120,9 @@ function Sidebar() {
                     marginLeft: '6px',
                   }}
                 >
-                  <Typography
-                    variant={'body2'}
-                    color={'fg.muted'}
-                    as={'span'}
-                    fontSize={'13px'}
-                  >
+                  <Span color={'fg.muted'} fontSize={'13px'}>
                     {item.name} {item.new ? <Badge /> : ''}
-                  </Typography>
+                  </Span>
                 </Link>
               ))}
             </React.Fragment>
@@ -138,8 +135,8 @@ function Sidebar() {
 
 const Badge = () => {
   return (
-    <SnapsBadge colorPalette={'accent'} size={'sm'}>
-      New
+    <SnapsBadge colorPalette={'orange'} size={'sm'}>
+      WIP
     </SnapsBadge>
   )
 }

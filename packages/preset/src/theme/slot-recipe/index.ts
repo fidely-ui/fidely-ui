@@ -1,6 +1,6 @@
 import { type SlotRecipeConfig } from '@pandacss/dev'
 
-import { avaterSlotRecipe } from './avater.recipe'
+import { avatarSlotRecipe } from './avatar.recipe'
 import { cardSlotRecipe } from './card.recipe'
 import { tabsSlotRecipe } from './tabs.recipe'
 import { fieldSlotRecipe } from './field.recipe'
@@ -13,15 +13,14 @@ import { checkboxSlotRecipe } from './checkbox.recipe'
 import { selectSlotRecipe } from './select.recipe'
 
 export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
-  accordionSlotRecipe,
-  avaterSlotRecipe,
-  cardSlotRecipe,
-  checkboxSlotRecipe,
-  clipboardSlotRecipe,
-  fieldSlotRecipe,
-  pinInputSlotRecipe,
-  selectSlotRecipe,
-  switchSlotRecipe,
-  tabsSlotRecipe,
-  tableSlotRecipe,
+  accordion: accordionSlotRecipe,
+  avatar: avatarSlotRecipe,
+  card: cardSlotRecipe,
+  checkbox: checkboxSlotRecipe,
+  clipboard: clipboardSlotRecipe,
+  field: fieldSlotRecipe,
+  pinInput: pinInputSlotRecipe,
+  switchRecipe: switchSlotRecipe,
+  tabs: tabsSlotRecipe,
+  table: tableSlotRecipe,
 }

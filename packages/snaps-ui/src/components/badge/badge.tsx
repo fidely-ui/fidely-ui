@@ -3,10 +3,10 @@
 import { forwardRef } from 'react'
 import { ark } from '@ark-ui/react/factory'
 import { styled } from '@snaps-ui/styled-system/jsx'
-import { badgeRecipes } from '@snaps-ui/styled-system/recipes'
+import { badge } from '@snaps-ui/styled-system/recipes'
 import { ComponentProps } from '@snaps-ui/styled-system/types'
 
-const StyledBagde = styled(ark.span, badgeRecipes)
+const StyledBagde = styled(ark.span, badge)
 
 type BadgeBaseProps = ComponentProps<typeof StyledBagde>
 
@@ -23,3 +23,5 @@ export const Badge = forwardRef<HTMLSpanElement, BadgeProps>(
     )
   }
 )
+
+Badge.displayName = 'Badge'

@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { cx } from '@snaps-ui/styled-system/css'
-import { floatLabelRecipe } from '@snaps-ui/styled-system/recipes'
+import { floatLabel } from '@snaps-ui/styled-system/recipes'
 
 import { Box } from '../box/index'
 import { Field } from '../field/index'
@@ -39,7 +39,7 @@ export const FloatInput = React.forwardRef<HTMLInputElement, FloatInputProps>(
         />
         <Field.Label
           className={cx(
-            floatLabelRecipe({ float: isFloating, size: inputSize }),
+            floatLabel({ float: isFloating, size: inputSize }),
             className
           )}
         >
@@ -49,3 +49,5 @@ export const FloatInput = React.forwardRef<HTMLInputElement, FloatInputProps>(
     )
   }
 )
+
+FloatInput.displayName = 'FloatInput'

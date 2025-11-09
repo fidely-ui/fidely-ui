@@ -1,6 +1,6 @@
 import { Table } from '@snaps-ui/react/table'
 
-export default function TableBasics() {
+export const TableBasics = () => {
   return (
     <Table.Root>
       <Table.Header>

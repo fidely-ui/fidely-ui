@@ -77,15 +77,6 @@ export const buttonRecipe = defineRecipe({
           outlineColor: 'colorPalette.default',
           outlineOffset: '2px',
         },
-        _selected: {
-          background: 'accent.default',
-          borderColor: 'accent.default',
-          color: 'accent.fg',
-          _hover: {
-            background: 'accent.emphasized',
-            borderColor: 'accent.emphasized',
-          },
-        },
       },
       plain: {
         background: 'transparent',

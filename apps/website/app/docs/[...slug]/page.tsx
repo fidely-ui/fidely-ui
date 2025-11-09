@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { docs } from '~/.velite'
-import { Box, Flex, Typography } from '@snaps-ui/react'
+import { Box, Flex, Heading, Text } from '@snaps-ui/react'
 
 import { MDXContent } from '~/components/mdx-content'
 import { DocsPage } from '~/components/docs-page'
@@ -26,14 +26,14 @@ export default async function DocsPagePage({ params }: Props) {
         {/* Main content */}
         <Box flex="1" maxW={{ base: '100%', md: '75%' }} px={4}>
           <article className="doc-container">
-            <Typography as="h1" fontSize="2xl" fontWeight="bold" mb={2}>
+            <Heading as="h1" fontSize="2xl" fontWeight="bold" mb={2}>
               {doc.title}
-            </Typography>
+            </Heading>
 
             {doc.description && (
-              <Typography color="gray.500" mb={4}>
+              <Text color="gray.500" mb={4}>
                 {doc.description}
-              </Typography>
+              </Text>
             )}
 
             <MDXContent code={doc.code} />
@@ -50,9 +50,9 @@ export default async function DocsPagePage({ params }: Props) {
           py={2}
           display={{ base: 'none', md: 'block' }}
         >
-          <Typography variant="body2" fontWeight="medium" mb={2}>
+          <Text fontWeight="medium" mb={2}>
             On this page
-          </Typography>
+          </Text>
           {/* headings here */}
           <Box as={'ul'} pl={'7px'}>
             {doc.toc?.map((heading) => (

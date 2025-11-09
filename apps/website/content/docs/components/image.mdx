@@ -1,0 +1,58 @@
+---
+title: Image
+description: Used to display images
+---
+
+<ExampleTabs name="image-basic" scope="image" />
+
+## Usage
+
+```tsx
+import { Image } from '@snaps-ui/react'
+```
+
+```tsx
+<Image />
+```
+
+## Examples
+
+### Height
+
+Use the **height** prop to change the height of the image component.
+
+<ExampleTabs name="image-height" scope="image" />
+
+### Circular
+
+An example of how to render a circular image to look like avatar.
+
+<ExampleTabs name="image-circular" scope="image" />
+
+### HTML Width and Height
+
+Use the **htmlWidth** and **htmlHeight** props to set the native width and height of the image component.
+
+<ExampleTabs name="image-with-height" scope="image" />
+
+### Aspect Ratio
+
+Use the **aspectRatio** prop to change the aspect ratio of the image component.
+
+<ExampleTabs name="image-aspect-ratio" scope="image" />
+
+### Next.js Image
+
+Use the **asChild** prop to render the image as a child of the Image component.
+
+```tsx
+import NextImage from 'next/image'
+
+;<Image asChild>
+  <NextImage src="..." alt="..." />
+</Image>
+```
+
+## Props
+
+The **Image** component supports all native props of **HTML** image.

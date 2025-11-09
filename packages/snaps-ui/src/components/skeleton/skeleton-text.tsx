@@ -3,11 +3,14 @@
 import { forwardRef } from 'react'
 import type { Assign, HTMLArkProps } from '@ark-ui/react'
 import { styled } from '@snaps-ui/styled-system/jsx'
-import type { JsxStyleProps } from '@snaps-ui/styled-system/types'
+import type {
+  HTMLStyledProps,
+  JsxStyleProps,
+} from '@snaps-ui/styled-system/types'
+
 import { Skeleton } from './skeleton'
 
-export interface SkeletonTextProps
-  extends Assign<JsxStyleProps, HTMLArkProps<'div'>> {
+export interface SkeletonTextProps extends HTMLStyledProps<'div'> {
   noOfLines?: number
   spacing?: string | number
   skeletonHeight?: string | number

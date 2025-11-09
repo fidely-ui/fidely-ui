@@ -1,6 +1,6 @@
 import { Paper, Stack } from '@snaps-ui/react'
 
-export default function PaperElevation() {
+export const PaperElevation = () => {
   return (
     <Stack gap={2}>
       <Paper elevation={'0'}>Paper elevation (0)</Paper>

@@ -5,21 +5,20 @@ import type { Assign } from '@ark-ui/react'
 import { Clipboard as ArkClipboard } from '@ark-ui/react/clipboard'
 import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
 import {
-  clipboardSlotRecipe,
-  type ClipboardSlotRecipeVariantProps,
+  clipboard,
+  type ClipboardVariantProps,
 } from '@snaps-ui/styled-system/recipes'
 import { LuCheck, LuCopy } from 'react-icons/lu'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
-const { withSlotProvider, withSlotContext } =
-  makeStyleContext(clipboardSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(clipboard)
 
 // -------------------- RootProvider --------------------
 export interface ClipboardRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkClipboard.RootProviderBaseProps>,
-    ClipboardSlotRecipeVariantProps
+    ClipboardVariantProps
   > {}
 
 export const ClipboardRootProvider = withSlotProvider<
@@ -31,7 +30,7 @@ export const ClipboardRootProvider = withSlotProvider<
 export interface ClipboardRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkClipboard.RootBaseProps>,
-    ClipboardSlotRecipeVariantProps
+    ClipboardVariantProps
   > {}
 
 export const ClipboardRoot = withSlotProvider<

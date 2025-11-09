@@ -1,20 +1,18 @@
-import { Accordion, Stack, Typography } from '@snaps-ui/react'
+import { Accordion, Span, Stack, Text } from '@snaps-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 
-export default function AccordionSize() {
+export const AccordionSize = () => {
   return (
     <Stack gap="8">
       {sizes.map((size) => (
         <Stack key={size} gap="3">
-          <Typography variant="body2" fontWeight="medium">
-            {size}
-          </Typography>
+          <Text fontWeight="medium">{size}</Text>
 
           <Accordion.Root size={size} collapsible>
             {items.map((item) => (
               <Accordion.Item key={item.value} value={item.value}>
                 <Accordion.ItemTrigger>
-                  <Typography as="span">{item.title}</Typography>
+                  <Span>{item.title}</Span>
                   <Accordion.ItemIndicator>
                     <BiChevronDown />
                   </Accordion.ItemIndicator>

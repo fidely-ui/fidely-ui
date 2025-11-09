@@ -1,6 +1,6 @@
 import { Switch } from '@snaps-ui/react/switch'
 
-export default function SwitchBasics() {
+export const SwitchBasics = () => {
   return (
     <Switch.Root>
       <Switch.HiddenInput />

@@ -9,8 +9,10 @@ description: A graphical representation of a user, commonly used in profile sect
 
 ```tsx
 import { Avatar } from '@snaps-ui/react'
+```
 
-;<Avatar.Root>
+```tsx
+<Avatar.Root>
   <Avatar.Fallback />
   <Avatar.Image />
 </Avatar.Root>
@@ -27,3 +29,39 @@ You can control the size of the Avatar using the **size** prop.
 When no image source is provided, the Avatar automatically renders the user’s initials and when no initial value it displays an icon.
 
 <ExampleTabs name="avatar-fallback" scope="avatar" />
+
+## Props
+
+### Root
+
+| Prop             | Default  | Type                                                               | Description                                                                                         |
+| ---------------- | -------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| `colorPalette`   | `gray`   | `"red" \| "blue" \| "green" \| "purple" \| "orange" \| "gray"`     | The color palette of the component.                                                                 |
+| `size`           | `md`     | `'full' \| '2xs' \| 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'` | The size of the component.                                                                          |
+| `variant`        | `subtle` | `'solid' \| 'subtle' \| 'outline'`                                 | The variant of the component.                                                                       |
+| `shape`          | `full`   | `'square' \| 'rounded' \| 'full'`                                  | The shape of the component.                                                                         |
+| `as`             | —        | `React.ElementType`                                                | The underlying element to render.                                                                   |
+| `asChild`        | `false`  | `boolean`                                                          | Use the provided child element as the default rendered element, combining their props and behavior. |
+| `unstyled`       | `false`  | `boolean`                                                          | Whether to remove the component's style.                                                            |
+| `ids`            | —        | `Partial<{ root: string; image: string; fallback: string }>`       | The ids of the elements in the avatar. Useful for composition.                                      |
+| `onStatusChange` | —        | `(details: StatusChangeDetails) => void`                           | Function called when the image loading status changes.                                              |
+| `borderless`     | `false`  | `'true' \| 'false'`                                                | Controls whether the avatar is rendered without a border.                                           |
+
+---
+
+### Fallback
+
+| Prop      | Default | Type                  | Description                                                                                         |
+| --------- | ------- | --------------------- | --------------------------------------------------------------------------------------------------- |
+| `name`    | —       | `string \| undefined` | The name to derive the initials from. If not provided, displays a generic icon.                     |
+| `as`      | —       | `React.ElementType`   | The underlying element to render.                                                                   |
+| `asChild` | `false` | `boolean`             | Use the provided child element as the default rendered element, combining their props and behavior. |
+
+---
+
+### Image
+
+| Prop      | Default | Type                | Description                                                                                         |
+| --------- | ------- | ------------------- | --------------------------------------------------------------------------------------------------- |
+| `as`      | —       | `React.ElementType` | The underlying element to render.                                                                   |
+| `asChild` | `false` | `boolean`           | Use the provided child element as the default rendered element, combining their props and behavior. |

@@ -3,22 +3,18 @@
 import type { Assign } from '@ark-ui/react'
 import { Checkbox as ArkCheckbox } from '@ark-ui/react/checkbox'
 import { HTMLStyledProps } from '@snaps-ui/styled-system/jsx'
-import {
-  checkboxSlotRecipe,
-  CheckboxSlotRecipeVariantProps,
-} from '@snaps-ui/styled-system/recipes'
+import { checkbox, CheckboxVariantProps } from '@snaps-ui/styled-system/recipes'
 import { FaCheck } from 'react-icons/fa6'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
-const { withSlotProvider, withSlotContext } =
-  makeStyleContext(checkboxSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(checkbox)
 
 // -------------------- Root Provider --------------------
 export interface CheckboxRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkCheckbox.RootProviderBaseProps>,
-    CheckboxSlotRecipeVariantProps
+    CheckboxVariantProps
   > {}
 
 export const CheckboxRootProvider = withSlotProvider<
@@ -30,7 +26,7 @@ export const CheckboxRootProvider = withSlotProvider<
 export interface CheckboxRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkCheckbox.RootBaseProps>,
-    CheckboxSlotRecipeVariantProps
+    CheckboxVariantProps
   > {}
 
 export const CheckboxRoot = withSlotProvider<HTMLDivElement, CheckboxRootProps>(

@@ -3,23 +3,20 @@
 import { Tabs as ArkTabs } from '@ark-ui/react/tabs'
 import { type Assign } from '@ark-ui/react'
 import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
-import {
-  tabsSlotRecipe,
-  type TabsSlotRecipeVariantProps,
-} from '@snaps-ui/styled-system/recipes'
+import { tabs, type TabsVariantProps } from '@snaps-ui/styled-system/recipes'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
 // ─────────────────────────────────────────────
 // Build context utilities for the `tabsRecipe`
 // ─────────────────────────────────────────────
-const { withSlotProvider, withSlotContext } = makeStyleContext(tabsSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(tabs)
 
 // -------------------- Root --------------------
 export interface TabsRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkTabs.RootProviderBaseProps>,
-    TabsSlotRecipeVariantProps
+    TabsVariantProps
   > {}
 
 export const TabsRootProvider = withSlotProvider<
@@ -30,7 +27,7 @@ export const TabsRootProvider = withSlotProvider<
 export interface TabsRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkTabs.RootBaseProps>,
-    TabsSlotRecipeVariantProps
+    TabsVariantProps
   > {}
 
 export const TabsRoot = withSlotProvider<HTMLDivElement, TabsRootProps>(
@@ -49,7 +46,7 @@ export const TabContent = withSlotContext<HTMLDivElement, TabContentProps>(
 
 // -------------------- indicator --------------------
 export interface TabIndicatorProps
-  extends Assign<HTMLStyledProps<'div'>, ArkTabs.ContentBaseProps> {}
+  extends Assign<HTMLStyledProps<'div'>, ArkTabs.IndicatorBaseProps> {}
 
 export const TabIndicator = withSlotContext<HTMLDivElement, TabIndicatorProps>(
   ArkTabs.Indicator,
@@ -74,4 +71,4 @@ export const TabTrigger = withSlotContext<HTMLButtonElement, TabTriggerProps>(
   'trigger'
 )
 
-export { TabsContext } from '@ark-ui/react/tabs'
+export const TabsContext = ArkTabs.Context

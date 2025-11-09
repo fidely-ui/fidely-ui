@@ -1,6 +1,6 @@
 import { Clipboard } from '@snaps-ui/react'
 
-export default function ClipboardWithTimer() {
+export const ClipboardWithTimer = () => {
   return (
     <Clipboard.Root value="https://snaps-ui.vercel.app/" timeout={2000}>
       <Clipboard.Control>

@@ -4,7 +4,7 @@ import { forwardRef } from 'react'
 import { cx } from '@snaps-ui/styled-system/css'
 
 import { Avatar } from '../avatar/index'
-import { Typography } from '../typography/index'
+import { Text } from '../text/index'
 import { Flex } from '../flex/index'
 import { Stack } from '../stack/index'
 import type { BoxProps } from '../box/index'
@@ -39,11 +39,11 @@ export const Persona = forwardRef<HTMLDivElement, PersonaProps>(
 
     const sizeMap = {
       xs: { gap: 1, nameSize: 'xs', titleSize: 'xs', nameWeight: 'medium' },
-      sm: { gap: 1.5, nameSize: 'sm', titleSize: 'sm', nameWeight: 'medium' },
-      md: { gap: 2, nameSize: 'sm', titleSize: 'sm', nameWeight: 'semibold' },
-      lg: { gap: 3, nameSize: 'md', titleSize: 'md', nameWeight: 'semibold' },
-      xl: { gap: 3.5, nameSize: 'md', titleSize: 'md', nameWeight: 'semibold' },
-      '2xl': { gap: 4, nameSize: 'lg', titleSize: 'lg', nameWeight: 'bold' },
+      sm: { gap: 1.5, nameSize: 'sm', titleSize: 'xs', nameWeight: 'medium' },
+      md: { gap: 2, nameSize: 'sm', titleSize: 'xs', nameWeight: 'semibold' },
+      lg: { gap: 3, nameSize: 'md', titleSize: 'sm', nameWeight: 'semibold' },
+      xl: { gap: 3.5, nameSize: 'md', titleSize: 'sm', nameWeight: 'semibold' },
+      '2xl': { gap: 4, nameSize: 'lg', titleSize: 'md', nameWeight: 'bold' },
     } as const
 
     const current = sizeMap[imgSize]
@@ -65,23 +65,18 @@ export const Persona = forwardRef<HTMLDivElement, PersonaProps>(
         {(name || title) && (
           <Stack>
             {name && (
-              <Typography
-                variant="body1"
+              <Text
                 fontWeight="medium"
                 color="fg.default"
                 fontSize={current.nameSize}
               >
                 {name}
-              </Typography>
+              </Text>
             )}
             {title && (
-              <Typography
-                variant="body2"
-                color="fg.muted"
-                fontSize={current.titleSize}
-              >
+              <Text color="fg.muted" fontSize={current.titleSize}>
                 {title}
-              </Typography>
+              </Text>
             )}
           </Stack>
         )}

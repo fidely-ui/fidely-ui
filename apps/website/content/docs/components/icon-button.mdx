@@ -9,8 +9,10 @@ description: A button that displays an icon instead of text, ideal for compact a
 
 ```tsx
 import { IconButton } from '@snaps-ui/react'
+```
 
-;<IconButton>
+```tsx
+<IconButton>
   <YourCustomIcon />
 </IconButton>
 ```
@@ -28,3 +30,31 @@ You can control the size of the Button using the **size** prop.
 You can control the appearance of the icon-button using the **variant** prop.
 
 <ExampleTabs name="icon-button-variant" scope="icon-button" />
+
+## ColorPalette
+
+Use the **colorPalette** prop to change the color and background appearance of the icon-button.
+
+<ExampleTabs name="icon-button-colors" scope="icon-button" />
+
+## With Spinner
+
+When using **IconButton** with spinner pass the **isLoading** prop
+
+<ExampleTabs name="icon-button-spinner" scope="icon-button" />
+
+## Props
+
+### IconButton
+
+| Prop           | Default | Type                                                           | Description                                                                                         |
+| -------------- | ------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `aria-label`   | `-`     | `string`                                                       | aria-label for.                                                                                     |
+| `colorPalette` | `gray`  | `"red" \| "blue" \| "green" \| "purple" \| "orange" \| "gray"` | The color palette of the component.                                                                 |
+| `size`         | `md`    | `'2xs' \| 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'`       | The size of the button.                                                                             |
+| `variant`      | `solid` | `'solid' \| 'subtle' \| 'outline' \| 'ghost' \| 'plain'`       | The variant that defines the button's visual style.                                                 |
+| `loading`      | —       | `boolean \| undefined`                                         | If `true`, the button will display a loading spinner.                                               |
+| `loadingText`  | —       | `React.ReactNode \| undefined`                                 | The text to display while the button is loading.                                                    |
+| `spinner`      | —       | `React.ReactNode \| undefined`                                 | The spinner element to render while loading.                                                        |
+| `as`           | —       | `React.ElementType`                                            | The underlying element to render.                                                                   |
+| `asChild`      | `false` | `boolean`                                                      | Use the provided child element as the default rendered element, combining their props and behavior. |
