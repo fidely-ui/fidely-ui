@@ -4,19 +4,19 @@ import type { Assign, CollectionItem } from '@ark-ui/react'
 import { Select as ArkSelect } from '@ark-ui/react/select'
 import type { HTMLStyledProps } from '@snaps-ui/styled-system/jsx'
 import {
-  selectSlotRecipe,
-  type SelectSlotRecipeVariantProps,
+  select,
+  type SelectVariantProps,
 } from '@snaps-ui/styled-system/recipes'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
-const { withSlotProvider, withSlotContext } = makeStyleContext(selectSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(select)
 
 // -------------------- RootProvider --------------------
 export interface SelectRootProviderProps<T extends CollectionItem = any>
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkSelect.RootProviderBaseProps<T>>,
-    SelectSlotRecipeVariantProps
+    SelectVariantProps
   > {}
 
 export const SelectRootProvider = withSlotProvider<
@@ -28,7 +28,7 @@ export const SelectRootProvider = withSlotProvider<
 export interface SelectRootProps<T extends CollectionItem = any>
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkSelect.RootBaseProps<T>>,
-    SelectSlotRecipeVariantProps
+    SelectVariantProps
   > {}
 
 export const SelectRoot = withSlotProvider<HTMLDivElement, SelectRootProps>(

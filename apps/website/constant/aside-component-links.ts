@@ -59,6 +59,7 @@ export const asideComponentLinks = [
       { name: 'Pin Input', new: false, linkUrl: 'pin-input' },
       { name: 'Clipboard', new: false, linkUrl: 'clipboard' },
       { name: 'Switch', new: false, linkUrl: 'switch' },
+      { name: 'Select', new: false, linkUrl: 'select' },
     ],
   },
 

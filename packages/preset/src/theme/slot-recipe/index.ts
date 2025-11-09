@@ -23,4 +23,5 @@ export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
   switchRecipe: switchSlotRecipe,
   tabs: tabsSlotRecipe,
   table: tableSlotRecipe,
+  select: selectSlotRecipe,
 }
