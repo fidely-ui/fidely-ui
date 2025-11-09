@@ -3,23 +3,20 @@
 import type { Assign, HTMLArkProps, PolymorphicProps } from '@ark-ui/react'
 import { ark } from '@ark-ui/react/factory'
 import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
-import {
-  cardSlotRecipe,
-  type CardSlotRecipeVariantProps,
-} from '@snaps-ui/styled-system/recipes'
+import { card, type CardVariantProps } from '@snaps-ui/styled-system/recipes'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
 // ─────────────────────────────────────────────
 // Build context utilities for the `cardRecipe`
 // ─────────────────────────────────────────────
-const { withSlotProvider, withSlotContext } = makeStyleContext(cardSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(card)
 
 // -------------------- Root --------------------
 export interface CardRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, PolymorphicProps>,
-    CardSlotRecipeVariantProps
+    CardVariantProps
   > {}
 
 export const CardRoot = withSlotProvider<HTMLDivElement, CardRootProps>(

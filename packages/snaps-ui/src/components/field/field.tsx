@@ -4,22 +4,19 @@ import * as React from 'react'
 import type { Assign, HTMLArkProps } from '@ark-ui/react'
 import { ark } from '@ark-ui/react/factory'
 import { Field as ArkField, useFieldContext } from '@ark-ui/react/field'
-import {
-  fieldSlotRecipe,
-  type FieldSlotRecipeVariantProps,
-} from '@snaps-ui/styled-system/recipes'
+import { field, type FieldVariantProps } from '@snaps-ui/styled-system/recipes'
 import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
 import { cx } from '@snaps-ui/styled-system/css'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
-const { withSlotProvider, withSlotContext } = makeStyleContext(fieldSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(field)
 
 // -------------------- RootProvider --------------------
 export interface FieldRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkField.RootProviderBaseProps>,
-    FieldSlotRecipeVariantProps
+    FieldVariantProps
   > {}
 
 export const FieldRootProvider = withSlotProvider<
@@ -31,7 +28,7 @@ export const FieldRootProvider = withSlotProvider<
 export interface FieldRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkField.RootBaseProps>,
-    FieldSlotRecipeVariantProps
+    FieldVariantProps
   > {}
 
 export const FieldRoot = withSlotProvider<HTMLDivElement, FieldRootProps>(
@@ -86,7 +83,7 @@ export const FieldRequiredIndicator = React.forwardRef<
 >(function FieldIndicator(props, ref) {
   const { fallback, className, children = '*', ...rest } = props
 
-  const slotStyles = fieldSlotRecipe().requiredIndicator
+  const slotStyles = field().requiredIndicator
 
   const context = useFieldContext()
   if (!context.required) {
@@ -105,4 +102,4 @@ export const FieldRequiredIndicator = React.forwardRef<
   )
 })
 
-export { FieldContext } from '@ark-ui/react/field'
+export const FieldContext = ArkField.Context

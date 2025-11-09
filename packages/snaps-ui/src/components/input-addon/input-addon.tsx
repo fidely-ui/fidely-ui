@@ -3,11 +3,11 @@
 import { forwardRef } from 'react'
 import { ark } from '@ark-ui/react/factory'
 import { styled } from '@snaps-ui/styled-system/jsx'
-import { inputAddonRecipe } from '@snaps-ui/styled-system/recipes'
+import { inputAddon } from '@snaps-ui/styled-system/recipes'
 
 import { ComponentProps } from '@snaps-ui/styled-system/types'
 
-const StyledInputAddon = styled(ark.div, inputAddonRecipe)
+const StyledInputAddon = styled(ark.div, inputAddon)
 
 export type InputAddonProps = ComponentProps<typeof StyledInputAddon>
 

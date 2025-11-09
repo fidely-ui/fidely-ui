@@ -3,12 +3,12 @@
 import * as React from 'react'
 import { ark } from '@ark-ui/react/factory'
 import { styled } from '@snaps-ui/styled-system/jsx'
-import { inputGroupRecipe } from '@snaps-ui/styled-system/recipes'
+import { inputGroup } from '@snaps-ui/styled-system/recipes'
 
 import { type BoxProps } from '../box/index'
 import { InputAddon, type InputAddonProps } from '../input-addon/index'
 
-const StyledInputGroup = styled(ark.div, inputGroupRecipe)
+const StyledInputGroup = styled(ark.div, inputGroup)
 
 export interface InputGroupProps extends Omit<BoxProps, 'direction'> {
   startAddon?: React.ReactNode | undefined

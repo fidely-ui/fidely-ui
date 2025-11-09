@@ -17,7 +17,8 @@ export default defineConfig({
     './components/**/*.{js,jsx,ts,tsx}',
     '../patherns/src/examples/**/*.{js,jsx,ts,tsx}',
   ],
-  outdir: 'dist',
+  importMap: '@snaps-ui/styled-system',
+  outdir: 'styled-system',
   jsxFramework: 'react',
   staticCss: {
     recipes: '*',

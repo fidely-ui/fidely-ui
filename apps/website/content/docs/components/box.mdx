@@ -1,0 +1,38 @@
+---
+title: Box
+description: Snaps UI Box is a simple div tag with styled system.
+---
+
+<ExampleTabs name="box-basic" scope="box" />
+
+## Usage
+
+```tsx
+import { Box } from '@snaps-ui/react'
+```
+
+```tsx
+<Box>Hey there</Box>
+```
+
+## asChild
+
+Use the **asChild** prop to forward the styles to the child component or as another element.
+
+<ExampleTabs name="box-as-child" scope="box" />
+
+## Using as Prop
+
+By default **Box** renders as div tag to change the default element use the **as** prop to change the element
+
+**Note:** every snaps ui component accept the **as** prop
+
+```tsx
+<Box as="p">Paragraph element</Box>
+<Box as="h1">Heading element</Box>
+<Box as="span">Span element</Box>
+<Box as="section">Section element</Box>
+<Box as="article">Article element</Box>
+```
+
+## Props

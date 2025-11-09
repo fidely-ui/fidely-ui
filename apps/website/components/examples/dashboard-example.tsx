@@ -13,9 +13,9 @@ import { InputGroup } from '@snaps-ui/react/input-group'
 import { InputAddon } from '@snaps-ui/react/input-addon'
 import { Persona } from '@snaps-ui/react/persona'
 import { Table } from '@snaps-ui/react/table'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
+import { Heading } from '@snaps-ui/react/heading'
 import { VStack } from '@snaps-ui/react/stack'
-
 import { BiSearch } from 'react-icons/bi'
 import { FaArrowTrendUp } from 'react-icons/fa6'
 import { HiOutlineDotsHorizontal } from 'react-icons/hi'
@@ -60,14 +60,14 @@ export const DashboardSideBar = () => {
   return (
     <Box position={'relative'} height={'100vh'}>
       <Box padding={'10px'} borderBottom={'0.6px solid white'}>
-        <Typography fontWeight={'bold'} variant={'h5'}>
+        <Heading fontWeight={'bold'} as={'h3'} textStyle={'2xl'}>
           Snaps Inc.
-        </Typography>
+        </Heading>
       </Box>
 
       <Box mt={'15px'}>
         {asideItems.map((nav) => (
-          <Typography
+          <Text
             padding={'12px'}
             _hover={{ bg: 'bg.subtle' }}
             cursor={'pointer'}
@@ -77,7 +77,7 @@ export const DashboardSideBar = () => {
             gap={'2'}
           >
             <nav.icon /> {nav.label}
-          </Typography>
+          </Text>
         ))}
       </Box>
 
@@ -162,8 +162,8 @@ export const DashboardMain = ({ searchValue }: DashboardMainProps) => {
                   alignItems={'flex-start'}
                 >
                   <VStack gap={'2'}>
-                    <Typography variant={'subtitle2'}>{data.name}</Typography>
-                    <Typography variant={'body2'}>{data.numbers}</Typography>
+                    <Heading as={'h5'}>{data.name}</Heading>
+                    <Text textStyle={'md'}>{data.numbers}</Text>
                   </VStack>
 
                   <Box>
@@ -210,7 +210,7 @@ export const DashboardMain = ({ searchValue }: DashboardMainProps) => {
                       </Badge>
                     </Table.Cell>
                     <Table.Cell>{d.id}</Table.Cell>
-                    <Table.Cell>
+                    <Table.Cell textAlign={'right'}>
                       <IconButton variant={'ghost'} size={'sm'}>
                         <HiOutlineDotsHorizontal />
                       </IconButton>

@@ -2,15 +2,15 @@
 
 import { Box } from '@snaps-ui/react/box'
 import { Center } from '@snaps-ui/react/center'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
 
 export const Banner = () => {
   return (
     <Box bg="orange.9" p="2" w="full">
       <Center>
-        <Typography variant="body1" fontWeight="bold" color="white">
+        <Text fontWeight="bold" color="white">
           Snaps UI is still in development mode. 🚀
-        </Typography>
+        </Text>
       </Center>
     </Box>
   )

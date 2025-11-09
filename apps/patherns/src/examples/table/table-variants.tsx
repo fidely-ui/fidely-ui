@@ -1,4 +1,4 @@
-import { Stack, Table, Typography, VStack } from '@snaps-ui/react'
+import { Stack, Table, Text, VStack } from '@snaps-ui/react'
 
 export const TableVariants = () => {
   const variants = ['subtle', 'outline', 'striped'] as const
@@ -7,9 +7,7 @@ export const TableVariants = () => {
     <Stack gap={3}>
       {variants.map((variant) => (
         <VStack key={variant} gap={4}>
-          <Typography variant={'body2'} color={'fg.muted'}>
-            {variant}
-          </Typography>
+          <Text color={'fg.muted'}>{variant}</Text>
 
           <Table.Root size={'sm'} variant={variant}>
             <Table.Header>

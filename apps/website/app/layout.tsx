@@ -3,9 +3,9 @@ import { Geist, Geist_Mono, Inter } from 'next/font/google'
 
 import { AppProvider } from '~/app/proider'
 import { NavBar } from '~/components/navbar'
+import { Banner } from '~/components/banner'
 
 import './global.css'
-import { Banner } from '~/components/banner'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

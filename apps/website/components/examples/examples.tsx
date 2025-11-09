@@ -1,3 +1,5 @@
+'use client'
+
 import { Avatar, AvatarGroup } from '@snaps-ui/react/avatar'
 import { Button } from '@snaps-ui/react/button'
 import { Box } from '@snaps-ui/react/box'
@@ -8,7 +10,8 @@ import { Input } from '@snaps-ui/react/input'
 import { Paper } from '@snaps-ui/react/paper'
 import { HStack, Stack, VStack } from '@snaps-ui/react/stack'
 import { Textarea } from '@snaps-ui/react/textarea'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
+import { Heading } from '@snaps-ui/react/heading'
 import { Tabs } from '@snaps-ui/react/tabs'
 import { Checkbox } from '@snaps-ui/react/checkbox'
 import { Spinner } from '@snaps-ui/react/spinner'
@@ -25,10 +28,8 @@ export const BillingAddress = () => {
   return (
     <Paper width={'full'} height="min-content">
       <Stack gap={2} mb={'15px'}>
-        <Typography variant={'subtitle1'}>Billing Address</Typography>
-        <Typography variant={'body1'}>
-          The billing address associated with your payment method
-        </Typography>
+        <Heading as={'h3'}>Billing Address</Heading>
+        <Text>The billing address associated with your payment method</Text>
       </Stack>
 
       <Stack mb={'4'}>
@@ -37,9 +38,7 @@ export const BillingAddress = () => {
           <Checkbox.Control>
             <Checkbox.Indicator />
           </Checkbox.Control>
-          <Checkbox.Label color={'fg.muted'}>
-            Same as Shipping address.
-          </Checkbox.Label>
+          <Checkbox.Label>Same as Shipping address.</Checkbox.Label>
         </Checkbox.Root>
       </Stack>
 
@@ -70,10 +69,8 @@ export const PaymentMethod = () => {
   return (
     <Paper width={'full'} height="min-content">
       <Stack gap={2} mb={'15px'}>
-        <Typography variant={'subtitle1'}>Payment Method</Typography>
-        <Typography variant={'subtitle2'}>
-          All transactions are secure and encrypted
-        </Typography>
+        <Heading as={'h3'}>Payment Method</Heading>
+        <Text>All transactions are secure and encrypted</Text>
       </Stack>
 
       <Stack gap={5}>
@@ -132,12 +129,8 @@ export const TeamMembers = () => {
               <Avatar.Fallback>+3</Avatar.Fallback>
             </Avatar.Root>
           </AvatarGroup>
-          <Typography variant={'body1'} textAlign={'center'}>
-            No Team Members
-          </Typography>
-          <Typography variant={'body2'}>
-            Invite your team to collaborate on this project.
-          </Typography>
+          <Text textAlign={'center'}>No Team Members</Text>
+          <Text>Invite your team to collaborate on this project.</Text>
 
           <Button colorPalette={'orange'}>
             <FaPlus /> Invite Member
@@ -152,7 +145,7 @@ export const TabsExample = () => {
   return (
     <Paper width={'full'} height="min-content">
       <Stack mb={'15px'}>
-        <Typography variant={'subtitle1'}>Tabs</Typography>
+        <Heading as={'h3'}>Tabs</Heading>
       </Stack>
 
       <Tabs.Root variant="outline" defaultValue="snaps">
@@ -163,21 +156,23 @@ export const TabsExample = () => {
         </Tabs.List>
 
         <Tabs.Content value="snaps" width="full" p="3">
-          <Typography>
+          <Text textStyle={'sm'}>
             Snaps UI is a modern UI library with reusable, intuitive components
             that help you ship products faster. Create beautiful, consistent
             interfaces with customizable, production-ready building blocks.
-          </Typography>
+          </Text>
         </Tabs.Content>
 
         <Tabs.Content value="dashboard" p="3">
-          <Typography>Coming soon — a visual dashboard overview.</Typography>
+          <Text textStyle={'sm'}>
+            Coming soon — a visual dashboard overview.
+          </Text>
         </Tabs.Content>
 
         <Tabs.Content value="authentication" p="3">
-          <Typography>
+          <Text textStyle={'sm'}>
             Manage user sign-in and security settings here.
-          </Typography>
+          </Text>
         </Tabs.Content>
       </Tabs.Root>
     </Paper>
@@ -197,9 +192,9 @@ export const ProcessingCard = () => {
             <Spinner />
           </VStack>
 
-          <Typography>Payment processing</Typography>
+          <Text>Payment processing</Text>
 
-          <Typography>Please wait while we process your payment</Typography>
+          <Text>Please wait while we process your payment</Text>
 
           <Button colorPalette={'orange'} width={'auto'}>
             Stop processing
@@ -211,15 +206,15 @@ export const ProcessingCard = () => {
 }
 
 export const MoreComponents = () => {
-  const { theme, toggleTheme } = useToggleTheme()
+  const { toggleTheme } = useToggleTheme()
 
   return (
     <Paper width={'full'} height="min-content">
       <Stack gap={4} mb={'15px'}>
         <VStack gap={4}>
-          <Typography variant={'body2'} color={'fg.muted'}>
+          <Heading as={'h6'} textStyle={'lg'}>
             Input Group
-          </Typography>
+          </Heading>
           <InputGroup startAddon={<BiUser />}>
             <Input placeholder="@justicechimobi_" />
           </InputGroup>
@@ -236,9 +231,9 @@ export const MoreComponents = () => {
         </VStack>
 
         <VStack gap={3}>
-          <Typography variant={'body2'} color={'fg.muted'}>
+          <Heading as={'h6'} textStyle={'lg'}>
             Switch
-          </Typography>
+          </Heading>
 
           <Switch.Root
             colorPalette={'orange'}
@@ -249,16 +244,14 @@ export const MoreComponents = () => {
             <Switch.Control>
               <Switch.Thumb />
             </Switch.Control>
-            <Switch.Label>
-              Switch {theme === 'light' ? 'Dark' : 'Light'} mode
-            </Switch.Label>
+            <Switch.Label>Switch color mode</Switch.Label>
           </Switch.Root>
         </VStack>
 
         <VStack gap={3}>
-          <Typography variant={'body2'} color={'fg.muted'}>
+          <Heading as={'h6'} textStyle={'lg'}>
             Persona
-          </Typography>
+          </Heading>
           <Persona
             name="Leanne Graham"
             title="harness real-time e-markets"

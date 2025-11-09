@@ -3,12 +3,12 @@
 import * as React from 'react'
 import { ark, type PolymorphicProps } from '@ark-ui/react/factory'
 import { styled } from '@snaps-ui/styled-system/jsx'
-import { buttonRecipe } from '@snaps-ui/styled-system/recipes'
+import { button } from '@snaps-ui/styled-system/recipes'
 import { type ComponentProps } from '@snaps-ui/styled-system/types'
 
 import { Loader } from '../loader'
 
-const StyledButton = styled(ark.button, buttonRecipe)
+const StyledButton = styled(ark.button, button)
 
 interface LoadingButtonProps {
   isLoading?: boolean

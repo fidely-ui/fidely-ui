@@ -14,21 +14,14 @@ export const StyledFlex = styled(ark.div, {
 
 type FlexBaseProps = ComponentProps<typeof StyledFlex>
 
-export interface FlexProps extends FlexBaseProps {
-  inline?: boolean
-}
+export interface FlexProps extends FlexBaseProps {}
 
 export const Flex = forwardRef<HTMLDivElement, FlexProps>(
   function Flex(props, ref) {
-    const { inline, children, className, ...rest } = props
+    const { children, className, ...rest } = props
 
     return (
-      <StyledFlex
-        ref={ref}
-        display={inline ? 'inline-flex' : 'flex'}
-        className={cx('snaps-flex', className)}
-        {...rest}
-      >
+      <StyledFlex ref={ref} className={cx('snaps-flex', className)} {...rest}>
         {children}
       </StyledFlex>
     )
