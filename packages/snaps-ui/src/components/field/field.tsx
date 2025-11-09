@@ -63,15 +63,6 @@ export const FieldLabel = withSlotContext<HTMLLabelElement, FieldLabelProps>(
   'label'
 )
 
-// -------------------- Select --------------------
-export interface FieldSelectProps
-  extends Assign<HTMLStyledProps<'select'>, ArkField.SelectBaseProps> {}
-
-export const FieldSelect = withSlotContext<HTMLLabelElement, FieldSelectProps>(
-  ArkField.Select,
-  'select'
-)
-
 // -------------------- Indicator --------------------
 export interface FieldRequiredIndicatorProps extends HTMLArkProps<'span'> {
   fallback?: React.ReactNode | undefined

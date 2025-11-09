@@ -4,7 +4,6 @@ export {
   FieldLabel,
   FieldError,
   FieldHelperText,
-  FieldSelect,
   FieldRequiredIndicator,
   FieldContext,
 } from './field'
@@ -15,7 +14,6 @@ export type {
   FieldLabelProps,
   FieldErrorProps,
   FieldHelperTextProps,
-  FieldSelectProps,
   FieldRequiredIndicatorProps,
 } from './field'
 

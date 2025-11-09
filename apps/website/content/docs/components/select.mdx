@@ -1,0 +1,101 @@
+---
+title: Select
+description: Displays a list of options for the user to pick from.
+---
+
+<ExampleTabs name="select-basics" scope="select" />
+
+## Usage
+
+```tsx
+import { Select } from '@snaps-ui/react'
+```
+
+```tsx
+<Select.Root
+  collection={collection}
+  positioning={{ sameWidth: true }}
+  maxW={'350px'}
+>
+  <Select.Label>Framework</Select.Label>
+  <Select.Control>
+    <Select.Trigger>
+      <Select.ValueText placeholder="Select a Framework" />
+      <Select.Indicator>
+        <BiChevronDown />
+      </Select.Indicator>
+    </Select.Trigger>
+    <Select.ClearTrigger>Clear</Select.ClearTrigger>
+  </Select.Control>
+  <Portal>
+    <Select.Positioner>
+      <Select.Content>
+        <Select.ItemGroup>
+          <Select.ItemGroupLabel>Frameworks</Select.ItemGroupLabel>
+          <Select.Item key={item} item={item}>
+            <Select.ItemText>Hello</Select.ItemText>
+            <Select.ItemIndicator>✓</Select.ItemIndicator>
+          </Select.Item>
+        </Select.ItemGroup>
+      </Select.Content>
+    </Select.Positioner>
+  </Portal>
+  <Select.HiddenSelect />
+</Select.Root>
+```
+
+## Examples
+
+### Variants
+
+Use the **variant** prop to change the appearance of the Select component.
+
+<ExampleTabs name="select-variant" scope="select" />
+
+### Sizes
+
+Use the **size** prop to adjust the size of the Select component.
+
+<ExampleTabs name="select-size" scope="select" />
+
+### Option Group
+
+Use the **Select.ItemGroup** component to group related select options.
+
+<ExampleTabs name="select-group" scope="select" />
+
+### Controlled
+
+Use the **value** and **onValueChange** props to control the select component.
+
+<ExampleTabs name="select-controlled" scope="select" />
+
+### Disabled
+
+Use the **value** and **onValueChange** props to control the select component.
+
+<ExampleTabs name="select-disabled" scope="select" />
+
+### Multiple
+
+Use the **multiple** prop to allow multiple selections.
+
+<ExampleTabs name="select-multiple" scope="select" />
+
+### Positioning
+
+Use the **positioning** prop to control the underlying **floating-ui** options of the select component.
+
+<ExampleTabs name="select-positioning" scope="select" />
+
+### ClearTrigger
+
+Render the **Select.ClearTrigger** component to show a clear text or button (you can customize its design as needed).
+
+Clicking the clear button will clear the selected value.
+
+<ExampleTabs name="select-trigger" scope="select" />
+
+## Props
+
+### Root
