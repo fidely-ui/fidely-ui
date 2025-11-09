@@ -26,7 +26,7 @@ export default function NotFound() {
             404 Page
           </Heading>
           <Text mt={'25px'}>
-            Hey, the page you're looking for is currently not available
+            {`Hey, the page you're looking for is currently not available`}
           </Text>
         </Box>
 
