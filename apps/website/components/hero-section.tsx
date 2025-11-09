@@ -1,8 +1,5 @@
-'use client'
-
 import Link from 'next/link'
 import { Box } from '@snaps-ui/react/box'
-import { Container } from '@snaps-ui/react/container'
 import { Center } from '@snaps-ui/react/center'
 import { Clipboard } from '@snaps-ui/react/clipboard'
 import { Button } from '@snaps-ui/react/button'
@@ -10,8 +7,8 @@ import { Flex } from '@snaps-ui/react/flex'
 import { IconButton } from '@snaps-ui/react/icon-button'
 import { Input } from '@snaps-ui/react/input'
 import { Stack } from '@snaps-ui/react/stack'
-import { Typography } from '@snaps-ui/react/typography'
-
+import { Heading } from '@snaps-ui/react/heading'
+import { Text } from '@snaps-ui/react/text'
 import { SiArkecosystem } from 'react-icons/si'
 import { IoLogoReact } from 'react-icons/io5'
 import { SiTypescript } from 'react-icons/si'
@@ -43,111 +40,110 @@ const Logos = [
 export const HeroSection = () => {
   return (
     <Box as={'section'} height={'auto'}>
-      <Container maxW="8xl">
-        <Box
-          display={'flex'}
-          flexDirection={'column'}
-          justifyContent={'center'}
-          alignItems={'center'}
-          p={'15px'}
-          width={{ base: '100%', md: '85%' }}
-          m={'5rem auto'}
-          textAlign={'center'}
+      <Box
+        display={'flex'}
+        flexDirection={'column'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        p={'15px'}
+        width={{ base: '100%', md: '65%' }}
+        m={'5rem auto'}
+        textAlign={'center'}
+      >
+        <Heading
+          as="h1"
+          textStyle={{ base: '3xl', md: '7xl' }}
+          textAlign="center"
+          color={'orange.9'}
+          lineHeight={'1.4em'}
         >
-          <Typography
-            variant="h1"
-            fontSize={{ base: '30px', md: '65px' }}
-            textAlign="center"
-            color={'orange.9'}
-            lineHeight={'1.4em'}
+          Build modern apps with speed and flexibility
+        </Heading>
+
+        <Text
+          my={'10px'}
+          textStyle={{ base: 'lg', md: 'xl' }}
+          color={'fg.subtle'}
+          textAlign={'center'}
+          lineHeight={'1.7em'}
+        >
+          Snaps UI is a modern UI library with reusable, intuitive components
+          that help you ship products faster to create beautiful, consistent
+          interfaces with customizable, production-ready building blocks.
+        </Text>
+
+        <Stack
+          flexDirection={{ base: 'column', sm: 'row' }}
+          alignItems={'center'}
+          gap="3"
+          mt={'25px'}
+          mb={'5px'}
+        >
+          <Button
+            variant={'solid'}
+            size={'xl'}
+            colorPalette={'orange'}
+            asChild
+            ripple
+            px={'30px'}
           >
-            Build modern apps with speed and flexibility
-          </Typography>
+            <Link href={'/docs/getting-started/installation'}>Get Started</Link>
+          </Button>
 
-          <Typography
-            variant="subtitle1"
-            my={'10px'}
-            color={'fg.subtle'}
-            textAlign={'center'}
-            lineHeight={'1.7em'}
+          <Clipboard.Root value={'npm i @snaps-ui/react'} width={'100%'}>
+            <Clipboard.Control>
+              <Clipboard.Input asChild>
+                <Input />
+              </Clipboard.Input>
+              <Clipboard.Trigger asChild>
+                <IconButton variant="outline">
+                  <Clipboard.Indicator />
+                </IconButton>
+              </Clipboard.Trigger>
+            </Clipboard.Control>
+          </Clipboard.Root>
+        </Stack>
+
+        <Box mt="2rem" opacity={0.7}>
+          <Center>
+            <Text fontSize={'xs'} mb={4} mt={1}>
+              Powered by
+            </Text>
+          </Center>
+
+          <Flex
+            alignItems="center"
+            justifyContent="center"
+            flexWrap={'wrap'}
+            gap={8}
+            display={'flex'}
           >
-            Snaps UI is a modern UI library with reusable, intuitive components
-            that help you ship products faster to create beautiful, consistent
-            interfaces with customizable, production-ready building blocks.
-          </Typography>
-
-          <Stack
-            flexDirection={{ base: 'column', sm: 'row' }}
-            alignItems={'center'}
-            gap="3"
-            mt={'25px'}
-            mb={'5px'}
-          >
-            <Button
-              variant={'solid'}
-              size={'xl'}
-              colorPalette={'orange'}
-              asChild
-              ripple
-            >
-              <Link href={'/docs/getting-started'}>Get Started</Link>
-            </Button>
-
-            <Clipboard.Root value={'npm i @snaps-ui/react'} width={'100%'}>
-              <Clipboard.Control>
-                <Clipboard.Input asChild>
-                  <Input />
-                </Clipboard.Input>
-                <Clipboard.Trigger asChild>
-                  <IconButton variant="outline">
-                    <Clipboard.Indicator />
-                  </IconButton>
-                </Clipboard.Trigger>
-              </Clipboard.Control>
-            </Clipboard.Root>
-          </Stack>
-
-          <Box mt="2rem" opacity={0.7}>
-            <Center>
-              <Typography variant="body2" fontSize={'xs'} mb={4} mt={1}>
-                Powered by
-              </Typography>
-            </Center>
-
-            <Flex
-              alignItems="center"
-              justifyContent="center"
-              flexWrap={'wrap'}
-              gap={8}
-              display={'flex'}
-            >
-              {Logos.map(({ href, label, icon }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            {Logos.map(({ href, label, icon }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Flex
+                  direction="column"
+                  alignItems="center"
+                  gap={3}
+                  _hover={{
+                    textDecoration: 'none',
+                    transform: 'scale(1.05)',
+                  }}
                 >
-                  <Flex
-                    direction="column"
-                    alignItems="center"
-                    gap={3}
-                    _hover={{
-                      textDecoration: 'none',
-                      transform: 'scale(1.05)',
-                    }}
-                  >
-                    <Box fontSize={{ base: 'sm', md: '2xl' }}>{icon}</Box>
-                    <Typography variant="body2" mt={1}>
-                      {label}
-                    </Typography>
-                  </Flex>
-                </Link>
-              ))}
-            </Flex>
-          </Box>
+                  <Box fontSize={{ base: 'sm', md: '2xl' }}>{icon}</Box>
+                  <Text textStyle={{ base: 'sm', md: 'md' }} mt={1}>
+                    {label}
+                  </Text>
+                </Flex>
+              </Link>
+            ))}
+          </Flex>
         </Box>
-      </Container>
+      </Box>
     </Box>
   )
 }

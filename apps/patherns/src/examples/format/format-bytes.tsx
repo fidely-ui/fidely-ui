@@ -1,26 +1,26 @@
-import { FormatByte, Stack, Typography } from '@snaps-ui/react'
+import { FormatByte, Stack, Text } from '@snaps-ui/react'
 
 export const FormatBytes = () => {
   return (
     <Stack gap={2}>
-      <Typography>
+      <Text>
         <FormatByte value={50} />
-      </Typography>
+      </Text>
 
-      <Typography>
+      <Text>
         <FormatByte value={500} />
-      </Typography>
+      </Text>
 
-      <Typography>
+      <Text>
         <FormatByte value={50000} />
-      </Typography>
-      <Typography>
+      </Text>
+      <Text>
         <FormatByte value={50000000} />
-      </Typography>
+      </Text>
 
-      <Typography>
+      <Text>
         <FormatByte value={1450.45} unit="bit" />
-      </Typography>
+      </Text>
     </Stack>
   )
 }

@@ -3,12 +3,12 @@
 import * as React from 'react'
 import { LuSearch } from 'react-icons/lu'
 import { cx } from '@snaps-ui/styled-system/css'
-import { commandInputRecipe } from '@snaps-ui/styled-system/recipes'
+import { commandInput } from '@snaps-ui/styled-system/recipes'
 
 import { Group } from '../group/index'
 import { Kbd } from '../kbd/index'
 import { Flex } from '../flex/index'
-import { Typography } from '../typography/index'
+import { Text } from '../text/index'
 import { BoxProps } from '../box/index'
 import { isMobileDevice } from '../../utils/is-mobile-device'
 
@@ -31,7 +31,7 @@ export const CommandInput = React.forwardRef<
     className,
     ...rest
   } = props
-  const slotStyles = commandInputRecipe()
+  const slotStyles = commandInput()
 
   const [isMobile, setIsMobile] = React.useState(false)
   const [resolvedShortcut, setResolvedShortcut] = React.useState<string | null>(
@@ -83,7 +83,7 @@ export const CommandInput = React.forwardRef<
     >
       <Flex alignItems="center" gap="2">
         {leftElement ?? <LuSearch />}
-        <Typography color="fg.muted">{placeholder}</Typography>
+        <Text color="fg.muted">{placeholder}</Text>
       </Flex>
 
       {!isMobile && resolvedShortcut ? (

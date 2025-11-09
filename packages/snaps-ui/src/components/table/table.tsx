@@ -3,21 +3,18 @@
 import type { Assign, PolymorphicProps } from '@ark-ui/react'
 import { ark } from '@ark-ui/react/factory'
 import { HTMLStyledProps, styled } from '@snaps-ui/styled-system/jsx'
-import {
-  tableSlotRecipe,
-  type TableSlotRecipeVariantProps,
-} from '@snaps-ui/styled-system/recipes'
+import { table, type TableVariantProps } from '@snaps-ui/styled-system/recipes'
 
 import { makeStyleContext } from '../../system/make-style-context'
 import { forwardRef } from 'react'
 import { cx } from '@snaps-ui/styled-system/css'
 
-const { withSlotProvider, withSlotContext } = makeStyleContext(tableSlotRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(table)
 
 // -------------------- Root --------------------
 export interface TableRootProps
   extends Assign<HTMLStyledProps<'table'>, PolymorphicProps>,
-    TableSlotRecipeVariantProps {}
+    TableVariantProps {}
 
 export const TableRoot = withSlotProvider<HTMLTableElement, TableRootProps>(
   ark.table,
@@ -92,7 +89,7 @@ export interface TableScrollAreaProps extends HTMLStyledProps<'div'> {}
 
 export const TableScrollArea = forwardRef<HTMLDivElement, TableScrollAreaProps>(
   function TableScrollArea(props, ref) {
-    const slotStyles = tableSlotRecipe().scrollArea
+    const slotStyles = table().scrollArea
 
     return (
       <styled.div

@@ -3,10 +3,10 @@
 import { forwardRef } from 'react'
 import { ark } from '@ark-ui/react/factory'
 import type { ComponentProps } from '@snaps-ui/styled-system/types'
-import { paperRecipe } from '@snaps-ui/styled-system/recipes'
+import { paper } from '@snaps-ui/styled-system/recipes'
 import { styled } from '@snaps-ui/styled-system/jsx'
 
-const StyledPaper = styled(ark.div, paperRecipe)
+const StyledPaper = styled(ark.div, paper)
 
 type PaperBaseProps = ComponentProps<typeof StyledPaper>
 

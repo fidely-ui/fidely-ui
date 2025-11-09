@@ -1,4 +1,4 @@
-import { Stack, Table, Typography, VStack } from '@snaps-ui/react'
+import { Stack, Table, Text, VStack } from '@snaps-ui/react'
 
 export const TableSizes = () => {
   const sizes = ['sm', 'md', 'lg'] as const
@@ -7,9 +7,7 @@ export const TableSizes = () => {
     <Stack gap={3}>
       {sizes.map((size) => (
         <VStack key={size} gap={4}>
-          <Typography variant={'body2'} color={'fg.muted'}>
-            {size}
-          </Typography>
+          <Text color={'fg.muted'}>{size}</Text>
 
           <Table.Root size={size}>
             <Table.Header>

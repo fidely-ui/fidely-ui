@@ -5,7 +5,7 @@ import {
   Flex,
   HStack,
   Stack,
-  Typography,
+  Text,
 } from '@snaps-ui/react'
 import { LuCheck, LuX } from 'react-icons/lu'
 
@@ -23,7 +23,7 @@ export const CardWithAvatar = () => {
 
               <Stack gap="0">
                 <Card.Title mt="2">Nelson Chinedu</Card.Title>
-                <Typography variant="body2">Frontend Engineer</Typography>
+                <Text textStyle={'sm'}>Frontend Engineer</Text>
               </Stack>
             </HStack>
           </Flex>

@@ -1,4 +1,4 @@
-import { Accordion, Stack, Typography } from '@snaps-ui/react'
+import { Accordion, Span, Stack, Text } from '@snaps-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 
 export const AccordionVariant = () => {
@@ -6,15 +6,13 @@ export const AccordionVariant = () => {
     <Stack gap="8">
       {variants.map((variant) => (
         <Stack key={variant} gap="3">
-          <Typography variant="body2" fontWeight="medium">
-            {variant}
-          </Typography>
+          <Text fontWeight="medium">{variant}</Text>
 
           <Accordion.Root variant={variant}>
             {items.map((item) => (
               <Accordion.Item key={item.value} value={item.value}>
                 <Accordion.ItemTrigger>
-                  <Typography as="span">{item.title}</Typography>
+                  <Span as="span">{item.title}</Span>
                   <Accordion.ItemIndicator>
                     <BiChevronDown />
                   </Accordion.ItemIndicator>

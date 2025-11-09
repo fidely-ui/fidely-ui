@@ -1,4 +1,4 @@
-import { Box, HStack, Typography } from '@snaps-ui/react'
+import { Box, HStack, Text } from '@snaps-ui/react'
 
 interface CodeBlockProps {
   title?: string
@@ -35,9 +35,9 @@ export const CodeBlock = (props: CodeBlockProps) => {
         borderBottomWidth="1px"
         borderBottomColor="gray.800"
       >
-        <Typography fontSize="xs" fontFamily="mono" fontWeight="semibold">
+        <Text fontSize="xs" fontFamily="mono" fontWeight="semibold">
           {title}
-        </Typography>
+        </Text>
       </HStack>
       {children}
     </Box>

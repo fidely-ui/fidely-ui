@@ -7,7 +7,7 @@ import { Button } from '@snaps-ui/react/button'
 import { Flex } from '@snaps-ui/react/flex'
 import { IconButton } from '@snaps-ui/react/icon-button'
 import { CommandInput } from '@snaps-ui/react/command-input'
-import { Typography } from '@snaps-ui/react/typography'
+import { Text } from '@snaps-ui/react/text'
 import { FaGithub, FaBars } from 'react-icons/fa6'
 import { FaTimes } from 'react-icons/fa'
 import { FcLike } from 'react-icons/fc'
@@ -19,8 +19,7 @@ export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: '/docs/getting-started/introduction', label: 'Docs' },
-    { href: '/docs/components/accordion', label: 'Components' },
+    { href: '/docs/getting-started/installation', label: 'Docs' },
     // { href: '#', label: 'Blogs' },
   ]
 
@@ -68,8 +67,7 @@ export const NavBar = () => {
           />
 
           {navLinks.map(({ href, label }, index: number) => (
-            <Typography
-              variant="body2"
+            <Text
               key={index}
               transition="color 0.2s ease"
               _hover={{
@@ -78,7 +76,7 @@ export const NavBar = () => {
               }}
             >
               <Link href={href}>{label}</Link>
-            </Typography>
+            </Text>
           ))}
 
           <IconButton
@@ -157,13 +155,9 @@ export const NavBar = () => {
           <CommandInput onOpen={() => alert('Open Command')} shortcut="/" />
 
           {navLinks.map(({ href, label }, index: number) => (
-            <Typography
-              variant="body2"
-              key={index}
-              onClick={() => setMenuOpen(false)}
-            >
+            <Text key={index} onClick={() => setMenuOpen(false)}>
               <Link href={href}>{label}</Link>
-            </Typography>
+            </Text>
           ))}
         </Box>
       )}

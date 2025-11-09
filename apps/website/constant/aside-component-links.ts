@@ -4,7 +4,7 @@ export const asideComponentLinks = [
     items: [
       { name: 'Box', new: false, linkUrl: 'box' },
       { name: 'Center', new: false, linkUrl: 'center' },
-      { name: 'Container', new: false, linkUrl: 'container' },
+      // { name: 'Container', new: false, linkUrl: 'container' },
       { name: 'Flex', new: false, linkUrl: 'flex' },
       { name: 'Grid', new: false, linkUrl: 'grid' },
       { name: 'Stack', new: false, linkUrl: 'stack' },
@@ -21,9 +21,18 @@ export const asideComponentLinks = [
       { name: 'Avatar Group', new: false, linkUrl: 'avatar-group' },
       { name: 'Persona', new: false, linkUrl: 'persona' },
       { name: 'Image', new: false, linkUrl: 'image' },
-      { name: 'Typography', new: false, linkUrl: 'typography' },
       { name: 'Table', new: false, linkUrl: 'table' },
       { name: 'KBD', new: false, linkUrl: 'kbd' },
+    ],
+  },
+
+  {
+    section: 'Typography',
+    items: [
+      { name: 'Heading', new: false, linkUrl: 'heading' },
+      { name: 'Text', new: false, linkUrl: 'text' },
+      { name: 'Span', new: false, linkUrl: 'span' },
+      { name: 'Em', new: false, linkUrl: 'em' },
     ],
   },
 

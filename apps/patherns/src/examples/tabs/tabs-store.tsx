@@ -1,6 +1,6 @@
 'use client'
 
-import { Stack, Typography, Tabs, useTabs } from '@snaps-ui/react'
+import { Stack, Text, Tabs, useTabs } from '@snaps-ui/react'
 import { LuFolder, LuSquareCheck, LuUser } from 'react-icons/lu'
 
 export const TabsStore = () => {
@@ -29,7 +29,7 @@ export const TabsStore = () => {
           Manage your tasks for freelancers
         </Tabs.Content>
       </Tabs.RootProvider>
-      <Typography>selected: {tabs.value}</Typography>
+      <Text>selected: {tabs.value}</Text>
     </Stack>
   )
 }
