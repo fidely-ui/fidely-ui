@@ -1,0 +1,31 @@
+export {
+  DialogRootProvider as RootProvider,
+  DialogRoot as Root,
+  DialogBackdrop as Backdrop,
+  DialogContent as Content,
+  DialogTitle as Title,
+  DialogDescription as Description,
+  DialogBody as Body,
+  DialogHeader as Header,
+  DialogFooter as Footer,
+  DialogCloseTrigger as CloseTrigger,
+  DialogTrigger as Trigger,
+  DialogPositioner as Positioner,
+  DialogContext as Context,
+  DialogOpenChangeDetails as OpenChangeDetails,
+} from './dialog'
+
+export type {
+  DialogRootProviderProps as RootProviderProps,
+  DialogRootProps as RootProps,
+  DialogBackdropProps as BackdropProps,
+  DialogContentProps as ContentProps,
+  DialogTitleProps as TitleProps,
+  DialogDescriptionProps as DescriptionProps,
+  DialogBodyProps as BodyProps,
+  DialogHeaderProps as HeaderProps,
+  DialogFooterProps as FooterProps,
+  DialogCloseTriggerProps as CloseTriggerProps,
+  DialogTriggerProps as TriggerProps,
+  DialogPositionerProps as PositionerProps,
+} from './dialog'

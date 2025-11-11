@@ -22,7 +22,6 @@ export const asideComponentLinks = [
       { name: 'Persona', new: false, linkUrl: 'persona' },
       { name: 'Image', new: false, linkUrl: 'image' },
       { name: 'Table', new: false, linkUrl: 'table' },
-      { name: 'KBD', new: false, linkUrl: 'kbd' },
     ],
   },
 
@@ -33,6 +32,7 @@ export const asideComponentLinks = [
       { name: 'Text', new: false, linkUrl: 'text' },
       { name: 'Span', new: false, linkUrl: 'span' },
       { name: 'Em', new: false, linkUrl: 'em' },
+      { name: 'KBD', new: false, linkUrl: 'kbd' },
     ],
   },
 
@@ -55,12 +55,17 @@ export const asideComponentLinks = [
       { name: 'Float Input', new: true, linkUrl: 'floating-input' },
       { name: 'Textarea', new: false, linkUrl: 'textarea' },
       { name: 'Command Input', new: false, linkUrl: 'command-input' },
-      { name: 'Input Group', new: false, linkUrl: 'input-group' },
+      { name: 'Input Group', new: true, linkUrl: 'input-group' },
       { name: 'Pin Input', new: false, linkUrl: 'pin-input' },
       { name: 'Clipboard', new: false, linkUrl: 'clipboard' },
       { name: 'Switch', new: false, linkUrl: 'switch' },
       { name: 'Select', new: false, linkUrl: 'select' },
     ],
+  },
+
+  {
+    section: 'Overlays',
+    items: [{ name: 'Dialog', new: false, linkUrl: 'dialog' }],
   },
 
   {

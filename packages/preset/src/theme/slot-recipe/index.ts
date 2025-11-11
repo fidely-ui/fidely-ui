@@ -11,6 +11,7 @@ import { tableSlotRecipe } from './table.recipe'
 import { pinInputSlotRecipe } from './pinInput.recipe'
 import { checkboxSlotRecipe } from './checkbox.recipe'
 import { selectSlotRecipe } from './select.recipe'
+import { dialogSlotRecipe } from './dialog.recipe'
 
 export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
   accordion: accordionSlotRecipe,
@@ -18,6 +19,7 @@ export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
   card: cardSlotRecipe,
   checkbox: checkboxSlotRecipe,
   clipboard: clipboardSlotRecipe,
+  dialog: dialogSlotRecipe,
   field: fieldSlotRecipe,
   pinInput: pinInputSlotRecipe,
   switchRecipe: switchSlotRecipe,

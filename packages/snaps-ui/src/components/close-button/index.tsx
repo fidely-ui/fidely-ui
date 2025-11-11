@@ -8,7 +8,13 @@ export interface CloseButtonProps extends IconButtonProps {}
 export const CloseButton = forwardRef<HTMLButtonElement, CloseButtonProps>(
   function CloseButton(props, ref) {
     return (
-      <IconButton variant={'ghost'} aria-label="Close" ref={ref} {...props}>
+      <IconButton
+        variant={'ghost'}
+        size={'sm'}
+        aria-label="Close"
+        ref={ref}
+        {...props}
+      >
         {props.children ?? <IoCloseOutline />}
       </IconButton>
     )

@@ -6,7 +6,7 @@ export { checkboxAnatomy } from '@ark-ui/react/checkbox'
 export { clipboardAnatomy } from '@ark-ui/react/clipboard'
 export { collapsibleAnatomy } from '@ark-ui/react/collapsible'
 export { colorPickerAnatomy } from '@ark-ui/react/color-picker'
-export { dialogAnatomy } from '@ark-ui/react/dialog'
+import { dialogAnatomy as arkDialogAnatomy } from '@ark-ui/react/dialog'
 export { editableAnatomy } from '@ark-ui/react/editable'
 export { fieldAnatomy } from '@ark-ui/react/field'
 export { fieldsetAnatomy } from '@ark-ui/react/fieldset'
@@ -54,4 +54,10 @@ export const tableAnatomy = createAnatomy('table').parts(
   'footer',
   'caption',
   'scrollArea'
+)
+
+export const dialogAnatomy = arkDialogAnatomy.extendWith(
+  'header',
+  'body',
+  'footer'
 )

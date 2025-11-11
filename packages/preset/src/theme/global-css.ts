@@ -7,7 +7,6 @@ export const globalCss = defineGlobalStyles({
     _dark: {
       colorScheme: 'dark',
     },
-    colorPalette: 'gray',
   },
   '*, *::before, *::after': {
     borderColor: 'border.subtle',
