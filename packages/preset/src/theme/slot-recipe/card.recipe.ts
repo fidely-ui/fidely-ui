@@ -1,8 +1,10 @@
 import { defineSlotRecipe } from '@pandacss/dev'
 
+import { cardAnatomy } from '../../anatomy'
+
 export const cardSlotRecipe = defineSlotRecipe({
   className: 'snaps-card',
-  slots: ['root', 'body', 'header', 'footer', 'title', 'description'],
+  slots: cardAnatomy.keys(),
   base: {
     root: {
       background: 'bg.default',
@@ -16,14 +18,13 @@ export const cardSlotRecipe = defineSlotRecipe({
       display: 'flex',
       flex: '1',
       flexDirection: 'column',
-      pb: '2',
       px: '5',
       py: '5',
     },
     header: {
       display: 'flex',
       flexDirection: 'column',
-      padding: '4',
+      padding: '2',
       gap: '2',
     },
     title: {
@@ -38,9 +39,7 @@ export const cardSlotRecipe = defineSlotRecipe({
     footer: {
       display: 'flex',
       justifyContent: 'flex-end',
-      pb: '5',
-      pt: '2',
-      px: '4',
+      padding: '2',
       gap: '2',
     },
   },
