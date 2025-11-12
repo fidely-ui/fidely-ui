@@ -1,14 +1,17 @@
 'use client'
 
 import { type Assign } from '@ark-ui/react'
-import { Dialog as ArkDialog } from '@ark-ui/react/dialog'
+import { ark, HTMLArkProps } from '@ark-ui/react/factory'
+import { Dialog as ArkDialog, useDialogContext } from '@ark-ui/react/dialog'
 import {
   dialog,
   type DialogVariantProps,
 } from '@snaps-ui/styled-system/recipes'
 import { type HTMLStyledProps } from '@snaps-ui/styled-system/types'
+import { styled } from '@snaps-ui/styled-system/jsx'
 
 import { makeStyleContext } from '../../system/make-style-context'
+import { forwardRef } from 'react'
 
 const { withSlotRootProvider, withSlotContext } = makeStyleContext(dialog)
 
@@ -70,6 +73,26 @@ export const DialogTrigger = withSlotContext<
   HTMLButtonElement,
   DialogTriggerProps
 >(ArkDialog.Trigger, 'trigger')
+
+// -------------------- CloseAction --------------------
+export interface DialogCloseActionProps extends HTMLArkProps<'button'> {}
+
+const StyledCloseAction = styled(ark.button)
+
+export const DialogCloseAction = forwardRef<
+  HTMLButtonElement,
+  DialogCloseActionProps
+>(function DialogCloseAction(props, ref) {
+  const dialog = useDialogContext()
+
+  return (
+    <StyledCloseAction
+      {...props}
+      ref={ref}
+      onClick={() => dialog.setOpen(false)}
+    />
+  )
+})
 
 // -------------------- Positioner --------------------
 export interface DialogPositionerProps

@@ -1,9 +1,9 @@
 ---
 title: Dialog
-description: Used to display a dialog prompt
+description: A modal window that appears on top of the main content.
 ---
 
-## Full docs coming soon.
+<ExampleTabs name="dialog-basics" scope="dialog" />
 
 ## Usage
 
@@ -27,3 +27,80 @@ import { Dialog } from '@snaps-ui/react'
   </Dialog.Positioner>
 </Dialog.Root>
 ```
+
+## Examples
+
+### Sizes
+
+Use the **size** prop to change the size of the dialog component.
+
+<ExampleTabs name="dialog-sizes" scope="dialog" />
+
+### Controlled
+
+Use the **open** and **onOpenChange** prop to control the visibility of the dialog component.
+
+<ExampleTabs name="dialog-controlled" scope="dialog" />
+
+### Within Context
+
+Use the **Dialog.Context** component to access the dialog state and methods from outside the dialog.
+
+<ExampleTabs name="dialog-with-context" scope="dialog" />
+
+### Store
+
+An alternative way to control the dialog is to use the **RootProvider** component and the **useDialog** store hook.
+
+This way you can access the dialog state and methods from outside the dialog.
+
+<ExampleTabs name="dialog-with-store" scope="dialog" />
+
+### AlertDialog
+
+By default dialog renders as **role: "dialog"** to change the role below
+
+Pass the **role: "alertdialog"** prop to change the dialog component to an alert dialog.
+
+<ExampleTabs name="dialog-alert" scope="dialog" />
+
+### Initial Focus
+
+Use the **initialFocusEl** prop to set the initial focus of the dialog component.
+
+<ExampleTabs name="dialog-focus" scope="dialog" />
+
+## Props
+
+### Root
+
+| Prop                     | Type                                                                                                                                      | Default    | Description                                                                                                             |
+| ------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `defaultOpen`            | `boolean`                                                                                                                                 | false      | The initial open state of the dialog when rendered. Use when you don't need to control the open state of the dialog.    |
+| `closeOnEscape`          | `boolean`                                                                                                                                 | `true`     | Whether to close the dialog when the escape key is pressed                                                              |
+| `closeOnInteractOutside` | `boolean`                                                                                                                                 | true       | Whether to close the dialog when the outside is clicked                                                                 |
+| `lazyMount`              | `boolean`                                                                                                                                 | `false`    | Whether to enable lazy mounting                                                                                         |
+| `modal`                  | `boolean`                                                                                                                                 | `true`     | Whether to prevent pointer interaction outside the element and hide all content below it.                               |
+| `preventScroll`          | `boolean`                                                                                                                                 | `true`     | Whether to prevent scrolling behind the dialog when it's opened                                                         |
+| `role`                   | `"dialog" \| "alertdialog"`                                                                                                               | `"dialog"` | The dialog's role.                                                                                                      |
+| `size`                   | ` "xs" \| "sm" \| "md" \| "lg"`                                                                                                           | `"md"`     | Controls the size of the switch.                                                                                        |
+| `skipAnimationOnMount`   | `boolean                                                                                                                                  | `"false"`  | Whether to allow the initial presence animation.                                                                        |
+| `unmountOnExit`          | `boolean`                                                                                                                                 | `false`    | Whether to unmount on exit.                                                                                             |
+| `trapFocus`              | `boolean`                                                                                                                                 | `true`     | Whether to trap focus inside the dialog when it's opened.                                                               |
+| `as`                     | `React.ElementType`                                                                                                                       | —          | The content of the switch, typically including control, thumb, and label.                                               |
+| `finalFocusEl`           | `() => MaybeElement`                                                                                                                      | —          | Element to receive focus when the dialog is closed                                                                      |
+| `id`                     | `string`                                                                                                                                  | —          | The unique identifier of the machine.                                                                                   |
+| `ids`                    | `Partial<{ trigger: string positioner: string backdrop: string content: string closeTrigger: string title: string description: string }>` | —          | The ids of the elements in the dialog. Useful for composition.                                                          |
+| `immediate`              | `boolean`                                                                                                                                 | —          | Whether to synchronize the present change immediately or defer it to the next frame.                                    |
+| `open`                   | `boolean`                                                                                                                                 | —          | The controlled open state of the dialog.                                                                                |
+| `present`                | `boolean`                                                                                                                                 | —          | Whether the node is present (controlled by the user).                                                                   |
+| `persistentElements`     | `boolean`                                                                                                                                 | —          | Returns the persistent elements that: - should not have pointer-events disabled - should not trigger the dismiss event. |
+| `restoreFocus`           | `boolean`                                                                                                                                 | —          | Whether to restore focus to the element that had focus before the dialog was opened                                     |
+
+---
+
+### CloseTrigger
+
+| Prop      | Type    | Default   | Description                                                                                         |
+| --------- | ------- | --------- | --------------------------------------------------------------------------------------------------- |
+| `asChild` | `false` | `boolean` | Use the provided child element as the default rendered element, combining their props and behavior. |
