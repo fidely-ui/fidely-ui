@@ -81,9 +81,5 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
-  },
-  "dependencies": {
-    "@snaps-ui/panda-preset": "link:../../../Library/pnpm/global/5/node_modules/@snaps-ui/panda-preset",
-    "@snaps-ui/react": "link:../../../Library/pnpm/global/5/node_modules/@snaps-ui/react"
   }
 }
