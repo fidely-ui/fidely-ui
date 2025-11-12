@@ -13,7 +13,7 @@ export default defineConfig({
     createSnapsPreset({
       accentColor: neutral,
       grayColor: neutral,
-      radius: 'sm',
+      rounded: 'sm',
     }),
   ],
 })

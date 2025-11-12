@@ -6,7 +6,6 @@ export const tabsSlotRecipe = defineSlotRecipe({
   slots: tabsAnatomy.keys(),
   base: {
     root: {
-      colorPalette: 'gray',
       display: 'flex',
       width: 'full',
       _horizontal: { flexDirection: 'column' },

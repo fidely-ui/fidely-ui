@@ -48,7 +48,8 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 
 ## Acknowledgement
 
-Most of the documentation were taken from [Ark UI](https://ark-ui.com/), [Chakra UI](https://chakra-ui.com/) and inspired by [Park UI](https://park-ui.com/)
+Snaps UI’s documentation and design philosophy are inspired by [Chakra UI](https://chakra-ui.com/), and [Park UI](https://park-ui.com/).
+We’re grateful for their contributions to the open-source ecosystem.
 
 ## 🙏🏽 Support
 

@@ -3,7 +3,6 @@ import { defineRecipe } from '@pandacss/dev'
 export const badgeRecipes = defineRecipe({
   className: 'snaps-badge',
   base: {
-    colorPalette: 'gray',
     userSelect: 'none',
     display: 'inline-flex',
     alignItems: 'center',

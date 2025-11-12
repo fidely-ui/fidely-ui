@@ -3,7 +3,6 @@ import { defineRecipe } from '@pandacss/dev'
 export const kbdRecipe = defineRecipe({
   className: 'snaps-kbd',
   base: {
-    colorPalette: 'gray',
     display: 'inline-flex',
     alignItems: 'center',
     flexShrink: '0',

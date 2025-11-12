@@ -19,7 +19,7 @@ import purple from './colors/purple'
 import orange from './colors/orange'
 
 export const createSnapsPreset = (options: PresetsOptions) => {
-  const { accentColor, radius, grayColor } = options
+  const { accentColor, rounded, grayColor } = options
 
   const normalizeNeutralTokens = (tokens: SemanticTokens['colors']) =>
     JSON.parse(
@@ -67,8 +67,8 @@ export const createSnapsPreset = (options: PresetsOptions) => {
             orange: orange.semanticTokens,
             gray: normalizeNeutralTokens(grayColor.semanticTokens),
             [accentColor.name]: accentColor.semanticTokens,
-            radii: createRadii(radius),
           },
+          radii: createRadii(rounded),
         },
       },
     },

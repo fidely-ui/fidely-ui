@@ -1,45 +1,57 @@
 ---
-title: Switch
-description: A control element that allows for a binary selection.
+title: Checkbox
+description: A control element that allows for multiple selections within a set.
 ---
 
-<ExampleTabs name="switch-basics" scope="switch" />
+<ExampleTabs name="checkbox-basics" scope="checkbox" />
 
 ## Usage
 
 ```tsx
-import { Switch } from '@snaps-ui/react'
+import { Checkbox } from '@snaps-ui/react'
 ```
 
 ```tsx
-<Switch.Root>
-  <Switch.HiddenInput />
-  <Switch.Control>
-    <Switch.Thumb />
-  </Switch.Control>
-  <Switch.Label />
-</Switch.Root>
+<Checkbox.Root>
+  <Checkbox.HiddenInput />
+  <Checkbox.Control>
+    <Checkbox.Indicator />
+  </Checkbox.Control>
+  <Checkbox.Label />
+</Checkbox.Root>
 ```
 
 ## Examples
+
+### With custom icon
+
+Use your own custom checked icon by wrapping the **Checkbox.Indicator**
+
+<ExampleTabs name="checkbox-with-icon" scope="checkbox" />
 
 ### Sizes
 
 Pass the **size** prop to the **Switch.Root** component to change the size of the switch component.
 
-<ExampleTabs name="switch-sizes" scope="switch" />
+<ExampleTabs name="checkbox-sizes" scope="checkbox" />
 
 ### Colors
 
 Pass the **colorPalette** prop to the **Switch.Root** component to change the color of the component.
 
-<ExampleTabs name="switch-with-colors" scope="switch" />
+<ExampleTabs name="checkbox-with-colors" scope="checkbox" />
 
 ### Controlled
 
 Use the **checked** and **onCheckedChange** props to control the state of the switch.
 
-<ExampleTabs name="switch-with-control" scope="switch" />
+<ExampleTabs name="checkbox-with-control" scope="checkbox" />
+
+### Disabled States
+
+Pass the **disabled** prop to the **Checkbox.Root** component to disabled the checkbox.
+
+<ExampleTabs name="checkbox-with-state" scope="checkbox" />
 
 ## Props
 
@@ -69,11 +81,11 @@ Use the **checked** and **onCheckedChange** props to control the state of the sw
 
 ---
 
-### Thumb
+### Indicator
 
 | Prop       | Type        | Default | Description                    |
 | ---------- | ----------- | ------- | ------------------------------ |
-| `children` | `ReactNode` | —       | Optional custom thumb content. |
+| `children` | `ReactNode` | —       | Optional custom checkbox icon. |
 
 ---
 

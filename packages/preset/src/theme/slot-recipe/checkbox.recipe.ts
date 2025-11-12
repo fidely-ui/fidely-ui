@@ -41,8 +41,11 @@ export const checkboxSlotRecipe = defineSlotRecipe({
         },
       },
       _invalid: {
-        borderColor: 'border.error',
-        background: 'bg.error',
+        borderColor: 'fg.error',
+        _focus: {
+          borderColor: 'fg.error',
+          boxShadow: '0 0 0 1px var(--colors-border-error)',
+        },
       },
       _disabled: {
         opacity: 0.4,

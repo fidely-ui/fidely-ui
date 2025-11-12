@@ -18,5 +18,6 @@ export const globalCss = defineGlobalStyles({
   },
   '*::selection': {
     bg: 'colorPalette.emphasized/80',
+    color: 'white',
   },
 })
