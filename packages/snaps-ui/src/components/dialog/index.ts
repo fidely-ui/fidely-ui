@@ -11,6 +11,7 @@ export {
   DialogCloseTrigger,
   DialogTrigger,
   DialogPositioner,
+  DialogCloseAction,
   DialogContext,
   DialogOpenChangeDetails,
 } from './dialog'
@@ -28,6 +29,7 @@ export type {
   DialogCloseTriggerProps,
   DialogTriggerProps,
   DialogPositionerProps,
+  DialogCloseActionProps,
 } from './dialog'
 
 export { useDialog, useDialogContext } from '@ark-ui/react/dialog'

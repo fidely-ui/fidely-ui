@@ -11,6 +11,7 @@ export {
   DialogCloseTrigger as CloseTrigger,
   DialogTrigger as Trigger,
   DialogPositioner as Positioner,
+  DialogCloseAction as CloseAction,
   DialogContext as Context,
   DialogOpenChangeDetails as OpenChangeDetails,
 } from './dialog'
@@ -28,4 +29,5 @@ export type {
   DialogCloseTriggerProps as CloseTriggerProps,
   DialogTriggerProps as TriggerProps,
   DialogPositionerProps as PositionerProps,
+  DialogCloseActionProps as CloseActionProps,
 } from './dialog'
