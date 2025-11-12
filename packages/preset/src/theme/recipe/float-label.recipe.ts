@@ -20,7 +20,7 @@ export const floatLabelRecipe = defineRecipe({
       true: {
         top: '0',
         insetStart: '2',
-        color: 'fg',
+        color: 'fg.defailt',
         fontSize: 'xs',
         bg: 'bg.default',
         transform: 'translateY(-50%) scale(0.9)',

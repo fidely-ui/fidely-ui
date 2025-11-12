@@ -1,0 +1,39 @@
+---
+title: Download Trigger
+description: Used to trigger file downloads programmatically.
+---
+
+<ExampleTabs name="download-basic" scope="download-trigger" />
+
+## Usage
+
+```tsx
+import { DownloadTrigger } from '@snaps-ui/react'
+```
+
+```tsx
+<DownloadTrigger />
+```
+
+## Examples
+
+### File Size
+
+Use the **DownloadTrigger** with the **FormatByte** component to display the size of the file in a human-readable format.
+
+<ExampleTabs name="download-file-size" scope="download-trigger" />
+
+### Svg
+
+Here's an example of how to download an SVG file.
+
+<ExampleTabs name="download-svg" scope="download-trigger" />
+
+## Props
+
+| Prop       | Type           | Default | Description                                                                                         |
+| ---------- | -------------- | ------- | --------------------------------------------------------------------------------------------------- |
+| `data`     | `-`            | —       | The data to download.                                                                               |
+| `fileName` | `string`       | `-`     | The name of the file to download.                                                                   |
+| `mimeType` | `FileMimeType` | `-`     | The MIME type of the data to download.                                                              |
+| `asChild`  | `boolean`      | `false` | Use the provided child element as the default rendered element, combining their props and behavior. |

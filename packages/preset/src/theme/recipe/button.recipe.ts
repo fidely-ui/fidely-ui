@@ -4,7 +4,6 @@ export const buttonRecipe = defineRecipe({
   className: 'snaps-button',
   jsx: ['Button', 'IconButton'],
   base: {
-    colorPalette: 'gray',
     appearance: 'none',
     alignItems: 'center',
     cursor: 'pointer',

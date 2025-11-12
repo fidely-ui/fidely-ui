@@ -60,8 +60,8 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/js": "^9.34.0",
     "@types/node": "^24.3.0",
-    "@types/react": "^19.1.12",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
     "@typescript-eslint/eslint-plugin": "^8.41.0",
     "@typescript-eslint/parser": "^8.41.0",
     "eslint": "^9.34.0",
@@ -71,6 +71,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "prettier": "3.6.2",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "tsup": "^8.5.0",
     "turbo": "^2.5.6",
     "typescript": "^5.9.2",
@@ -79,5 +81,9 @@
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
+  },
+  "dependencies": {
+    "@snaps-ui/panda-preset": "link:../../../Library/pnpm/global/5/node_modules/@snaps-ui/panda-preset",
+    "@snaps-ui/react": "link:../../../Library/pnpm/global/5/node_modules/@snaps-ui/react"
   }
 }

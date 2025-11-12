@@ -9,7 +9,7 @@ export interface ColorPalette {
 export interface PresetsOptions {
   accentColor: ColorPalette
   grayColor: ColorPalette
-  radius: Radius
+  rounded: Radius
 }
 
 export type AccentColor = (typeof accent)[number]

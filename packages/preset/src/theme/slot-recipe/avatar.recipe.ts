@@ -6,7 +6,6 @@ export const avatarSlotRecipe = defineSlotRecipe({
   slots: avatarAnatomy.keys(),
   base: {
     root: {
-      colorPalette: 'gray',
       display: 'inline-flex',
       alignItems: 'center',
       justifyContent: 'center',
