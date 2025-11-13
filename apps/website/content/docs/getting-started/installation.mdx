@@ -39,11 +39,6 @@ yarn add @snaps-ui/react @snaps-ui/panda-preset
 
 ```
 
-```bash
-# bun
-bun add @snaps-ui/react @snaps-ui/panda-preset
-```
-
 ### 3. Configure Panda with Snaps UI Preset
 
 After installation, update your **panda.config.ts** file to include the Snaps UI preset.
@@ -56,7 +51,6 @@ import neutral from '@snaps-ui/panda-preset/colors/neutral'
 
 export default defineConfig({
   presets: [
-    '@pandacss/preset-panda',
     createSnapsPreset({
       accentColor: neutral,
       grayColor: neutral,
@@ -111,11 +105,5 @@ export default function Index() {
 You should now see your first Snaps UI button rendered beautifully in your app. 🎉
 
 ---
-
-## Development Mode Notice
-
-Snaps UI is currently in Beta 🚀
-
-Expect frequent updates, new components, and an official CLI to make installation and customization even smoother.
 
 [⭐ Star Snaps UI on GitHub →](https://github.com/snaps-ui/snaps-ui)

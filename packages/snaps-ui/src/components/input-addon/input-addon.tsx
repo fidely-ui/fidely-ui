@@ -9,7 +9,9 @@ import { ComponentProps } from '@snaps-ui/styled-system/types'
 
 const StyledInputAddon = styled(ark.div, inputAddon)
 
-export type InputAddonProps = ComponentProps<typeof StyledInputAddon>
+type InputAddonPropsBaseProps = ComponentProps<typeof StyledInputAddon>
+
+export interface InputAddonProps extends InputAddonPropsBaseProps {}
 
 export const InputAddon = forwardRef<HTMLDivElement, InputAddonProps>(
   function InputAddon(props, ref) {

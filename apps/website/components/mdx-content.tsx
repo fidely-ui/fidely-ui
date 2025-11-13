@@ -20,6 +20,7 @@ import {
   TableRow,
   TableFooter,
 } from '~/components/mdx/table'
+import { ColorShowcase } from './mdx/color-showcase'
 
 const sharedComponents = {
   a: Anchor,
@@ -41,6 +42,7 @@ const sharedComponents = {
   tr: TableRow,
   td: TableCell,
   callout: Callout,
+  ColorShowcase,
   ExampleTabs: ExampleTabs,
   ExamplePreview: ExamplePreview,
   ExampleCode(props: { name: string }) {

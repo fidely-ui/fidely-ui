@@ -12,9 +12,9 @@ export interface PresetsOptions {
   rounded: Radius
 }
 
-export type AccentColor = (typeof accent)[number]
+export type AccentColor = (typeof accentColor)[number]
 
-export const accent = [
+export const accentColor = [
   'neutral',
   'tomato',
   'red',

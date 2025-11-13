@@ -13,5 +13,6 @@ export default {
   ],
 } satisfies Meta
 
-export { TypographyBasics as Basics } from 'patherns/examples/typography/typography-basics'
-export { TypographyWithVariants as Variants } from 'patherns/examples/typography/typography-with-variants'
+export { HeadingBasic as Basics } from 'patherns/examples/heading/heading-basic'
+export { HeadingSize as Size } from 'patherns/examples/heading/heading-size'
+export { HeadingWithAs as As } from 'patherns/examples/heading/heading-with-as'

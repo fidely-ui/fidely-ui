@@ -1,0 +1,179 @@
+---
+title: Dark Mode
+description: Learn how to enable and manage dark mode in your Snaps UI project using next-themes.
+---
+
+# 🌙 Dark Mode
+
+Snaps UI doesn’t include a built-in color mode manager.  
+Instead, it integrates seamlessly with [`next-themes`](https://github.com/pacocoursey/next-themes) — a lightweight and powerful theme switcher for you project.
+
+---
+
+# Install `next-themes`
+
+```bash
+npm install next-themes
+```
+
+```bash
+pnpm add next-themes
+```
+
+# Wrap your app with ThemeProvider
+
+You can create a provider
+
+```tsx
+//app/provider.tsx
+
+'use client'
+
+import { ThemeProvider } from 'next-themes'
+
+export const Provider = (props: { children: React.ReactNode }) => {
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system" // optional
+      enableSystem
+      disableTransitionOnChange
+    >
+      {props.children}
+    </ThemeProvider>
+  )
+}
+```
+
+## Explanation:
+
+**attribute="class"** — adds **class="light"** or **class="dark"** to **html** tag.
+
+**defaultTheme="system"** — follows user OS preference.
+
+**disableTransitionOnChange** — prevents flashing when switching themes.
+
+---
+
+In your app/layout.tsx or \_app.tsx, import and wrap your application with the ThemeProvider created above
+
+```tsx
+import { Provider } from '../proider' // your proider file path
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Provider>{children}</Provider>
+      </body>
+    </html>
+  )
+}
+```
+
+# Styling dark mode
+
+Use the **\_dark** condition to style components for dark mode.
+
+```tsx
+<Box bg={{ base: 'white', _dark: 'black' }}>
+  <Text>Hello</Text>
+</Box>
+```
+
+or
+
+```tsx
+<Box bg="white" _dark={{ bg: 'black' }}>
+  <Text>Hello</Text>
+</Box>
+```
+
+## Using semantic tokens
+
+To reduce repetition and ensure consistency, use semantic tokens.
+
+**Snaps UI** provides semantic tokens built on **Panda CSS**, which automatically adjust for light and dark themes.
+
+```tsx
+<Box bg="bg.subtle">
+  <Text>Hello</Text>
+</Box>
+```
+
+## Semantic Tokens in Snaps UI
+
+- Background (bg):
+  surface | muted | emphasized | disabled | default
+
+- Foreground (fg):
+  error | muted | subtle | disabled | default
+
+- Border (border):
+  outline | muted | subtle | disabled | default | error
+
+These tokens handle both light and dark mode colors automatically.
+
+---
+
+# Add a Theme Toggle Button
+
+Here’s an example of a simple toggle button:
+
+```tsx
+'use client'
+
+import { ClientOnly, IconButton, Skeleton } from '@snaps-ui/react'
+import { IoSunnyOutline } from 'react-icons/io5'
+import { FaMoon } from 'react-icons/fa6'
+
+export function ThemeToggle() {
+  const { theme, setTheme } = useTheme()
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
+
+  return (
+    <ClientOnly fallback={<Skeleton boxSize="8" />}>
+      <IconButton
+        onClick={toggleTheme}
+        size="xs"
+        color="inherit"
+        variant="ghost"
+      >
+        {theme === 'light' ? (
+          <IoSunnyOutline size={'17px'} />
+        ) : (
+          <FaMoon size={'17px'} />
+        )}
+      </IconButton>
+    </ClientOnly>
+  )
+}
+```
+
+Works perfectly with Snaps UI components — all dark mode tokens update instantly.
+
+---
+
+## Example Live Usage
+
+```tsx
+// app/page.tsx
+import { ThemeToggle } from '../theme-toggle'
+import { Box } from '@snaps-ui/react'
+
+export default function Page() {
+  return (
+    <Box p="6">
+      <ThemeToggle />
+      <Box>Hello from Snaps UI 🌗</Box>
+    </Box>
+  )
+}
+```

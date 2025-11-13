@@ -78,9 +78,36 @@ function Sidebar() {
           <Text color={'fg.default'} fontSize={'14px'}>
             Theming
           </Text>
-          <Link href="/docs/theming" style={{ marginLeft: '6px' }}>
+          <Link
+            href="/docs/theming/customization"
+            style={{ marginLeft: '6px' }}
+          >
             <Span color={'fg.muted'} fontSize={'13px'}>
-              customization
+              Customization
+            </Span>
+          </Link>
+
+          <Link
+            href="/docs/theming/semantic-tokens"
+            style={{ marginLeft: '6px' }}
+          >
+            <Span color={'fg.muted'} fontSize={'13px'}>
+              Semantic tokens
+            </Span>
+          </Link>
+
+          <Link href="/docs/theming/colors" style={{ marginLeft: '6px' }}>
+            <Span color={'fg.muted'} fontSize={'13px'}>
+              Colors
+            </Span>
+          </Link>
+        </Stack>
+
+        <Stack gap="3">
+          <Text color={'fg.default'}>Styling</Text>
+          <Link href="/docs/styling/dark-mode" style={{ marginLeft: '6px' }}>
+            <Span color={'fg.muted'} fontSize={'13px'}>
+              Dark Mode
             </Span>
           </Link>
         </Stack>
