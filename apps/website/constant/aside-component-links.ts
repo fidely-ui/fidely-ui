@@ -11,6 +11,9 @@ export const asideComponentLinks = [
       { name: 'Paper', new: false, linkUrl: 'paper' },
       { name: 'Group', new: false, linkUrl: 'group' },
       { name: 'Card', new: false, linkUrl: 'card' },
+      { name: 'Divider', new: false, linkUrl: 'divider' },
+      { name: 'Wrap', new: false, linkUrl: 'wrap' },
+      // { name: 'Card', new: false, linkUrl: 'card' },
     ],
   },
 
@@ -52,7 +55,7 @@ export const asideComponentLinks = [
     items: [
       { name: 'Field', new: false, linkUrl: 'field' },
       { name: 'Input', new: false, linkUrl: 'input' },
-      { name: 'Float Input', new: true, linkUrl: 'floating-input' },
+      // { name: 'Float Input', new: true, linkUrl: 'floating-input' },
       { name: 'Textarea', new: false, linkUrl: 'textarea' },
       { name: 'Command Input', new: false, linkUrl: 'command-input' },
       { name: 'Input Group', new: false, linkUrl: 'input-group' },

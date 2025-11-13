@@ -11,6 +11,7 @@ import { Persona } from '@snaps-ui/react/persona'
 import { FaLinkedin } from 'react-icons/fa'
 
 import { testimonials } from '~/constant/testimonials'
+import { HStack, Stack } from '@snaps-ui/react'
 
 export const Testimonials = () => {
   return (
@@ -77,6 +78,20 @@ export const Testimonials = () => {
           )
         })}
       </Grid>
+
+      <Box border={'1px solid red'}>
+        <Stack>
+          <Box boxSize={'200px'} bg={'red'}>
+            one
+          </Box>
+          <Box boxSize={'200px'} bg={'orange'}>
+            two
+          </Box>
+          <Box boxSize={'200px'} bg={'green'}>
+            three
+          </Box>
+        </Stack>
+      </Box>
     </Box>
   )
 }

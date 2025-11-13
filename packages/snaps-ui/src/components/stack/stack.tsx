@@ -1,37 +1,33 @@
 'use client'
 
-import { ark } from '@ark-ui/react/factory'
-import { styled } from '@snaps-ui/styled-system/jsx'
-import { type ComponentProps } from '@snaps-ui/styled-system/types'
+import { forwardRef } from 'react'
+import { HTMLStyledProps, styled } from '@snaps-ui/styled-system/jsx'
+import { stack, type StackProperties } from '@snaps-ui/styled-system/patterns'
 
-/* ---------------- Stack ---------------- */
-export const Stack = styled(ark.div, {
-  base: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 'var(--stack-gap, 0.5rem)',
-  },
-})
-export type StackProps = ComponentProps<typeof Stack>
+import { splitProps } from '../../utils/split-props'
 
-/* ---------------- HStack ---------------- */
-export const HStack = styled(ark.div, {
-  base: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: '1rem',
-  },
-})
-export type HStackProps = ComponentProps<typeof HStack>
+export interface StackProps
+  extends Omit<HTMLStyledProps<'div'>, keyof StackProperties>,
+    StackProperties {}
 
-/* ---------------- VStack ---------------- */
-export const VStack = styled(ark.div, {
-  base: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '1rem',
-  },
-})
-export type VStackProps = ComponentProps<typeof VStack>
+/**
+ * Stack component
+ *
+ * Provides a flexible box layout system using Panda's stack pattern.
+ */
+export const Stack = forwardRef<HTMLDivElement, StackProps>(
+  function Stack(props, ref) {
+    const [patternProps, restProps] = splitProps(props, [
+      'align',
+      'justify',
+      'direction',
+      'gap',
+    ])
+
+    const styles = stack.raw(patternProps)
+
+    return <styled.div ref={ref} {...styles} {...restProps} />
+  }
+)
+
+Stack.displayName = 'Stack'

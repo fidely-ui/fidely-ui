@@ -9,7 +9,7 @@ import { Flex } from '../flex/index'
 import { Stack } from '../stack/index'
 import type { BoxProps } from '../box/index'
 
-export interface PersonaProps extends BoxProps {
+export interface PersonaProps extends Omit<BoxProps, 'direction'> {
   /** The name of the person */
   name?: string
   /** The secondary text (e.g. job title, role, etc.) */

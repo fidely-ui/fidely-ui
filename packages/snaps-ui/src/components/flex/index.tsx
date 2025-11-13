@@ -1,30 +1,36 @@
 'use client'
 
 import { forwardRef } from 'react'
-import { ark } from '@ark-ui/react/factory'
-import { styled } from '@snaps-ui/styled-system/jsx'
-import { cx } from '@snaps-ui/styled-system/css'
-import type { ComponentProps } from '@snaps-ui/styled-system/types'
+import { HTMLStyledProps, styled } from '@snaps-ui/styled-system/jsx'
+import { flex, type FlexProperties } from '@snaps-ui/styled-system/patterns'
 
-export const StyledFlex = styled(ark.div, {
-  base: {
-    display: 'flex',
-  },
-})
+import { splitProps } from '../../utils/split-props'
 
-type FlexBaseProps = ComponentProps<typeof StyledFlex>
+export interface FlexProps
+  extends Omit<HTMLStyledProps<'div'>, keyof FlexProperties>,
+    FlexProperties {}
 
-export interface FlexProps extends FlexBaseProps {}
-
+/**
+ * Flex component
+ *
+ * Provides a flexible box layout system using Panda's flex pattern.
+ */
 export const Flex = forwardRef<HTMLDivElement, FlexProps>(
   function Flex(props, ref) {
-    const { children, className, ...rest } = props
+    const [patternProps, restProps] = splitProps(props, [
+      'align',
+      'justify',
+      'direction',
+      'wrap',
+      'basis',
+      'grow',
+      'shrink',
+      'gap',
+    ])
 
-    return (
-      <StyledFlex ref={ref} className={cx('snaps-flex', className)} {...rest}>
-        {children}
-      </StyledFlex>
-    )
+    const styles = flex.raw(patternProps)
+
+    return <styled.div ref={ref} {...styles} {...restProps} />
   }
 )
 

@@ -1,15 +1,28 @@
 'use client'
 
-import { ark } from '@ark-ui/react/factory'
-import { styled } from '@snaps-ui/styled-system/jsx'
-import { type ComponentProps } from '@snaps-ui/styled-system/types'
+import { forwardRef } from 'react'
+import { HTMLStyledProps, styled } from '@snaps-ui/styled-system/jsx'
+import { center, type CenterProperties } from '@snaps-ui/styled-system/patterns'
 
-/* ---------------- Center ---------------- */
-export const Center = styled(ark.div, {
-  base: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
-export type CenterProps = ComponentProps<typeof Center>
+import { splitProps } from '../../utils/split-props'
+
+export interface CenterProps
+  extends Omit<HTMLStyledProps<'div'>, keyof CenterProperties>,
+    CenterProperties {}
+
+/**
+ * Center component
+ *
+ * Provides a flexible box layout system using Panda's center pattern.
+ */
+export const Center = forwardRef<HTMLDivElement, CenterProps>(
+  function Center(props, ref) {
+    const [patternProps, restProps] = splitProps(props, ['inline'])
+
+    const styles = center.raw(patternProps)
+
+    return <styled.div ref={ref} {...styles} {...restProps} />
+  }
+)
+
+Center.displayName = 'Center'
