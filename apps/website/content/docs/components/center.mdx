@@ -25,6 +25,17 @@ import { Center } from '@snaps-ui/react'
 
 <ExampleTabs name="center-with-image" scope="center" />
 
+### Inline
+
+Use the inline prop to make Center behave like an inline element **(display: inline-flex)**
+instead of a block-level element **(display: flex)**. This makes Center only take up as much width
+as its content needs, allowing it to fit inside links, buttons, or other inline contexts without
+breaking the layout.
+
+<ExampleTabs name="center-inline" scope="center" />
+
 ## Props
 
-The **Center** component supports all props of **Box**.
+The center component accepts the following properties:
+
+**inline**: Whether to use **inline-flex** or **flex** for the container. The value is a boolean.

@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Box } from '@snaps-ui/react/box'
 import { Button } from '@snaps-ui/react/button'
 import { Flex } from '@snaps-ui/react/flex'
@@ -10,13 +10,21 @@ import { CommandInput } from '@snaps-ui/react/command-input'
 import { Text } from '@snaps-ui/react/text'
 import { Dialog, useDialog } from '@snaps-ui/react/dialog'
 import { Portal } from '@snaps-ui/react/portal'
+import { Badge } from '@snaps-ui/react/badge'
+import { Input } from '@snaps-ui/react/input'
+import { Span } from '@snaps-ui/react/span'
+import { Stack } from '@snaps-ui/react/stack'
+
 import { FaGithub, FaBars } from 'react-icons/fa6'
 import { FaTimes } from 'react-icons/fa'
 import { FcLike } from 'react-icons/fc'
 
 import { ColorModeButton } from '~/components/color-mode-button'
 import { AppLogo } from '~/components/logo'
-import { Input } from '@snaps-ui/react'
+import {
+  asideComponentLinks,
+  asideUtilLinks,
+} from '~/constant/aside-component-links'
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -153,13 +161,85 @@ export const NavBar = () => {
           flexDirection="column"
           gap="3"
         >
-          <CommandInput onOpen={() => alert('Open Command')} shortcut="/" />
+          <CommandInput onOpen={() => dialog.setOpen(true)} shortcut="/" />
 
-          {navLinks.map(({ href, label }, index: number) => (
-            <Text key={index} onClick={() => setMenuOpen(false)}>
-              <Link href={href}>{label}</Link>
-            </Text>
-          ))}
+          <Stack gap="6">
+            <Stack gap="3">
+              <Text color={'fg.default'}>Getting Started</Text>
+              <Link
+                href="/docs/getting-started/introduction"
+                style={{ marginLeft: '6px' }}
+              >
+                <Span color={'fg.muted'} fontSize={'13px'}>
+                  Introduction
+                </Span>
+              </Link>
+
+              <Link
+                href="/docs/getting-started/installation"
+                style={{ marginLeft: '6px' }}
+              >
+                <Span color={'fg.muted'} fontSize={'13px'}>
+                  Installation
+                </Span>
+              </Link>
+            </Stack>
+
+            <Stack gap="3">
+              <Text color={'fg.default'} fontSize={'14px'}>
+                Theming
+              </Text>
+              <Link href="/docs/theming" style={{ marginLeft: '6px' }}>
+                <Span color={'fg.muted'} fontSize={'13px'}>
+                  customization
+                </Span>
+              </Link>
+            </Stack>
+
+            <Stack gap="3">
+              {asideComponentLinks.map((section, index: number) => (
+                <React.Fragment key={index}>
+                  <Text fontSize={'14px'}>{section.section}</Text>
+
+                  {section.items.map((item) => (
+                    <Link
+                      href={`/docs/components/${item.linkUrl}`}
+                      key={item.name}
+                      style={{
+                        marginLeft: '6px',
+                      }}
+                    >
+                      <Span color={'fg.muted'} fontSize={'13px'}>
+                        {item.name} {item.new ? <Badge /> : ''}
+                      </Span>
+                    </Link>
+                  ))}
+                </React.Fragment>
+              ))}
+            </Stack>
+
+            <Stack gap="3">
+              {asideUtilLinks.map((section, index: number) => (
+                <React.Fragment key={index}>
+                  <Text fontSize={'14px'}>{section.section}</Text>
+
+                  {section.items.map((item) => (
+                    <Link
+                      href={`/docs/utilities/${item.linkUrl}`}
+                      key={item.name}
+                      style={{
+                        marginLeft: '6px',
+                      }}
+                    >
+                      <Span color={'fg.muted'} fontSize={'13px'}>
+                        {item.name} {item.new ? <Badge /> : ''}
+                      </Span>
+                    </Link>
+                  ))}
+                </React.Fragment>
+              ))}
+            </Stack>
+          </Stack>
         </Box>
       )}
 

@@ -1,21 +1,34 @@
 'use client'
 
-import { ark } from '@ark-ui/react/factory'
-import { styled } from '@snaps-ui/styled-system/jsx'
-import { type ComponentProps } from '@snaps-ui/styled-system/types'
+import { forwardRef } from 'react'
+import { HTMLStyledProps, styled } from '@snaps-ui/styled-system/jsx'
+import { grid, type GridProperties } from '@snaps-ui/styled-system/patterns'
 
-/* ---------------- Grid ---------------- */
-export const Grid = styled(ark.div, {
-  base: {
-    display: 'grid',
-  },
-})
-export type GridProps = ComponentProps<typeof Grid>
+import { splitProps } from '../../utils/split-props'
 
-/* ---------------- GridItem ---------------- */
-export const GridItem = styled(ark.div, {
-  base: {
-    display: 'block',
-  },
-})
-export type GridItemProps = ComponentProps<typeof GridItem>
+export interface GridProps
+  extends Omit<HTMLStyledProps<'div'>, keyof GridProperties>,
+    GridProperties {}
+
+/**
+ * Grid component
+ *
+ * Provides a flexible box layout system using Panda's grid pattern.
+ */
+export const Grid = forwardRef<HTMLDivElement, GridProps>(
+  function Grid(props, ref) {
+    const [patternProps, restProps] = splitProps(props, [
+      'minChildWidth',
+      'rowGap',
+      'columnGap',
+      'columns',
+      'gap',
+    ])
+
+    const styles = grid.raw(patternProps)
+
+    return <styled.div ref={ref} {...styles} {...restProps} />
+  }
+)
+
+Grid.displayName = 'Grid'

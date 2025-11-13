@@ -2,7 +2,7 @@ import { Box, Flex, Image } from '@snaps-ui/react'
 
 export const FlexInlineFlex = () => {
   return (
-    <Flex display={'inline-flex'} justifyContent={'space-between'}>
+    <Flex display={'inline-flex'} justify={'space-between'}>
       <Box>
         <Image
           boxSize="200px"

@@ -2,7 +2,7 @@ import { Box, Flex } from '@snaps-ui/react'
 
 export const FlexBetween = () => {
   return (
-    <Flex justifyContent={'space-between'}>
+    <Flex justify={'space-between'}>
       <Box bg={'orange.9'} boxSize={'200px'} p={'10px'}>
         Box One
       </Box>
