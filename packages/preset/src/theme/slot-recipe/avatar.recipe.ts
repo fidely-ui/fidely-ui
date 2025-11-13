@@ -18,7 +18,7 @@ export const avatarSlotRecipe = defineSlotRecipe({
       h: 'var(--avatar-size)',
       fontSize: 'var(--avatar-font-size)',
       borderRadius: 'var(--avatar-radius)',
-      bg: 'bg.emphasized',
+      background: 'colorPalette.alpha7',
     },
     image: {
       w: '100%',

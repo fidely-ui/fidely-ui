@@ -4,7 +4,6 @@ import neutral from '@snaps-ui/panda-preset/colors/neutral'
 
 export default defineConfig({
   presets: [
-    '@pandacss/preset-panda',
     createSnapsPreset({
       accentColor: neutral,
       grayColor: neutral,

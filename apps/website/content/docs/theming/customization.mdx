@@ -1,0 +1,367 @@
+---
+title: Customization
+description: Learn how to customize Snaps UI preset and Panda CSS for your design system.
+---
+
+# Snaps UI preset
+
+Snaps UI is built on top of **Panda CSS**, so you can customize it at the token, theme, and component levels.  
+This page explains how to extend or override Snaps UI’s default design system.
+
+---
+
+# Setting Up Your Panda Config
+
+Snaps UI uses a custom Panda preset under the hood.  
+To customize it, edit your **panda.config.ts** or **panda.config.js** file.
+
+```tsx
+// panda.config.ts
+
+import { defineConfig } from '@pandacss/dev'
+import { createSnapsPreset } from '@snaps-ui/panda-preset'
+import neutral from '@snaps-ui/panda-preset/colors/neutral'
+
+export default defineConfig({
+  presets: [
+    createSnapsPreset({
+      accentColor: neutral, // you can use your brand color
+      grayColor: neutral,
+      rounded: 'sm', // border radius for your project
+    }),
+  ],
+  // Whether to use css reset
+  preflight: true,
+
+  // Optional: files to exclude
+  exclude: [],
+
+  // Files to scan for classnames and recipes
+  include: [
+    './src/components/**/*.{ts,tsx,js,jsx}',
+    './src/app/**/*.{ts,tsx,js,jsx}',
+  ],
+
+  importMap: '@snaps-ui/styled-system',
+
+  // The output directory for your css system
+  outdir: 'styled-system',
+
+  jsxFramework: 'react',
+
+  staticCss: {
+    recipes: '*',
+  },
+
+  theme: {
+    extend: {},
+  },
+})
+```
+
+# Custom Color Palette
+
+You can define a custom accent color palette for your project and integrate it into Snaps UI easily.
+
+The easiest way is to use the built-in **createColorTokens** utility, which automatically maps tokens and semantic tokens for both light and dark themes.
+
+**Snaps UI** uses **Radix Colors** by default, so you can base your palette on their design system.
+
+```ts
+// theme/colors/burgundy.ts
+import { createColorTokens } from '@snaps-ui/panda-preset/utils'
+
+const light = {
+  '1': { value: '#FFFCFC' },
+  '2': { value: '#FFF7F6' },
+  // 3–11 ...
+  '12': { value: '#720015' },
+  alpha1: { value: '#FF000003' },
+  alpha2: { value: '#FF1D0009' },
+  // 3–11 ...
+  alpha12: { value: '#720015' },
+}
+
+const dark = {
+  '1': { value: '#180E0E' },
+  '2': { value: '#231111' },
+  // 3–11 ...
+  '12': { value: '#FCC' },
+  alpha1: { value: '#F1000008' },
+  alpha2: { value: '#F7111114' },
+  // 3–11 ...
+  alpha12: { value: '#FFCCCC' },
+}
+
+export default createColorTokens('burgundy', light, dark)
+```
+
+Then use your new color in your Panda config:
+
+```tsx
+// panda.config.ts
+
+import { defineConfig } from '@pandacss/dev'
+import { createSnapsPreset } from '@snaps-ui/panda-preset'
+import slate from '@snaps-ui/panda-preset/colors/slate'
+import burgundy from './theme/colors/burgundy'
+
+export default defineConfig({
+  presets: [
+    createSnapsPreset({
+      accentColor: burgundy,
+      grayColor: slate,
+      rounded: 'sm',
+    }),
+  ],
+  // ...rest of your config
+})
+```
+
+# Semantic Tokens
+
+Semantic tokens make theming consistent and easier to maintain.
+They let you define abstract tokens like bg.primary or fg.subtle that change automatically in dark mode.
+
+```ts
+import { defineConfig } from '@pandacss/dev'
+
+export default defineConfig({
+  theme: {
+    extend: {
+      semanticTokens: {
+        colors: {
+          bg: {
+            DEFAULT: { value: '{colors.gray.2}' },
+            primary: { value: '{colors.teal.6}' },
+            secondary: { value: '{colors.gray.3}' },
+          },
+          fg: {
+            DEFAULT: { value: '{colors.gray.9}' },
+            subtle: { value: '{colors.gray.6}' },
+          },
+        },
+      },
+    },
+  },
+})
+```
+
+You can also use raw color values (like #fff or "white") instead of tokens.
+
+# Customizing Typography, Radii, and Spacing
+
+Snaps UI exposes Panda’s theme API for easy customization of design tokens.
+
+```ts
+// panda.config.ts
+theme: {
+  extend: {
+    tokens: {
+      radii: {
+        xl: { value: '1.25rem' },
+        '2xl': { value: '1.75rem' },
+      },
+      spacing: {
+        '4.5': { value: '1.125rem' },
+      },
+      fonts: {
+        heading: { value: "'Poppins', sans-serif" },
+        body: { value: "'Inter', sans-serif" },
+      },
+    },
+  },
+},
+
+```
+
+You can also set a custom rounded value globally in the preset:
+
+```ts
+// panda.config.ts
+
+createSnapsPreset({
+  accentColor: orange,
+  grayColor: slate,
+  rounded: 'lg',
+})
+```
+
+# Extending Component Recipes
+
+Each Snaps UI component is powered by a **Panda recipe**, allowing you to override or extend them.
+
+Example — extending the **Button** recipe:
+
+```ts
+// theme/recipes/button.ts
+import { defineRecipe } from '@pandacss/dev'
+
+export const buttonRecipe = defineRecipe({
+  className: 'snaps-button',
+  base: {
+    fontWeight: 'medium',
+    borderRadius: 'md',
+  },
+  variants: {
+    variant: {
+      solid: {
+        bg: 'green.9',
+        color: 'white',
+        _hover: { bg: 'green.10' },
+      },
+      outline: {
+        borderWidth: '1px',
+        borderColor: 'green.7',
+        color: 'green.11',
+      },
+      subtle: {
+        // styles
+      },
+      ghost: {
+        // styles
+      },
+      plain: {
+        // styles
+      },
+    },
+  },
+  defaultVariants: {
+    variant: 'solid',
+  },
+})
+```
+
+Then import and use it inside your config:
+
+```ts
+// panda.config.ts
+theme: {
+  extend: {
+    recipes: {
+      button: buttonRecipe,
+    },
+  },
+},
+```
+
+---
+
+# Customizing Slot Recipes
+
+Some Snaps UI components, like **Accordion**, use slot recipes internally.
+You can override or extend these to customize how each part (slot) of a component looks.
+
+Example: Custom Accordion Slot Recipe
+
+```ts
+// theme/recipes/accordion.ts
+import { defineSlotRecipe } from '@pandacss/dev'
+import { accordionAnatomy } from '@snaps-ui/react/anatomy'
+
+export const accordionSlotRecipe = defineSlotRecipe({
+  className: 'snaps-accordion',
+  slots: accordionAnatomy.keys(),
+
+  base: {
+    root: {
+      width: '100%',
+      borderRadius: 'md',
+    },
+    item: {
+      borderBottomWidth: '1px',
+      borderColor: 'border.default',
+      _last: { borderBottomWidth: '0' },
+    },
+    itemTrigger: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      py: '3',
+      px: '4',
+      cursor: 'pointer',
+      fontWeight: 'medium',
+      color: 'fg.default',
+      _hover: { bg: 'bg.subtle' },
+    },
+    itemContent: {
+      px: '4',
+      py: '3',
+      color: 'fg.muted',
+      fontSize: 'sm',
+    },
+    itemIndicator: {
+      transition: 'transform 0.2s',
+      _open: { transform: 'rotate(-180deg)' },
+    },
+  },
+
+  variants: {
+    variant: {
+      subtle: {
+        itemTrigger: { _hover: { bg: 'gray.3' } },
+      },
+      outline: {
+        item: {
+          borderWidth: '1px',
+          borderColor: 'gray.6',
+          borderRadius: 'md',
+          mb: '2',
+        },
+      },
+    },
+    size: {
+      sm: {
+        itemTrigger: { py: '2', fontSize: 'sm' },
+      },
+      lg: {
+        itemTrigger: { py: '4', fontSize: 'lg' },
+      },
+    },
+  },
+
+  defaultVariants: {
+    variant: 'subtle',
+    size: 'sm',
+  },
+})
+```
+
+Then import and use it inside your config:
+
+```ts
+// panda.config.ts
+theme: {
+  extend: {
+    slotRecipes: {
+      accordion: accordionSlotRecipe
+    }
+  },
+},
+```
+
+---
+
+- Use semantic tokens for better dark/light mode compatibility.
+
+- Use createColorTokens to generate consistent token sets.
+
+- Extend recipes rather than overriding base component styles for cleaner maintenance.
+
+- Combine Snaps UI utilities and Panda CSS for full design control.
+
+## Summary
+
+Snaps UI gives you full control of:
+
+Theme customization via createSnapsPreset
+
+Custom color palettes via createColorTokens
+
+Semantic tokens for adaptive theming
+
+Extendable component recipes
+
+Panda’s token system for typography, spacing, and radii
+
+With these, you can adapt Snaps UI to match your brand or build your own design system foundation.

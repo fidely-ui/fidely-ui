@@ -40,7 +40,7 @@ export const tabsSlotRecipe = defineSlotRecipe({
         _hover: { color: 'fg.default' },
       },
       _disabled: {
-        color: 'text.disabled',
+        color: 'fg.disabled',
         cursor: 'not-allowed',
         _hover: { color: 'text.disabled' },
       },
@@ -93,7 +93,7 @@ export const tabsSlotRecipe = defineSlotRecipe({
             borderTop: 'none',
             borderRight: 'none',
             borderLeft: 'none',
-            borderBottomColor: 'fg.subtle',
+            borderBottomColor: 'colorPalette.default',
             borderBottomWidth: '2px',
             borderBottomStyle: 'solid',
           },
