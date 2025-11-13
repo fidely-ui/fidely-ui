@@ -1,0 +1,59 @@
+---
+title: Stack
+description: Used to layout its children in a vertical or horizontal stack.
+---
+
+<ExampleTabs name="stack-basic" scope="stack" />
+
+## Usage
+
+```tsx
+import { HStack, Stack, VStack } from '@snaps-ui/react'
+```
+
+```tsx
+<Stack>
+  <div />
+  <div />
+</Stack>
+```
+
+## Examples
+
+### HStack
+
+Alternatively, you can use the **HStack** to create a horizontal stack and align its children horizontally.
+
+```tsx
+<HStack>
+  <Box height={'50px'} />
+  <Box height={'50px'} />
+  <Box height={'50px'} />
+  <Box height={'50px'} />
+</HStack>
+```
+
+### VStack
+
+Use the **VStack** to create a vertical stack and align its children vertically.
+
+```tsx
+<VStack>
+  <Box height={'50px'} />
+  <Box height={'50px'} />
+  <Box height={'50px'} />
+  <Box height={'50px'} />
+</VStack>
+```
+
+### Responsive Direction
+
+Use the **direction** prop to change the direction of the stack responsively.
+
+```tsx
+<Stack direction={{ base: 'column', md: 'row' }} gap="6">
+  <Box boxSize="25" />
+  <Box boxSize="25" />
+  <Box boxSize="25" />
+</Stack>
+```

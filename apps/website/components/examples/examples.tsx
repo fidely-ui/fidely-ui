@@ -211,7 +211,7 @@ export const MoreComponents = () => {
   return (
     <Paper width={'full'} height="min-content">
       <Stack gap={4} mb={'15px'}>
-        <VStack gap={4}>
+        <Stack gap={4}>
           <Heading as={'h6'} textStyle={'lg'}>
             Input Group
           </Heading>
@@ -228,9 +228,9 @@ export const MoreComponents = () => {
               23 results
             </InputAddon>
           </InputGroup>
-        </VStack>
+        </Stack>
 
-        <VStack gap={3}>
+        <Stack gap={3}>
           <Heading as={'h6'} textStyle={'lg'}>
             Switch
           </Heading>
@@ -246,9 +246,9 @@ export const MoreComponents = () => {
             </Switch.Control>
             <Switch.Label>Switch color mode</Switch.Label>
           </Switch.Root>
-        </VStack>
+        </Stack>
 
-        <VStack gap={3}>
+        <Stack gap={3}>
           <Heading as={'h6'} textStyle={'lg'}>
             Persona
           </Heading>
@@ -258,7 +258,7 @@ export const MoreComponents = () => {
             img={'http://bit.ly/47jPX1D'}
             imgSize="lg"
           />
-        </VStack>
+        </Stack>
       </Stack>
     </Paper>
   )

@@ -10,6 +10,7 @@ import { Stack } from '@snaps-ui/react/stack'
 import { Text } from '@snaps-ui/react/text'
 import { Heading } from '@snaps-ui/react/heading'
 import { FaGithub, FaGoogle } from 'react-icons/fa6'
+import { Divider } from '@snaps-ui/react'
 
 export const AuthenticationExample = () => {
   return (
@@ -77,9 +78,13 @@ export const AuthenticationExample = () => {
               <Stack gap={3}>
                 <Button colorPalette={'orange'}>Sign up with Email </Button>
 
-                <Text textStyle={'sm'} textAlign={'center'}>
-                  Or continue with
-                </Text>
+                <Flex align={'center'} justify={'center'} gap={'2'}>
+                  <Divider color={'gray'} width={'25%'} />
+                  <Text textStyle={'sm'} textAlign={'center'}>
+                    Or continue with
+                  </Text>
+                  <Divider color={'gray'} width={'25%'} />
+                </Flex>
 
                 <Stack gap={3}>
                   <Button variant={'outline'}>

@@ -1,0 +1,69 @@
+---
+title: Grid
+description: Used to manage grid layouts.
+---
+
+<ExampleTabs name="grid-basic" scope="grid" />
+
+## Usage
+
+```tsx
+import { Grid, GridItem } from '@snaps-ui/react'
+```
+
+```tsx
+<Grid>
+  <GridItem />
+  <GridItem />
+  <GridItem />
+  <GridItem />
+</Grid>
+```
+
+## Examples
+
+### Col spans
+
+Passn the **colSpan** prop to **GridItem** to span across columns.
+
+<ExampleTabs name="grid-spans" scope="grid" />
+
+### Spanning Columns
+
+In some layouts, you may need certain grid items to span specific amount of columns or rows instead of an even distribution
+
+<ExampleTabs name="grid-span-columns" scope="grid" />
+
+### minChildWidth
+
+The minimum width of the child elements before wrapping **(must not be used with columns)**.
+
+<ExampleTabs name="grid-min-width" scope="grid" />
+
+The **Grid** component accepts the following properties:
+
+**columns**: The number of columns in the grid.
+
+**gap**: The gap between the elements in the stack.
+
+**columnGap**: The gap between the elements in the stack horizontally.
+
+**rowGap**: The gap between the elements in the stack vertically.
+
+**minChildWidth**: The minimum width of the child elements before wrapping (must not be used with columns).
+
+---
+
+The **GridItem** component accepts the following properties:
+
+**colSpan**: The number of columns the item spans.
+
+**rowSpan**: The number of rows the item spans.
+
+**rowStart**: The row the item starts at.
+
+**rowEnd**: The row the item ends at.
+
+**colStart**: The column the item starts at.
+
+**colEnd**: The column the item ends at.

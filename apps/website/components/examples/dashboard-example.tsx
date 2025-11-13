@@ -15,7 +15,7 @@ import { Persona } from '@snaps-ui/react/persona'
 import { Table } from '@snaps-ui/react/table'
 import { Text } from '@snaps-ui/react/text'
 import { Heading } from '@snaps-ui/react/heading'
-import { VStack } from '@snaps-ui/react/stack'
+import { Stack, VStack } from '@snaps-ui/react/stack'
 import { BiSearch } from 'react-icons/bi'
 import { FaArrowTrendUp } from 'react-icons/fa6'
 import { HiOutlineDotsHorizontal } from 'react-icons/hi'
@@ -161,10 +161,10 @@ export const DashboardMain = ({ searchValue }: DashboardMainProps) => {
                   justifyContent={'space-between'}
                   alignItems={'flex-start'}
                 >
-                  <VStack gap={'2'}>
+                  <Stack gap={'2'}>
                     <Heading as={'h5'}>{data.name}</Heading>
                     <Text textStyle={'md'}>{data.numbers}</Text>
-                  </VStack>
+                  </Stack>
 
                   <Box>
                     <FaArrowTrendUp />

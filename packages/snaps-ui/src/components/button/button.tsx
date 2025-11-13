@@ -6,6 +6,7 @@ import { styled } from '@snaps-ui/styled-system/jsx'
 import { button } from '@snaps-ui/styled-system/recipes'
 import { type ComponentProps } from '@snaps-ui/styled-system/types'
 
+import { dataAttr } from '../../utils/attr'
 import { Loader } from '../loader'
 
 const StyledButton = styled(ark.button, button)
@@ -55,14 +56,27 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     if (asChild) {
       return (
-        <StyledButton asChild disabled={checkDisabled} {...rest} ref={ref}>
+        <StyledButton
+          asChild
+          ref={ref}
+          disabled={checkDisabled}
+          data-disabled={dataAttr(disabled)}
+          data-loading={dataAttr(isLoading)}
+          {...rest}
+        >
           {children}
         </StyledButton>
       )
     }
 
     return (
-      <StyledButton disabled={checkDisabled} {...rest} ref={ref}>
+      <StyledButton
+        ref={ref}
+        disabled={checkDisabled}
+        data-disabled={dataAttr(disabled)}
+        data-loading={dataAttr(isLoading)}
+        {...rest}
+      >
         {buttonContent}
       </StyledButton>
     )

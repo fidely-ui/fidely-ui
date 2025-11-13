@@ -21,11 +21,12 @@ export interface GridItemProps
 export const GridItem = forwardRef<HTMLDivElement, GridItemProps>(
   function GridItem(props, ref) {
     const [patternProps, restProps] = splitProps(props, [
-      'minChildWidth',
-      'rowGap',
-      'columnGap',
-      'columns',
-      'gap',
+      'colSpan',
+      'rowSpan',
+      'rowStart',
+      'rowEnd',
+      'colStart',
+      'colEnd',
     ])
 
     const styles = gridItem.raw(patternProps)
