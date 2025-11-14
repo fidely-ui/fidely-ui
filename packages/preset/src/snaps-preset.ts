@@ -44,7 +44,7 @@ import tomato from './colors/tomato'
 import violet from './colors/violet'
 import yellow from './colors/yellow'
 
-export const createSnapsPreset = (options: PresetsOptions) => {
+export const snapsPreset = (options: PresetsOptions) => {
   const { accentColor, rounded, grayColor } = options
 
   const normalizeNeutralTokens = (tokens: SemanticTokens['colors']) =>

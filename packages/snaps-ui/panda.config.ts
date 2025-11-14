@@ -1,5 +1,5 @@
 import { defineConfig } from '@pandacss/dev'
-import { createSnapsPreset } from '@snaps-ui/panda-preset'
+import { snapsPreset } from '@snaps-ui/panda-preset'
 import neutral from '@snaps-ui/panda-preset/colors/neutral'
 
 export default defineConfig({
@@ -10,7 +10,7 @@ export default defineConfig({
   jsxFramework: 'react',
   presets: [
     '@pandacss/preset-panda',
-    createSnapsPreset({
+    snapsPreset({
       accentColor: neutral,
       grayColor: neutral,
       rounded: 'sm',

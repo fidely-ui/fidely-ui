@@ -122,6 +122,7 @@ export const tabsSlotRecipe = defineSlotRecipe({
           _selected: {
             background: 'bg.default',
             borderColor: 'border.subtle',
+            color: 'colorPalette.default',
             _horizontal: {
               borderBottomColor: 'transparent',
             },

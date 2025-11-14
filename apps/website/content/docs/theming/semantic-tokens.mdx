@@ -1,6 +1,137 @@
 ---
 title: Semantic Tokens
-description: A button used to close modals, drawers, alerts, and other dismissible elements.
+description: Standardized design tokens for foreground, background, border, radii, shadows, and color palettes in Snaps UI.
 ---
 
-coming soon.
+Semantic tokens provide a consistent, theme-aware way to style components across Snaps UI.
+They abstract raw design values into meaningful names such as **fg**, **bg**, **border**, **radii**, **shadow**, and **colorPalette**.
+These tokens adapt automatically across light and dark modes.
+
+# Foreground (`fg`)
+
+```ts
+fg: {
+  default: { value: '{colors.gray.12}' },
+  muted: { value: '{colors.gray.11}' },
+  subtle: { value: '{colors.gray.10}' },
+  disabled: { value: '{colors.gray.9}' },
+  error: { value: '{colors.red.9}' },
+}
+```
+
+## Usage
+
+```tsx
+<Box color="fg.muted" />
+```
+
+Use for text, icons, and interactive states.
+
+# Background (bg)
+
+```ts
+bg: {
+  surface: { value: '{colors.red.1}' },
+  default: { value: '{colors.gray.2}' },
+  subtle: { value: '{colors.gray.3}' },
+  muted: { value: '{colors.gray.4}' },
+  emphasized: { value: '{colors.gray.5}' },
+  disabled: { value: '{colors.gray.6}' },
+}
+```
+
+Use for cards, buttons, inputs, and sections.
+
+## Usage
+
+```tsx
+<Box bg="bg.default" />
+```
+
+# Border (border)
+
+Border tokens define the colors used for outlines, dividers, and borders throughout your UI.
+They help maintain a consistent look across inputs, buttons, cards, and other components.
+
+```ts
+border: {
+  default: { value: '{colors.gray.7}' },
+  muted: { value: '{colors.gray.6}' },
+  disabled: { value: '{colors.gray.5}' },
+  subtle: { value: '{colors.gray.4}' },
+  outline: { value: '{colors.gray.alpha9}' },
+  error: { value: '{colors.red.9}' },
+}
+```
+
+## Usage
+
+```tsx
+<Box borderColor="border.subtle" />
+```
+
+Use for input outlines, button borders, card dividers, and focus rings.
+
+# Shadows
+
+Shadows provide visual depth and elevation for components such as cards, modals, and dropdowns.
+Using consistent shadow tokens ensures a cohesive UI hierarchy.
+
+| Shadows | values                                                       |
+| ------- | ------------------------------------------------------------ |
+| `-`     | **xs** \| **sm** \| **md** \| **lg** \| **xl** \| **2xl** \| |
+
+---
+
+## Usage
+
+```tsx
+<Box borderShadow="sm" />
+```
+
+or
+
+```tsx
+<Box shadow="11px 11px 3px 1px rgba(255, 145, 0, 0.2)" />
+
+
+<Box shadow="40px -12px var(--shadow-color)" shadowColor="blue" />
+```
+
+# Radii
+
+Radii tokens define the border-radius of components, giving consistent rounding for buttons, cards, inputs, and overlays etc.
+
+| Radii | values                     |
+| ----- | -------------------------- |
+| `-`   | **s1** \| **s2** \| **s3** |
+
+---
+
+## Usage
+
+```tsx
+<Box borderRadius="s2"  />
+
+<Box rounded="md" /> // shorthand
+```
+
+# Color Palette (accent colors)
+
+| CSS Variable                | Token         |
+| --------------------------- | ------------- |
+| `var(--colors-fg-default)`  | `fg.default`  |
+| `var(--colors-fg-muted)`    | `fg.muted`    |
+| `var(--colors-fg-subtle)`   | `fg.subtle`   |
+| `var(--colors-fg-disabled)` | `fg.disabled` |
+| `var(--colors-fg-error)`    | `fg.error`    |
+
+---
+
+## Usage
+
+```tsx
+<Box color="colorPalette.subtle"  />
+
+<Box color="colorPalette.muted"  />
+```
