@@ -19,13 +19,14 @@ To customize it, edit your **panda.config.ts** or **panda.config.js** file.
 // panda.config.ts
 
 import { defineConfig } from '@pandacss/dev'
-import { createSnapsPreset } from '@snaps-ui/panda-preset'
+import { snapsPreset } from '@snaps-ui/panda-preset'
 import neutral from '@snaps-ui/panda-preset/colors/neutral'
+import orange from '@snaps-ui/panda-preset/colors/orange'
 
 export default defineConfig({
   presets: [
-    createSnapsPreset({
-      accentColor: neutral, // you can use your brand color
+    snapsPreset({
+      accentColor: orange, // you can use your brand color
       grayColor: neutral,
       rounded: 'sm', // border radius for your project
     }),
@@ -102,13 +103,13 @@ Then use your new color in your Panda config:
 // panda.config.ts
 
 import { defineConfig } from '@pandacss/dev'
-import { createSnapsPreset } from '@snaps-ui/panda-preset'
+import { snapsPreset } from '@snaps-ui/panda-preset'
 import slate from '@snaps-ui/panda-preset/colors/slate'
 import burgundy from './theme/colors/burgundy'
 
 export default defineConfig({
   presets: [
-    createSnapsPreset({
+    snapsPreset({
       accentColor: burgundy,
       grayColor: slate,
       rounded: 'sm',
@@ -180,7 +181,7 @@ You can also set a custom rounded value globally in the preset:
 ```ts
 // panda.config.ts
 
-createSnapsPreset({
+snapsPreset({
   accentColor: orange,
   grayColor: slate,
   rounded: 'lg',
@@ -354,7 +355,7 @@ theme: {
 
 Snaps UI gives you full control of:
 
-Theme customization via createSnapsPreset
+Theme customization via snapsPreset
 
 Custom color palettes via createColorTokens
 

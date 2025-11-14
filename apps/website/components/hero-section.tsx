@@ -18,12 +18,12 @@ const Logos = [
   {
     href: 'https://ark-ui.com/',
     label: 'Ark UI',
-    icon: <SiArkecosystem size={32} color="#ff8976" />,
+    icon: <SiArkecosystem size={32} color="#FF7F50" />,
   },
   {
     href: 'https://panda-css.com/',
     label: 'Panda CSS',
-    icon: <SiFoodpanda size={32} color="#E5A50A" />,
+    icon: <SiFoodpanda size={32} color="#fde047" />,
   },
   {
     href: 'https://react.dev/',
