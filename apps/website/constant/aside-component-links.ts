@@ -86,6 +86,7 @@ export const asideUtilLinks = [
     section: 'Utilities',
     items: [
       { name: 'Client Only', new: false, linkUrl: 'client-only' },
+      { name: 'Portal', new: false, linkUrl: 'portal' },
       { name: 'Download Trigger', new: false, linkUrl: 'download-trigger' },
       { name: 'Formats', new: false, linkUrl: 'formats' },
     ],
