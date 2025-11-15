@@ -9,7 +9,7 @@ export const Banner = () => {
     <Box bg="orange.9" p="2" w="full">
       <Center>
         <Text fontWeight="bold" color="white">
-          Fidely UI beta is now available!. 🚀
+          Fidely UI v1 beta is now available!. 🚀
         </Text>
       </Center>
     </Box>
