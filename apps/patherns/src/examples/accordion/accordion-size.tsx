@@ -1,4 +1,4 @@
-import { Accordion, Span, Stack, Text } from '@snaps-ui/react'
+import { Accordion, Span, Stack, Text } from '@fidely-ui/react'
 import { BiChevronDown } from 'react-icons/bi'
 
 export const AccordionSize = () => {

@@ -2,7 +2,7 @@
   "include": [],
   "references": [
     {
-      "path": "./packages/snaps-ui/tsconfig.json"
+      "path": "./packages/fidely-ui/tsconfig.json"
     },
     {
       "path": "./packages/preset/tsconfig.json"

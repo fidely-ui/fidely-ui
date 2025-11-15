@@ -1,4 +1,4 @@
-import { HStack, Image } from '@snaps-ui/react'
+import { HStack, Image } from '@fidely-ui/react'
 
 export const ImageCircular = () => {
   return (

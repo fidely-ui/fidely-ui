@@ -1,8 +1,8 @@
 'use client'
 
-import { ClientOnly } from '@snaps-ui/react/client-only'
-import { IconButton } from '@snaps-ui/react/icon-button'
-import { Skeleton } from '@snaps-ui/react/skeleton'
+import { ClientOnly } from '@fidely-ui/react/client-only'
+import { IconButton } from '@fidely-ui/react/icon-button'
+import { Skeleton } from '@fidely-ui/react/skeleton'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { FaMoon } from 'react-icons/fa6'
 

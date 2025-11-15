@@ -1,4 +1,4 @@
-import { Grid, GridItem } from '@snaps-ui/react'
+import { Grid, GridItem } from '@fidely-ui/react'
 
 export const GridMinWidth = () => {
   return (

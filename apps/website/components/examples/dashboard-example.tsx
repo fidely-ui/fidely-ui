@@ -1,21 +1,21 @@
 'use client'
 
 import * as React from 'react'
-import { Avatar } from '@snaps-ui/react/avatar'
-import { Badge } from '@snaps-ui/react/badge'
-import { Box } from '@snaps-ui/react/box'
-import { Card } from '@snaps-ui/react/card'
-import { Flex } from '@snaps-ui/react/flex'
-import { Grid, GridItem } from '@snaps-ui/react/grid'
-import { IconButton } from '@snaps-ui/react/icon-button'
-import { Input } from '@snaps-ui/react/input'
-import { InputGroup } from '@snaps-ui/react/input-group'
-import { InputAddon } from '@snaps-ui/react/input-addon'
-import { Persona } from '@snaps-ui/react/persona'
-import { Table } from '@snaps-ui/react/table'
-import { Text } from '@snaps-ui/react/text'
-import { Heading } from '@snaps-ui/react/heading'
-import { Stack, VStack } from '@snaps-ui/react/stack'
+import { Avatar } from '@fidely-ui/react/avatar'
+import { Badge } from '@fidely-ui/react/badge'
+import { Box } from '@fidely-ui/react/box'
+import { Card } from '@fidely-ui/react/card'
+import { Flex } from '@fidely-ui/react/flex'
+import { Grid, GridItem } from '@fidely-ui/react/grid'
+import { IconButton } from '@fidely-ui/react/icon-button'
+import { Input } from '@fidely-ui/react/input'
+import { InputGroup } from '@fidely-ui/react/input-group'
+import { InputAddon } from '@fidely-ui/react/input-addon'
+import { Persona } from '@fidely-ui/react/persona'
+import { Table } from '@fidely-ui/react/table'
+import { Text } from '@fidely-ui/react/text'
+import { Heading } from '@fidely-ui/react/heading'
+import { Stack } from '@fidely-ui/react/stack'
 import { BiSearch } from 'react-icons/bi'
 import { FaArrowTrendUp } from 'react-icons/fa6'
 import { HiOutlineDotsHorizontal } from 'react-icons/hi'
@@ -61,7 +61,7 @@ export const DashboardSideBar = () => {
     <Box position={'relative'} height={'100vh'}>
       <Box padding={'10px'} borderBottom={'0.6px solid white'}>
         <Heading fontWeight={'bold'} as={'h3'} textStyle={'2xl'}>
-          Snaps Inc.
+          Fidely Inc.
         </Heading>
       </Box>
 
@@ -84,7 +84,7 @@ export const DashboardSideBar = () => {
       <Box position={'absolute'} bottom={'0px'} padding={'10px'}>
         <Persona
           name="Justice Chimobi"
-          title="Creator Snaps UI"
+          title="Creator Fidely UI"
           img={'https://avatars.githubusercontent.com/u/74328318?v=4'}
           imgSize="sm"
         />

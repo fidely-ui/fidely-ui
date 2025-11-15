@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const inputRecipe = defineRecipe({
-  className: 'snaps-input',
+  className: 'fidely-input',
   jsx: ['Input', 'FloatInput'],
   base: {
     appearance: 'none',

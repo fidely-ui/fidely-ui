@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const textareaRecipe = defineRecipe({
-  className: 'snaps-textarea',
+  className: 'fidely-textarea',
   jsx: ['Textarea'],
   base: {
     appearance: 'none',

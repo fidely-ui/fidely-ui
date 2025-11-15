@@ -1,4 +1,4 @@
-import { IconButton, HStack } from '@snaps-ui/react'
+import { IconButton, HStack } from '@fidely-ui/react'
 import { FaRegUser } from 'react-icons/fa6'
 
 export const IconButtonSize = () => {

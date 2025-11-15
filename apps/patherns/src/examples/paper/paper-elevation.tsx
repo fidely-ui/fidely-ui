@@ -1,4 +1,4 @@
-import { Paper, Stack } from '@snaps-ui/react'
+import { Paper, Stack } from '@fidely-ui/react'
 
 export const PaperElevation = () => {
   return (

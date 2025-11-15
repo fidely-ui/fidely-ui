@@ -1,15 +1,15 @@
 'use client'
 
-import { Box } from '@snaps-ui/react/box'
-import { Center } from '@snaps-ui/react/center'
-import { Text } from '@snaps-ui/react/text'
+import { Box } from '@fidely-ui/react/box'
+import { Center } from '@fidely-ui/react/center'
+import { Text } from '@fidely-ui/react/text'
 
 export const Banner = () => {
   return (
     <Box bg="orange.9" p="2" w="full">
       <Center>
         <Text fontWeight="bold" color="white">
-          Snaps UI is still in development mode. 🚀
+          Fidely UI beta is now available!. 🚀
         </Text>
       </Center>
     </Box>

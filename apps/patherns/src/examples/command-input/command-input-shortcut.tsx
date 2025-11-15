@@ -1,6 +1,6 @@
 'use client'
 
-import { CommandInput } from '@snaps-ui/react/command-input'
+import { CommandInput } from '@fidely-ui/react/command-input'
 
 export const CommandInputShortcut = () => {
   return (

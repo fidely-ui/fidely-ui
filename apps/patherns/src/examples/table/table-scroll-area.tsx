@@ -1,4 +1,4 @@
-import { Table } from '@snaps-ui/react/table'
+import { Table } from '@fidely-ui/react/table'
 
 export const TableScrollArea = () => {
   return (

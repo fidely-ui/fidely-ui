@@ -1,4 +1,4 @@
-import { Box, type BoxProps } from '@snaps-ui/react'
+import { Box, type BoxProps } from '@fidely-ui/react'
 
 export const P = (props: BoxProps) => {
   return (

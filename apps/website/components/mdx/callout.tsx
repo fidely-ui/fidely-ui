@@ -1,5 +1,5 @@
-import { Box } from '@snaps-ui/react/box'
-import { Text } from '@snaps-ui/react/text'
+import { Box } from '@fidely-ui/react/box'
+import { Text } from '@fidely-ui/react/text'
 
 interface CalloutProps {
   type?: 'info' | 'warning' | 'tip' | 'danger'

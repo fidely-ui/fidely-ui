@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const paperRecipe = defineRecipe({
-  className: 'snaps-paper',
+  className: 'fidely-paper',
   base: {
     borderRadius: 's3',
     p: 4,

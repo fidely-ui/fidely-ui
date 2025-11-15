@@ -1,4 +1,4 @@
-import { Accordion } from '@snaps-ui/react/accordion'
+import { Accordion } from '@fidely-ui/react/accordion'
 import { BiChevronDown } from 'react-icons/bi'
 
 export const AccordionBasics = () => {

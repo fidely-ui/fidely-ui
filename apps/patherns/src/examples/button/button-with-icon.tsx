@@ -1,4 +1,4 @@
-import { Button, HStack } from '@snaps-ui/react'
+import { Button, HStack } from '@fidely-ui/react'
 import { RiArrowRightLine, RiMailLine } from 'react-icons/ri'
 
 export const ButtonWithIcon = () => {

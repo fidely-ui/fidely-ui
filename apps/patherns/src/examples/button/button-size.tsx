@@ -1,4 +1,4 @@
-import { Button, HStack } from '@snaps-ui/react'
+import { Button, HStack } from '@fidely-ui/react'
 
 export const ButtonSize = () => {
   return (

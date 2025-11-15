@@ -1,4 +1,4 @@
-import { HStack, Stack, Switch, Text } from '@snaps-ui/react'
+import { HStack, Stack, Switch, Text } from '@fidely-ui/react'
 
 export const SwitchWithColors = () => {
   return (

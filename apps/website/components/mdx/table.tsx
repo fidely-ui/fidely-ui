@@ -1,14 +1,14 @@
 import type { ReactNode } from 'react'
-import { Table as SnapsTable } from '@snaps-ui/react/table'
+import { Table as FidelyTable } from '@fidely-ui/react/table'
 
 interface TableProps {
   children?: ReactNode
 }
 
-export const Table = (props: SnapsTable.RootProps & TableProps) => {
+export const Table = (props: FidelyTable.RootProps & TableProps) => {
   return (
-    <SnapsTable.ScrollArea>
-      <SnapsTable.Root
+    <FidelyTable.ScrollArea>
+      <FidelyTable.Root
         size="sm"
         variant="subtle"
         {...props}
@@ -18,31 +18,33 @@ export const Table = (props: SnapsTable.RootProps & TableProps) => {
         }}
       >
         {props.children}
-      </SnapsTable.Root>
-    </SnapsTable.ScrollArea>
+      </FidelyTable.Root>
+    </FidelyTable.ScrollArea>
   )
 }
 
 export const TableHeader = (props: TableProps) => {
-  return <SnapsTable.Header {...props}>{props.children}</SnapsTable.Header>
+  return <FidelyTable.Header {...props}>{props.children}</FidelyTable.Header>
 }
 
 export const TableBody = (props: TableProps) => {
-  return <SnapsTable.Body {...props}>{props.children}</SnapsTable.Body>
+  return <FidelyTable.Body {...props}>{props.children}</FidelyTable.Body>
 }
 
 export const TableRow = (props: TableProps) => {
-  return <SnapsTable.Row {...props}>{props.children}</SnapsTable.Row>
+  return <FidelyTable.Row {...props}>{props.children}</FidelyTable.Row>
 }
 
 export const TableHeadCell = (props: TableProps) => {
-  return <SnapsTable.HeadCell {...props}>{props.children}</SnapsTable.HeadCell>
+  return (
+    <FidelyTable.HeadCell {...props}>{props.children}</FidelyTable.HeadCell>
+  )
 }
 
 export const TableCell = (props: TableProps) => {
-  return <SnapsTable.Cell {...props}>{props.children}</SnapsTable.Cell>
+  return <FidelyTable.Cell {...props}>{props.children}</FidelyTable.Cell>
 }
 
 export const TableFooter = (props: TableProps) => {
-  return <SnapsTable.Footer {...props}>{props.children}</SnapsTable.Footer>
+  return <FidelyTable.Footer {...props}>{props.children}</FidelyTable.Footer>
 }

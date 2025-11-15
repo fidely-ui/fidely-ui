@@ -1,4 +1,4 @@
-import { Box } from '@snaps-ui/react/box'
+import { Box } from '@fidely-ui/react/box'
 import Link, { type LinkProps } from 'next/link'
 
 export const Anchor = (props: LinkProps) => {

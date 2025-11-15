@@ -1,7 +1,7 @@
 'use client'
 
-import { Box } from '@snaps-ui/react/box'
-import { Tabs } from '@snaps-ui/react/tabs'
+import { Box } from '@fidely-ui/react/box'
+import { Tabs } from '@fidely-ui/react/tabs'
 
 import {
   TeamMembers,
@@ -12,7 +12,7 @@ import {
   MoreComponents,
 } from '~/components/examples/examples'
 import { AuthenticationExample } from '~/components/examples/authentication'
-import { Grid, GridItem } from '@snaps-ui/react'
+import { Grid, GridItem } from '@fidely-ui/react'
 import { DashboardExample } from './dashboard-example'
 
 const exampleComponents = [

@@ -1,4 +1,4 @@
-import { PinInput, Stack } from '@snaps-ui/react'
+import { PinInput, Stack } from '@fidely-ui/react'
 
 export const PinInputSizes = () => {
   const sizes = ['2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'] as const

@@ -1,4 +1,4 @@
-import { Button, Card, Field, Input, Stack } from '@snaps-ui/react'
+import { Button, Card, Field, Input, Stack } from '@fidely-ui/react'
 
 export const CardForm = () => (
   <Card.Root width={{ base: 'full', md: '340px' }}>

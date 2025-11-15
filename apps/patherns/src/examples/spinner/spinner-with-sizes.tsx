@@ -1,4 +1,4 @@
-import { HStack, Spinner } from '@snaps-ui/react'
+import { HStack, Spinner } from '@fidely-ui/react'
 
 export const SpinnerWithSizes = () => {
   return (

@@ -1,7 +1,7 @@
 'use client'
 
-import { Portal, Select } from '@snaps-ui/react'
-import { createListCollection } from '@snaps-ui/react/collection'
+import { Portal, Select } from '@fidely-ui/react'
+import { createListCollection } from '@fidely-ui/react/collection'
 import { BiChevronDown } from 'react-icons/bi'
 
 export const SelectGroup = () => {

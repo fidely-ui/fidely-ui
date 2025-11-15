@@ -1,4 +1,4 @@
-import { Input, InputGroup, InputAddon } from '@snaps-ui/react'
+import { Input, InputGroup, InputAddon } from '@fidely-ui/react'
 import { BiUser } from 'react-icons/bi'
 
 export const InputGroupCompAddon = () => {

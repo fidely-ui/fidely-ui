@@ -7,7 +7,7 @@ import { mapEntries } from '../../utils/entries'
 const { variants, defaultVariants } = inputRecipe
 
 export const pinInputSlotRecipe = defineSlotRecipe({
-  className: 'snaps-pin-input',
+  className: 'fidely-pin-input',
   slots: pinInputAnatomy.keys(),
 
   base: {

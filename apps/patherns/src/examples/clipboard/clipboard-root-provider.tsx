@@ -1,9 +1,9 @@
 'use client'
 
-import { Clipboard, useClipboard } from '@snaps-ui/react'
+import { Clipboard, useClipboard } from '@fidely-ui/react'
 
 export const ClipboardRootProvider = () => {
-  const clipboard = useClipboard({ value: 'https://snaps-ui.vercel.app/' })
+  const clipboard = useClipboard({ value: 'https://fidely-ui.vercel.app/' })
 
   return (
     <Clipboard.RootProvider value={clipboard}>

@@ -1,4 +1,4 @@
-import { Divider } from '@snaps-ui/react/divider'
+import { Divider } from '@fidely-ui/react/divider'
 
 export const DividerColor = () => {
   return (

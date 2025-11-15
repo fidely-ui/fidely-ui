@@ -23,15 +23,15 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Snaps UI',
+  title: 'Fidely  UI',
   description:
     'A beautifully crafted React design system powered by Ark UI and Panda CSS, providing accessible, themeable, and production-ready components.',
   authors: [
     { name: 'Justice Chimobi', url: 'https://github.com/chimobi-justice' },
   ],
-  applicationName: 'Snaps UI',
+  applicationName: 'Fidely  UI',
   keywords: [
-    'snaps-ui',
+    'fidely-ui',
     'react',
     'ui',
     'ark ui',

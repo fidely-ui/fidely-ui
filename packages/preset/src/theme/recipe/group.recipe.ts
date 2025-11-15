@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const groupRecipe = defineRecipe({
-  className: 'snaps-group',
+  className: 'fidely-group',
   description: 'A flex group component for layout and avatar stacking',
   base: {
     display: 'flex',

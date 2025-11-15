@@ -1,4 +1,4 @@
-import { Field, Textarea } from '@snaps-ui/react'
+import { Field, Textarea } from '@fidely-ui/react'
 
 export const FieldTextarea = () => {
   return (

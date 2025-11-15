@@ -1,4 +1,4 @@
-import { Avatar, AvatarGroup } from '@snaps-ui/react/avatar'
+import { Avatar, AvatarGroup } from '@fidely-ui/react/avatar'
 import { imgUrl } from './avatar-group-basics'
 
 export const AvatarGroupSpace = () => {

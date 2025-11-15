@@ -1,5 +1,5 @@
-import { Group } from '@snaps-ui/react'
-import { PinInput } from '@snaps-ui/react/pin-input'
+import { Group } from '@fidely-ui/react'
+import { PinInput } from '@fidely-ui/react/pin-input'
 
 export const PinInputAttached = () => {
   return (

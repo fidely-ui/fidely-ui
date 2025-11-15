@@ -1,4 +1,4 @@
-import { Button, HStack } from '@snaps-ui/react'
+import { Button, HStack } from '@fidely-ui/react'
 import { BeatLoader, DotLoader } from 'react-spinners'
 
 export const ButtonCustomSpinner = () => {

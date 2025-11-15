@@ -1,4 +1,4 @@
-import { ClientOnly } from '@snaps-ui/react/client-only'
+import { ClientOnly } from '@fidely-ui/react/client-only'
 
 export const ClientOnlyBasics = () => {
   return (

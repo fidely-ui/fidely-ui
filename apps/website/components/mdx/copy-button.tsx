@@ -1,7 +1,7 @@
 'use client'
 
-import { IconButton } from '@snaps-ui/react/icon-button'
-import { Clipboard } from '@snaps-ui/react/clipboard'
+import { IconButton } from '@fidely-ui/react/icon-button'
+import { Clipboard } from '@fidely-ui/react/clipboard'
 
 export function CopyButton({ code }: { code?: string }) {
   return (

@@ -1,8 +1,8 @@
-import { Button, Clipboard } from '@snaps-ui/react'
+import { Button, Clipboard } from '@fidely-ui/react'
 
 export const ClipboardWithStatusText = () => {
   return (
-    <Clipboard.Root value="https://snaps-ui.vercel.app/">
+    <Clipboard.Root value="https://fidely-ui.vercel.app/">
       <Clipboard.Control>
         <Clipboard.Trigger asChild>
           <Button>

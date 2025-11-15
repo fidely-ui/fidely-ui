@@ -1,4 +1,4 @@
-import { Center, Wrap } from '@snaps-ui/react'
+import { Center, Wrap } from '@fidely-ui/react'
 
 export const WrapGap = () => {
   return (

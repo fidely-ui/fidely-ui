@@ -3,7 +3,7 @@ export const testimonials = [
     name: 'Nelson Chinedu',
     role: 'Frontend Engineer',
     image: '/nelson.jpeg',
-    text: 'Snaps UI completely changed how I build apps. Everything is composable and the design system is consistent out of the box.',
+    text: 'Fidely UI completely changed how I build apps. Everything is composable and the design system is consistent out of the box.',
     linkUrl: 'https://www.linkedin.com/in/nelson-chinedu',
   },
   {
@@ -26,7 +26,7 @@ export const testimonials = [
   {
     name: 'David Kim',
     role: 'Senior Frontend Developer',
-    text: 'Snaps UI has sped up our prototyping process massively. We ship features twice as fast now.',
+    text: 'Fidely UI has sped up our prototyping process massively. We ship features twice as fast now.',
   },
   {
     name: 'Elena Petrova',

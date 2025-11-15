@@ -1,17 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import { Box } from '@snaps-ui/react/box'
-import { Flex } from '@snaps-ui/react/flex'
-import { Stack } from '@snaps-ui/react/stack'
-import { Heading } from '@snaps-ui/react/heading'
-import { Text } from '@snaps-ui/react/text'
+import { Box } from '@fidely-ui/react/box'
+import { Flex } from '@fidely-ui/react/flex'
+import { Stack } from '@fidely-ui/react/stack'
+import { Heading } from '@fidely-ui/react/heading'
+import { Text } from '@fidely-ui/react/text'
 
-import { Grid, GridItem } from '@snaps-ui/react/grid'
+import { Grid, GridItem } from '@fidely-ui/react/grid'
 import { IoLogoVercel } from 'react-icons/io5'
 
 import { AppLogo } from '~/components/logo'
-import { Span } from '@snaps-ui/react'
+import { Span } from '@fidely-ui/react'
 
 const documentation = [
   { href: '/docs/getting-started/installation', label: 'Getting Started' },
@@ -22,8 +22,8 @@ const documentation = [
 
 const community = [
   { href: '#', label: 'Discord' },
-  { href: 'https://x.com/SnapsUi', label: 'Twitter' },
-  { href: 'https://github.com/snaps-ui/snaps-ui', label: 'Github' },
+  { href: 'https://x.com/FidelyUi', label: 'Twitter' },
+  { href: 'https://github.com/fidely-ui/fidely-ui', label: 'Github' },
 ]
 
 export const Footer = () => {

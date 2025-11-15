@@ -1,4 +1,4 @@
-import { Center, Text } from '@snaps-ui/react'
+import { Center, Text } from '@fidely-ui/react'
 
 export const CenterBasic = () => {
   return (

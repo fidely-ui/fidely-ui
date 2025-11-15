@@ -1,9 +1,9 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const headingRecipe = defineRecipe({
-  className: 'snaps-heading',
+  className: 'fidely-heading',
   jsx: ['Heading'],
-  description: 'Snaps UI Heading styles',
+  description: 'Fidely UI Heading styles',
   base: {
     color: 'fg.default',
     fontWeight: 'normal',

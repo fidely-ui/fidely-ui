@@ -2,18 +2,18 @@
 
 import Link from 'next/link'
 import React, { useState } from 'react'
-import { Box } from '@snaps-ui/react/box'
-import { Button } from '@snaps-ui/react/button'
-import { Flex } from '@snaps-ui/react/flex'
-import { IconButton } from '@snaps-ui/react/icon-button'
-import { CommandInput } from '@snaps-ui/react/command-input'
-import { Text } from '@snaps-ui/react/text'
-import { Dialog, useDialog } from '@snaps-ui/react/dialog'
-import { Portal } from '@snaps-ui/react/portal'
-import { Badge } from '@snaps-ui/react/badge'
-import { Input } from '@snaps-ui/react/input'
-import { Span } from '@snaps-ui/react/span'
-import { Stack } from '@snaps-ui/react/stack'
+import { Box } from '@fidely-ui/react/box'
+import { Button } from '@fidely-ui/react/button'
+import { Flex } from '@fidely-ui/react/flex'
+import { IconButton } from '@fidely-ui/react/icon-button'
+import { CommandInput } from '@fidely-ui/react/command-input'
+import { Text } from '@fidely-ui/react/text'
+import { Dialog, useDialog } from '@fidely-ui/react/dialog'
+import { Portal } from '@fidely-ui/react/portal'
+import { Badge } from '@fidely-ui/react/badge'
+import { Input } from '@fidely-ui/react/input'
+import { Span } from '@fidely-ui/react/span'
+import { Stack } from '@fidely-ui/react/stack'
 
 import { FaGithub, FaBars } from 'react-icons/fa6'
 import { FaTimes } from 'react-icons/fa'
@@ -61,7 +61,7 @@ export const NavBar = () => {
         >
           <Button variant={'ghost'} ripple asChild>
             <Link
-              href={'https://ko-fi.com/snaps_ui'}
+              href={'https://ko-fi.com/fidely_ui'}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -95,7 +95,7 @@ export const NavBar = () => {
             size="xs"
           >
             <Link
-              href="https://github.com/snaps-ui/snaps-ui"
+              href="https://github.com/fidely-ui/fidely-ui"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -110,12 +110,12 @@ export const NavBar = () => {
         <Box display={{ base: 'block', md: 'none' }}>
           <IconButton
             asChild
-            aria-label="Sponsor Snaps UI"
+            aria-label="Sponsor Fidely UI"
             variant="plain"
             size="xs"
           >
             <Link
-              href="https://ko-fi.com/snaps_ui"
+              href="https://ko-fi.com/fidely_ui"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -131,7 +131,7 @@ export const NavBar = () => {
             size="xs"
           >
             <Link
-              href="https://github.com/snaps-ui/snaps-ui"
+              href="https://github.com/fidely-ui/fidely-ui"
               target="_blank"
               rel="noopener noreferrer"
             >

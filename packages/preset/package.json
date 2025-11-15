@@ -1,7 +1,7 @@
 {
-  "name": "@snaps-ui/panda-preset",
-  "version": "0.0.0-development",
-  "description": "Snaps UI Panda CSS Preset",
+  "name": "@fidely-ui/panda-preset",
+  "version": "0.0.0",
+  "description": "Fidely UI Panda CSS Preset",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -46,11 +46,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snaps-ui/snaps-ui",
+    "url": "https://github.com/fidely-ui/fidely-ui",
     "directory": "packages/presets"
   },
   "keywords": [
-    "Snaps UI",
+    "Fidely UI",
     "presets",
     "panda css",
     "Ark UI"

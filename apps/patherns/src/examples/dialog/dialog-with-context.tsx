@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, CloseButton, Dialog, Portal } from '@snaps-ui/react'
+import { Button, CloseButton, Dialog, Portal } from '@fidely-ui/react'
 
 export const DialogWithContext = () => {
   return (

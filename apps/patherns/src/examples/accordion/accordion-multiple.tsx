@@ -1,4 +1,4 @@
-import { Accordion } from '@snaps-ui/react/accordion'
+import { Accordion } from '@fidely-ui/react/accordion'
 import { BiChevronDown } from 'react-icons/bi'
 
 export const AccordionMultiple = () => {
@@ -24,7 +24,7 @@ export const AccordionMultiple = () => {
 const items = [
   {
     value: 'a',
-    title: 'Snaps UI',
+    title: 'Fidely  UI',
     text: 'A beautifully crafted React design system powered by Ark UI and Panda CSS, providing accessible, themeable, and production-ready components.',
   },
   {

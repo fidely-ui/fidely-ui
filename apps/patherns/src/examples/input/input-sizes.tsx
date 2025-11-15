@@ -1,4 +1,4 @@
-import { Input, Stack } from '@snaps-ui/react'
+import { Input, Stack } from '@fidely-ui/react'
 
 export const InputSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const

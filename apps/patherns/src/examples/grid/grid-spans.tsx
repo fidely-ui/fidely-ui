@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem } from '@snaps-ui/react'
+import { Box, Grid, GridItem } from '@fidely-ui/react'
 
 export const GridSpans = () => {
   return (

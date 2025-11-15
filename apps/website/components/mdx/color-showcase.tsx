@@ -1,6 +1,6 @@
-import { accentColor, grayColor } from '@snaps-ui/panda-preset'
-import { Box, Grid, Text, VStack, HStack } from '@snaps-ui/react'
-import { token } from '@snaps-ui/styled-system/tokens'
+import { accentColor, grayColor } from '@fidely-ui/panda-preset'
+import { Box, Grid, Text, VStack, HStack } from '@fidely-ui/react'
+import { token } from '@fidely-ui/styled-system/tokens'
 
 const shades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 

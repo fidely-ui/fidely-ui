@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Tabs } from '@snaps-ui/react/tabs'
+import { Tabs } from '@fidely-ui/react/tabs'
 
 export const TabsControlled = () => {
   const [value, setValue] = useState<string | null>('first')

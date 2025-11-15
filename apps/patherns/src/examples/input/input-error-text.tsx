@@ -1,4 +1,4 @@
-import { Field, Input } from '@snaps-ui/react'
+import { Field, Input } from '@fidely-ui/react'
 
 export const InputErrorText = () => {
   return (

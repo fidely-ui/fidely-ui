@@ -1,4 +1,4 @@
-import { Stack, Table, Text, VStack } from '@snaps-ui/react'
+import { Stack, Table, Text, VStack } from '@fidely-ui/react'
 
 export const TableSizes = () => {
   const sizes = ['sm', 'md', 'lg'] as const

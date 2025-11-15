@@ -8,7 +8,7 @@ import {
   Portal,
   Text,
   useDialog,
-} from '@snaps-ui/react'
+} from '@fidely-ui/react'
 
 export const DialogWithStore = () => {
   const dialog = useDialog()

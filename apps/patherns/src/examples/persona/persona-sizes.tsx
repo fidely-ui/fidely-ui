@@ -1,4 +1,4 @@
-import { Persona, Tabs } from '@snaps-ui/react'
+import { Persona, Tabs } from '@fidely-ui/react'
 
 export const PersonaSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const

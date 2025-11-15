@@ -1,16 +1,16 @@
 'use client'
 
-import { Button } from '@snaps-ui/react/button'
-import { Box } from '@snaps-ui/react/box'
-import { Flex } from '@snaps-ui/react/flex'
-import { Field } from '@snaps-ui/react/field'
-import { Input } from '@snaps-ui/react/input'
-import { Paper } from '@snaps-ui/react/paper'
-import { Stack } from '@snaps-ui/react/stack'
-import { Text } from '@snaps-ui/react/text'
-import { Heading } from '@snaps-ui/react/heading'
+import { Button } from '@fidely-ui/react/button'
+import { Box } from '@fidely-ui/react/box'
+import { Flex } from '@fidely-ui/react/flex'
+import { Field } from '@fidely-ui/react/field'
+import { Input } from '@fidely-ui/react/input'
+import { Paper } from '@fidely-ui/react/paper'
+import { Stack } from '@fidely-ui/react/stack'
+import { Text } from '@fidely-ui/react/text'
+import { Heading } from '@fidely-ui/react/heading'
 import { FaGithub, FaGoogle } from 'react-icons/fa6'
-import { Divider } from '@snaps-ui/react'
+import { Divider } from '@fidely-ui/react/divider'
 
 export const AuthenticationExample = () => {
   return (
@@ -26,7 +26,7 @@ export const AuthenticationExample = () => {
         display={{ base: 'none', md: 'block' }}
       >
         <Heading as={'h1'} textStyle={'3xl'}>
-          Snaps UI
+          Fidely UI
         </Heading>
       </Box>
 

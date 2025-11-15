@@ -1,4 +1,4 @@
-import { Span, Text } from '@snaps-ui/react'
+import { Span, Text } from '@fidely-ui/react'
 
 export const SpanBasic = () => {
   return (

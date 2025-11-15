@@ -1,6 +1,6 @@
 import * as runtime from 'react/jsx-runtime'
-import { Kbd } from '@snaps-ui/react/kbd'
-import { Card } from '@snaps-ui/react/card'
+import { Kbd } from '@fidely-ui/react/kbd'
+import { Card } from '@fidely-ui/react/card'
 
 import { ExampleTabs } from '~/components/docs/example-tabs'
 import { ExamplePreview } from '~/components/docs/example-preview'

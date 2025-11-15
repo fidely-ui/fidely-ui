@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const commandInputRecipe = defineRecipe({
-  className: 'snaps-command-input',
+  className: 'fidely-command-input',
   base: {
     display: 'flex',
     alignItems: 'center',

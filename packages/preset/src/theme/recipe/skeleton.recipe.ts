@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const skeletonRecipe = defineRecipe({
-  className: 'snaps-skeleton',
+  className: 'fidely-skeleton',
   base: {
     animation: 'skeleton-pulse',
     backgroundClip: 'padding-box',

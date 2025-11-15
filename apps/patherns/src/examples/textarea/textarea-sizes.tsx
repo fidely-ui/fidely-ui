@@ -1,4 +1,4 @@
-import { Stack, Textarea } from '@snaps-ui/react'
+import { Stack, Textarea } from '@fidely-ui/react'
 
 export const TextareaSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg', 'xl'] as const

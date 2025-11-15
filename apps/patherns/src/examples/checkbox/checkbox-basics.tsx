@@ -1,4 +1,4 @@
-import { Checkbox } from '@snaps-ui/react/checkbox'
+import { Checkbox } from '@fidely-ui/react/checkbox'
 
 export const CheckboxBasics = () => {
   return (

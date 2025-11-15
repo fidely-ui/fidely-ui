@@ -1,4 +1,4 @@
-import { Switch } from '@snaps-ui/react/switch'
+import { Switch } from '@fidely-ui/react/switch'
 
 export const SwitchBasics = () => {
   return (
@@ -7,7 +7,7 @@ export const SwitchBasics = () => {
       <Switch.Control>
         <Switch.Thumb />
       </Switch.Control>
-      <Switch.Label>Snaps UI Switch</Switch.Label>
+      <Switch.Label>Fidely UI Switch</Switch.Label>
     </Switch.Root>
   )
 }

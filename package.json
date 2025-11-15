@@ -1,7 +1,7 @@
 {
-  "name": "snaps-ui",
-  "version": "0.0.0-development",
-  "description": "snaps-ui monorepo, A beautifully crafted React design system powered by Ark UI and Panda",
+  "name": "fidely-ui",
+  "version": "0.0.0",
+  "description": "fidely-ui monorepo, A beautifully crafted React design system powered by Ark UI and Panda",
   "private": true,
   "type": "module",
   "scripts": {
@@ -18,24 +18,24 @@
     "test:watch": "vitest --watch --onlyChanged",
     "commitlint": "commitlint --edit",
     "release": "pnpm run changeset:version && pnpm run build:packages && pnpm run publish",
-    "publish": "pnpm --filter @snaps-ui /* publish --access public --tag latest",
+    "publish": "pnpm --filter @fidely-ui /* publish --access public --tag latest",
     "changeset": "changeset",
     "changeset:version": "changeset version",
     "changeset:publish": "changeset publish"
   },
   "bugs": {
-    "url": "https://github.com/snaps-ui/snaps-ui/issues"
+    "url": "https://github.com/fidely-ui/fidely-ui/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snaps-ui/snaps-ui"
+    "url": "https://github.com/fidely-ui/fidely-ui"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "keywords": [
-    "snaps-ui",
+    "fidely-ui",
     "react",
     "ui",
     "ark-ui",

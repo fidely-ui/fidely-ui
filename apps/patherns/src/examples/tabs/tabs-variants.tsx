@@ -1,4 +1,4 @@
-import { Flex, Tabs } from '@snaps-ui/react'
+import { Flex, Tabs } from '@fidely-ui/react'
 
 export const TabsVariants = () => {
   const variants = ['outline', 'underline'] as const

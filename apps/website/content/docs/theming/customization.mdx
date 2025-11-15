@@ -1,31 +1,33 @@
 ---
 title: Customization
-description: Learn how to customize Snaps UI preset and Panda CSS for your design system.
+description: Learn how to customize Fidely UI preset and Panda CSS for your design system.
 ---
 
-# Snaps UI preset
+# Fidely UI preset
 
-Snaps UI is built on top of **Panda CSS**, so you can customize it at the token, theme, and component levels.  
-This page explains how to extend or override Snaps UI’s default design system.
+Fidely UI is built on top of **Panda CSS**, so you can customize it at the token, theme, and component levels and
+You can choose one **neutral(gray color)** and **accent color** for your brand
+
+This page explains how to extend or override Fidely UI’s default design system.
 
 ---
 
 # Setting Up Your Panda Config
 
-Snaps UI uses a custom Panda preset under the hood.  
+Fidely UI uses a custom Panda preset under the hood.  
 To customize it, edit your **panda.config.ts** or **panda.config.js** file.
 
 ```tsx
 // panda.config.ts
 
 import { defineConfig } from '@pandacss/dev'
-import { snapsPreset } from '@snaps-ui/panda-preset'
-import neutral from '@snaps-ui/panda-preset/colors/neutral'
-import orange from '@snaps-ui/panda-preset/colors/orange'
+import { fidelyPreset } from '@fidely-ui/panda-preset'
+import neutral from '@fidely-ui/panda-preset/colors/neutral'
+import orange from '@fidely-ui/panda-preset/colors/orange'
 
 export default defineConfig({
   presets: [
-    snapsPreset({
+    fidelyPreset({
       accentColor: orange, // you can use your brand color
       grayColor: neutral,
       rounded: 'sm', // border radius for your project
@@ -43,7 +45,7 @@ export default defineConfig({
     './src/app/**/*.{ts,tsx,js,jsx}',
   ],
 
-  importMap: '@snaps-ui/styled-system',
+  importMap: '@fidely-ui/styled-system',
 
   // The output directory for your css system
   outdir: 'styled-system',
@@ -62,15 +64,15 @@ export default defineConfig({
 
 # Custom Color Palette
 
-You can define a custom accent color palette for your project and integrate it into Snaps UI easily.
+You can define a custom accent color palette for your project and integrate it into Fidely UI easily.
 
 The easiest way is to use the built-in **createColorTokens** utility, which automatically maps tokens and semantic tokens for both light and dark themes.
 
-**Snaps UI** uses **Radix Colors** by default, so you can base your palette on their design system.
+**Fidely UI** uses **Radix Colors** by default, so you can base your palette on their design system.
 
 ```ts
 // theme/colors/burgundy.ts
-import { createColorTokens } from '@snaps-ui/panda-preset/utils'
+import { createColorTokens } from '@fidely-ui/panda-preset/utils'
 
 const light = {
   '1': { value: '#FFFCFC' },
@@ -103,13 +105,13 @@ Then use your new color in your Panda config:
 // panda.config.ts
 
 import { defineConfig } from '@pandacss/dev'
-import { snapsPreset } from '@snaps-ui/panda-preset'
-import slate from '@snaps-ui/panda-preset/colors/slate'
+import { fidelyPreset } from '@fidely-ui/panda-preset'
+import slate from '@fidely-ui/panda-preset/colors/slate'
 import burgundy from './theme/colors/burgundy'
 
 export default defineConfig({
   presets: [
-    snapsPreset({
+    fidelyPreset({
       accentColor: burgundy,
       grayColor: slate,
       rounded: 'sm',
@@ -152,7 +154,7 @@ You can also use raw color values (like #fff or "white") instead of tokens.
 
 # Customizing Typography, Radii, and Spacing
 
-Snaps UI exposes Panda’s theme API for easy customization of design tokens.
+Fidely UI exposes Panda’s theme API for easy customization of design tokens.
 
 ```ts
 // panda.config.ts
@@ -181,7 +183,7 @@ You can also set a custom rounded value globally in the preset:
 ```ts
 // panda.config.ts
 
-snapsPreset({
+fidelyPreset({
   accentColor: orange,
   grayColor: slate,
   rounded: 'lg',
@@ -190,7 +192,7 @@ snapsPreset({
 
 # Extending Component Recipes
 
-Each Snaps UI component is powered by a **Panda recipe**, allowing you to override or extend them.
+Each Fidely UI component is powered by a **Panda recipe**, allowing you to override or extend them.
 
 Example — extending the **Button** recipe:
 
@@ -199,7 +201,7 @@ Example — extending the **Button** recipe:
 import { defineRecipe } from '@pandacss/dev'
 
 export const buttonRecipe = defineRecipe({
-  className: 'snaps-button',
+  className: 'fidely-button',
   base: {
     fontWeight: 'medium',
     borderRadius: 'md',
@@ -250,7 +252,7 @@ theme: {
 
 # Customizing Slot Recipes
 
-Some Snaps UI components, like **Accordion**, use slot recipes internally.
+Some Fidely UI components, like **Accordion**, use slot recipes internally.
 You can override or extend these to customize how each part (slot) of a component looks.
 
 Example: Custom Accordion Slot Recipe
@@ -258,10 +260,10 @@ Example: Custom Accordion Slot Recipe
 ```ts
 // theme/recipes/accordion.ts
 import { defineSlotRecipe } from '@pandacss/dev'
-import { accordionAnatomy } from '@snaps-ui/react/anatomy'
+import { accordionAnatomy } from '@fidely-ui/react/anatomy'
 
 export const accordionSlotRecipe = defineSlotRecipe({
-  className: 'snaps-accordion',
+  className: 'fidely-accordion',
   slots: accordionAnatomy.keys(),
 
   base: {
@@ -349,13 +351,13 @@ theme: {
 
 - Extend recipes rather than overriding base component styles for cleaner maintenance.
 
-- Combine Snaps UI utilities and Panda CSS for full design control.
+- Combine Fidely UI utilities and Panda CSS for full design control.
 
 ## Summary
 
-Snaps UI gives you full control of:
+Fidely UI gives you full control of:
 
-Theme customization via snapsPreset
+Theme customization via FidelyPreset
 
 Custom color palettes via createColorTokens
 
@@ -365,4 +367,4 @@ Extendable component recipes
 
 Panda’s token system for typography, spacing, and radii
 
-With these, you can adapt Snaps UI to match your brand or build your own design system foundation.
+With these, you can adapt Fidely UI to match your brand or build your own design system foundation.

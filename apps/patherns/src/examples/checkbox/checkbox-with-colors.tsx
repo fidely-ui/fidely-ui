@@ -1,4 +1,4 @@
-import { Checkbox, HStack, Stack } from '@snaps-ui/react'
+import { Checkbox, HStack, Stack } from '@fidely-ui/react'
 
 export const CheckboxWithColors = () => {
   return (

@@ -6,7 +6,7 @@ import {
   HStack,
   Stack,
   Text,
-} from '@snaps-ui/react'
+} from '@fidely-ui/react'
 import { LuCheck, LuX } from 'react-icons/lu'
 
 export const CardWithAvatar = () => {
@@ -29,8 +29,8 @@ export const CardWithAvatar = () => {
           </Flex>
         </Card.Header>
         <Card.Description>
-          Snaps UI completely changed how I build apps. Everything is composable
-          and the design system is consistent out of the box
+          Fidely UI completely changed how I build apps. Everything is
+          composable and the design system is consistent out of the box
         </Card.Description>
         <Card.Footer>
           <Button variant="subtle" ripple colorPalette={'orange'} flex="1">

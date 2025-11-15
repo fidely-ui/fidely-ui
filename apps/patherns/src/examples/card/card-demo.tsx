@@ -1,4 +1,4 @@
-import { Avatar, Button, Card } from '@snaps-ui/react'
+import { Avatar, Button, Card } from '@fidely-ui/react'
 
 export const CardDemo = () => {
   return (

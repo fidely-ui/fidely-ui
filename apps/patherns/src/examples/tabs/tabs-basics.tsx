@@ -1,4 +1,4 @@
-import { Tabs } from '@snaps-ui/react/tabs'
+import { Tabs } from '@fidely-ui/react/tabs'
 import { FaReact, FaVuejs } from 'react-icons/fa6'
 import { RiSvelteLine } from 'react-icons/ri'
 

@@ -1,11 +1,11 @@
 ---
 title: Dark Mode
-description: Learn how to enable and manage dark mode in your Snaps UI project using next-themes.
+description: Learn how to enable and manage dark mode in your Fidely UI project using next-themes.
 ---
 
 # 🌙 Dark Mode
 
-Snaps UI doesn’t include a built-in color mode manager.  
+Fidely UI doesn’t include a built-in color mode manager.  
 Instead, it integrates seamlessly with [`next-themes`](https://github.com/pacocoursey/next-themes) — a lightweight and powerful theme switcher for you project.
 
 ---
@@ -97,7 +97,7 @@ or
 
 To reduce repetition and ensure consistency, use semantic tokens.
 
-**Snaps UI** provides semantic tokens built on **Panda CSS**, which automatically adjust for light and dark themes.
+**Fidely UI** provides semantic tokens built on **Panda CSS**, which automatically adjust for light and dark themes.
 
 ```tsx
 <Box bg="bg.subtle">
@@ -105,7 +105,7 @@ To reduce repetition and ensure consistency, use semantic tokens.
 </Box>
 ```
 
-## Semantic Tokens in Snaps UI
+## Semantic Tokens in Fidely UI
 
 - Background (bg):
   surface | muted | emphasized | disabled | default
@@ -127,7 +127,7 @@ Here’s an example of a simple toggle button:
 ```tsx
 'use client'
 
-import { ClientOnly, IconButton, Skeleton } from '@snaps-ui/react'
+import { ClientOnly, IconButton, Skeleton } from '@fidely-ui/react'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { FaMoon } from 'react-icons/fa6'
 
@@ -157,7 +157,7 @@ export function ThemeToggle() {
 }
 ```
 
-Works perfectly with Snaps UI components — all dark mode tokens update instantly.
+Works perfectly with Fidely UI components — all dark mode tokens update instantly.
 
 ---
 
@@ -166,13 +166,13 @@ Works perfectly with Snaps UI components — all dark mode tokens update instant
 ```tsx
 // app/page.tsx
 import { ThemeToggle } from '../theme-toggle'
-import { Box } from '@snaps-ui/react'
+import { Box } from '@fidely-ui/react'
 
 export default function Page() {
   return (
     <Box p="6">
       <ThemeToggle />
-      <Box>Hello from Snaps UI 🌗</Box>
+      <Box>Hello from Fidely UI 🌗</Box>
     </Box>
   )
 }

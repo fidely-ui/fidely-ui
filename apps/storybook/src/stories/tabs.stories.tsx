@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react-vite'
-import { Box } from '@snaps-ui/react'
+import { Box } from '@fidely-ui/react'
 
 export default {
   title: 'Disclosure/Tabs',

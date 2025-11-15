@@ -1,4 +1,4 @@
-import { Em } from '@snaps-ui/react/em'
+import { Em } from '@fidely-ui/react/em'
 
 export const EmBasic = () => {
   return (

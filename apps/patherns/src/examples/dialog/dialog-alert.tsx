@@ -1,4 +1,4 @@
-import { Button, CloseButton, Dialog, Portal, Text } from '@snaps-ui/react'
+import { Button, CloseButton, Dialog, Portal, Text } from '@fidely-ui/react'
 
 export const DialogAlert = () => {
   return (

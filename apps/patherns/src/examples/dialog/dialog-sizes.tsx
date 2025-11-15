@@ -5,7 +5,7 @@ import {
   HStack,
   Portal,
   Text,
-} from '@snaps-ui/react'
+} from '@fidely-ui/react'
 
 export const DialogSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg'] as const

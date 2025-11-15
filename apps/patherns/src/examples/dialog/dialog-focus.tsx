@@ -9,7 +9,7 @@ import {
   Input,
   Portal,
   Stack,
-} from '@snaps-ui/react'
+} from '@fidely-ui/react'
 
 export const DialogFocus = () => {
   const ref = useRef<HTMLInputElement | null>(null)

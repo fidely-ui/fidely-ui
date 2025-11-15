@@ -1,4 +1,4 @@
-import { Button, DownloadTrigger } from '@snaps-ui/react'
+import { Button, DownloadTrigger } from '@fidely-ui/react'
 
 const data = 'The modern UI libary'
 

@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const badgeRecipes = defineRecipe({
-  className: 'snaps-badge',
+  className: 'fidely-badge',
   base: {
     userSelect: 'none',
     display: 'inline-flex',

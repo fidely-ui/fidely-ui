@@ -6,7 +6,7 @@ import { mapEntries } from '../../utils/entries'
 const { variants, defaultVariants } = inputRecipe
 
 export const inputGroupRecipe = defineRecipe({
-  className: 'snaps-input-group',
+  className: 'fidely-input-group',
   jsx: ['InputGroup'],
   base: {
     display: 'flex',
@@ -14,7 +14,7 @@ export const inputGroupRecipe = defineRecipe({
     position: 'relative',
     width: '100%',
 
-    '& > input, & > .snaps-input': {
+    '& > input, & > .fidely-input': {
       flex: 1,
       borderRadius: '0',
       borderWidth: '1px',

@@ -2,12 +2,12 @@
 
 import Link from 'next/link'
 import * as React from 'react'
-import { Box } from '@snaps-ui/react/box'
-import { Flex } from '@snaps-ui/react/flex'
-import { Stack } from '@snaps-ui/react/stack'
-import { Text } from '@snaps-ui/react/text'
-import { Badge as SnapsBadge } from '@snaps-ui/react/badge'
-import { Span } from '@snaps-ui/react/span'
+import { Box } from '@fidely-ui/react/box'
+import { Flex } from '@fidely-ui/react/flex'
+import { Stack } from '@fidely-ui/react/stack'
+import { Text } from '@fidely-ui/react/text'
+import { Badge as FidelyBadge } from '@fidely-ui/react/badge'
+import { Span } from '@fidely-ui/react/span'
 
 import {
   asideComponentLinks,
@@ -162,8 +162,8 @@ function Sidebar() {
 
 const Badge = () => {
   return (
-    <SnapsBadge colorPalette={'orange'} size={'sm'}>
+    <FidelyBadge colorPalette={'orange'} size={'sm'}>
       WIP
-    </SnapsBadge>
+    </FidelyBadge>
   )
 }

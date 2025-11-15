@@ -1,1 +1,1 @@
-# Snaps UI storybook
+# Fidely storybook
