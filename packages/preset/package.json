@@ -1,6 +1,6 @@
 {
   "name": "@fidely-ui/panda-preset",
-  "version": "0.0.0",
+  "version": "1.0.1-beta.0",
   "description": "Fidely UI Panda CSS Preset",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -48,6 +48,9 @@
     "type": "git",
     "url": "https://github.com/fidely-ui/fidely-ui",
     "directory": "packages/presets"
+  },
+  "bugs": {
+    "url": "https://github.com/fidely-ui/fidely-ui/issues"
   },
   "keywords": [
     "Fidely UI",

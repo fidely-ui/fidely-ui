@@ -1,5 +1,6 @@
 {
   "name": "@fidely-ui/styled-system",
+  "version": "1.0.1-beta.0",
   "scripts": {
     "preprepare": "pnpm -F @fidely-ui/panda-preset build",
     "prepare": "panda codegen"

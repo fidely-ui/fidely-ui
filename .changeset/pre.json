@@ -1,0 +1,13 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@fidely-ui/patherns": "1.0.0",
+    "@fidely-ui/storybook": "0.0.0",
+    "@fidely-ui/website": "0.1.0",
+    "@fidely-ui/react": "0.0.0",
+    "@fidely-ui/panda-preset": "0.0.0",
+    "@fidely-ui/styled-system": "0.0.0"
+  },
+  "changesets": ["shaky-dryers-cut"]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "fidely-ui/fidely-ui" }
+  ],
+  "commit": false,
+  "fixed": [["@fidely-ui/**"]],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  },
+  "ignore": [
+    "@fidely-ui/storybook",
+    "@fidely-ui/website",
+    "@fidely-ui/patherns"
+  ]
+}
