@@ -1,5 +1,11 @@
 # @fidely-ui/panda-preset
 
+## 1.0.1-beta.1
+
+### Patch Changes
+
+- Fix: cleanup build output and remove extra external deps
+
 ## 1.0.1-beta.0
 
 ### Patch Changes
