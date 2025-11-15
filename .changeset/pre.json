@@ -9,5 +9,5 @@
     "@fidely-ui/panda-preset": "0.0.0",
     "@fidely-ui/styled-system": "0.0.0"
   },
-  "changesets": ["shaky-dryers-cut"]
+  "changesets": ["flat-jokes-drum", "shaky-dryers-cut"]
 }

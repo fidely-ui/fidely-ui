@@ -1,6 +1,6 @@
 {
   "name": "@fidely-ui/panda-preset",
-  "version": "1.0.1-beta.0",
+  "version": "1.0.1-beta.1",
   "description": "Fidely UI Panda CSS Preset",
   "type": "module",
   "main": "./dist/index.cjs",

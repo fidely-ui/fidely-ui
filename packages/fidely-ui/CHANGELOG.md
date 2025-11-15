@@ -1,5 +1,15 @@
 # @fidely-ui/react
 
+## 1.0.1-beta.1
+
+### Patch Changes
+
+- Fix: cleanup build output and remove extra external deps
+
+- Updated dependencies []:
+  - @fidely-ui/panda-preset@1.0.1-beta.1
+  - @fidely-ui/styled-system@1.0.1-beta.1
+
 ## 1.0.1-beta.0
 
 ### Patch Changes

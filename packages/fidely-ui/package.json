@@ -1,6 +1,6 @@
 {
   "name": "@fidely-ui/react",
-  "version": "1.0.1-beta.0",
+  "version": "1.0.1-beta.1",
   "private": false,
   "description": "A beautifully crafted React design system powered by Ark UI and Panda CSS, providing accessible, themeable, and production-ready components.",
   "type": "module",
