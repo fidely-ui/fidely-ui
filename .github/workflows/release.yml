@@ -28,16 +28,20 @@ jobs:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Setup pnpm
+        run: corepack enable && corepack prepare pnpm@latest --activate
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build packages
         run: pnpm run build:packages
 
-      - id: changesets
+      - name: Create release Pull Request or publish to NPM
+        id: changesets
         uses: changesets/action@v1
         with:
-          publish: pnpm run release
+          publish: pnpm release
           commit: 'ci(changesets): version packages'
           setupGitUser: false
         env:

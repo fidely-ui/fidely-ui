@@ -17,7 +17,7 @@
     "test:ui": "vitest --ui",
     "test:watch": "vitest --watch --onlyChanged",
     "commitlint": "commitlint --edit",
-    "release": "pnpm run changeset:version && pnpm run build:packages && pnpm run publish",
+    "release": "changeset publish",
     "publish": "pnpm --filter @fidely-ui /* publish --access public --tag latest",
     "changeset": "changeset",
     "changeset:version": "changeset version",
