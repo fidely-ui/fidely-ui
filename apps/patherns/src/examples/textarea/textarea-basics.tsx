@@ -1,4 +1,4 @@
-import { Textarea } from '@snaps-ui/react'
+import { Textarea } from '@fidely-ui/react'
 
 export const TextareaBasics = () => {
   return <Textarea placeholder="Comment..." />

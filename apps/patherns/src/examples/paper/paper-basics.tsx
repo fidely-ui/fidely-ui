@@ -1,5 +1,5 @@
-import { Paper } from '@snaps-ui/react/paper'
+import { Paper } from '@fidely-ui/react/paper'
 
 export const PaperBasics = () => {
-  return <Paper>Hey, Snaps UI paper</Paper>
+  return <Paper>Hey, Fidely UI paper</Paper>
 }

@@ -1,4 +1,4 @@
-import { Tabs } from '@snaps-ui/react/tabs'
+import { Tabs } from '@fidely-ui/react/tabs'
 import { LuFolder, LuSquareCheck, LuUser } from 'react-icons/lu'
 
 export const TabsManual = () => {

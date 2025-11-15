@@ -1,10 +1,10 @@
 import { defineConfig } from '@pandacss/dev'
-import { snapsPreset } from '@snaps-ui/panda-preset'
-import neutral from '@snaps-ui/panda-preset/colors/neutral'
+import { fidelyPreset } from '@fidely-ui/panda-preset'
+import neutral from '@fidely-ui/panda-preset/colors/neutral'
 
 export default defineConfig({
   presets: [
-    snapsPreset({
+    fidelyPreset({
       accentColor: neutral,
       grayColor: neutral,
       rounded: 'sm',
@@ -21,7 +21,7 @@ export default defineConfig({
   ],
   // Files to exclude
   exclude: [],
-  importMap: '@snaps-ui/styled-system',
+  importMap: '@fidely-ui/styled-system',
   // The output directory for your css system
   outdir: 'styled-system',
   staticCss: {

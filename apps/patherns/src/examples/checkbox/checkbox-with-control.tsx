@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Checkbox } from '@snaps-ui/react'
+import { Checkbox } from '@fidely-ui/react'
 
 export const CheckboxWithControl = () => {
   const [checked, setChecked] = useState(false)
@@ -15,7 +15,7 @@ export const CheckboxWithControl = () => {
       <Checkbox.Control>
         <Checkbox.Indicator />
       </Checkbox.Control>
-      <Checkbox.Label>Snaps UI Checkbox</Checkbox.Label>
+      <Checkbox.Label>Fidely UI Checkbox</Checkbox.Label>
     </Checkbox.Root>
   )
 }

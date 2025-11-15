@@ -1,11 +1,11 @@
 import { defineConfig } from '@pandacss/dev'
-import { snapsPreset } from '@snaps-ui/panda-preset'
-import neutral from '@snaps-ui/panda-preset/colors/neutral'
+import { fidelyPreset } from '@fidely-ui/panda-preset'
+import neutral from '@fidely-ui/panda-preset/colors/neutral'
 
 export default defineConfig({
   presets: [
     '@pandacss/preset-panda',
-    snapsPreset({
+    fidelyPreset({
       accentColor: neutral,
       grayColor: neutral,
       rounded: 'sm',

@@ -1,4 +1,4 @@
-import { Box, Text } from '@snaps-ui/react'
+import { Box, Text } from '@fidely-ui/react'
 
 export const TextLineClamp = () => {
   return (

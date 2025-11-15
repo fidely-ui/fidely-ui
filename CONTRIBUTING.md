@@ -1,10 +1,10 @@
-# Contributing to Snaps UI
+# Contributing to Fidely UI
 
-Thanks for showing interest in contributing to **Snaps UI 💖** — you rock!
+Thanks for showing interest in contributing to **Fidely UI 💖** — you rock!
 
 ## Overview
 
-Here are a few ways you can help improve Snaps UI:
+Here are a few ways you can help improve Fidely UI:
 
 - **Improve the documentation**: Add new demos, fix typos, or expand missing information.
 - **Add new demos**: Contribute new component demos to the website and Storybook.
@@ -16,16 +16,16 @@ Here are a few ways you can help improve Snaps UI:
 
 ## Architecture
 
-Snaps UI is built with **flexibility and reusability** in mind. It provides production-ready components powered by a lightweight core, while keeping styling and customization fully in your control.
+Fidely UI is built with **flexibility and reusability** in mind. It provides production-ready components powered by a lightweight core, while keeping styling and customization fully in your control.
 
 ### Filing Issues
 
-- If the issue is related to **component logic or accessibility**, open it in the Snaps UI repository.
-- If it’s a **styling or design issue**, you can usually fix it directly in the Snaps UI codebase and submit a PR.
+- If the issue is related to **component logic or accessibility**, open it in the Fidely UI repository.
+- If it’s a **styling or design issue**, you can usually fix it directly in the Fidely UI codebase and submit a PR.
 
 ### Feature Requests
 
-- If the feature is a **new component**, start a discussion in the [Snaps UI repository](https://github.com/snaps-ui/snaps-ui).
+- If the feature is a **new component**, start a discussion in the [Fidely UI repository](https://github.com/fidely-ui/fidely-ui).
 - If the feature involves **core logic or architectural changes**, open an issue so we can evaluate and plan together.
 
 ## Local Setup
@@ -33,7 +33,7 @@ Snaps UI is built with **flexibility and reusability** in mind. It provides prod
 - Clone the repository
 
 ```bash
-git clone https://github.com/snaps-ui/snaps-ui.git
+git clone https://github.com/fidely-ui/fidely-ui.git
 ```
 
 Install dependencies

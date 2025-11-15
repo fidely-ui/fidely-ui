@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
-import { Box } from '@snaps-ui/react/box'
+import { Box } from '@fidely-ui/react/box'
 
 import { getHighlighter } from '~/lib/shiki'
 import { type ExampleProps } from '~/components/docs/example-tabs'

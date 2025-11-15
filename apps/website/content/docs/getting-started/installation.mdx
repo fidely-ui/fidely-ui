@@ -1,57 +1,57 @@
 ---
 title: Installation
-description: Learn how to install and set up Snaps UI in your project.
+description: Learn how to install and set up Fidely UI in your project.
 ---
 
 ## Getting Started
 
-Snaps UI is built on top of **Panda CSS** and **Ark UI**, designed to help you build fast, consistent, and beautiful interfaces.  
+Fidely UI is built on top of **Panda CSS** and **Ark UI**, designed to help you build fast, consistent, and beautiful interfaces.  
 Follow the steps below to get started.
 
 ---
 
 ### 1. Install Panda CSS
 
-Before installing Snaps UI, make sure you have **Panda CSS** set up in your project.  
+Before installing Fidely UI, make sure you have **Panda CSS** set up in your project.  
 Follow the official Panda CSS installation guide for your framework:
 
 👉 [Panda CSS Installation Guide](https://panda-css.com/docs/overview/getting-started#installation)
 
 ---
 
-### 2. Install Snaps UI
+### 2. Install Fidely UI
 
-Once Panda CSS is installed, add Snaps UI and its peer dependencies using your preferred package manager:
+Once Panda CSS is installed, add Fidely UI and its peer dependencies using your preferred package manager:
 
 ```bash
 # npm
-npm install @snaps-ui/react @snaps-ui/panda-preset
+npm install @fidely-ui/react@beta @fidely-ui/panda-preset@beta
 ```
 
 ```bash
 # pnpm
-pnpm add @snaps-ui/react @snaps-ui/panda-preset
+pnpm add @fidely-ui/react@beta @fidely-ui/panda-preset@beta
 ```
 
 ```bash
 # yarn
-yarn add @snaps-ui/react @snaps-ui/panda-preset
+yarn add @fidely-ui/react@beta @fidely-ui/panda-preset@beta
 
 ```
 
-### 3. Configure Panda with Snaps UI Preset
+### 3. Configure Panda with Fidely UI Preset
 
-After installation, update your **panda.config.ts** file to include the Snaps UI preset.
-This preset automatically adds design tokens, colors, and component recipes optimized for Snaps UI.
+After installation, update your **panda.config.ts** file to include the Fidely UI preset.
+This preset automatically adds design tokens, colors, and component recipes optimized for Fidely UI.
 
 ```tsx
 import { defineConfig } from '@pandacss/dev'
-import { snapsPreset } from '@snaps-ui/panda-preset'
-import neutral from '@snaps-ui/panda-preset/colors/neutral'
+import { fidelyPreset } from '@fidely-ui/panda-preset'
+import neutral from '@fidely-ui/panda-preset/colors/neutral'
 
 export default defineConfig({
   presets: [
-    snapsPreset({
+    fidelyPreset({
       accentColor: neutral,
       grayColor: neutral,
       rounded: 'sm',
@@ -66,7 +66,7 @@ export default defineConfig({
     './app/**/*.{js,jsx,ts,tsx}', // Replace with your app source directory
   ],
 
-  importMap: '@snaps-ui/styled-system',
+  importMap: '@fidely-ui/styled-system',
   // The output directory for your css system
   outdir: 'styled-system',
   jsxFramework: 'react',
@@ -90,20 +90,20 @@ Note after updating your config make sure you run panda codegen e.g (npm panda c
 @layer reset, base, tokens, recipes, utilities;
 ```
 
-### 4. Try Snaps UI in action
+### 4. Try Fidely UI in action
 
-Now that you’ve set everything up, create a new React component and try using a Snaps UI component!
+Now that you’ve set everything up, create a new React component and try using a Fidely UI component!
 
 ```tsx
-import { Button } from '@snaps-ui/react'
+import { Button } from '@fidely-ui/react'
 
 export default function Index() {
-  return <Button variant="solid">I am a Snaps Button</Button>
+  return <Button variant="solid">I am a Fidely Button</Button>
 }
 ```
 
-You should now see your first Snaps UI button rendered beautifully in your app. 🎉
+You should now see your first Fidely UI button rendered beautifully in your app. 🎉
 
 ---
 
-[⭐ Star Snaps UI on GitHub →](https://github.com/snaps-ui/snaps-ui)
+[⭐ Star Fidely UI on GitHub →](https://github.com/fidely-ui/fidely-ui)

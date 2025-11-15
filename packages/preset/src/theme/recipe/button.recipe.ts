@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const buttonRecipe = defineRecipe({
-  className: 'snaps-button',
+  className: 'fidely-button',
   jsx: ['Button', 'IconButton'],
   base: {
     appearance: 'none',

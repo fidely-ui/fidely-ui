@@ -8,7 +8,7 @@ description: Used to render an element outside the DOM hierarchy.
 The Portal uses the **ReactDOM.createPortal** API to render an element at the end of **document.body** or specific container.
 
 ```tsx
-import { Portal } from '@snaps-ui/react'
+import { Portal } from '@fidely-ui/react'
 ```
 
 ```tsx
@@ -22,7 +22,7 @@ import { Portal } from '@snaps-ui/react'
 Use the container prop to render the portal in a custom container.
 
 ```tsx
-import { Portal } from '@snaps-ui/react/portal'
+import { Portal } from '@fidely-ui/react/portal'
 
 const Container = () => {
   const ref = React.useRef()
@@ -42,7 +42,7 @@ const Container = () => {
 Use the disabled prop to disable the portal. This will render the children in the same DOM hierarchy.
 
 ```tsx
-import { Portal } from '@snaps-ui/react/portal'
+import { Portal } from '@fidely-ui/react/portal'
 
 const Disabled = () => {
   return (

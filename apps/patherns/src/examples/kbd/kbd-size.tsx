@@ -1,4 +1,4 @@
-import { Kbd, Flex } from '@snaps-ui/react'
+import { Kbd, Flex } from '@fidely-ui/react'
 
 export const KbdSize = () => {
   return (

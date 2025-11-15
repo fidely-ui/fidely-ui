@@ -1,1 +1,1 @@
-# Snaps UI Website
+# Fidely UI Website

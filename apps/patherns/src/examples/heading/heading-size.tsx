@@ -1,4 +1,4 @@
-import { Heading } from '@snaps-ui/react/heading'
+import { Heading } from '@fidely-ui/react/heading'
 
 export const HeadingSize = () => {
   return (

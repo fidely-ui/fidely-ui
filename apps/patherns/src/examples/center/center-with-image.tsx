@@ -1,4 +1,4 @@
-import { Box, Center, Image } from '@snaps-ui/react'
+import { Box, Center, Image } from '@fidely-ui/react'
 
 export const CenterWithImage = () => {
   return (

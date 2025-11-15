@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { Box } from '@snaps-ui/react/box'
-import { Button } from '@snaps-ui/react/button'
-import { Center } from '@snaps-ui/react/center'
-import { Flex } from '@snaps-ui/react/flex'
-import { Heading } from '@snaps-ui/react/heading'
-import { Text } from '@snaps-ui/react/text'
-import { Image } from '@snaps-ui/react/image'
+import { Box } from '@fidely-ui/react/box'
+import { Button } from '@fidely-ui/react/button'
+import { Center } from '@fidely-ui/react/center'
+import { Flex } from '@fidely-ui/react/flex'
+import { Heading } from '@fidely-ui/react/heading'
+import { Text } from '@fidely-ui/react/text'
+import { Image } from '@fidely-ui/react/image'
 
 export default function NotFound() {
   return (
@@ -18,7 +18,7 @@ export default function NotFound() {
           flexDirection={'column'}
           mb={'10px'}
         >
-          <Image src="/app-logo.png" alt="Snaps UI Logo" w="350px" />
+          <Image src="/app-logo.png" alt="Fidely  UI Logo" w="350px" />
         </Flex>
 
         <Box mb={'15px'}>

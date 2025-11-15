@@ -1,4 +1,4 @@
-import { ClientOnly, SkeletonText } from '@snaps-ui/react'
+import { ClientOnly, SkeletonText } from '@fidely-ui/react'
 
 export const ClientOnlyFallback = () => {
   return (

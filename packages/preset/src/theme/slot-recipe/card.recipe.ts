@@ -3,7 +3,7 @@ import { defineSlotRecipe } from '@pandacss/dev'
 import { cardAnatomy } from '../../anatomy'
 
 export const cardSlotRecipe = defineSlotRecipe({
-  className: 'snaps-card',
+  className: 'fidely-card',
   slots: cardAnatomy.keys(),
   base: {
     root: {

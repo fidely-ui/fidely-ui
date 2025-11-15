@@ -1,8 +1,8 @@
 'use client'
 
 import { defineStyles } from '@pandacss/dev'
-import { IconButton } from '@snaps-ui/react/icon-button'
-import { Box, type BoxProps } from '@snaps-ui/react/box'
+import { IconButton } from '@fidely-ui/react/icon-button'
+import { Box, type BoxProps } from '@fidely-ui/react/box'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { LuCheck, LuCopy } from 'react-icons/lu'
 

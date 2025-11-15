@@ -2,9 +2,9 @@ import { defineSlotRecipe } from '@pandacss/dev'
 import { selectAnatomy } from '@ark-ui/react/anatomy'
 
 export const selectSlotRecipe = defineSlotRecipe({
-  className: 'snaps-select',
+  className: 'fidely-select',
   slots: selectAnatomy.keys(),
-  description: 'Styles for the Snaps UI Select component',
+  description: 'Styles for the Fidely UI Select component',
 
   base: {
     root: {

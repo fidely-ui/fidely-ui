@@ -1,4 +1,4 @@
-import { HStack, Switch } from '@snaps-ui/react'
+import { HStack, Switch } from '@fidely-ui/react'
 
 export const SwitchSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg'] as const

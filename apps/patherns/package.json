@@ -1,13 +1,13 @@
 {
-  "name": "@snaps-ui/patherns",
+  "name": "@fidely-ui/patherns",
   "version": "1.0.0",
   "private": true,
-  "description": "Reusable UI patterns and compositions for Snaps UI",
+  "description": "Reusable UI patterns and compositions for Fidely UI",
   "scripts": {
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
-    "snaps ui",
+    "fidely ui",
     "ui",
     "registry",
     "compositions",
@@ -18,8 +18,8 @@
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
   "dependencies": {
-    "@snaps-ui/panda-preset": "workspace:*",
-    "@snaps-ui/react": "workspace:*",
+    "@fidely-ui/panda-preset": "workspace:*",
+    "@fidely-ui/react": "workspace:*",
     "@pandacss/dev": "^1.4.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",

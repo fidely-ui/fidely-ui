@@ -1,20 +1,20 @@
 <p align="center">
-  <a href="https://github.com/snaps-ui/snaps-ui">
-    <img src="https://raw.githubusercontent.com/snaps-ui/snaps-ui/main/apps/website/public/app-logo.png?raw=true" alt="snaps logo" width="300" />
+  <a href="https://github.com/fidely-ui/fidely-ui">
+    <img src="https://raw.githubusercontent.com/fidely-ui/fidely-ui/main/apps/website/public/app-logo.png?raw=true" alt="Fidely logo" width="300" />
   </a>
 </p>
 
-# Snaps UI ⚡
+# Fidely UI ⚡
 
 ## Build modern apps with speed and flexibility
 
-> **Snaps UI is a modern UI library with reusable, intuitive components that help you ship products faster. Create beautiful, consistent interfaces with customizable, production-ready building blocks.**
+> **Fidely UI is a modern UI library with reusable, intuitive components that help you ship products faster. Create beautiful, consistent interfaces with customizable, production-ready building blocks.**
 
 ---
 
 <p align="center">
-  <a href="https://github.com/snaps-ui/snaps-ui">
-    <img src="https://raw.githubusercontent.com/snaps-ui/snaps-ui/main/apps/website/public/snaps-showcase.png?raw=true" alt="snaps logo" width="100%" />
+  <a href="https://github.com/fidely-ui/fidely-ui">
+    <img src="https://raw.githubusercontent.com/fidely-ui/fidely-ui/main/apps/website/public/fidely-showcase.png?raw=true" alt="Fidely logo" width="100%" />
   </a>
 </p>
 
@@ -38,17 +38,17 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 
 ## 📣 Stay Connected
 
-[Website](https://snaps-ui.vercel.app/)
+[Website](https://fidely-ui.vercel.app/)
 
-[LinkedIn](https://www.linkedin.com/company/snaps-ui)
+[LinkedIn](https://www.linkedin.com/company/fidely-ui)
 
-[Twitter](https://x.com/SnapsUi)
+[Twitter](https://x.com/FidelyUi)
 
 💬 Community Discord (coming soon)
 
 ## Acknowledgement
 
-Snaps UI’s documentation and design philosophy are inspired by [Chakra UI](https://chakra-ui.com/), and [Park UI](https://park-ui.com/).
+Fidely UI’s documentation and design philosophy are inspired by [Chakra UI](https://chakra-ui.com/), and [Park UI](https://park-ui.com/).
 We’re grateful for their contributions to the open-source ecosystem.
 
 ## 🙏🏽 Support

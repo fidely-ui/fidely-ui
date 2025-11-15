@@ -2,7 +2,7 @@ import { defineSlotRecipe } from '@pandacss/dev'
 import { checkboxAnatomy } from '@ark-ui/react/anatomy'
 
 export const checkboxSlotRecipe = defineSlotRecipe({
-  className: 'snaps-checkbox',
+  className: 'fidely-checkbox',
   slots: checkboxAnatomy.keys(),
   base: {
     root: {

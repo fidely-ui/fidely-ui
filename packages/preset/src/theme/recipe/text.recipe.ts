@@ -6,9 +6,9 @@ import { mapEntries } from '../../utils/entries'
 const { variants } = headingRecipe
 
 export const textRecipe = defineRecipe({
-  className: 'snaps-text',
+  className: 'fidely-text',
   jsx: ['Text'],
-  description: 'Snaps UI Text',
+  description: 'Fidely UI Text',
 
   variants: {
     size: mapEntries(variants!.size, (key, value) => [key, { ...value }]),

@@ -1,25 +1,25 @@
 'use client'
 
-import { Avatar, AvatarGroup } from '@snaps-ui/react/avatar'
-import { Button } from '@snaps-ui/react/button'
-import { Box } from '@snaps-ui/react/box'
-import { Center } from '@snaps-ui/react/center'
-import { Flex } from '@snaps-ui/react/flex'
-import { Field } from '@snaps-ui/react/field'
-import { Input } from '@snaps-ui/react/input'
-import { Paper } from '@snaps-ui/react/paper'
-import { HStack, Stack, VStack } from '@snaps-ui/react/stack'
-import { Textarea } from '@snaps-ui/react/textarea'
-import { Text } from '@snaps-ui/react/text'
-import { Heading } from '@snaps-ui/react/heading'
-import { Tabs } from '@snaps-ui/react/tabs'
-import { Checkbox } from '@snaps-ui/react/checkbox'
-import { Spinner } from '@snaps-ui/react/spinner'
+import { Avatar, AvatarGroup } from '@fidely-ui/react/avatar'
+import { Button } from '@fidely-ui/react/button'
+import { Box } from '@fidely-ui/react/box'
+import { Center } from '@fidely-ui/react/center'
+import { Flex } from '@fidely-ui/react/flex'
+import { Field } from '@fidely-ui/react/field'
+import { Input } from '@fidely-ui/react/input'
+import { Paper } from '@fidely-ui/react/paper'
+import { HStack, Stack, VStack } from '@fidely-ui/react/stack'
+import { Textarea } from '@fidely-ui/react/textarea'
+import { Text } from '@fidely-ui/react/text'
+import { Heading } from '@fidely-ui/react/heading'
+import { Tabs } from '@fidely-ui/react/tabs'
+import { Checkbox } from '@fidely-ui/react/checkbox'
+import { Spinner } from '@fidely-ui/react/spinner'
 import { FaPlus } from 'react-icons/fa6'
-import { InputGroup } from '@snaps-ui/react/input-group'
-import { InputAddon } from '@snaps-ui/react/input-addon'
-import { Switch } from '@snaps-ui/react/switch'
-import { Persona } from '@snaps-ui/react/persona'
+import { InputGroup } from '@fidely-ui/react/input-group'
+import { InputAddon } from '@fidely-ui/react/input-addon'
+import { Switch } from '@fidely-ui/react/switch'
+import { Persona } from '@fidely-ui/react/persona'
 import { BiSearch, BiUser } from 'react-icons/bi'
 
 import { useToggleTheme } from '~/hooks/useToggleTheme'
@@ -148,16 +148,16 @@ export const TabsExample = () => {
         <Heading as={'h3'}>Tabs</Heading>
       </Stack>
 
-      <Tabs.Root variant="outline" defaultValue="snaps">
+      <Tabs.Root variant="outline" defaultValue="fidely">
         <Tabs.List>
-          <Tabs.Trigger value="snaps">snaps</Tabs.Trigger>
+          <Tabs.Trigger value="fidely">fidely</Tabs.Trigger>
           <Tabs.Trigger value="dashboard">Dashboard</Tabs.Trigger>
           <Tabs.Trigger value="authentication">Authentication</Tabs.Trigger>
         </Tabs.List>
 
-        <Tabs.Content value="snaps" width="full" p="3">
+        <Tabs.Content value="fidely" width="full" p="3">
           <Text textStyle={'sm'}>
-            Snaps UI is a modern UI library with reusable, intuitive components
+            Fidely UI is a modern UI library with reusable, intuitive components
             that help you ship products faster. Create beautiful, consistent
             interfaces with customizable, production-ready building blocks.
           </Text>

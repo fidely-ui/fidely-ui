@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const inputAddonRecipe = defineRecipe({
-  className: 'snaps-input-addon',
+  className: 'fidely-input-addon',
   jsx: ['InputAddon'],
   base: {
     display: 'flex',

@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const toastRecipe = defineRecipe({
-  className: 'snaps-toast',
+  className: 'fidely-toast',
   base: {
     display: 'flex',
     borderRadius: 's3',

@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const floatLabelRecipe = defineRecipe({
-  className: 'snaps-float-label',
+  className: 'fidely-float-label',
   description: 'Recipe for floating input labels',
   base: {
     position: 'absolute',

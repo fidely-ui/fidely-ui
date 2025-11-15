@@ -2,8 +2,8 @@ import { defineSlotRecipe } from '@pandacss/dev'
 import { tableAnatomy } from '../../anatomy'
 
 export const tableSlotRecipe = defineSlotRecipe({
-  className: 'snaps-table',
-  description: 'Styles for the Snaps UI Table component',
+  className: 'fidely-table',
+  description: 'Styles for the Fidely UI Table component',
   slots: tableAnatomy.keys(),
   base: {
     root: {

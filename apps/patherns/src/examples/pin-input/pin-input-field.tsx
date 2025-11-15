@@ -1,4 +1,4 @@
-import { Field, PinInput } from '@snaps-ui/react'
+import { Field, PinInput } from '@fidely-ui/react'
 
 export const PinInputField = () => {
   return (

@@ -1,4 +1,4 @@
-import { Skeleton, Stack } from '@snaps-ui/react'
+import { Skeleton, Stack } from '@fidely-ui/react'
 
 export const SkeletonBasic = () => {
   return (

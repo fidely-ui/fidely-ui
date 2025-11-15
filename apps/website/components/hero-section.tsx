@@ -1,14 +1,14 @@
 import Link from 'next/link'
-import { Box } from '@snaps-ui/react/box'
-import { Center } from '@snaps-ui/react/center'
-import { Clipboard } from '@snaps-ui/react/clipboard'
-import { Button } from '@snaps-ui/react/button'
-import { Flex } from '@snaps-ui/react/flex'
-import { IconButton } from '@snaps-ui/react/icon-button'
-import { Input } from '@snaps-ui/react/input'
-import { Stack } from '@snaps-ui/react/stack'
-import { Heading } from '@snaps-ui/react/heading'
-import { Text } from '@snaps-ui/react/text'
+import { Box } from '@fidely-ui/react/box'
+import { Center } from '@fidely-ui/react/center'
+import { Clipboard } from '@fidely-ui/react/clipboard'
+import { Button } from '@fidely-ui/react/button'
+import { Flex } from '@fidely-ui/react/flex'
+import { IconButton } from '@fidely-ui/react/icon-button'
+import { Input } from '@fidely-ui/react/input'
+import { Stack } from '@fidely-ui/react/stack'
+import { Heading } from '@fidely-ui/react/heading'
+import { Text } from '@fidely-ui/react/text'
 import { SiArkecosystem } from 'react-icons/si'
 import { IoLogoReact } from 'react-icons/io5'
 import { SiTypescript } from 'react-icons/si'
@@ -67,7 +67,7 @@ export const HeroSection = () => {
           textAlign={'center'}
           lineHeight={'1.7em'}
         >
-          Snaps UI is a modern UI library with reusable, intuitive components
+          Fidely UI is a modern UI library with reusable, intuitive components
           that help you ship products faster to create beautiful, consistent
           interfaces with customizable, production-ready building blocks.
         </Text>
@@ -90,7 +90,7 @@ export const HeroSection = () => {
             <Link href={'/docs/getting-started/installation'}>Get Started</Link>
           </Button>
 
-          <Clipboard.Root value={'npm i @snaps-ui/react'} width={'100%'}>
+          <Clipboard.Root value={'npm i @fidely-ui/react'} width={'100%'}>
             <Clipboard.Control>
               <Clipboard.Input asChild>
                 <Input />

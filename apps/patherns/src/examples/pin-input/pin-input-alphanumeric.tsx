@@ -1,4 +1,4 @@
-import { PinInput } from '@snaps-ui/react/pin-input'
+import { PinInput } from '@fidely-ui/react/pin-input'
 
 export const PinInputAlphanumeric = () => {
   return (

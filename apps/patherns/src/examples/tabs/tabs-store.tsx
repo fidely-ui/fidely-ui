@@ -1,6 +1,6 @@
 'use client'
 
-import { Stack, Text, Tabs, useTabs } from '@snaps-ui/react'
+import { Stack, Text, Tabs, useTabs } from '@fidely-ui/react'
 import { LuFolder, LuSquareCheck, LuUser } from 'react-icons/lu'
 
 export const TabsStore = () => {

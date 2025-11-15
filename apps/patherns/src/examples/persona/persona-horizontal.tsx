@@ -1,4 +1,4 @@
-import { Persona } from '@snaps-ui/react/persona'
+import { Persona } from '@fidely-ui/react/persona'
 
 export const PersonaHorizontal = () => {
   return (

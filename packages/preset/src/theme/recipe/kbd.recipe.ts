@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const kbdRecipe = defineRecipe({
-  className: 'snaps-kbd',
+  className: 'fidely-kbd',
   base: {
     display: 'inline-flex',
     alignItems: 'center',

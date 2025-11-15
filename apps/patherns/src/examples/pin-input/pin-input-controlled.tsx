@@ -1,6 +1,6 @@
 'use client'
 
-import { PinInput } from '@snaps-ui/react/pin-input'
+import { PinInput } from '@fidely-ui/react/pin-input'
 import { useState } from 'react'
 
 export const PinInputControlled = () => {

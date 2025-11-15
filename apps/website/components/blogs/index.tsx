@@ -1,8 +1,8 @@
 // 'use client'
 
-// import { Box } from '@snaps-ui/react/box'
+// import { Box } from '@fidely-ui/react/box'
 
-// import { Heading } from '@snaps-ui/react/heading'
+// import { Heading } from '@fidely-ui/react/heading'
 
 // export const BlogsSection = () => {
 //   return (

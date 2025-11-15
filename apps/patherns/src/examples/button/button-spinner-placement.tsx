@@ -1,5 +1,5 @@
-import { HStack } from '@snaps-ui/react'
-import { Button } from '@snaps-ui/react/button'
+import { HStack } from '@fidely-ui/react'
+import { Button } from '@fidely-ui/react/button'
 
 export const ButtonSpinnerPlacement = () => {
   return (

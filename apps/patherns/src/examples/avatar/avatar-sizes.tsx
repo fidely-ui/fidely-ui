@@ -1,4 +1,4 @@
-import { Avatar } from '@snaps-ui/react/avatar'
+import { Avatar } from '@fidely-ui/react/avatar'
 
 export const AvatarSizes = () => {
   return (

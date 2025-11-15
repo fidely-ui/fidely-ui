@@ -1,4 +1,4 @@
-import { Checkbox, VStack } from '@snaps-ui/react'
+import { Checkbox, VStack } from '@fidely-ui/react'
 
 export const CheckboxSizes = () => {
   const sizes = ['xs', 'sm', 'md', 'lg'] as const

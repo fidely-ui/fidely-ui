@@ -1,5 +1,5 @@
-import { CloseButton as SnapsCloseButton } from '@snaps-ui/react/close-button'
+import { CloseButton as FidelyCloseButton } from '@fidely-ui/react/close-button'
 
 export const CloseButton = () => {
-  return <SnapsCloseButton />
+  return <FidelyCloseButton />
 }

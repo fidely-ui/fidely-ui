@@ -1,4 +1,4 @@
-import { Box } from '@snaps-ui/react/box'
+import { Box } from '@fidely-ui/react/box'
 
 import { ExamplePreview } from '~/components/docs/example-preview'
 import { ExampleCodeWrapper } from '~/components/docs/example-code-wrapper'

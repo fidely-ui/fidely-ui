@@ -1,5 +1,5 @@
-import { HStack } from '@snaps-ui/react'
-import { IconButton } from '@snaps-ui/react/icon-button'
+import { HStack } from '@fidely-ui/react'
+import { IconButton } from '@fidely-ui/react/icon-button'
 import {
   BeatLoader,
   DotLoader,

@@ -1,4 +1,4 @@
-import { Checkbox } from '@snaps-ui/react/checkbox'
+import { Checkbox } from '@fidely-ui/react/checkbox'
 import { GiCheckMark } from 'react-icons/gi'
 
 export const CheckboxWithIcon = () => {
@@ -10,7 +10,7 @@ export const CheckboxWithIcon = () => {
           <GiCheckMark />
         </Checkbox.Indicator>
       </Checkbox.Control>
-      <Checkbox.Label>Snaps UI Checkbox</Checkbox.Label>
+      <Checkbox.Label>Fidely UI Checkbox</Checkbox.Label>
     </Checkbox.Root>
   )
 }

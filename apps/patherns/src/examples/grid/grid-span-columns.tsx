@@ -1,4 +1,4 @@
-import { Flex, Grid, GridItem } from '@snaps-ui/react'
+import { Flex, Grid, GridItem } from '@fidely-ui/react'
 
 export const GridSpanColumns = () => {
   return (

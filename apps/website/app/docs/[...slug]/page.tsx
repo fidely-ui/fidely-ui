@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { docs } from '~/.velite'
-import { Box, Flex, Heading, Text } from '@snaps-ui/react'
+import { Box, Flex, Heading, Text } from '@fidely-ui/react'
 
 import { MDXContent } from '~/components/mdx-content'
 import { DocsPage } from '~/components/docs-page'

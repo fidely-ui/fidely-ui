@@ -1,5 +1,5 @@
-import { Button } from '@snaps-ui/react/button'
+import { Button } from '@fidely-ui/react/button'
 
 export const ButtonLoading = () => {
-  return <Button isLoading>Snaps UI</Button>
+  return <Button isLoading>Fidely UI</Button>
 }

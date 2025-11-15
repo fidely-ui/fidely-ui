@@ -1,4 +1,4 @@
-import { Button, DownloadTrigger, FormatByte } from '@snaps-ui/react'
+import { Button, DownloadTrigger, FormatByte } from '@fidely-ui/react'
 import { LuDownload } from 'react-icons/lu'
 
 const data = 'The modern UI libary.'

@@ -1,5 +1,5 @@
-import { Field } from '@snaps-ui/react'
-import { FloatInput } from '@snaps-ui/react/float-input'
+import { Field } from '@fidely-ui/react'
+import { FloatInput } from '@fidely-ui/react/float-input'
 
 export const FloatWithError = () => {
   return (

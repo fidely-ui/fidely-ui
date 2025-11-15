@@ -1,4 +1,4 @@
-import { Checkbox, VStack } from '@snaps-ui/react'
+import { Checkbox, VStack } from '@fidely-ui/react'
 
 export const CheckboxWithState = () => {
   return (

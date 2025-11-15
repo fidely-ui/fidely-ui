@@ -1,4 +1,4 @@
-import { Stack, Table, Text, VStack } from '@snaps-ui/react'
+import { Stack, Table, Text, VStack } from '@fidely-ui/react'
 
 export const TableVariants = () => {
   const variants = ['subtle', 'outline', 'striped'] as const

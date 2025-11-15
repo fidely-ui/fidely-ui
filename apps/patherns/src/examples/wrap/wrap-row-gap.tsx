@@ -1,4 +1,4 @@
-import { Box, Wrap } from '@snaps-ui/react'
+import { Box, Wrap } from '@fidely-ui/react'
 
 export const WrapRowGap = () => {
   return (

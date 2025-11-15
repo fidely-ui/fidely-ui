@@ -1,4 +1,4 @@
-import { Box, Stack } from '@snaps-ui/react'
+import { Box, Stack } from '@fidely-ui/react'
 
 export const StackBasic = () => {
   return (

@@ -1,4 +1,4 @@
-import { FormatByte, Stack, Text } from '@snaps-ui/react'
+import { FormatByte, Stack, Text } from '@fidely-ui/react'
 
 export const FormatBytes = () => {
   return (

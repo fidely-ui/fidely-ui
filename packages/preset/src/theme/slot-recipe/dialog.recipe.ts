@@ -3,7 +3,7 @@ import { defineSlotRecipe } from '@pandacss/dev'
 import { dialogAnatomy } from '../../anatomy'
 
 export const dialogSlotRecipe = defineSlotRecipe({
-  className: 'snaps-dialog',
+  className: 'fidely-dialog',
   slots: dialogAnatomy.keys(),
   base: {
     content: {

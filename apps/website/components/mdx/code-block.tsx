@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from '@snaps-ui/react'
+import { Box, HStack, Text } from '@fidely-ui/react'
 
 interface CodeBlockProps {
   title?: string

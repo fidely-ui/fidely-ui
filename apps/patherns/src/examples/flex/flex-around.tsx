@@ -1,4 +1,4 @@
-import { Box, Flex } from '@snaps-ui/react'
+import { Box, Flex } from '@fidely-ui/react'
 
 export const FlexAround = () => {
   return (

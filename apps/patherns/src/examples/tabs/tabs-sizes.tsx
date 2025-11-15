@@ -1,4 +1,4 @@
-import { Stack, Tabs } from '@snaps-ui/react'
+import { Stack, Tabs } from '@fidely-ui/react'
 
 export const TabsSizes = () => {
   const sizes = ['sm', 'md', 'lg'] as const

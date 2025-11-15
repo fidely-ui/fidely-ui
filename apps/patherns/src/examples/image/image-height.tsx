@@ -1,4 +1,4 @@
-import { Image } from '@snaps-ui/react'
+import { Image } from '@fidely-ui/react'
 
 export const ImageHeight = () => {
   return (

@@ -25,7 +25,7 @@ body:
       label: 'Link to Reproduction'
       description: |
         # A link to a CodeSandbox reproduction which demonstrates the bug (Example template:
-        # https://codesandbox.io/p/sandbox/snaps-ui)
+        # https://codesandbox.io/p/sandbox/fidely-ui)
       placeholder: 'https://codesandbox.io/'
     validations:
       required: false
@@ -41,10 +41,10 @@ body:
         3. Scroll down to '...'
         4. See error
   - type: 'input'
-    id: 'snaps-ui-version'
+    id: 'fidely-ui-version'
     attributes:
-      label: 'Snaps UI Version'
-      description: 'The version of Snaps UI you use.'
+      label: 'Fidely UI Version'
+      description: 'The version of Fidely UI you use.'
       placeholder: '1.x.x'
     validations:
       required: true

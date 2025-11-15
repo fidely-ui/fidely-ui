@@ -1,4 +1,4 @@
-import { Text } from '@snaps-ui/react/text'
+import { Text } from '@fidely-ui/react/text'
 
 export const TextBasic = () => {
   return (

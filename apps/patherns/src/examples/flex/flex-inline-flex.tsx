@@ -1,4 +1,4 @@
-import { Box, Flex, Image } from '@snaps-ui/react'
+import { Box, Flex, Image } from '@fidely-ui/react'
 
 export const FlexInlineFlex = () => {
   return (
