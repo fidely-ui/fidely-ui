@@ -2,9 +2,6 @@ name: Release
 
 on:
   push:
-    paths:
-      - '.changeset/**'
-      - 'packages/**'
     branches:
       - main
 
@@ -35,7 +32,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build packages
-        run: pnpm run build:packages
+        run: pnpm build:packages
 
       - name: Create release Pull Request or publish to NPM
         id: changesets
