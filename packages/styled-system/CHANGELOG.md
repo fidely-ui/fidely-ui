@@ -1,5 +1,11 @@
 # @fidely-ui/styled-system
 
+## 1.0.1-beta.2
+
+### Patch Changes
+
+- fix: bundle Panda CSS recipes inside @fidely-ui/react
+
 ## 1.0.1-beta.1
 
 ### Patch Changes
