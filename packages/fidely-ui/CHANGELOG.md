@@ -1,5 +1,15 @@
 # @fidely-ui/react
 
+## 1.0.1-beta.3
+
+### Patch Changes
+
+- externize fidely styled system
+
+- Updated dependencies []:
+  - @fidely-ui/styled-system@1.0.1-beta.3
+  - @fidely-ui/panda-preset@1.0.1-beta.3
+
 ## 1.0.1-beta.2
 
 ### Patch Changes
