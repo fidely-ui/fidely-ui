@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-import { LuSearch } from 'react-icons/lu'
 import { cx } from '@fidely-ui/styled-system/css'
 import { commandInput } from '@fidely-ui/styled-system/recipes'
 
@@ -11,6 +10,7 @@ import { Flex } from '../flex/index'
 import { Text } from '../text/index'
 import { BoxProps } from '../box/index'
 import { isMobileDevice } from '../../utils/is-mobile-device'
+import { FiSearch } from '../icons/FiSearch'
 
 export interface CommandInputProps extends Omit<BoxProps, 'direction'> {
   shortcut?: string
@@ -82,7 +82,7 @@ export const CommandInput = React.forwardRef<
       {...rest}
     >
       <Flex alignItems="center" gap="2">
-        {leftElement ?? <LuSearch />}
+        {leftElement ?? <FiSearch />}
         <Text color="fg.muted">{placeholder}</Text>
       </Flex>
 

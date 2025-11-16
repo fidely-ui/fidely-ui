@@ -7,9 +7,9 @@ import {
   checkbox,
   CheckboxVariantProps,
 } from '@fidely-ui/styled-system/recipes'
-import { FaCheck } from 'react-icons/fa6'
 
 import { makeStyleContext } from '../../system/make-style-context'
+import { FiCheck } from '../icons/FiCheck'
 
 const { withSlotProvider, withSlotContext } = makeStyleContext(checkbox)
 
@@ -74,7 +74,7 @@ export const CheckboxIndicator = withSlotContext<
   HTMLDivElement,
   CheckboxIndicatorProps
 >((props) => {
-  const { idleIcon = <FaCheck />, children, ...rest } = props
+  const { idleIcon = <FiCheck />, children, ...rest } = props
 
   return (
     <ArkCheckbox.Indicator {...rest}>

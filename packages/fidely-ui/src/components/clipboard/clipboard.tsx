@@ -8,8 +8,9 @@ import {
   clipboard,
   type ClipboardVariantProps,
 } from '@fidely-ui/styled-system/recipes'
-import { LuCheck, LuCopy } from 'react-icons/lu'
 
+import { FiCheck } from '../icons/FiCheck'
+import { FiCopy } from '../icons/FiCopy'
 import { makeStyleContext } from '../../system/make-style-context'
 
 const { withSlotProvider, withSlotContext } = makeStyleContext(clipboard)
@@ -68,8 +69,8 @@ export const ClipboardIndicator = withSlotContext<
   ClipboardIndicatorProps
 >((props) => {
   const {
-    copiedIcon = <LuCheck />,
-    idleIcon = <LuCopy />,
+    copiedIcon = <FiCheck />,
+    idleIcon = <FiCopy />,
     children,
     ...rest
   } = props
