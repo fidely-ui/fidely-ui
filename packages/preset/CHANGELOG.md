@@ -1,5 +1,11 @@
 # @fidely-ui/panda-preset
 
+## 1.0.1-beta.3
+
+### Patch Changes
+
+- externize fidely styled system
+
 ## 1.0.1-beta.2
 
 ### Patch Changes

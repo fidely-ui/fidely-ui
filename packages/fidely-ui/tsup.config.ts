@@ -10,7 +10,7 @@ export default defineConfig({
     'react-dom',
     '@pandacss/dev',
     '@fidely-ui/panda-preset',
+    '@fidely-ui/styled-system',
     '@ark-ui/react',
   ],
-  noExternal: [/@fidely-ui\/styled-system/],
 })

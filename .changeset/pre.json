@@ -9,5 +9,10 @@
     "@fidely-ui/panda-preset": "0.0.0",
     "@fidely-ui/styled-system": "0.0.0"
   },
-  "changesets": ["flat-jokes-drum", "shaky-dryers-cut", "yellow-cooks-call"]
+  "changesets": [
+    "eight-beans-study",
+    "flat-jokes-drum",
+    "shaky-dryers-cut",
+    "yellow-cooks-call"
+  ]
 }
