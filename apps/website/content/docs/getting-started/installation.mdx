@@ -13,15 +13,34 @@ Follow the steps below to get started.
 ### 1. Install Panda CSS
 
 Before installing Fidely UI, make sure you have **Panda CSS** set up in your project.  
-Follow the official Panda CSS installation guide for your framework:
+Follow the official Panda CSS installation guide for your **react framework**:
 
 👉 [Panda CSS Installation Guide](https://panda-css.com/docs/overview/getting-started#installation)
 
 ---
 
-### 2. Install Fidely UI
+## 2 Install Ark UI
 
-Once Panda CSS is installed, add Fidely UI and its peer dependencies using your preferred package manager:
+**Ark UI** is a headless component library that forms the foundation for most components.
+
+```bash
+# npm
+npm install @ark-ui/react
+```
+
+```bash
+# pnpm
+pnpm add @ark-ui/react
+```
+
+```bash
+# yarn
+yarn add @ark-ui/react
+```
+
+## 3. Install Fidely UI
+
+Once Panda CSS and Ark UI are installed, add Fidely UI and its peer dependencies using your preferred package manager:
 
 ```bash
 # npm
@@ -39,7 +58,7 @@ yarn add @fidely-ui/react@beta @fidely-ui/panda-preset@beta
 
 ```
 
-### 3. Configure Panda with Fidely UI Preset
+## 4. Configure Panda with Fidely UI Preset
 
 After installation, update your **panda.config.ts** file to include the Fidely UI preset.
 This preset automatically adds design tokens, colors, and component recipes optimized for Fidely UI.
@@ -90,7 +109,7 @@ Note after updating your config make sure you run **panda codegen** e.g (npm pan
 @layer reset, base, tokens, recipes, utilities;
 ```
 
-### 4. Try Fidely UI in action
+## 5. Try Fidely UI in action
 
 Now that you’ve set everything up, create a new React component and try using a Fidely UI component!
 

@@ -63,6 +63,7 @@
   "bugs": {
     "url": "https://github.com/fidely-ui/fidely-ui/issues"
   },
+  "homepage": "https://fidely-ui.vercel.app/",
   "keywords": [
     "Fidely UI",
     "react",
@@ -86,16 +87,15 @@
   },
   "dependencies": {
     "@ark-ui/react": "^5.27.1",
-    "@pandacss/dev": "^1.4.3",
-    "@fidely-ui/panda-preset": "workspace:*",
-    "@fidely-ui/styled-system": "workspace:*"
+    "@fidely-ui/panda-preset": "workspace:*"
   },
   "devDependencies": {
+    "@fidely-ui/styled-system": "workspace:*",
+    "@pandacss/dev": "^1.4.3",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-icons": "^5.5.0",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",
