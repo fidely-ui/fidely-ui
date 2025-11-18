@@ -25,7 +25,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Fidely  UI',
   description:
-    'A beautifully crafted React design system powered by Ark UI and Panda CSS, providing accessible, themeable, and production-ready components.',
+    'Fidely UI is a modern, beautifully crafted React design system powered by Ark UI and Panda CSS, delivering accessible and themeable components for building exceptional web apps',
   authors: [
     { name: 'Justice Chimobi', url: 'https://github.com/chimobi-justice' },
   ],
@@ -43,6 +43,9 @@ export const metadata: Metadata = {
     'components',
     'library',
   ],
+  twitter: {
+    creator: '@chimobijustice_',
+  },
 }
 
 export default function RootLayout({

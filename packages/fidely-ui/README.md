@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/npm/l/@fidely-ui/react?style=flat" alt="License">
   </a>
   <a href="https://www.npmjs.com/package/@fidely-ui/react">
-    <img src="https://img.shields.io/npm/dm/@fidely-ui.svg?style=flat-round" alt="npm downloads">
+    <img src="https://img.shields.io/npm/dm/@fidely-ui/react.svg?style=flat-round" alt="npm downloads">
   </a>
 </p>
 

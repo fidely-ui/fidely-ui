@@ -1,5 +1,7 @@
 import * as React from 'react'
 
+import { ark } from '@ark-ui/react/factory'
+
 export interface IconProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string
 }
@@ -8,7 +10,7 @@ export function createIcon(path: React.ReactNode) {
   return React.forwardRef<SVGSVGElement, IconProps>(function Icon(props, ref) {
     const { size = 20, ...rest } = props
     return (
-      <svg
+      <ark.svg
         ref={ref}
         width={size}
         height={size}
@@ -18,7 +20,7 @@ export function createIcon(path: React.ReactNode) {
         {...rest}
       >
         {path}
-      </svg>
+      </ark.svg>
     )
   })
 }

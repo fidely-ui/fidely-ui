@@ -2,7 +2,7 @@
   "name": "@fidely-ui/react",
   "version": "1.0.1-beta.3",
   "private": false,
-  "description": "A beautifully crafted React design system powered by Ark UI and Panda CSS, providing accessible, themeable, and production-ready components.",
+  "description": "Fidely UI is a modern, beautifully crafted React design system powered by Ark UI and Panda CSS, delivering accessible and themeable components for building exceptional web apps",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
