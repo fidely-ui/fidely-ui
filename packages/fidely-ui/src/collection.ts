@@ -3,7 +3,11 @@ export {
   createGridCollection,
   createListCollection,
   createTreeCollection,
+  useListCollection,
 } from '@ark-ui/react/collection'
+
+export { useFilter } from '@ark-ui/react/locale'
+export type { UseFilterProps, UseFilterReturn } from '@ark-ui/react/locale'
 
 export type {
   CollectionItem,

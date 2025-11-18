@@ -47,11 +47,6 @@ export const passwordInputSlotRecipe = defineSlotRecipe({
           boxShadow: 'none',
         },
       },
-
-      borderTopLeftRadius: 's2',
-      borderBottomLeftRadius: 's2',
-      borderTopRightRadius: '0',
-      borderBottomRightRadius: '0',
     },
     label: {
       color: 'fg.default',

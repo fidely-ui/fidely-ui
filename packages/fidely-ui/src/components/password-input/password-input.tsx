@@ -4,7 +4,7 @@ import type { Assign } from '@ark-ui/react'
 import { PasswordInput as ArkPasswordInput } from '@ark-ui/react/password-input'
 import {
   passwordInput,
-  PasswordInputVariantProps,
+  type PasswordInputVariantProps,
 } from '@fidely-ui/styled-system/recipes'
 import { HTMLStyledProps } from '@fidely-ui/styled-system/jsx'
 
