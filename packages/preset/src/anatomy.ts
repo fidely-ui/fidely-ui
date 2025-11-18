@@ -4,6 +4,8 @@ export { avatarAnatomy } from '@ark-ui/react/avatar'
 // export { comboboxAnatomy } from '@ark-ui/react/combobox'
 export { checkboxAnatomy } from '@ark-ui/react/checkbox'
 export { clipboardAnatomy } from '@ark-ui/react/clipboard'
+import { comboboxAnatomy as arkComboboxAnatomy } from '@ark-ui/react/anatomy'
+
 // export { collapsibleAnatomy } from '@ark-ui/react/collapsible'
 // export { colorPickerAnatomy } from '@ark-ui/react/color-picker'
 import { dialogAnatomy as arkDialogAnatomy } from '@ark-ui/react/dialog'
@@ -62,3 +64,5 @@ export const dialogAnatomy = arkDialogAnatomy.extendWith(
   'body',
   'footer'
 )
+
+export const comboboxAnatomy = arkComboboxAnatomy.extendWith('indicatorGroup')

@@ -11,9 +11,10 @@ import { Text } from '@fidely-ui/react/text'
 import { Dialog, useDialog } from '@fidely-ui/react/dialog'
 import { Portal } from '@fidely-ui/react/portal'
 import { Badge } from '@fidely-ui/react/badge'
-import { Input } from '@fidely-ui/react/input'
 import { Span } from '@fidely-ui/react/span'
 import { Stack } from '@fidely-ui/react/stack'
+import { Combobox, useListCollection } from '@fidely-ui/react/combobox'
+import { useFilter } from '@fidely-ui/react'
 
 import { FaGithub, FaBars } from 'react-icons/fa6'
 import { FaTimes } from 'react-icons/fa'
@@ -30,10 +31,21 @@ export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const dialog = useDialog()
 
+  const { contains } = useFilter({ sensitivity: 'base' })
+
   const navLinks = [
     { href: '/docs/getting-started/installation', label: 'Docs' },
     // { href: '#', label: 'Blogs' },
   ]
+
+  const { collection, filter } = useListCollection({
+    initialItems: ['React', 'Solid', 'Vue', 'Svelte'],
+    filter: contains,
+  })
+
+  const handleInputChange = (details: Combobox.InputValueChangeDetails) => {
+    filter(details.inputValue)
+  }
 
   return (
     <Box
@@ -248,13 +260,32 @@ export const NavBar = () => {
           <Dialog.Backdrop />
           <Dialog.Positioner>
             <Dialog.Content>
-              <Dialog.Header>
-                <Input placeholder="search the docs" />
-              </Dialog.Header>
               <Dialog.Body>
-                <Dialog.Description textAlign={'center'}>
-                  nothing found...
-                </Dialog.Description>
+                <Combobox.Root
+                  open
+                  collection={collection}
+                  onInputValueChange={handleInputChange}
+                >
+                  <Combobox.Control>
+                    <Combobox.Input placeholder="Search the docs..." />
+                    <Combobox.IndicatorGroup>
+                      <Combobox.ClearTrigger />
+                    </Combobox.IndicatorGroup>
+                  </Combobox.Control>
+                  <Combobox.Positioner>
+                    <Combobox.Content>
+                      <Combobox.ItemGroup>
+                        {collection.items.map((item) => (
+                          <Combobox.Item key={item} item={item}>
+                            <Combobox.ItemText>{item}</Combobox.ItemText>
+                            <Combobox.ItemIndicator>✓</Combobox.ItemIndicator>
+                          </Combobox.Item>
+                        ))}
+                      </Combobox.ItemGroup>
+                      <Combobox.Empty>No items found</Combobox.Empty>
+                    </Combobox.Content>
+                  </Combobox.Positioner>
+                </Combobox.Root>
               </Dialog.Body>
             </Dialog.Content>
           </Dialog.Positioner>
