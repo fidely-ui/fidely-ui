@@ -4,11 +4,20 @@
   </a>
 </p>
 
-# Fidely UI ⚡
+<p align="center">
+  <a href="https://github.com/fidely-ui/fidely-ui/blob/main/License">
+    <img src="https://img.shields.io/npm/l/@fidely-ui/react?style=flat" alt="License">
+  </a>
+  <a href="https://www.npmjs.com/package/@fidely-ui/react">
+    <img src="https://img.shields.io/npm/dm/@fidely-ui/react.svg?style=flat-round" alt="npm downloads">
+  </a>
+</p>
+
+# Fidely UI ⭐
 
 ## Build modern apps with speed and flexibility
 
-> **Fidely UI is a modern UI library with reusable, intuitive components that help you ship products faster. Create beautiful, consistent interfaces with customizable, production-ready building blocks.**
+> **Fidely UI is a modern, beautifully crafted React design system powered by Ark UI and Panda CSS, delivering accessible and themeable components for building exceptional web apps.**
 
 ---
 

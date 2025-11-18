@@ -67,9 +67,9 @@ export const HeroSection = () => {
           textAlign={'center'}
           lineHeight={'1.7em'}
         >
-          Fidely UI is a modern UI library with reusable, intuitive components
-          that help you ship products faster to create beautiful, consistent
-          interfaces with customizable, production-ready building blocks.
+          Fidely UI is a modern, beautifully crafted React design system powered
+          by Ark UI and Panda CSS, delivering accessible and themeable
+          components for building exceptional web apps
         </Text>
 
         <Stack
