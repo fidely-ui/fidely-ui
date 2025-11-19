@@ -24,7 +24,8 @@ export const cardSlotRecipe = defineSlotRecipe({
     header: {
       display: 'flex',
       flexDirection: 'column',
-      padding: '2',
+      px: '2',
+      py: '3',
       gap: '2',
     },
     title: {

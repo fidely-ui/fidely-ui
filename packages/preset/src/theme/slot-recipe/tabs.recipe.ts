@@ -4,6 +4,7 @@ import { tabsAnatomy } from '@ark-ui/react/anatomy'
 export const tabsSlotRecipe = defineSlotRecipe({
   className: 'fidely-tabs',
   slots: tabsAnatomy.keys(),
+  description: 'Styles for the Fidely UI Tabs component',
   base: {
     root: {
       display: 'flex',
@@ -18,8 +19,17 @@ export const tabsSlotRecipe = defineSlotRecipe({
       position: 'relative',
       scrollbarWidth: 'none',
       '&::-webkit-scrollbar': { display: 'none' },
-      _horizontal: { flexDirection: 'row' },
-      _vertical: { flexDirection: 'column' },
+
+      _horizontal: {
+        boxShadow: '0 -1px 0 0 inset var(--colors-border-default)',
+        gap: '4',
+        flexDirection: 'row',
+      },
+      _vertical: {
+        boxShadow: '1px 0 0 0 inset var(--colors-border-default)',
+        gap: '1',
+        flexDirection: 'column',
+      },
     },
     trigger: {
       alignItems: 'center',
@@ -59,16 +69,6 @@ export const tabsSlotRecipe = defineSlotRecipe({
   variants: {
     variant: {
       underline: {
-        list: {
-          _horizontal: {
-            boxShadow: '0 -1px 0 0 inset var(--colors-border-default)',
-            gap: '4',
-          },
-          _vertical: {
-            boxShadow: '1px 0 0 0 inset var(--colors-border-default)',
-            gap: '1',
-          },
-        },
         indicator: {
           background: 'colorPalette.default',
           _horizontal: {
@@ -132,8 +132,6 @@ export const tabsSlotRecipe = defineSlotRecipe({
           },
         },
         content: {
-          borderWidth: '1px',
-          borderColor: 'border.subtle',
           background: 'bg.default',
           width: 'full',
         },
