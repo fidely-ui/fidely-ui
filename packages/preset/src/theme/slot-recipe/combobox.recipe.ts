@@ -122,10 +122,6 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       },
     },
 
-    positioner: {
-      zIndex: 'dropdown',
-    },
-
     content: {
       bg: 'bg.default',
       display: 'flex',
@@ -137,6 +133,7 @@ export const comboboxSlotRecipe = defineSlotRecipe({
 
       maxH: '64',
       overflowY: 'auto',
+      zIndex: 'dropdown',
 
       _open: {
         animation: 'fadeIn 0.2s ease-out',

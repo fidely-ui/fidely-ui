@@ -39,7 +39,7 @@ export const NavBar = () => {
   ]
 
   const { collection, filter } = useListCollection({
-    initialItems: ['React', 'Solid', 'Vue', 'Svelte'],
+    initialItems: ['Accordion', 'Button', 'Tabs', 'Dialog'],
     filter: contains,
   })
 
@@ -259,21 +259,30 @@ export const NavBar = () => {
         <Portal>
           <Dialog.Backdrop />
           <Dialog.Positioner>
-            <Dialog.Content>
+            <Dialog.Content h="50vh" overflow={'auto'}>
               <Dialog.Body>
                 <Combobox.Root
                   open
+                  disableLayer
+                  inputBehavior="autohighlight"
+                  placeholder="Search the docs"
+                  selectionBehavior="clear"
+                  loopFocus={false}
                   collection={collection}
                   onInputValueChange={handleInputChange}
                 >
                   <Combobox.Control>
                     <Combobox.Input placeholder="Search the docs..." />
-                    <Combobox.IndicatorGroup>
-                      <Combobox.ClearTrigger />
-                    </Combobox.IndicatorGroup>
                   </Combobox.Control>
                   <Combobox.Positioner>
-                    <Combobox.Content>
+                    <Combobox.Content
+                      boxShadow="none"
+                      px="0"
+                      py="0"
+                      overflow="auto"
+                      maxH="50vh"
+                      overscrollBehavior="contain"
+                    >
                       <Combobox.ItemGroup>
                         {collection.items.map((item) => (
                           <Combobox.Item key={item} item={item}>
@@ -282,7 +291,9 @@ export const NavBar = () => {
                           </Combobox.Item>
                         ))}
                       </Combobox.ItemGroup>
-                      <Combobox.Empty>No items found</Combobox.Empty>
+                      <Combobox.Empty textAlign={'center'}>
+                        No items found
+                      </Combobox.Empty>
                     </Combobox.Content>
                   </Combobox.Positioner>
                 </Combobox.Root>
