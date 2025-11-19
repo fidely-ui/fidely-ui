@@ -3,6 +3,7 @@ import { defineRecipe } from '@pandacss/dev'
 export const buttonRecipe = defineRecipe({
   className: 'fidely-button',
   jsx: ['Button', 'IconButton'],
+  description: 'Styles for the Fidely UI Button component',
   base: {
     appearance: 'none',
     alignItems: 'center',
@@ -12,8 +13,8 @@ export const buttonRecipe = defineRecipe({
     fontWeight: 'medium',
     isolation: 'isolate',
     minWidth: '0',
-    height: 'var(--input-height)',
-    minW: 'var(--input-height)',
+    height: 'var(--button-height)',
+    minW: 'var(--button-height)',
     justifyContent: 'center',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -159,7 +160,7 @@ export const buttonRecipe = defineRecipe({
 
     size: {
       '2xs': {
-        '--input-height': 'sizes.6',
+        '--button-height': 'sizes.6',
         textStyle: 'xs',
         px: '2',
         gap: '1',
@@ -169,7 +170,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       xs: {
-        '--input-height': 'sizes.8',
+        '--button-height': 'sizes.8',
         textStyle: 'xs',
         px: '2.5',
         gap: '1',
@@ -179,7 +180,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       sm: {
-        '--input-height': 'sizes.9',
+        '--button-height': 'sizes.9',
         px: '3.5',
         textStyle: 'sm',
         gap: '2',
@@ -189,7 +190,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       md: {
-        '--input-height': 'sizes.10',
+        '--button-height': 'sizes.10',
         textStyle: 'sm',
         px: '4',
         gap: '2',
@@ -199,7 +200,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       lg: {
-        '--input-height': 'sizes.11',
+        '--button-height': 'sizes.11',
         textStyle: 'md',
         px: '5',
         gap: '3',
@@ -209,7 +210,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       xl: {
-        '--input-height': 'sizes.12',
+        '--button-height': 'sizes.12',
         textStyle: 'md',
         px: '5',
         gap: '2.5',
@@ -219,7 +220,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       '2xl': {
-        '--input-height': 'sizes.16',
+        '--button-height': 'sizes.16',
         textStyle: 'lg',
         px: '7',
         gap: '3',
