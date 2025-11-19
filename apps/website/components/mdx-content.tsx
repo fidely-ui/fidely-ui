@@ -10,7 +10,15 @@ import { Callout } from '~/components/mdx/callout'
 import { Anchor } from '~/components/mdx/anchor'
 import { Code, Pre } from '~/components/mdx/code'
 import { CodeBlock } from '~/components/mdx/code-block'
-import { H1, H2, H3, H4, P, Strong } from '~/components/mdx/typography'
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  P,
+  Strong,
+  Blockquote,
+} from '~/components/mdx/typography'
 import {
   Table,
   TableBody,
@@ -32,6 +40,7 @@ const sharedComponents = {
   pre: Pre,
   code: Code,
   strong: Strong,
+  blockquote: Blockquote,
   p: P,
   card: Card,
   table: Table,

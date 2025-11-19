@@ -163,7 +163,7 @@ function Sidebar() {
 const Badge = () => {
   return (
     <FidelyBadge colorPalette={'orange'} size={'sm'}>
-      WIP
+      New
     </FidelyBadge>
   )
 }
