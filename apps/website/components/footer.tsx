@@ -16,7 +16,7 @@ import { Span } from '@fidely-ui/react'
 const documentation = [
   { href: '/docs/getting-started/installation', label: 'Getting Started' },
   { href: '/docs/components/accordion', label: 'Components' },
-  { href: '/docs/theming', label: 'Theming' },
+  { href: '/docs/theming/customization', label: 'Theming' },
   // { href: '/blogs', label: 'Blog' },
 ]
 

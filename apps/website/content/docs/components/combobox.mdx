@@ -1,101 +1,188 @@
 ---
 title: Combobox
-description: Displays a list of options for the user to pick from.
+description: A single input field that combines the functionality of select and input.
 ---
 
-<ExampleTabs name="select-basics" scope="select" />
+<ExampleTabs name="combobox-basics" scope="combobox" />
 
 ## Usage
 
 ```tsx
-import { Select } from '@fidely-ui/react'
+import { Combobox } from '@fidely-ui/react'
 ```
 
 ```tsx
-<Select.Root
-  collection={collection}
-  positioning={{ sameWidth: true }}
-  maxW={'350px'}
->
-  <Select.Label>Framework</Select.Label>
-  <Select.Control>
-    <Select.Trigger>
-      <Select.ValueText placeholder="Select a Framework" />
-      <Select.Indicator>
-        <BiChevronDown />
-      </Select.Indicator>
-    </Select.Trigger>
-    <Select.ClearTrigger>Clear</Select.ClearTrigger>
-  </Select.Control>
-  <Portal>
-    <Select.Positioner>
-      <Select.Content>
-        <Select.ItemGroup>
-          <Select.ItemGroupLabel>Frameworks</Select.ItemGroupLabel>
-          <Select.Item key={item} item={item}>
-            <Select.ItemText>Hello</Select.ItemText>
-            <Select.ItemIndicator>✓</Select.ItemIndicator>
-          </Select.Item>
-        </Select.ItemGroup>
-      </Select.Content>
-    </Select.Positioner>
-  </Portal>
-  <Select.HiddenSelect />
-</Select.Root>
+<Combobox.Root>
+  <Combobox.Label />
+  <Combobox.Control>
+    <Combobox.Input />
+    <Combobox.IndicatorGroup>
+      <Combobox.ClearTrigger />
+      <Combobox.Trigger />
+    </Combobox.IndicatorGroup>
+  </Combobox.Control>
+
+  <Combobox.Positioner>
+    <Combobox.Content>
+      <Combobox.Empty />
+      <Combobox.Item />
+
+      <Combobox.ItemGroup>
+        <Combobox.ItemGroupLabel />
+        <Combobox.Item />
+      </Combobox.ItemGroup>
+    </Combobox.Content>
+  </Combobox.Positioner>
+</Combobox.Root>
 ```
 
 ## Examples
-
-### Variants
-
-Use the **variant** prop to change the appearance of the Select component.
-
-<ExampleTabs name="select-variant" scope="select" />
 
 ### Sizes
 
 Use the **size** prop to adjust the size of the Select component.
 
-<ExampleTabs name="select-size" scope="select" />
+<ExampleTabs name="combobox-size" scope="combobox" />
 
-### Option Group
+### Open on Click
 
-Use the **Select.ItemGroup** component to group related select options.
+Use the **openOnClick** prop to open the **Combobox** when the user clicks on the input.
 
-<ExampleTabs name="select-group" scope="select" />
+<ExampleTabs name="combobox-open" scope="combobox" />
 
-### Controlled
+### Custom Objects
 
-Use the **value** and **onValueChange** props to control the select component.
+By default, the **Combobox** collection expects an array of objects with label and value properties. In some cases, you may need to deal with custom objects.
 
-<ExampleTabs name="select-controlled" scope="select" />
+Use the **itemToString** and **itemToValue** props to map the custom object to the required interface.
+
+```tsx
+const items = [
+  { name: 'JavaScript', id: 'js' },
+  { name: 'TypeScript', id: 'ts' },
+  { name: 'Python', id: 'py' },
+  { name: 'Go', id: 'go' },
+  { name: 'Rust', id: 'rs' },
+]
+
+const { contains } = useFilter({ sensitivity: 'base' })
+
+const { collection } = useListCollection({
+  initialItems: items,
+  itemToString: (item) => item.name,
+  itemToValue: (item) => item.id,
+  filter: contains,
+})
+```
+
+### With Persona
+
+Use **Combobox** with **Persona** component
+
+<ExampleTabs name="combobox-with-persona" scope="combobox" />
+
+### Minimum Characters
+
+Use the openOnChange prop to set a minimum number of characters before filtering the list.
+
+```tsx
+<Combobox.Root openOnChange={(e) => e.inputValue.length > 2} />
+```
 
 ### Disabled
 
-Use the **value** and **onValueChange** props to control the select component.
+Pass the **disabled** prop to the **Combobox.Root** to disable the entire combobox.
 
-<ExampleTabs name="select-disabled" scope="select" />
+<ExampleTabs name="combobox-disabled" scope="combobox" />
 
-### Multiple
+### Disabled Item
 
-Use the **multiple** prop to allow multiple selections.
+Disable specific items in the dropdown, add the disabled prop to the collection item.
 
-<ExampleTabs name="select-multiple" scope="select" />
+```tsx
+const items = [
+  { label: 'Item 1', value: 'item-1', disabled: true },
+  { label: 'Item 2', value: 'item-2' },
+]
 
-### Positioning
+const { collection } = useListCollection({
+  initialItems: items,
+})
+```
 
-Use the **positioning** prop to control the underlying **floating-ui** options of the select component.
+### Store
 
-<ExampleTabs name="select-positioning" scope="select" />
+An alternative way to control the **Combobox** component is to use the **Combobox.RootProvider** component and the useCombobox store hook.
 
-### ClearTrigger
+```tsx
+import { Combobox, useCombobox } from '@fidely-ui/react'
 
-Render the **Select.ClearTrigger** component to show a clear text or button (you can customize its design as needed).
+function ComboboxDemo() {
+  const combobox = useCombobox()
 
-Clicking the clear button will clear the selected value.
+  return (
+    <Combobox.RootProvider value={combobox}>{/* ... */}</Combobox.RootProvider>
+  )
+}
+```
 
-<ExampleTabs name="select-trigger" scope="select" />
+This way you can access the combobox state and methods from outside the combobox.
+
+<ExampleTabs name="combobox-store" scope="combobox" />
+
+### Limit Large Datasets
+
+The recommended way of managing large lists is to use the limit property on the **useListCollection** hook.
+This will limit the number of rendered items in the DOM to improve performance.
+
+<ExampleTabs name="combobox-limits" scope="combobox" />
+
+### Within Dialog
+
+To use the **Combobox** within a dialog component, avoid wrapping the **Combobox.Positioner** within the **Portal**.
+
+```tsx
+;-(
+  <Portal>
+    <Combobox.Positioner>
+      <Combobox.Content>{/* ... */}</Combobox.Content>
+    </Combobox.Positioner>
+    -
+  </Portal>
+)
+```
+
+If you use a Dialog and have set scrollBehavior="inside", you need to:
+
+- Set the combobox positioning to fixed to avoid the combobox from being clipped by the dialog.
+- Set hideWhenDetached to true to hide the combobox when the trigger is scrolled out of view.
+
+```tsx
+<Combobox.Root positioning={{ strategy: 'fixed', hideWhenDetached: true }}>
+  {/* ... */}
+</Combobox.Root>
+```
 
 ## Props
 
 ### Root
+
+| Prop                | Type                                          | Default | Description                                                                                                                                                                                                                             |
+| ------------------- | --------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `asChild`           | `boolean`                                     | —       | Uses the provided child element as the rendered element, merging its props and behavior.                                                                                                                                                |
+| `collection`        | `ListCollection<T>`                           | `-`     | The collection of items.                                                                                                                                                                                                                |
+| `composite`         | `boolean`                                     | `true`  | Whether the combobox is a composed with other composite widgets like tabs.                                                                                                                                                              |
+| `defaultInputValue` | `string`                                      | —       | The initial value of the combobox's input when rendered. Use when you don't need to control the value of the combobox's input..                                                                                                         |
+| `defaultValue`      | `string[]`                                    | []      | The initial value of the combobox's selected items when rendered. Use when you don't need to control the value of the combobox's selected items.                                                                                        |
+| `inputBehavior`     | `'none' \| 'autohighlight' \| 'autocomplete'` | `none`  | Defines the auto-completion behavior of the combobox. - `autohighlight`: The first focused item is highlighted as the user types - `autocomplete`: Navigating the listbox with the arrow keys selects the item and the input is updated |
+
+---
+
+### Item
+
+| Prop           | Type      | Default | Description                                                                |
+| -------------- | --------- | ------- | -------------------------------------------------------------------------- |
+| `asChild`      | `boolean` | —       | Uses the provided child element as the rendered element, merging behavior. |
+| `item`         | `any`     | —       | The item to render.                                                        |
+| `persistFocus` | `boolean` | —       | Whether hovering outside should clear the highlighted state.               |
+| `as`           | `boolean` | —       | The underlying element to render..                                         |

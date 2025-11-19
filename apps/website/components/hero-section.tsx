@@ -13,6 +13,7 @@ import { SiArkecosystem } from 'react-icons/si'
 import { IoLogoReact } from 'react-icons/io5'
 import { SiTypescript } from 'react-icons/si'
 import { SiFoodpanda } from 'react-icons/si'
+import { NewComponentBadge } from '~/components/new-component-badge'
 
 const Logos = [
   {
@@ -50,6 +51,15 @@ export const HeroSection = () => {
         m={'5rem auto'}
         textAlign={'center'}
       >
+        <Flex gap="3" flexDirection={{ base: 'column', md: 'row' }}>
+          <NewComponentBadge href={'/docs/components/password-input'}>
+            [New] Password Input Component
+          </NewComponentBadge>
+
+          <NewComponentBadge href={'/docs/components/combobox'}>
+            [New] Combobox Component
+          </NewComponentBadge>
+        </Flex>
         <Heading
           as="h1"
           textStyle={{ base: '3xl', md: '7xl' }}

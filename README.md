@@ -29,7 +29,7 @@
 
 ## 🚀 Features
 
-- ⚡ **Snappy Developer Experience** – copy-paste ready, works out of the box.
+- ⚡ **Snappy Developer Experience**
 - 🎨 **Fully Customizable** – powered by Ark UI, Panda CSS theme system & design tokens.
 - ♿ **Accessible by Default** – inherits strong a11y foundation.
 - 🧩 **Composable** – extend or override styles without losing flexibility.
@@ -38,16 +38,13 @@
 
 ## 📖 Documentation
 
-Docs are coming soon!
-For now, check out our Storybook (coming soon) for interactive component previews.
+[Documentation](https://fidely-ui.vercel.app/)
 
 ## 🤝 Contributing
 
 Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 
 ## 📣 Stay Connected
-
-[Website](https://fidely-ui.vercel.app/)
 
 [LinkedIn](https://www.linkedin.com/company/fidely-ui)
 
