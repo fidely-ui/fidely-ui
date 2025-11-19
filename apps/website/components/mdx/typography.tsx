@@ -31,6 +31,23 @@ export const Strong = (props: BoxProps) => {
   )
 }
 
+export const Blockquote = (props: BoxProps) => {
+  return (
+    <Box
+      as="blockquote"
+      {...props}
+      css={{
+        fontWeight: 'semibold',
+        color: 'fg.default',
+        borderLeft: '3px solid',
+        borderColor: 'bg.muted',
+        p: '4.7px',
+        mb: '5px',
+      }}
+    />
+  )
+}
+
 export const H1 = (props: BoxProps) => {
   return (
     <Box
