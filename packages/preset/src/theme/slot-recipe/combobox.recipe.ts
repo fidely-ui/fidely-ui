@@ -2,9 +2,6 @@ import { defineSlotRecipe } from '@pandacss/dev'
 import { comboboxAnatomy } from '../../anatomy'
 
 import { inputRecipe } from '../recipe/input.recipe'
-import { mapEntries } from '../../utils/entries'
-
-const { variants } = inputRecipe
 
 export const comboboxSlotRecipe = defineSlotRecipe({
   className: 'fidely-combobox',
@@ -159,10 +156,6 @@ export const comboboxSlotRecipe = defineSlotRecipe({
   },
 
   variants: {
-    variant: mapEntries(variants!.variant, (key, value) => [
-      key,
-      { input: value },
-    ]),
     size: {
       xs: {
         root: {

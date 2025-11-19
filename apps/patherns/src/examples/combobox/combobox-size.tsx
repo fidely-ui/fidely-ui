@@ -1,0 +1,66 @@
+'use client'
+
+import {
+  Combobox,
+  Portal,
+  Stack,
+  useFilter,
+  useListCollection,
+} from '@fidely-ui/react'
+
+export const ComboboxSize = () => {
+  const { contains } = useFilter({ sensitivity: 'base' })
+
+  const { collection, filter } = useListCollection({
+    initialItems: frameworks,
+    filter: contains,
+  })
+
+  const sizes = ['xs', 'sm', 'md', 'lg'] as const
+
+  return (
+    <Stack gap={3}>
+      {sizes.map((size) => (
+        <Combobox.Root
+          collection={collection}
+          onInputValueChange={(e) => filter(e.inputValue)}
+          key={size}
+          size={size}
+        >
+          <Combobox.Label>Select framework</Combobox.Label>
+          <Combobox.Control>
+            <Combobox.Input placeholder="Type to search" />
+            <Combobox.IndicatorGroup>
+              <Combobox.ClearTrigger />
+              <Combobox.Trigger />
+            </Combobox.IndicatorGroup>
+          </Combobox.Control>
+          <Portal>
+            <Combobox.Positioner>
+              <Combobox.Content>
+                <Combobox.Empty>Nothing found.</Combobox.Empty>
+                {collection.items.map((item) => (
+                  <Combobox.Item item={item} key={item.value}>
+                    {item.label}
+                    <Combobox.ItemIndicator>✓</Combobox.ItemIndicator>
+                  </Combobox.Item>
+                ))}
+              </Combobox.Content>
+            </Combobox.Positioner>
+          </Portal>
+        </Combobox.Root>
+      ))}
+    </Stack>
+  )
+}
+
+const frameworks = [
+  { label: 'React', value: 'react' },
+  { label: 'Next.js', value: 'nextjs' },
+  { label: 'Solid', value: 'solid' },
+  { label: 'Vue', value: 'vue' },
+  { label: 'Angular', value: 'angular' },
+  { label: 'Svelte', value: 'svelte' },
+  { label: 'Remix', value: 'remix' },
+  { label: 'Laravel', value: 'laravel' },
+]
