@@ -1,5 +1,17 @@
 # @fidely-ui/styled-system
 
+## 1.1.0-beta.4
+
+### Minor Changes
+
+- feat: add `PasswordInput` and `Combobox` components
+  - Introduced new `PasswordInput` component with toggle visibility functionality and full theming support.
+  - Added new `Combobox` component with keyboard navigation, async loading, and slot-based styling.
+  - Updated recipes and slot recipes to include styles for both components.
+  - Improved internal consistency across input-based components.
+
+  This release adds two new components and represents a minor version bump.
+
 ## 1.0.1-beta.3
 
 ### Patch Changes
