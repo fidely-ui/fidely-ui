@@ -25,7 +25,7 @@ const items = [
   {
     value: 'a',
     title: 'Fidely  UI',
-    text: 'A beautifully crafted React design system powered by Ark UI and Panda CSS, providing accessible, themeable, and production-ready components.',
+    text: 'Fidely UI is a modern, beautifully crafted React design system powered by Ark UI and Panda CSS, delivering accessible and themeable components for building exceptional web apps.',
   },
   {
     value: 'b',

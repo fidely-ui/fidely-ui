@@ -22,7 +22,6 @@ export const ComboboxLimits = () => {
     <Combobox.Root
       collection={collection}
       onInputValueChange={(e) => filter(e.inputValue)}
-      width="320px"
     >
       <Combobox.Label>Select framework</Combobox.Label>
       <Combobox.Control>

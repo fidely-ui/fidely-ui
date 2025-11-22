@@ -152,6 +152,10 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       justifyContent: 'center',
       gap: '1',
       textStyle: 'sm',
+
+      '[data-disabled] &': {
+        opacity: 0.4,
+      },
     },
   },
 

@@ -22,7 +22,6 @@ export const ComboboxWithPersona = () => {
     <Combobox.Root
       collection={collection}
       onInputValueChange={(e) => filter(e.inputValue)}
-      width="320px"
       openOnClick
     >
       <Combobox.Label>Select a person</Combobox.Label>

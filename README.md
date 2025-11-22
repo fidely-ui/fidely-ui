@@ -54,7 +54,7 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 
 ## Acknowledgement
 
-Fidely UI’s documentation and design philosophy are inspired by [Chakra UI](https://chakra-ui.com/), and [Park UI](https://park-ui.com/).
+Fidely UI’s documentation and design philosophy are inspired by [Ark UI](https://ark-ui.com/) and [Chakra UI](https://chakra-ui.com/).
 We’re grateful for their contributions to the open-source ecosystem.
 
 ## 🙏🏽 Support
