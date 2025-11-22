@@ -24,7 +24,7 @@ export const ComboboxStore = () => {
   })
 
   return (
-    <Combobox.RootProvider value={combobox} width="320px">
+    <Combobox.RootProvider value={combobox}>
       <Combobox.Label>Select framework</Combobox.Label>
       <Combobox.Control>
         <Combobox.Input placeholder="Type to search" />

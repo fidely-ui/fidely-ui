@@ -19,7 +19,6 @@ export const ComboboxOpen = () => {
     <Combobox.Root
       collection={collection}
       onInputValueChange={(e) => filter(e.inputValue)}
-      width="320px"
       openOnClick
     >
       <Combobox.Label>Select framework</Combobox.Label>

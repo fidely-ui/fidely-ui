@@ -19,7 +19,6 @@ export const ComboboxDisabled = () => {
     <Combobox.Root
       collection={collection}
       onInputValueChange={(e) => filter(e.inputValue)}
-      width="320px"
       disabled
     >
       <Combobox.Label>Select framework</Combobox.Label>

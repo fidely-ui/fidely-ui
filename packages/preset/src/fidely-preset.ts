@@ -12,37 +12,7 @@ import { semanticTokens } from './theme/semantic-tokens'
 import { createRadii } from './utils/createRadii'
 import { recipes } from './theme/recipe'
 import { slotRecipes } from './theme/slot-recipe'
-
-import red from './colors/red'
-import blue from './colors/blue'
-import green from './colors/green'
-import purple from './colors/purple'
-import orange from './colors/orange'
-import amber from './colors/amber'
-import bronze from './colors/bronze'
-import brown from './colors/brown'
-import crimson from './colors/crimson'
-import cyan from './colors/cyan'
-import gold from './colors/gold'
-import grass from './colors/grass'
-import indigo from './colors/indigo'
-import iris from './colors/iris'
-import jade from './colors/jade'
-import lime from './colors/lime'
-import mauve from './colors/mauve'
-import mint from './colors/mint'
-import olive from './colors/olive'
-import pink from './colors/pink'
-import plum from './colors/plum'
-import ruby from './colors/ruby'
-import sage from './colors/sage'
-import sand from './colors/sand'
-import sky from './colors/sky'
-import slate from './colors/slate'
-import teal from './colors/teal'
-import tomato from './colors/tomato'
-import violet from './colors/violet'
-import yellow from './colors/yellow'
+import * as colors from './colors/index'
 
 export const fidelyPreset = (options: PresetsOptions) => {
   const { accentColor, rounded, grayColor } = options
@@ -74,36 +44,9 @@ export const fidelyPreset = (options: PresetsOptions) => {
           colors: {
             ...tokens.colors,
 
-            amber: amber.tokens,
-            blue: blue.tokens,
-            bronze: bronze.tokens,
-            brown: brown.tokens,
-            crimson: crimson.tokens,
-            cyan: cyan.tokens,
-            gold: gold.tokens,
-            grass: grass.tokens,
-            green: green.tokens,
-            indigo: indigo.tokens,
-            iris: iris.tokens,
-            jade: jade.tokens,
-            lime: lime.tokens,
-            mauve: mauve.tokens,
-            mint: mint.tokens,
-            olive: olive.tokens,
-            orange: orange.tokens,
-            pink: pink.tokens,
-            plum: plum.tokens,
-            purple: purple.tokens,
-            red: red.tokens,
-            ruby: ruby.tokens,
-            sage: sage.tokens,
-            sand: sand.tokens,
-            sky: sky.tokens,
-            slate: slate.tokens,
-            teal: teal.tokens,
-            tomato: tomato.tokens,
-            violet: violet.tokens,
-            yellow: yellow.tokens,
+            ...Object.fromEntries(
+              Object.entries(colors).map(([name, mod]) => [name, mod.tokens])
+            ),
 
             gray: grayColor.tokens ?? {},
             [accentColor.name]: accentColor.tokens,
@@ -113,36 +56,13 @@ export const fidelyPreset = (options: PresetsOptions) => {
           ...semanticTokens,
           colors: {
             ...semanticTokens.colors,
-            amber: amber.semanticTokens,
-            blue: blue.semanticTokens,
-            bronze: bronze.semanticTokens,
-            brown: brown.semanticTokens,
-            crimson: crimson.semanticTokens,
-            cyan: cyan.semanticTokens,
-            gold: gold.semanticTokens,
-            grass: grass.semanticTokens,
-            green: green.semanticTokens,
-            indigo: indigo.semanticTokens,
-            iris: iris.semanticTokens,
-            jade: jade.semanticTokens,
-            lime: lime.semanticTokens,
-            mauve: mauve.semanticTokens,
-            mint: mint.semanticTokens,
-            olive: olive.semanticTokens,
-            orange: orange.semanticTokens,
-            pink: pink.semanticTokens,
-            plum: plum.semanticTokens,
-            purple: purple.semanticTokens,
-            red: red.semanticTokens,
-            ruby: ruby.semanticTokens,
-            sage: sage.semanticTokens,
-            sand: sand.semanticTokens,
-            sky: sky.semanticTokens,
-            slate: slate.semanticTokens,
-            teal: teal.semanticTokens,
-            tomato: tomato.semanticTokens,
-            violet: violet.semanticTokens,
-            yellow: yellow.semanticTokens,
+
+            ...Object.fromEntries(
+              Object.entries(colors).map(([name, mod]) => [
+                name,
+                mod.semanticTokens,
+              ])
+            ),
 
             gray: normalizeNeutralTokens(grayColor.semanticTokens),
             [accentColor.name]: accentColor.semanticTokens,
