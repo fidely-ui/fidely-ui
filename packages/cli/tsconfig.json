@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": false,
+    "emitDeclarationOnly": false,
+
+    "types": ["node"]
+  },
+  "include": ["src", "bin"],
+  "exclude": ["dist", "node_modules"]
+}
