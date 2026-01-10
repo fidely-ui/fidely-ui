@@ -16,7 +16,7 @@
   ],
   "author": "Justice Chimobi <chimobi.justice@gmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.28.0",
   "dependencies": {
     "@fidely-ui/panda-preset": "workspace:*",
     "@fidely-ui/react": "workspace:*",
@@ -27,7 +27,7 @@
     "react-spinners": "^0.17.0"
   },
   "devDependencies": {
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.8",
     "@types/react-dom": "19.2.3"
   }
 }

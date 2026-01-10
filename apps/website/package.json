@@ -36,7 +36,7 @@
     "@eslint/eslintrc": "^3",
     "@pandacss/dev": "^1.7.3",
     "@types/node": "^20",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.8",
     "@types/react-dom": "19.2.3",
     "eslint": "^9",
     "eslint-config-next": "15.5.9",
