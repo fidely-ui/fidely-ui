@@ -1,11 +1,11 @@
 <p align="center">
   <a href="https://github.com/fidely-ui/fidely-ui">
-    <img src="https://raw.githubusercontent.com/fidely-ui/fidely-ui/main/apps/website/public/app-logo.png?raw=true" alt="Fidely logo" width="300" />
+    <img src="https://raw.githubusercontent.com/fidely-ui/fidely-ui/v1.x/apps/website/public/app-logo.png?raw=true" alt="Fidely logo" width="300" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/fidely-ui/fidely-ui/blob/main/License">
+  <a href="https://github.com/fidely-ui/fidely-ui/blob/v1.x/License">
     <img src="https://img.shields.io/npm/l/@fidely-ui/react?style=flat" alt="License">
   </a>
   <a href="https://www.npmjs.com/package/@fidely-ui/react">
@@ -23,7 +23,7 @@
 
 <p align="center">
   <a href="https://github.com/fidely-ui/fidely-ui">
-    <img src="https://raw.githubusercontent.com/fidely-ui/fidely-ui/main/apps/website/public/fidely-showcase.png?raw=true" alt="Fidely logo" width="100%" />
+    <img src="https://raw.githubusercontent.com/fidely-ui/fidely-ui/v1.x/apps/website/public/fidely-showcase.png?raw=true" alt="Fidely logo" width="100%" />
   </a>
 </p>
 

@@ -26,7 +26,7 @@ export const asideComponentLinks = [
       { name: 'Profile', linkUrl: 'profile', info: '' },
       { name: 'Image', linkUrl: 'image', info: '' },
       { name: 'Table', linkUrl: 'table', info: '' },
-      { name: 'Marquee', linkUrl: 'marquee', info: 'New' },
+      { name: 'Marquee', linkUrl: 'marquee', info: '' },
     ],
   },
 
@@ -75,8 +75,8 @@ export const asideComponentLinks = [
     section: 'Overlays',
     items: [
       { name: 'Dialog', linkUrl: 'dialog', info: '' },
-      { name: 'Hover Card', linkUrl: 'hover-card', info: 'New' },
-      { name: 'Menu', linkUrl: 'menu', info: 'New' },
+      { name: 'Hover Card', linkUrl: 'hover-card', info: '' },
+      { name: 'Menu', linkUrl: 'menu', info: '' },
     ],
   },
 
