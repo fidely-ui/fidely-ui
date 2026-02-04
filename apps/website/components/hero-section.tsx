@@ -34,8 +34,8 @@ export const HeroSection = () => {
             height={{ base: '100vdh', lg: '85vh' }}
           >
             <Stack gap="7">
-              <NewComponentBadge href="https://v2-fidely-ui.vercel.app/">
-                Fidely UI v2.0.0 (beta){' '}
+              <NewComponentBadge href="https://fidely-ui.vercel.app/">
+                Fidely UI v2.0.0{' '}
                 <FaExternalLinkAlt style={{ marginLeft: '6px' }} />
               </NewComponentBadge>
               <Stack gap="4">
