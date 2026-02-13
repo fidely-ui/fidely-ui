@@ -17,18 +17,18 @@
   ],
   "author": "Justice Chimobi <chimobi.justice@gmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.29.3",
   "dependencies": {
     "@fidely-ui/react": "workspace:*",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-icons": "5.5.0",
     "react-spinners": "^0.17.0"
   },
   "devDependencies": {
     "@fidely-ui/panda-preset": "workspace:*",
     "@pandacss/dev": "^1.8.1",
-    "@types/react": "19.2.7",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3"
   }
 }
