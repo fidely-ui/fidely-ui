@@ -63,7 +63,7 @@
   ],
   "author": "Justice Chimobi <chimobi.justice@gmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@10.29.3",
+  "packageManager": "pnpm@10.30.0",
   "peerDependencies": {
     "@pandacss/dev": ">=1.1.0"
   },
