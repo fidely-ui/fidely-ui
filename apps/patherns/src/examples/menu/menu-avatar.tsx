@@ -2,7 +2,7 @@ import { Avatar, Menu, Portal } from '@fidely-ui/react'
 
 export const MenuAvatar = () => {
   return (
-    <Menu.Root positioning={{ placement: 'right-end' }}>
+    <Menu.Root>
       <Menu.Trigger
         rounded="full"
         focusRing="outside"
