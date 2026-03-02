@@ -10,29 +10,12 @@ import { Grid, GridItem } from '@fidely-ui/react/grid'
 
 import { AppLogo } from '~/components/logo'
 import { InfoBadge } from '~/components/nav-item'
-
-const documentation = [
-  { href: '/docs/getting-started/installation', label: 'Getting Started' },
-  { href: '/docs/components/accordion', label: 'Components' },
-  { href: '/docs/theming/customization', label: 'Theming' },
-  // { href: '/blogs', label: 'Blog' },
-]
-
-const community = [
-  // { href: '#', label: 'Discord' },
-  { href: 'https://x.com/FidelyUi', label: 'Twitter' },
-  { href: 'https://www.github.com/chimobi-justice', label: 'Follow on Github' },
-  {
-    href: 'https://github.com/fidely-ui/fidely-ui/discussions',
-    label: 'Github Discussions',
-  },
-]
-
-const resources = [
-  { href: '#', label: 'Pro Blocks' },
-  { href: '#', label: 'Templates' },
-  { href: '#', label: 'Commerce' },
-]
+import {
+  ABOUT_LINK,
+  COMMUNITY_LINK,
+  DOCUMENTATION_LINK,
+  RESOURCES_LINK,
+} from '~/constant/footer-links'
 
 export const Footer = () => {
   return (
@@ -80,28 +63,61 @@ export const Footer = () => {
           gridTemplateColumns={{
             base: '1fr',
             md: 'repeat(2, 1fr)',
-            lg: 'repeat(3, 1fr)',
+            lg: 'repeat(4, 1fr)',
           }}
-          gap={{ base: '10', md: '16' }}
+          gap={{ base: '10', md: '6' }}
         >
-          {/* Resources */}
+          {/* About */}
+          <GridItem>
+            <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
+              About
+            </Heading>
+            <Stack gap={3}>
+              {ABOUT_LINK.map(({ href, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Text
+                    transition="color 0.2s ease"
+                    display="flex"
+                    alignItems="center"
+                    gap="2"
+                    color={'fg.subtle'}
+                    _hover={{
+                      color: 'fg.muted',
+                    }}
+                  >
+                    {label}
+                  </Text>
+                </Link>
+              ))}
+            </Stack>
+          </GridItem>
+
+          {/* Documentation */}
           <GridItem>
             <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
               Documentation
             </Heading>
             <Stack gap={3}>
-              {documentation.map(({ href, label }) => (
-                <Text
-                  transition="color 0.2s ease"
-                  color={'fg.subtle'}
-                  _hover={{
-                    color: 'fg.muted',
-                  }}
-                  asChild
-                  key={label}
-                >
-                  <Link href={href}>{label}</Link>
-                </Text>
+              {DOCUMENTATION_LINK.map(({ href, label }) => (
+                <Link key={label} href={href}>
+                  <Text
+                    transition="color 0.2s ease"
+                    display="flex"
+                    alignItems="center"
+                    gap="2"
+                    color={'fg.subtle'}
+                    _hover={{
+                      color: 'fg.muted',
+                    }}
+                  >
+                    {label}
+                  </Text>
+                </Link>
               ))}
             </Stack>
           </GridItem>
@@ -112,31 +128,37 @@ export const Footer = () => {
               Community
             </Heading>
             <Stack gap={3}>
-              {community.map(({ href, label }) => (
-                <Text
-                  transition="color 0.2s ease"
-                  color={'fg.subtle'}
-                  _hover={{
-                    color: 'fg.muted',
-                  }}
+              {COMMUNITY_LINK.map(({ href, label }) => (
+                <Link
                   key={label}
-                  asChild
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Link href={href} target="_blank" rel="noopener noreferrer">
+                  <Text
+                    transition="color 0.2s ease"
+                    display="flex"
+                    alignItems="center"
+                    gap="2"
+                    color={'fg.subtle'}
+                    _hover={{
+                      color: 'fg.muted',
+                    }}
+                  >
                     {label}
-                  </Link>
-                </Text>
+                  </Text>
+                </Link>
               ))}
             </Stack>
           </GridItem>
 
-          {/* Projects */}
+          {/* Resources */}
           <GridItem>
             <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
               Resources
             </Heading>
             <Stack gap={3}>
-              {resources.map(({ href, label }) => (
+              {RESOURCES_LINK.map(({ href, label }) => (
                 <Link
                   key={label}
                   href={href}
