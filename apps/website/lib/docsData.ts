@@ -8,7 +8,7 @@ const getStarted = docs
     label: page.title,
     value: page.slug,
     description: page.description ?? '',
-    category: 'Get started',
+    category: 'Get Started',
   }))
 
 const styling = docs

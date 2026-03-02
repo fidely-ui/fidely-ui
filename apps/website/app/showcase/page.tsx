@@ -95,7 +95,9 @@ export default function ShowcaseProjectPage() {
         <Heading size="2xl">Start building with Fidely UI today</Heading>
 
         <Button asChild size="lg" colorPalette="orange" variant="outline">
-          <Link href="http://localhost:3000/docs/getting-started/installation">
+          <Link href="/docs/getting-started/installation">
+            Get Started
+          </Link>
             Get Started
           </Link>
         </Button>
