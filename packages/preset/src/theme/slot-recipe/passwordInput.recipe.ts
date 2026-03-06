@@ -38,8 +38,6 @@ export const passwordInputSlotRecipe = defineSlotRecipe({
       ...inputRecipe.base,
       flex: '1',
       minWidth: '0',
-      bg: 'bg.surface',
-
       border: 'none',
       _focus: {
         borderColor: 'transparent',
@@ -61,8 +59,9 @@ export const passwordInputSlotRecipe = defineSlotRecipe({
       display: 'inline-flex',
       alignItems: 'center',
       color: 'colorPalette.text',
-      bg: 'bg.surface',
-      borderRadius: 's2',
+      bg: 'transparent',
+      borderTopRightRadius: 's2',
+      borderBottomRightRadius: 's2',
 
       _hover: {
         background: 'colorPalette.alpha4',
