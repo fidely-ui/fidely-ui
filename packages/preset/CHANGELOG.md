@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.2.2
+
+### Patch Changes
+
+- [#245](https://github.com/fidely-ui/fidely-ui/pull/245) [`1207fa9`](https://github.com/fidely-ui/fidely-ui/commit/1207fa994c0a81209fa7bb12ab2a82d63c36a55b) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - fix: `PasswordInput` `VisibilityTrigger` `left-top`, `left-bottom` radius and use default `Input` background
+
+- [#246](https://github.com/fidely-ui/fidely-ui/pull/246) [`e46ae09`](https://github.com/fidely-ui/fidely-ui/commit/e46ae0996c0fc839d0057c9a22fa0a5db6eef1b3) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - fix: **`Menu`** `Arrow` & `ArrowTip` styles not showing when used
+
 ## 2.2.1
 
 ### Patch Changes
