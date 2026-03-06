@@ -22,7 +22,7 @@ export const RESOURCES_LINK = [
 ]
 
 export const ABOUT_LINK = [
-  { href: 'https://ko-fi.com/fidely_ui', label: 'Kofi' },
+  { href: 'https://ko-fi.com/fidely_ui', label: 'Ko-Fi' },
   {
     href: 'https://github.com/fidely-ui/fidely-ui/blob/main/CHANGELOG.md',
     label: 'Changelog',
