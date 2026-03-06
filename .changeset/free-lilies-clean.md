@@ -2,4 +2,4 @@
 '@fidely-ui/panda-preset': patch
 ---
 
-fix: `PasswordInput` `VisisbiltyTrigger` `left-top`, `left-bottom` radius and use default `Input` background
+fix: `PasswordInput` `VisibilityTrigger` `left-top`, `left-bottom` radius and use default `Input` background
