@@ -14,6 +14,10 @@ export const MenuBasics = () => {
       <Portal>
         <Menu.Positioner>
           <Menu.Content minW="160px">
+            <Menu.Arrow>
+              <Menu.ArrowTip />
+            </Menu.Arrow>
+
             <Menu.ItemGroup>
               <Menu.ItemGroupLabel>Workspace</Menu.ItemGroupLabel>
               <Menu.Separator />

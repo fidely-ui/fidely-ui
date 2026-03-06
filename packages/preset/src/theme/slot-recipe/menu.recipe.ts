@@ -10,8 +10,9 @@ export const menuSlotRecipe = defineSlotRecipe({
 
   base: {
     content: {
+      '--menu-bg': 'colors.bg.default',
       outline: 0,
-      bg: 'bg.default',
+      bg: 'var(--menu-bg)',
       color: 'fg.default',
       borderRadius: 's2',
       overflowY: 'auto',
@@ -105,6 +106,15 @@ export const menuSlotRecipe = defineSlotRecipe({
       _focusVisible: {
         focusVisibleRing: 'outside',
       },
+    },
+
+    arrow: {
+      '--arrow-size': 'sizes.3',
+      '--arrow-background': 'var(--menu-bg)',
+    },
+    arrowTip: {
+      borderTopWidth: '0.5px',
+      borderLeftWidth: '0.5px',
     },
   },
 
