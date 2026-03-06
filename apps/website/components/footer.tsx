@@ -31,7 +31,7 @@ export const Footer = () => {
           gap={4}
           width={{ base: '100%', lg: '50%' }}
           mt={{ base: '35px', md: '0px' }}
-          color={'fg.subtle'}
+          color="fg.subtle"
         >
           <AppLogo />
 
@@ -40,7 +40,7 @@ export const Footer = () => {
           <Text>
             Maintained by{' '}
             <Span
-              color={'orange.9'}
+              color="orange.9"
               transition="color 0.2s ease"
               fontWeight="bolder"
               _hover={{
@@ -55,9 +55,26 @@ export const Footer = () => {
                 Justice Chimobi
               </Link>
             </Span>{' '}
-            and contributors
+            and{' '}
+            <Span
+              color="orange.9"
+              transition="color 0.2s ease"
+              fontWeight="bolder"
+              _hover={{
+                color: 'orange.10',
+              }}
+            >
+              <Link
+                href="https://github.com/fidely-ui/fidely-ui/graphs/contributors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contributors
+              </Link>
+            </Span>
           </Text>
         </Stack>
+
         <Grid
           width={{ base: '100%', lg: '50%' }}
           gridTemplateColumns={{
@@ -69,7 +86,7 @@ export const Footer = () => {
         >
           {/* About */}
           <GridItem>
-            <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
+            <Heading as="h5" textStyle="lg" mb={4} color="fg.default">
               About
             </Heading>
             <Stack gap={3}>
@@ -85,7 +102,7 @@ export const Footer = () => {
                     display="flex"
                     alignItems="center"
                     gap="2"
-                    color={'fg.subtle'}
+                    color="fg.subtle"
                     _hover={{
                       color: 'fg.muted',
                     }}
@@ -99,7 +116,7 @@ export const Footer = () => {
 
           {/* Documentation */}
           <GridItem>
-            <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
+            <Heading as="h5" textStyle="lg" mb={4} color="fg.default">
               Documentation
             </Heading>
             <Stack gap={3}>
@@ -110,7 +127,7 @@ export const Footer = () => {
                     display="flex"
                     alignItems="center"
                     gap="2"
-                    color={'fg.subtle'}
+                    color="fg.subtle"
                     _hover={{
                       color: 'fg.muted',
                     }}
@@ -124,7 +141,7 @@ export const Footer = () => {
 
           {/* Community */}
           <GridItem>
-            <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
+            <Heading as="h5" textStyle="lg" mb={4} color="fg.default">
               Community
             </Heading>
             <Stack gap={3}>
@@ -140,7 +157,7 @@ export const Footer = () => {
                     display="flex"
                     alignItems="center"
                     gap="2"
-                    color={'fg.subtle'}
+                    color="fg.subtle"
                     _hover={{
                       color: 'fg.muted',
                     }}
@@ -154,7 +171,7 @@ export const Footer = () => {
 
           {/* Resources */}
           <GridItem>
-            <Heading as={'h5'} textStyle={'lg'} mb={4} color={'fg.default'}>
+            <Heading as="h5" textStyle="lg" mb={4} color="fg.default">
               Resources
             </Heading>
             <Stack gap={3}>
@@ -170,7 +187,7 @@ export const Footer = () => {
                     display="flex"
                     alignItems="center"
                     gap="2"
-                    color={'fg.subtle'}
+                    color="fg.subtle"
                     _hover={{
                       color: 'fg.muted',
                     }}

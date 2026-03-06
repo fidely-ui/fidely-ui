@@ -7,6 +7,8 @@ import { Center } from '@fidely-ui/react/center'
 import { Heading } from '@fidely-ui/react/heading'
 import { Stack } from '@fidely-ui/react/stack'
 import { Text } from '@fidely-ui/react/text'
+import { Icon } from '@fidely-ui/react/icon'
+import { IoIosStar } from 'react-icons/io'
 
 export const SponsorSection = () => {
   return (
@@ -26,16 +28,21 @@ export const SponsorSection = () => {
               fontWeight="semibold"
               size="3xl"
             >
-              Sponsor Us
+              Support Fidely UI development
             </Heading>
             <Text lineHeight="1.8em" color="fg.muted" size="md">
-              Fidely UI is an open-source project built and sustained by the
-              community. Your support helps us continue developing and keeps the
-              project moving forward.
-            </Text>
-
-            <Text color="fg.muted" size="md">
-              Available on the following platforms.
+              You can support Fidely UI development through{' '}
+              <Text asChild colorPalette="orange" color="colorPalette.default">
+                <Link
+                  href="https://ko-fi.com/fidely_ui"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ko-Fi
+                </Link>
+              </Text>
+              . All funds are used to improve the Fidely UI and create new
+              features and components.
             </Text>
           </Stack>
         </Box>
@@ -73,7 +80,7 @@ export const SponsorSection = () => {
                       colorPalette="orange"
                       color="colorPalette.default"
                     >
-                      Ko-fi
+                      Ko-Fi
                     </Text>
                   </Stack>
                 </Center>
@@ -92,26 +99,29 @@ export const SponsorSection = () => {
       >
         <Box width={{ base: '100%', lg: '35%' }}>
           <Stack gap="3">
-            <Heading
-              colorPalette="orange"
-              color="colorPalette.default"
-              fontWeight="semibold"
-              size="3xl"
-            >
-              Support Us
-            </Heading>
             <Text lineHeight="1.8em" color="fg.muted" size="md">
               Give us a star on GitHub, it helps the project grow and reach more
               audience.
             </Text>
 
-            <Text color="fg.muted" size="md" textDecoration="underline" asChild>
+            <Text
+              color="fg.muted"
+              size="md"
+              textDecoration="underline"
+              display="flex"
+              alignItems="center"
+              gap="1"
+              asChild
+            >
               <Link
                 href="https://github.com/fidely-ui/fidely-ui"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ⭐ Star on GitHub
+                <Icon size="lg" colorPalette="yellow" color="colorPalette.11">
+                  <IoIosStar />
+                </Icon>
+                Star on GitHub
               </Link>
             </Text>
           </Stack>
