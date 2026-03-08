@@ -6,8 +6,8 @@ export const DOCUMENTATION_LINK = [
 ]
 
 export const COMMUNITY_LINK = [
-  // { href: '#', label: 'Discord' },
   { href: 'https://x.com/FidelyUi', label: 'Twitter' },
+  { href: 'https://discord.com/invite/7ru3tEjkcQ', label: 'Discord' },
   { href: 'https://www.github.com/chimobi-justice', label: 'Follow on Github' },
   {
     href: 'https://github.com/fidely-ui/fidely-ui/discussions',
