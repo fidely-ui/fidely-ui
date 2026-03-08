@@ -66,6 +66,7 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 [LinkedIn](https://www.linkedin.com/company/fidely-ui),
 [Twitter](https://x.com/FidelyUi),
 [Github](https://github.com/orgs/fidely-ui/discussions)
+[Discord](https://discord.com/invite/7ru3tEjkcQ)
 
 <!-- 💬 Community Discord (coming soon) -->
 
