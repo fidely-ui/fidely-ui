@@ -6,6 +6,7 @@ import { Stack } from '@fidely-ui/react/stack'
 import { Heading } from '@fidely-ui/react/heading'
 import { Text } from '@fidely-ui/react/text'
 import { Center } from '@fidely-ui/react/center'
+import { Icon } from '@fidely-ui/react/icon'
 
 import {
   HeroCard,
@@ -16,6 +17,7 @@ import {
   HeroHighlightCard,
   HeroCardPlaylist,
 } from '~/components/hero'
+import { IoIosStar } from 'react-icons/io'
 
 export const HeroSection = () => {
   return (
@@ -46,30 +48,17 @@ export const HeroSection = () => {
                 <Heading
                   as="h1"
                   id="hero-heading"
-                  size={{ base: '3xl', lg: '5xl' }}
-                  colorPalette="orange"
-                  color="colorPalette.default"
-                  lineHeight="1.4em"
+                  textStyle={{ base: '3xl', lg: '7xl' }}
+                  lineHeight="1.2em"
+                  fontWeight="semibold"
                 >
-                  Build production-ready React apps faster
-                </Heading>
-
-                <Heading
-                  as="h2"
-                  size={{ base: '2xl', lg: '4xl' }}
-                  color="fg.muted"
-                >
-                  UI library for modern React apps
+                  Build production ready React apps
                 </Heading>
               </Stack>
 
               <Text color="fg.disabled" size={{ base: 'md', lg: 'lg' }}>
-                Fidely UI is a modern React design system powered by{' '}
-                <Text
-                  as="strong"
-                  colorPalette="orange"
-                  color="colorPalette.default"
-                >
+                Fidely UI is a modern design system powered by{' '}
+                <Text as="strong" textDecoration="underline" color="fg.default">
                   <a
                     href="https://ark-ui.com/"
                     target="_blank"
@@ -79,17 +68,13 @@ export const HeroSection = () => {
                   </a>
                 </Text>{' '}
                 and{' '}
-                <Text
-                  as="strong"
-                  colorPalette="orange"
-                  color="colorPalette.default"
-                >
+                <Text as="strong" textDecoration="underline" color="fg.default">
                   <a
                     href="https://panda-css.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Panda CSS
+                    Panda CSS,
                   </a>
                 </Text>{' '}
                 It provides accessible, themeable, and composable components for
@@ -117,10 +102,15 @@ export const HeroSection = () => {
                   size={{ base: 'md', lg: 'lg' }}
                 >
                   <Link
-                    href="/docs/getting-started/installation"
-                    aria-label="Explore Fidely UI blocks coming soon"
+                    href="https://github.com/fidely-ui/fidely-ui"
+                    aria-label="Github"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Explore Blocks
+                    Give a Star
+                    <Icon size="lg" colorPalette="amber" color="colorPalette.9">
+                      <IoIosStar />
+                    </Icon>
                   </Link>
                 </Button>
               </Stack>

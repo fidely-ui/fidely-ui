@@ -64,8 +64,11 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 ## 📣 Stay Connected
 
 [LinkedIn](https://www.linkedin.com/company/fidely-ui),
+
 [Twitter](https://x.com/FidelyUi),
-[Github](https://github.com/orgs/fidely-ui/discussions)
+
+[Github](https://github.com/orgs/fidely-ui/discussions),
+
 [Discord](https://discord.com/invite/7ru3tEjkcQ)
 
 <!-- 💬 Community Discord (coming soon) -->
@@ -80,10 +83,6 @@ Fidely UI’s documentation and design philosophy are inspired by [Ark UI](https
 We’re grateful for their contributions to the open-source ecosystem.
 
 ---
-
-[![Love Fidely UI](https://img.shields.io/badge/Love%20Fidely%20UI-Give%20a%20⭐-blue?style=for-the-badge)](https://github.com/fidely-ui/fidely-ui)
-
-**Love Fidely UI? Give our repo a star ⭐ ⬆️**
 
 ## 📜 License
 

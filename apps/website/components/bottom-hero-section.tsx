@@ -17,7 +17,7 @@ export const BottomHeroSection = () => {
         <Heading
           as="h4"
           textStyle={{ base: '2xl', md: '3xl' }}
-          color="orange.9"
+          fontWeight="semibold"
         >
           Why build with Fidely UI?
         </Heading>
@@ -44,7 +44,7 @@ export const BottomHeroSection = () => {
         <FeatureItem
           icon={<FaAffiliatetheme />}
           title="Composable System"
-          description="Headless logic and styled components designed to compose seamlessly across your app."
+          description="Styled components designed to compose seamlessly across your app."
         />
 
         {/* Accessibility */}
@@ -65,7 +65,7 @@ export const BottomHeroSection = () => {
         <FeatureItem
           icon={<LuHeartHandshake />}
           title="Production Ready"
-          description="Build production-ready React apps"
+          description="Build beautiful UIs with ease, You always have full control over how they look and behave"
         />
       </Grid>
     </Box>
