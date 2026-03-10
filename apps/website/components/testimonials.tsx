@@ -17,8 +17,8 @@ export const Testimonials = () => {
         <Heading
           as="h4"
           textStyle={{ base: '2xl', md: '3xl' }}
-          color="orange.9"
           mb="5px"
+          fontWeight="semibold"
         >
           Trusted by developers, startups, and enterprises
         </Heading>

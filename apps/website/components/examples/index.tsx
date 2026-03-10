@@ -30,8 +30,8 @@ export const ExampleSection = () => {
         <Heading
           as="h4"
           textStyle={{ base: '2xl', md: '3xl' }}
-          color="orange.9"
           mb="5px"
+          fontWeight="semibold"
         >
           Components built for modern React apps
         </Heading>
