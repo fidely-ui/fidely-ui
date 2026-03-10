@@ -37,7 +37,7 @@ export const SponsorSection = () => {
             </Heading>
 
             <Text color={'fg.muted'}>
-              Using Fidely UI as a freelancer, profit projects or for fun
+              Using Fidely UI for freelance work, for-profit projects, or fun
               projects? Your contributions will help make Fidely UI better.
             </Text>
           </Stack>
