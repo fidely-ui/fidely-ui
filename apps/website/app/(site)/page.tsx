@@ -3,6 +3,7 @@ import { Testimonials } from '~/components/testimonials'
 import { SponsorSection } from '~/components/sponsor-section'
 import { BottomHeroSection } from '~/components/bottom-hero-section'
 import { ExampleSection } from '~/components/examples'
+import { CommunitySection } from '~/components/community-section'
 // import { ProSection } from '~/components/pro-section'
 
 export default function Page() {
@@ -13,6 +14,7 @@ export default function Page() {
       <ExampleSection />
       <Testimonials />
       <SponsorSection />
+      <CommunitySection />
       {/* <ProSection /> */}
     </>
   )

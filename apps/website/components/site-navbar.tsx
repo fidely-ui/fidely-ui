@@ -9,7 +9,7 @@ import { IconButton } from '@fidely-ui/react/icon-button'
 import { Text } from '@fidely-ui/react/text'
 import { useDialog } from '@fidely-ui/react/dialog'
 import { Stack } from '@fidely-ui/react/stack'
-import { FaGithub, FaBars } from 'react-icons/fa6'
+import { FaGithub, FaBars, FaDiscord } from 'react-icons/fa6'
 import { FcLike } from 'react-icons/fc'
 
 import { ColorModeButton } from '~/components/color-mode-button'
@@ -73,7 +73,7 @@ export const SiteNavBar = () => {
 
           <IconButton
             asChild
-            aria-label="GitHub Repository"
+            aria-label="GitHub"
             variant="ghost"
             size="xs"
             title="Github"
@@ -84,6 +84,22 @@ export const SiteNavBar = () => {
               rel="noopener noreferrer"
             >
               <FaGithub size={18} />
+            </Link>
+          </IconButton>
+
+          <IconButton
+            asChild
+            aria-label="Join Discord"
+            variant="ghost"
+            size="xs"
+            title="Github"
+          >
+            <Link
+              href="https://discord.com/invite/7ru3tEjkcQ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDiscord size={18} />
             </Link>
           </IconButton>
 
@@ -121,6 +137,22 @@ export const SiteNavBar = () => {
               rel="noopener noreferrer"
             >
               <FaGithub size={18} />
+            </Link>
+          </IconButton>
+
+          <IconButton
+            asChild
+            aria-label="Join Discord"
+            variant="ghost"
+            size="xs"
+            title="Github"
+          >
+            <Link
+              href="https://discord.com/invite/7ru3tEjkcQ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDiscord size={18} />
             </Link>
           </IconButton>
 

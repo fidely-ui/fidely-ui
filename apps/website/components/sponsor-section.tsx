@@ -12,7 +12,7 @@ import { FcLike } from 'react-icons/fc'
 
 export const SponsorSection = () => {
   return (
-    <Box as="section" px="4" py="10">
+    <Box as="section" px="4" py="6">
       <Flex
         w="90%"
         m="4.5rem auto"
