@@ -24,7 +24,7 @@ export const SOCIAL_LINK = [
     name: 'Github',
     href: 'https://github.com/fidely-ui/fidely-ui',
     icon: FaGithub,
-    ariaLabel: 'Github',
+    ariaLabel: 'GitHub',
   },
   {
     name: 'Twitter',
@@ -48,6 +48,6 @@ export const SOCIAL_LINK = [
     name: 'Youtube',
     href: 'https://www.youtube.com/@chimobijustice',
     icon: FaYoutube,
-    ariaLabel: 'Youtube',
+    ariaLabel: 'YouTube',
   },
 ]

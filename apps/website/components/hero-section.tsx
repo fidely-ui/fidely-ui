@@ -103,7 +103,7 @@ export const HeroSection = () => {
                 >
                   <Link
                     href="https://github.com/fidely-ui/fidely-ui"
-                    aria-label="Github"
+                    aria-label="Give a Star on GitHub"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
