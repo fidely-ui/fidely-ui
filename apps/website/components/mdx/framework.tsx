@@ -7,7 +7,7 @@ import { Stack } from '@fidely-ui/react/stack'
 import { Text } from '@fidely-ui/react/text'
 
 import { RiNextjsFill } from 'react-icons/ri'
-import { SiFoodpanda, SiReactrouter, SiVite } from 'react-icons/si'
+import { SiFoodpanda, SiReactrouter, SiVite, SiLaravel } from 'react-icons/si'
 
 const frameworks = [
   {
@@ -57,6 +57,14 @@ const frameworks = [
   },
   {
     id: 6,
+    name: 'Laravel',
+    description: 'Use Fidely UI in Laravel + Inertia.js + React apps',
+    url: 'frameworks/laravel',
+    logo: <SiLaravel />,
+    comingSoon: false,
+  },
+  {
+    id: 7,
     name: 'Preset (Panda CSS)',
     description:
       'Use Fidely UI design tokens, recipes, and utilities without React components.',
