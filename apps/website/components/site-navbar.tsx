@@ -92,7 +92,7 @@ export const SiteNavBar = () => {
             aria-label="Join Discord"
             variant="ghost"
             size="xs"
-            title="Github"
+            title="Discord"
           >
             <Link
               href="https://discord.com/invite/7ru3tEjkcQ"
@@ -145,7 +145,7 @@ export const SiteNavBar = () => {
             aria-label="Join Discord"
             variant="ghost"
             size="xs"
-            title="Github"
+            title="Discord"
           >
             <Link
               href="https://discord.com/invite/7ru3tEjkcQ"
