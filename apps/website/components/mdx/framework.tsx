@@ -58,7 +58,7 @@ const frameworks = [
   {
     id: 6,
     name: 'Laravel',
-    description: 'Use Fidely UI in Lavavel + Inertialjs + React apps',
+    description: 'Use Fidely UI in Laravel + Inertia.js + React apps',
     url: 'frameworks/laravel',
     logo: <SiLaravel />,
     comingSoon: false,
