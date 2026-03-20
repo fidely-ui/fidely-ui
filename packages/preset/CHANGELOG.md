@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.3
+
+### Patch Changes
+
+- [#264](https://github.com/fidely-ui/fidely-ui/pull/264) [`1c47b4c`](https://github.com/fidely-ui/fidely-ui/commit/1c47b4c0b8520f669f72af01ec6c750cdd28168a) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - fix(tabs): prevent hover on disabled and fix selected state styles
+
 ## 2.2.2
 
 ### Patch Changes
