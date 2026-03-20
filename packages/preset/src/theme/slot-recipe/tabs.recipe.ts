@@ -50,7 +50,6 @@ export const tabsSlotRecipe = defineSlotRecipe({
       _disabled: {
         opacity: 0.4,
         cursor: 'not-allowed',
-        pointerEvents: 'none',
       },
       _vertical: { justifyContent: 'flex-start' },
     },
