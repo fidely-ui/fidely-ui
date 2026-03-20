@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.2.3
+
+### Patch Changes
+
+- Updated dependencies [[`1c47b4c`](https://github.com/fidely-ui/fidely-ui/commit/1c47b4c0b8520f669f72af01ec6c750cdd28168a)]:
+  - @fidely-ui/panda-preset@2.2.3
+
 ## 2.2.2
 
 ### Patch Changes

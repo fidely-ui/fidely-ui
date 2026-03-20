@@ -1,6 +1,12 @@
 # Changelog
 
-## 2.2.2 - 2026-03-6
+## 2.2.3 - (2026-03-20)
+
+### Patch Changes
+
+- [#264](https://github.com/fidely-ui/fidely-ui/pull/264) [`1c47b4c`](https://github.com/fidely-ui/fidely-ui/commit/1c47b4c0b8520f669f72af01ec6c750cdd28168a) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - fix(tabs): prevent hover on disabled and fix selected state styles
+
+## 2.2.2 - (2026-03-6)
 
 ### Patch Changes
 
@@ -17,7 +23,7 @@
 
 - [#246](https://github.com/fidely-ui/fidely-ui/pull/246) [`e46ae09`](https://github.com/fidely-ui/fidely-ui/commit/e46ae0996c0fc839d0057c9a22fa0a5db6eef1b3) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - fix: **`Menu`** `Arrow` & `ArrowTip` styles not showing when used
 
-## 2.2.1 - 2026-03-1
+## 2.2.1 - (2026-03-1)
 
 ### Patch Changes
 
@@ -38,7 +44,7 @@
 
 - [#225](https://github.com/fidely-ui/fidely-ui/pull/225) [`c033b2e`](https://github.com/fidely-ui/fidely-ui/commit/c033b2e5350b0c8c904a1a0a1e439139f6033ac2) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - fix **`Card`** `Header` and `Footer` spacing when header, footer used outside `Card.Body`
 
-## 2.2.0 - 2026-02-21
+## 2.2.0 - (2026-02-21)
 
 ### Minor Changes
 
@@ -50,25 +56,25 @@
 
 - Fix `AvatarGroup` overlap stacking behavior.
 
-## 2.1.0 - 2026-02-14
+## 2.1.0 - (2026-02-14)
 
 ### Minor Changes
 
 - Add **full** size variant to Dialog
 
-## 2.0.2 - 2026-02-8
+## 2.0.2 - (2026-02-8)
 
 ### Patch Changes
 
 - Fixed an issue where the Select trigger lost its active border when the dropdown content opened.
 
-## 2.0.1 - 2026-02-6
+## 2.0.1 - (2026-02-6)
 
 ### Patch Changes
 
 - fix(command-input): prevent crash and correctly resolve default keyboard shortcuts when the shortcut prop is omitted
 
-## 2.0.0 - 2026-02-4
+## 2.0.0 - (2026-02-4)
 
 ### Major Changes
 
