@@ -47,15 +47,9 @@ export const tabsSlotRecipe = defineSlotRecipe({
       transitionProperty: 'color, background, border-color',
       transitionDuration: 'normal',
       zIndex: '1',
-      _hover: { color: 'fg.default' },
-      _selected: {
-        color: 'fg.muted',
-        _hover: { color: 'fg.default' },
-      },
       _disabled: {
-        color: 'fg.disabled',
+        opacity: 0.4,
         cursor: 'not-allowed',
-        _hover: { color: 'text.disabled' },
       },
       _vertical: { justifyContent: 'flex-start' },
     },
@@ -89,10 +83,15 @@ export const tabsSlotRecipe = defineSlotRecipe({
           pt: '4.2',
         },
         trigger: {
+          color: 'fg.muted',
+          _hover: {
+            color: 'fg.default',
+          },
           _horizontal: {
             pb: '2.6',
           },
           _selected: {
+            color: 'fg.default',
             borderTop: 'none',
             borderRight: 'none',
             borderLeft: 'none',
@@ -113,6 +112,7 @@ export const tabsSlotRecipe = defineSlotRecipe({
           },
         },
         trigger: {
+          color: 'fg.muted',
           borderColor: 'transparent',
           borderWidth: '1px',
           _horizontal: {
