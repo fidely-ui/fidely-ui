@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@fidely-ui/panda-preset": "workspace:*",
-    "@pandacss/dev": "^1.8.2",
+    "@pandacss/dev": "^1.9.0",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3"
   }
