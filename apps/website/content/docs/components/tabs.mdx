@@ -73,6 +73,23 @@ Pass the **asChild** to the **Tabs.Trigger** component to render a link as a tab
 
 <ExampleTabs name="tabs-links" scope="tabs" />
 
+Using a custom links like react router, you need to set the **`navigate`** prop on the **Tabs.Root** component.
+
+```tsx
+import { useNavigate } from 'react-router-dom'
+import { Tabs } from '@fidely-ui/react'
+
+export const TabLinks = () => {
+  const navigate = useNavigate()
+
+  return (
+    <Tabs.Root navigate={({ value, node }) => navigate(`/${value}`)}>
+      {/* ... */}
+    </Tabs.Root>
+  )
+}
+```
+
 ## Props
 
 ### Root
