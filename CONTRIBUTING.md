@@ -1,6 +1,28 @@
 # Contributing to Fidely UI
 
-Thanks for showing interest in contributing to **Fidely UI 💖**, we’re excited to have you here!
+If you plan to contribute to Fidely UI, please take a moment to feel awesome ✨ People like you are what open source is about ♥. Any contributions, no matter how big or small, are highly appreciated.
+
+## Before getting started
+
+- Before jumping into a PR be sure to search [existing PRs](https://github.com/fidely-ui/fidely-ui/pulls) or [issues](https://github.com/fidely-ui/fidely-ui/issues) for an open or closed item that relates to your submission.
+- Select an issue from [here](https://github.com/fidely-ui/fidely-ui/issues) or create a new one
+- Consider the results from the discussion on the issue if any
+
+## Taking issues
+
+Before taking an issue, ensure that:
+
+- The issue has been assigned the public label
+- The issue is clearly defined and understood
+- No one has been assigned to the issue
+- No one has expressed intention to work on it
+
+You can then:
+
+1. Comment on the issue with your intention to work on it
+2. Begin work on the issue
+
+Always feel free to ask questions or seek clarification on the issue.
 
 ## Overview
 
@@ -10,43 +32,32 @@ There are many ways you can help improve Fidely UI:
   Fix typos, clarify explanations, expand missing sections, or add new guides.
 
 - **Add new demos**  
-  Contribute component demos for the website and Storybook.  
-  Open a PR to:
-  - `apps/patterns/src/examples`
-  - `apps/storybook/src/stories`
+  Contribute component demos for the website and Storybook
 
 - **Fix bugs**  
   Report bugs, fix existing issues, or improve edge cases.
 
 - **Contribute new features**  
-  Propose new ideas via GitHub Discussions or work on an existing issue.
+  Propose new ideas via GitHub Discussions or work on an existing requested feature.
 
 - **Enhance the codebase**  
   Refactor, optimize, or improve existing implementations.
 
-> We welcome all contributions, no contribution is too small.
-
-### Filing Issues
-
-To help us resolve issues faster in **Fidely UI**, please file them in the correct area:
-
-- **Component logic or accessibility issues**  
-  These belong in **`packages/fidely-ui`**
-
-- **Styling, tokens, or design issues**  
-  These belong in **`packages/presets`** and are usually resolved via PRs
-
 ### Feature Requests
 
-For new components or large feature ideas, please **open a GitHub Discussion first**.  
-This helps us align on scope, API design, and implementation before work begins.
+For new components or large feature ideas, please **[open a GitHub Discussion first](https://github.com/orgs/fidely-ui/discussions)**.
+This helps us align on scope, API design, and implementation before any code is written.
 
 ## About this repository
 
-Fidely UI is a **monorepo**.
+Fidely UI is a **monorepo** managed with **pnpm** and **Changesets**.
 
-- We use [pnpm](https://pnpm.io) with [workspaces](https://pnpm.io/workspaces)
-- We use [Changesets](https://github.com/changesets/changesets) for versioning and releases
+| Workspace            | Description                    | Path                               |
+| :------------------- | :----------------------------- | :--------------------------------- |
+| **React Components** | Headless primitives (Ark UI)   | `packages/fidely-ui`               |
+| **Panda Preset**     | Design tokens & CSS recipes    | `packages/presets`                 |
+| **Documentation**    | Next.js & MDX (Velite powered) | `apps/website`                     |
+| **Demos/Testing**    | Storybook & Patterns           | `apps/storybook` & `apps/patterns` |
 
 ## Development Setup
 
@@ -96,93 +107,39 @@ pnpm build:packages
 
 ---
 
-### 7. Start Storybook
+### 7. Start the environment:
 
-```bash
-pnpm dev:storybook
-```
-
----
-
-### 8. Start the documentation website
-
-```bash
-pnpm dev:web
-```
+- Storybook: `pnpm dev:storybook`
+- Documentation: `pnpm dev:web`
 
 ---
 
-> Running **`pnpm dev:web`** starts the **Next.js** server and builds the **Velite powered** documentation.
+## Styles & Documentation
 
-## Documentation
+### Documentation
 
-Documentation lives in the **`apps/website`** workspace and is written in **MDX**.
+Documentation is written in **MDX** and lives at:
+`apps/website/content/docs`
 
-Docs are located at:
+### Styling
 
-```bash
-apps/website/content/docs
-```
+Styling is handled via **Panda CSS recipes** and **slot recipes** located in:
+`packages/presets`
 
----
+> [!IMPORTANT]
+> **Note:** If you modify `packages/presets` or `packages/fidely-ui`, you must run:
+>
+> ```bash
+> pnpm build:packages
+> ```
+>
+> If the changes still don't reflect, try running `pnpm install`. We are actively working on a better HMR (Hot Module Replacement) experience for this!
 
-## Project Structure
-
-Fidely UI is built in two layers:
-
-### Panda Preset
-
-- Design tokens
-
-- Recipes and slot recipes
-
-- Utilities powered by Panda CSS
-
-### React Components
-
-- Accessible, headless first components
-
-- Built on Ark UI
-
-- Styled using the Panda preset
-
-## Components
-
-All React components live in:
-
-```bash
-packages/fidely-ui
-```
-
-These wrap **Ark UI** primitives and expose a clean, composable API.
+If you encounter CSS errors on the dev server after building, go to
+`apps/website/app/global.css`, temporarily comment out the CSS layers,
+reload, and then uncomment them.
 
 ---
-
-## Styles
-
-Styling is handled via **Panda CSS recipes** and **slot recipes**.
-
-lives in the folders below:
-
-```bash
-packages/presets
-```
-
-If you make changes to presets, or react components be sure to:
-
-```bash
-pnpm build:packages
-
-```
-
-> **Note**
-> After running **`pnpm build:packages`**, if you are running the documentation site and encounter errors, navigate to:
-
-```bash
-apps/website/app/global.css
-```
-
-> Temporarily comment out the CSS layers, reload the dev server, then uncomment them.
 
 ## Commit Convention
 
