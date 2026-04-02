@@ -74,9 +74,9 @@
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
   "peerDependencies": {
-    "@pandacss/dev": ">=1.1.0",
-    "react": ">=18",
-    "react-dom": ">=18"
+    "@pandacss/dev": "^1.7.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "dependencies": {
     "@ark-ui/react": "^5.34.1",
