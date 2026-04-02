@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react'
 import { styled, type StyledComponent, isCssProperty } from 'styled-system/jsx'
 import { cx } from 'styled-system/css'
