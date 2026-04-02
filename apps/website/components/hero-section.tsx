@@ -4,7 +4,6 @@ import { Button } from '@fidely-ui/react/button'
 import { Flex } from '@fidely-ui/react/flex'
 import { Stack } from '@fidely-ui/react/stack'
 import { Heading } from '@fidely-ui/react/heading'
-import { Text } from '@fidely-ui/react/text'
 import { Center } from '@fidely-ui/react/center'
 import { Icon } from '@fidely-ui/react/icon'
 
@@ -18,6 +17,7 @@ import {
   HeroCardPlaylist,
 } from '~/components/hero'
 import { IoIosStar } from 'react-icons/io'
+import { Span } from '@fidely-ui/react'
 
 export const HeroSection = () => {
   return (
@@ -56,9 +56,14 @@ export const HeroSection = () => {
                 </Heading>
               </Stack>
 
-              <Text color="fg.disabled" size={{ base: 'md', lg: 'lg' }}>
+              <Box color="fg.disabled">
                 Fidely UI is a modern design system powered by{' '}
-                <Text as="strong" textDecoration="underline" color="fg.default">
+                <Span
+                  asChild
+                  textDecoration="underline"
+                  color="fg.default"
+                  mr="2"
+                >
                   <a
                     href="https://ark-ui.com/"
                     target="_blank"
@@ -66,9 +71,14 @@ export const HeroSection = () => {
                   >
                     Ark UI
                   </a>
-                </Text>{' '}
-                and{' '}
-                <Text as="strong" textDecoration="underline" color="fg.default">
+                </Span>
+                and
+                <Span
+                  asChild
+                  textDecoration="underline"
+                  color="fg.default"
+                  ml="2"
+                >
                   <a
                     href="https://panda-css.com/"
                     target="_blank"
@@ -76,10 +86,10 @@ export const HeroSection = () => {
                   >
                     Panda CSS,
                   </a>
-                </Text>{' '}
+                </Span>{' '}
                 It provides accessible, themeable, and composable components for
                 building high-quality web applications.
-              </Text>
+              </Box>
 
               <Stack flexDirection={{ base: 'column', md: 'row' }}>
                 <Button
