@@ -6,6 +6,8 @@ import { Stack } from '@fidely-ui/react/stack'
 import { Heading } from '@fidely-ui/react/heading'
 import { Center } from '@fidely-ui/react/center'
 import { Icon } from '@fidely-ui/react/icon'
+import { Text } from '@fidely-ui/react/text'
+import { Span } from '@fidely-ui/react/span'
 
 import {
   HeroCard,
@@ -17,7 +19,6 @@ import {
   HeroCardPlaylist,
 } from '~/components/hero'
 import { IoIosStar } from 'react-icons/io'
-import { Span } from '@fidely-ui/react'
 
 export const HeroSection = () => {
   return (
@@ -56,7 +57,7 @@ export const HeroSection = () => {
                 </Heading>
               </Stack>
 
-              <Box color="fg.disabled">
+              <Text color="fg.disabled">
                 Fidely UI is a modern design system powered by{' '}
                 <Span
                   asChild
@@ -89,7 +90,7 @@ export const HeroSection = () => {
                 </Span>{' '}
                 It provides accessible, themeable, and composable components for
                 building high-quality web applications.
-              </Box>
+              </Text>
 
               <Stack flexDirection={{ base: 'column', md: 'row' }}>
                 <Button
