@@ -9,7 +9,6 @@ import { styled } from 'styled-system/jsx'
 import { Kbd } from '../kbd/index'
 import { Flex } from '../flex/index'
 import { Text } from '../text/index'
-import { useCommand } from '../../hooks/useCommand'
 import { FiSearch } from '../../icons/FiSearch'
 
 const StyledCommandInput = styled(ark.button, commandInput)
@@ -19,7 +18,11 @@ type CommandInputBaseProps = ComponentProps<typeof StyledCommandInput>
 export interface CommandInputProps extends CommandInputBaseProps {
   /**
    * Keyboard shortcut used to trigger the command menu/input.
-   * Example: "Ctrl+K" or "⌘+K"
+   * Example: 'Ctrl+K' or '⌘+K'
+   *
+   * @default
+   *
+   * '⌘+K'
    */
   shortcut?: string
 
@@ -54,7 +57,7 @@ export const CommandInput = React.forwardRef<
   CommandInputProps
 >(function CommandInput(props, ref) {
   const {
-    shortcut,
+    shortcut: shortcutKey,
     onOpen,
     isOpen,
     placeholder = 'Search...',
@@ -62,17 +65,59 @@ export const CommandInput = React.forwardRef<
     className,
     ...rest
   } = props
+  const [mounted, setMounted] = React.useState(false)
 
-  const { isMobile, shortcutLabel } = useCommand({
-    shortcut,
-    onTrigger: onOpen,
-  })
+  const shortcut = shortcutKey ?? '⌘+K'
+
+  const toggle = React.useCallback(() => {
+    onOpen?.()
+  }, [onOpen])
+
+  React.useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement
+      if (
+        target.tagName === 'INPUT' ||
+        target.tagName === 'TEXTAREA' ||
+        target.isContentEditable
+      ) {
+        return
+      }
+
+      const parts = shortcut
+        .toLowerCase()
+        .split('+')
+        .map((p) => p.trim())
+      const key = parts.pop()
+      const hasMeta = parts.includes('⌘') || parts.includes('cmd')
+      const hasCtrl = parts.includes('ctrl')
+
+      const isMatch =
+        e.key.toLowerCase() === key &&
+        e.ctrlKey === hasCtrl &&
+        e.metaKey === hasMeta
+
+      if (isMatch) {
+        e.preventDefault()
+        toggle()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [shortcut, toggle])
 
   return (
     <StyledCommandInput
       ref={ref}
       type="button"
-      onClick={onOpen}
+      onClick={toggle}
       aria-haspopup="dialog"
       aria-expanded={isOpen}
       className={className}
@@ -83,9 +128,9 @@ export const CommandInput = React.forwardRef<
         <Text color="fg.muted">{placeholder}</Text>
       </Flex>
 
-      {!isMobile && shortcutLabel ? (
+      {mounted && shortcut ? (
         <Flex gap="1" aria-hidden="true">
-          {shortcutLabel
+          {shortcut
             .split('+')
             .filter(Boolean)
             .map((key, i) => (
