@@ -162,7 +162,9 @@ export const pinInputAnatomy = anatomy('pin-input').parts(
   'root',
   'control',
   'label',
-  'input'
+  'input',
+  'separator',
+  'group'
 )
 
 export const popoverAnatomy = anatomy('popover').parts(

@@ -4,6 +4,8 @@ export {
   PinInputInput,
   PinInputLabel,
   PinInputControl,
+  PinInputInputGroup,
+  PinInputInputSeparator,
   PinInputHiddenInput,
   PinInputContext,
   PinInputValueChangeDetails,
@@ -14,6 +16,8 @@ export type {
   PinInputInputProps,
   PinInputLabelProps,
   PinInputControlProps,
+  PinInputInputGroupProps,
+  PinInputInputSeparatorProps,
   PinInputRootProps,
 } from './pin-input'
 
