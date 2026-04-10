@@ -32,6 +32,36 @@ export const pinInputSlotRecipe = defineSlotRecipe({
       textStyle: 'sm',
       fontWeight: 'medium',
     },
+    group: {
+      display: 'flex',
+      alignItems: 'center',
+      verticalAlign: 'middle',
+      gap: '0',
+
+      '& > input': {
+        borderRadius: '0',
+        marginLeft: '-1px',
+        _focusVisible: {
+          zIndex: '1',
+        },
+        '&:first-of-type': {
+          borderStartRadius: 's2',
+        },
+        '&:last-of-type': {
+          borderEndRadius: 's2',
+        },
+      },
+    },
+    separator: {
+      display: 'block',
+      border: 'none',
+      bg: 'border.default',
+      height: '1.5px',
+      width: '4',
+      mx: '1',
+      alignSelf: 'center',
+      flexShrink: 0,
+    },
   },
 
   variants: {

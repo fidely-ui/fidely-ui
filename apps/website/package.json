@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "panda codegen --clean",
     "dev:content": "velite --watch",
-    "dev:next": "next dev",
+    "dev:next": "rm -rf .next && next dev",
     "build:content": "velite --clean",
     "build:next": "next build",
     "dev": "pnpm run dev:content & pnpm run dev:next",

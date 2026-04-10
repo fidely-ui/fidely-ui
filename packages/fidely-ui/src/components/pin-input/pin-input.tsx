@@ -1,6 +1,7 @@
 'use client'
 
-import type { Assign } from '@ark-ui/react'
+import type { Assign, PolymorphicProps } from '@ark-ui/react'
+import { ark } from '@ark-ui/react/factory'
 import { PinInput as ArkPinInput } from '@ark-ui/react/pin-input'
 import { pinInput, type PinInputVariantProps } from 'styled-system/recipes'
 import { type HTMLStyledProps } from 'styled-system/types'
@@ -59,6 +60,26 @@ export const PinInputInput = withSlotContext<
   HTMLInputElement,
   PinInputInputProps
 >(ArkPinInput.Input, 'input')
+
+export interface PinInputInputGroupProps extends Assign<
+  HTMLStyledProps<'div'>,
+  PolymorphicProps
+> {}
+
+export const PinInputInputGroup = withSlotContext<
+  HTMLDivElement,
+  PinInputInputGroupProps
+>(ark.div, 'group')
+
+export interface PinInputInputSeparatorProps extends Assign<
+  HTMLStyledProps<'hr'>,
+  PolymorphicProps
+> {}
+
+export const PinInputInputSeparator = withSlotContext<
+  HTMLHRElement,
+  PinInputInputSeparatorProps
+>(ark.hr, 'separator')
 
 export const PinInputHiddenInput = ArkPinInput.HiddenInput
 export const PinInputContext = ArkPinInput.Context
