@@ -17,6 +17,15 @@ export type {
   AccordionItemIndicatorProps,
 } from './accordion'
 
-export { useAccordion, useAccordionContext } from '@ark-ui/react/accordion'
+export {
+  useAccordion,
+  useAccordionContext,
+  useAccordionItemContext,
+} from '@ark-ui/react/accordion'
+
+export type {
+  UseAccordionReturn,
+  UseAccordionProps,
+} from '@ark-ui/react/accordion'
 
 export * as Accordion from './namespace'
