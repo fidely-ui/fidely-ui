@@ -59,10 +59,10 @@ export const asideComponentLinks = [
       { name: 'Field', linkUrl: 'field', info: '' },
       { name: 'Input', linkUrl: 'input', info: '' },
       { name: 'Textarea', linkUrl: 'textarea', info: '' },
-      { name: 'Command Input', linkUrl: 'command-input', info: '' },
+      { name: 'Command Input', linkUrl: 'command-input', info: 'Updated' },
       { name: 'Combobox', linkUrl: 'combobox', info: '' },
       { name: 'Input Group', linkUrl: 'input-group', info: '' },
-      { name: 'Pin Input', linkUrl: 'pin-input', info: '' },
+      { name: 'Pin Input', linkUrl: 'pin-input', info: 'Updated' },
       { name: 'Password Input', linkUrl: 'password-input', info: '' },
       { name: 'Clipboard', linkUrl: 'clipboard', info: '' },
       { name: 'Checkbox', linkUrl: 'checkbox', info: '' },
@@ -84,7 +84,7 @@ export const asideComponentLinks = [
   {
     section: 'Disclosure',
     items: [
-      { name: 'Accordion', linkUrl: 'accordion', info: '' },
+      { name: 'Accordion', linkUrl: 'accordion', info: 'Updated' },
       { name: 'Tabs', linkUrl: 'tabs', info: '' },
     ],
   },

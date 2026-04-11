@@ -8,6 +8,12 @@ links:
 
 <ExampleTabs name="command-input-demo" scope="command-input" />
 
+<Callout>
+  **Important Note:** As of `v2.3.0`, we have removed automatic OS detection for
+  keyboard shortcuts. The default shortcut is now strictly `⌘ + K`. Support for
+  other modifier keys (such as `Alt`, `Shift` or `Space`) has been removed.
+</Callout>
+
 ## Overview
 
 **CommandInput** is an input styled trigger used to open command palettes, dialogs, or search surfaces.
@@ -43,25 +49,13 @@ You can replace the default search icon using the **leftElement** prop.
 
 **CommandInput** is typically paired with a dialog and combobox for search UI.
 
-On desktop devices, pressing the configured keyboard shortcut automatically triggers **onOpen**.
-
-On mobile devices, the shortcut hint is hidden and keyboard shortcuts are disabled.
-
 <ExampleTabs name="command-input-with-search" scope="command-input" />
 
 ## Custom Keyboard Shortcut
 
-You can override the default shortcut (⌘ + K on macOS or Ctrl + K on Windows) using the **shortcut** prop.
+You can override the default shortcut (⌘ + K) using the **shortcut** prop.
 
 <ExampleTabs name="command-input-shortcut" scope="command-input" />
-
-## Responsive Behavior
-
-- Keyboard shortcut hints are hidden on mobile devices
-
-- Keyboard shortcuts only trigger onOpen on desktop
-
-- Tap or click interaction is always supported
 
 ## Props
 
