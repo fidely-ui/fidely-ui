@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.3.0
+
+### Minor Changes
+
+- [#274](https://github.com/fidely-ui/fidely-ui/pull/274) [`eeadf0b`](https://github.com/fidely-ui/fidely-ui/commit/eeadf0ba85324dd303d32baf65993e7ab92aba81) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - feat(pin-input): add `PinInput.Group` and `PinInput.Separator` components with styling
+
+### Patch Changes
+
+- [#271](https://github.com/fidely-ui/fidely-ui/pull/271) [`72a3a72`](https://github.com/fidely-ui/fidely-ui/commit/72a3a728ae7df23058ec3f5afc604067a8c0cecb) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - Update react and react-dom peer dependencies to support version 19 and pandacss/dev to 1.7.0.
+
 ## 2.2.3
 
 ### Patch Changes

@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.3.0 - (2026-04-11)
+
+### Minor Changes
+
+- [#274](https://github.com/fidely-ui/fidely-ui/pull/274) [`eeadf0b`](https://github.com/fidely-ui/fidely-ui/commit/eeadf0ba85324dd303d32baf65993e7ab92aba81) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - feat(pin-input): add `PinInput.Group` and `PinInput.Separator` components with styling
+
+- [#275](https://github.com/fidely-ui/fidely-ui/pull/275) [`5cfa88b`](https://github.com/fidely-ui/fidely-ui/commit/5cfa88b965e2e50715ec6fbf813804702cdff145) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - Exported `useAccordionItemContext`: Enables external access to individual accordion item state.
+
+  Exported `UseAccordionProps` and `UseAccordionReturn`: provides better TypeScript support.
+
+- [#273](https://github.com/fidely-ui/fidely-ui/pull/273) [`9e636dc`](https://github.com/fidely-ui/fidely-ui/commit/9e636dc691ecbd18fe40ae9ec0c5e9a86a5e56d2) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - `feat(command-input)`: remove platform detection, and fix SSR hydration mismatch
+
+### Patch Changes
+
+- [#271](https://github.com/fidely-ui/fidely-ui/pull/271) [`72a3a72`](https://github.com/fidely-ui/fidely-ui/commit/72a3a728ae7df23058ec3f5afc604067a8c0cecb) Thanks [@chimobi-justice](https://github.com/chimobi-justice)! - Update react and react-dom peer dependencies to support version 19 and pandacss/dev to 1.7.0.
+
+- Updated dependencies [[`72a3a72`](https://github.com/fidely-ui/fidely-ui/commit/72a3a728ae7df23058ec3f5afc604067a8c0cecb), [`eeadf0b`](https://github.com/fidely-ui/fidely-ui/commit/eeadf0ba85324dd303d32baf65993e7ab92aba81)]:
+  - @fidely-ui/panda-preset@2.3.0
+
 ## 2.2.3 - (2026-03-20)
 
 ### Patch Changes
