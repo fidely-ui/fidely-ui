@@ -59,15 +59,6 @@ export const comboboxAnatomy = anatomy('combobox').parts(
   'empty'
 )
 
-export const commandInputAnatomy = anatomy('command-input').parts(
-  'root',
-  'left',
-  'icon',
-  'label',
-  'shortcut',
-  'kbd'
-)
-
 export const dialogAnatomy = anatomy('dialog').parts(
   'title',
   'description',
@@ -84,7 +75,7 @@ export const dialogAnatomy = anatomy('dialog').parts(
   'footer'
 )
 
-export const fieldAnatomy = anatomy('pin-input').parts(
+export const fieldAnatomy = anatomy('field').parts(
   'root',
   'select',
   'label',
