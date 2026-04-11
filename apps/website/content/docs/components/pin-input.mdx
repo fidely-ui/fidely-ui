@@ -58,6 +58,15 @@ To automatically blur the input after completion, set **blurOnComplete** to true
 
 <ExampleTabs name="pin-input-blur" scope="pin-input" />
 
+### With Group and Separator
+
+<Callout>
+  **Important Note:** As of `v2.3.0`, you can now use `PinInput.Group` and
+  `PinInput.Separator`.
+</Callout>
+
+<ExampleTabs name="pin-input-group" scope="pin-input" />
+
 ### With Field
 
 The **Field** component helps manage form-related state and accessibility attributes of a pin input.
@@ -80,6 +89,10 @@ Pass the **value** and **onValueChange** props to the **PinInPut.Root** componen
 
 <ExampleTabs name="pin-input-controlled" scope="pin-input" />
 
+### Example usage
+
+<ExampleTabs name="pin-input-example" scope="pin-input" />
+
 ## Props
 
 ### `Root`
@@ -88,7 +101,7 @@ Pass the **value** and **onValueChange** props to the **PinInPut.Root** componen
 | ----------------- | ---------------------------------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------- |
 | `placeholder`     | `string`                                                                                                         | `o`         | The placeholder text for each input.                                                      |
 | `type`            | `'numeric' \| 'alphabetic' \| 'alphanumeric'`                                                                    | `'numeric'` | The type of value the pin input should allow.                                             |
-| `colorPalette`    | `"red" \| "blue" \| "green" \| "purple" \| "orange" \| "gray"`                                                   | -           | The color palette of the component.                                                       |
+| `colorPalette`    | `all available colors`                                                                                           | -           | The color palette of the component.                                                       |
 | `size`            | `'2xs' \| 'xs' \| 'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl'`                                                         | `'md'`      | The size of the component.                                                                |
 | `variant`         | `'outline' \| 'subtle' \| 'flushed'`                                                                             | `'outline'` | The visual variant of the component.                                                      |
 | `as`              | `React.ElementType`                                                                                              | `-`         | The underlying element to render.                                                         |
