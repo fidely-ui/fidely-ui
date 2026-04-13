@@ -6,8 +6,8 @@ import { Stack } from '@fidely-ui/react/stack'
 import { Heading } from '@fidely-ui/react/heading'
 import { Center } from '@fidely-ui/react/center'
 import { Icon } from '@fidely-ui/react/icon'
+import { IconButton } from '@fidely-ui/react/icon-button'
 import { Text } from '@fidely-ui/react/text'
-import { Span } from '@fidely-ui/react/span'
 
 import {
   HeroCard,
@@ -58,36 +58,38 @@ export const HeroSection = () => {
               </Stack>
 
               <Text color="fg.disabled">
-                Fidely UI is a modern design system powered by{' '}
-                <Span
-                  asChild
+                Fidely UI is a modern design system powered by
+                <IconButton
+                  size="sm"
+                  variant="plain"
                   textDecoration="underline"
-                  color="fg.default"
-                  mr="2"
+                  mx="1"
+                  asChild
                 >
-                  <a
+                  <Link
                     href="https://ark-ui.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Ark UI
-                  </a>
-                </Span>
+                  </Link>
+                </IconButton>
                 and
-                <Span
-                  asChild
+                <IconButton
+                  size="sm"
+                  variant="plain"
                   textDecoration="underline"
-                  color="fg.default"
-                  ml="2"
+                  mx="1"
+                  asChild
                 >
-                  <a
+                  <Link
                     href="https://panda-css.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Panda CSS,
-                  </a>
-                </Span>{' '}
+                  </Link>
+                </IconButton>
                 It provides accessible, themeable, and composable components for
                 building high-quality web applications.
               </Text>

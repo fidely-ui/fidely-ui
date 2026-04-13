@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@fidely-ui/react/button'
 import { Flex } from '@fidely-ui/react/flex'
 import { HStack, Stack } from '@fidely-ui/react/stack'
