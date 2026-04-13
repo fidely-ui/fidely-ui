@@ -8,6 +8,7 @@ import { Span } from '@fidely-ui/react/span'
 import { Heading } from '@fidely-ui/react/heading'
 import { Text } from '@fidely-ui/react/text'
 import { IconButton } from '@fidely-ui/react/icon-button'
+import { Icon } from '@fidely-ui/react/icon'
 
 import { AppLogo } from '~/components/logo'
 import { InfoBadge } from '~/components/nav-item'
@@ -152,7 +153,9 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label={link.ariaLabel}
               >
-                <link.icon />
+                <Icon>
+                  <link.icon />
+                </Icon>
               </Link>
             </IconButton>
           ))}

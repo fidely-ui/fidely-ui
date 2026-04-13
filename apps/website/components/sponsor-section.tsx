@@ -61,8 +61,8 @@ export const SponsorSection = () => {
                 <Stack>
                   <Image
                     src="/sponsor-1.png"
-                    width="300"
-                    height="200"
+                    width={300}
+                    height={200}
                     alt="kofi logo"
                     placeholder="blur"
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsn9pfDwAFogI0qPkC4wAAAABJRU5ErkJggg=="
