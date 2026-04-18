@@ -28,6 +28,7 @@ export const SiteNavBar = () => {
   const navLinks = [
     { href: '/docs/getting-started/introduction', label: 'Docs' },
     { href: '/showcase', label: 'Showcase' },
+    { href: '/docs/theming/colors', label: 'Colors' },
     { href: '/docs/components/accordion', label: 'Components' },
   ]
 
@@ -201,6 +202,14 @@ const SiteMobileLinks = ({ closeDrawer }: SiteMobileLinksProps) => {
           closeDrawer={closeDrawer}
           fontSize="18px"
         />
+
+        <NavItem
+          href="/docs/theming/colors"
+          label="Colors"
+          closeDrawer={closeDrawer}
+          fontSize="18px"
+        />
+
         <NavItem
           href="/showcase"
           label="Showcase"
