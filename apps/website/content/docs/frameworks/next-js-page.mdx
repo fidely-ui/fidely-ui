@@ -20,16 +20,25 @@ If you prefer setting things up yourself, follow the steps below.
 
 ## 1. install Panda CSS
 
-```bash
-npm install -D @pandacss/dev
-npx panda init --postcss
-```
+<PackageManager
+  managers={{
+    npm: 'npm install -D @pandacss/dev\nnpx panda init --postcss',
+    yarn: 'yarn add -D @pandacss/dev\nyarn panda init --postcss',
+    pnpm: 'pnpm install -D @pandacss/dev\npnpm panda init --postcss',
+    bun: 'bun add -D @pandacss/dev\nbun panda init --postcss',
+  }}
+/>
 
 ## 2. install Fidely UI
 
-```bash
-npm install @fidely-ui/react @fidely-ui/panda-preset
-```
+<PackageManager
+  managers={{
+    npm: 'npm install @fidely-ui/react @fidely-ui/panda-preset',
+    yarn: 'yarn add @fidely-ui/react @fidely-ui/panda-preset',
+    pnpm: 'pnpm add @fidely-ui/react @fidely-ui/panda-preset',
+    bun: 'bun add @fidely-ui/react @fidely-ui/panda-preset',
+  }}
+/>
 
 ## 3. Update package.json scripts
 
@@ -51,7 +60,7 @@ The **prepare** script ensures Panda CSS generates styles automatically when dep
 
 ## 4. Update tsconfig
 
-If you are using TypeScript, update your **compilerOptions** to include the following:
+> Note: If you're using TypeScript v5 update your **compilerOptions** to include the following:
 
 ```json
 {
@@ -63,6 +72,22 @@ If you are using TypeScript, update your **compilerOptions** to include the foll
     "baseUrl": ".",
     "paths": {
       "styled-system/*": ["styled-system/*"]
+    }
+  }
+}
+```
+
+> Note: the below is using TypeScript v6 you dont need a **baseUrl**
+
+```json
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "paths": {
+      "styled-system/*": ["./styled-system/*"]
     }
   }
 }
@@ -143,9 +168,14 @@ export default defineConfig({
 
 After updating the config, generate the styled system:
 
-```bash
-npx panda codegen
-```
+<PackageManager
+  managers={{
+    npm: 'npx panda codegen',
+    yarn: 'yarn panda codegen',
+    pnpm: 'pnpm panda codegen',
+    bun: 'bun panda codegen',
+  }}
+/>
 
 ## 7. Configure the entry CSS with layers
 

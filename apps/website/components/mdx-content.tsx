@@ -31,6 +31,7 @@ import {
 } from '~/components/mdx/table'
 import { ColorShowcase } from '~/components/mdx/color-showcase'
 import { Frameworks } from '~/components/mdx/framework'
+import { PackageManager } from '~/components/mdx/package-manager'
 
 const sharedComponents = {
   a: Anchor,
@@ -59,6 +60,7 @@ const sharedComponents = {
   Callout,
   ColorShowcase,
   Frameworks,
+  PackageManager,
   ExampleTabs: ExampleTabs,
   ExamplePreview: ExamplePreview,
   ExampleCode(props: { name: string }) {

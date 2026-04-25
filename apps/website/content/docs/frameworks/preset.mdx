@@ -19,19 +19,28 @@ If you prefer setting things up yourself, follow the steps below.
 
 ## 1. install Panda CSS
 
-```bash
-npm install -D @pandacss/dev
-npx panda init --postcss
-```
+<PackageManager
+  managers={{
+    npm: 'npm install -D @pandacss/dev\nnpx panda init --postcss',
+    yarn: 'yarn add -D @pandacss/dev\nyarn panda init --postcss',
+    pnpm: 'pnpm install -D @pandacss/dev\npnpm panda init --postcss',
+    bun: 'bun add -D @pandacss/dev\nbun panda init --postcss',
+  }}
+/>
 
 ## 2. Install the preset
 
-```bash
-npm install @fidely-ui/panda-preset
-```
+<PackageManager
+  managers={{
+    npm: 'npm install @fidely-ui/panda-preset',
+    yarn: 'yarn add @fidely-ui/panda-preset',
+    pnpm: 'pnpm add @fidely-ui/panda-preset',
+    bun: 'bun add @fidely-ui/panda-preset',
+  }}
+/>
 
 > This preset contains design tokens, recipes, and utilities. No React components are included.
-> You can use your own components or another UI library while still leveraging the preset.
+> You can use your own or build components while still leveraging the preset.
 
 ## 3. Update package.json scripts
 
@@ -146,9 +155,14 @@ export default defineConfig({
 
 After updating the config, generate the styled system:
 
-```bash
-npx panda codegen
-```
+<PackageManager
+  managers={{
+    npm: 'npx panda codegen',
+    yarn: 'yarn panda codegen',
+    pnpm: 'pnpm panda codegen',
+    bun: 'bun panda codegen',
+  }}
+/>
 
 ### This will create the styled-system folder with:
 
