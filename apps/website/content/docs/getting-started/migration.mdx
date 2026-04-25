@@ -36,15 +36,25 @@ This shift gives you **full control over your design system** while keeping Fide
 
 Remove the unused packages **`@fidely-ui/styled-system`** and **`@ark-ui/react`**
 
-```bash
-npm uninstall @fidely-ui/styled-system @ark-ui/react
-```
+<PackageManager
+  managers={{
+    npm: 'npm uninstall @fidely-ui/styled-system @ark-ui/react',
+    yarn: 'yarn remove @fidely-ui/styled-system @ark-ui/react',
+    pnpm: 'pnpm remove @fidely-ui/styled-system @ark-ui/react',
+    bun: 'bun remove @fidely-ui/styled-system @ark-ui/react',
+  }}
+/>
 
 Install updated versions of the packages: **`@fidely-ui/react`** and **`@fidely-ui/panda-preset`**.
 
-```bash
-npm install @fidely-ui/react @fidely-ui/panda-preset
-```
+<PackageManager
+  managers={{
+    npm: 'npm install @fidely-ui/react @fidely-ui/panda-preset',
+    yarn: 'yarn add @fidely-ui/react @fidely-ui/panda-preset',
+    pnpm: 'pnpm add @fidely-ui/react @fidely-ui/panda-preset',
+    bun: 'bun add @fidely-ui/react @fidely-ui/panda-preset',
+  }}
+/>
 
 - v2 relies directly on end users Panda CSS generated styles
 - We No more depends or use our custom styles directly from the package
@@ -98,12 +108,28 @@ To make this work, you must configure **baseUrl** and **paths** correctly.
 
 v2 requires:
 
+> Note: If you're using TypeScript v5
+
 ```json
 {
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "styled-system/*": ["styled-system/*"]
+    }
+  }
+}
+```
+
+> Note: If you're using TypeScript v6
+
+You don't the **baseUrl**
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "styled-system/*": ["./styled-system/*"]
     }
   }
 }
@@ -205,9 +231,14 @@ also update your **`tsconfig.app.json`**
 
 After migration, always run:
 
-```bash
-npx panda codegen
-```
+<PackageManager
+  managers={{
+    npm: 'npx panda codegen',
+    yarn: 'yarn panda codegen',
+    pnpm: 'pnpm panda codegen',
+    bun: 'bun panda codegen',
+  }}
+/>
 
 ### 4. Panda CSS configuration (Required)
 

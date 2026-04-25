@@ -51,12 +51,6 @@ export const Pre = (props: BoxProps) => {
     }
   }, [])
 
-  useEffect(() => {
-    return () => {
-      if (timeout.current) clearTimeout(timeout.current)
-    }
-  }, [])
-
   if (isShiki) {
     return (
       <Box position="relative" marginY="1.6em">
