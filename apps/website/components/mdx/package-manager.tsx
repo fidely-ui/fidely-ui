@@ -27,7 +27,7 @@ export const PackageManager = ({ managers }: PackageManagerProps) => {
 
       {activeManagers.map((name) => (
         <Tabs.Content key={name} value={name}>
-          <CodeBash command={managers[name] || 'npm'} />
+          <CodeBash command={managers[name] || ''} />
         </Tabs.Content>
       ))}
     </Tabs.Root>
