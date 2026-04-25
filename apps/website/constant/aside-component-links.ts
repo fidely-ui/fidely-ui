@@ -126,6 +126,7 @@ export const asideFrameworkLinks = [
       { name: 'Next.js (Page)', linkUrl: 'next-js-page', info: '' },
       { name: 'Vite-ts', linkUrl: 'vite-ts', info: '' },
       { name: 'Vite-js', linkUrl: 'vite-js', info: '' },
+      { name: 'Laravel', linkUrl: 'laravel', info: '' },
       { name: 'Fidely Preset', linkUrl: 'preset', info: '' },
     ],
   },
