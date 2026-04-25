@@ -12,13 +12,14 @@ Instead, it integrates seamlessly with [`next-themes`](https://github.com/pacoco
 
 # Install `next-themes`
 
-```bash
-npm install next-themes
-```
-
-```bash
-pnpm add next-themes
-```
+<PackageManager
+  managers={{
+    npm: 'npm install next-themes',
+    yarn: 'yarn add next-themes',
+    pnpm: 'pnpm add next-themes',
+    bun: 'bun add next-themes',
+  }}
+/>
 
 # Wrap your app with ThemeProvider
 
@@ -44,14 +45,6 @@ export const Provider = (props: { children: React.ReactNode }) => {
   )
 }
 ```
-
-## Explanation:
-
-**attribute="class"** — adds **class="light"** or **class="dark"** to **html** tag.
-
-**defaultTheme="system"** — follows user OS preference.
-
-**disableTransitionOnChange** — prevents flashing when switching themes.
 
 ---
 
@@ -159,6 +152,7 @@ Here’s an example of a simple toggle button:
 ```tsx
 'use client'
 
+import { useTheme } from 'next-themes'
 import { ClientOnly, IconButton, Skeleton } from '@fidely-ui/react'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { FaMoon } from 'react-icons/fa6'
@@ -189,8 +183,6 @@ export function ThemeToggle() {
 }
 ```
 
-Works perfectly with Fidely UI components — all dark mode tokens update instantly.
-
 ---
 
 ## Example Live Usage
@@ -206,6 +198,26 @@ export default function Page() {
       <ThemeToggle />
       <Box>Hello from Fidely UI 🌗</Box>
     </Box>
+  )
+}
+```
+
+> Note: If you're using **next.js 16.2 +** and encountered script errors in development due to next-themes
+> update your ThemeProvider for quick workaround. Note this might change if next-themes update the fix
+
+```jsx
+export const Provider = (props: { children: React.ReactNode }) => {
+  const scriptProps =
+    typeof window === 'undefined'
+      ? undefined
+      : ({ type: 'application/json' } as const)
+  return (
+    <ThemeProvider
+      //rest props
+      scriptProps={scriptProps}
+    >
+      {props.children}
+    </ThemeProvider>
   )
 }
 ```
