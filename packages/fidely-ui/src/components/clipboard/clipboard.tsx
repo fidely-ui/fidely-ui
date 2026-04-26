@@ -59,26 +59,20 @@ export const ClipboardTrigger = withSlotContext<
 // -------------------- Indicator --------------------
 export interface ClipboardIndicatorProps extends Assign<
   HTMLStyledProps<'div'>,
-  ArkClipboard.IndicatorBaseProps
+  Omit<ArkClipboard.IndicatorBaseProps, 'copied'>
 > {
-  copiedIcon?: React.ReactNode
-  idleIcon?: React.ReactNode
+  copied?: React.ReactNode
 }
 
 export const ClipboardIndicator = withSlotContext<
   HTMLDivElement,
   ClipboardIndicatorProps
 >((props) => {
-  const {
-    copiedIcon = <FiCheck />,
-    idleIcon = <FiCopy />,
-    children,
-    ...rest
-  } = props
+  const { copied, children, ...rest } = props
 
   return (
-    <ArkClipboard.Indicator {...rest} copied={props.copied ?? copiedIcon}>
-      {children ?? idleIcon}
+    <ArkClipboard.Indicator copied={copied ?? <FiCheck />} {...rest}>
+      {children ?? <FiCopy />}
     </ArkClipboard.Indicator>
   )
 }, 'indicator')
