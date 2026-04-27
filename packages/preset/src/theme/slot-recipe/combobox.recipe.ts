@@ -26,12 +26,10 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       display: 'flex',
       alignItems: 'center',
       gap: '2',
-      px: '1.5',
-
+      px: 'var(--combobox-control--padding-x)',
       borderWidth: '1px',
       borderColor: 'border.default',
       borderRadius: 's2',
-      bg: 'bg.surface',
       '--default-color': 'colors.colorPalette.default',
       '--error-color': 'colors.border.error',
 
@@ -50,11 +48,8 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       ...inputRecipe.base,
       flex: 1,
       minWidth: 0,
-
       minH: 'var(--combobox-input-height)',
       '--input-height': 'var(--combobox-input-height)',
-
-      bg: 'bg.surface',
       border: 'none',
 
       _focus: {
@@ -109,8 +104,8 @@ export const comboboxSlotRecipe = defineSlotRecipe({
     },
 
     itemGroupLabel: {
-      px: '3',
-      py: '2',
+      px: 'var(--combobox-item-padding-y)',
+      py: 'var(--combobox-item-padding-x)',
       fontWeight: 'medium',
       textStyle: 'xs',
       color: 'fg.muted',
@@ -152,8 +147,8 @@ export const comboboxSlotRecipe = defineSlotRecipe({
 
     empty: {
       textStyle: 'sm',
-      px: '3',
-      py: '2',
+      px: 'var(--combobox-item-padding-y)',
+      py: 'var(--combobox-item-padding-x)',
       color: 'fg.muted',
     },
     indicatorGroup: {
@@ -174,8 +169,9 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       xs: {
         root: {
           '--combobox-input-height': 'sizes.8',
+          '--combobox-control--padding-x': 'spacing.2',
           '--combobox-item-padding-y': '2',
-          '--combobox-item-padding-x': '3.4',
+          '--combobox-item-padding-x': '2.5',
         },
         input: {
           textStyle: 'xs',
@@ -191,8 +187,9 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       sm: {
         root: {
           '--combobox-input-height': 'sizes.9',
+          '--combobox-control--padding-x': 'spacing.2.5',
           '--combobox-item-padding-y': '2.5',
-          '--combobox-item-padding-x': '3.9',
+          '--combobox-item-padding-x': '3',
         },
         input: {
           textStyle: 'sm',
@@ -208,8 +205,9 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       md: {
         root: {
           '--combobox-input-height': 'sizes.10',
+          '--combobox-control--padding-x': 'spacing.3',
           '--combobox-item-padding-y': '3',
-          '--combobox-item-padding-x': '4',
+          '--combobox-item-padding-x': '3.5',
         },
         input: {
           textStyle: 'sm',
@@ -225,8 +223,9 @@ export const comboboxSlotRecipe = defineSlotRecipe({
       lg: {
         root: {
           '--combobox-input-height': 'sizes.12',
+          '--combobox-control--padding-x': 'spacing.3.5',
           '--combobox-item-padding-y': '3',
-          '--combobox-item-padding-x': '4.9',
+          '--combobox-item-padding-x': '4',
         },
         input: {
           textStyle: 'md',
@@ -234,7 +233,7 @@ export const comboboxSlotRecipe = defineSlotRecipe({
         content: {
           '--combobox-item-padding-y': 'spacing.2',
           '--combobox-item-padding-x': 'spacing.3',
-          p: '1.5',
+          p: '1',
           textStyle: 'md',
         },
       },
