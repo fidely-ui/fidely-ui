@@ -4,6 +4,7 @@ export {
   SelectClearTrigger as ClearTrigger,
   SelectTrigger as Trigger,
   SelectContent as Content,
+  SelectContext as Context,
   SelectControl as Control,
   SelectHiddenSelect as HiddenSelect,
   SelectIndicator as Indicator,
@@ -40,3 +41,9 @@ export {
   SelectValueTextProps as ValueTextProps,
   SelectIndicatorGroupProps as IndicatorGroupProps,
 } from './select'
+
+export type {
+  SelectInteractOutsideEvent as InteractOutsideEvent,
+  SelectFocusOutsideEvent as FocusOutsideEvent,
+  SelectPointerDownOutsideEvent as PointerDownOutsideEvent,
+} from '@ark-ui/react/select'
