@@ -83,14 +83,14 @@
     "@fidely-ui/panda-preset": "workspace:*"
   },
   "devDependencies": {
-    "@pandacss/dev": "^1.9.1",
+    "@pandacss/dev": "^1.11.1",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "react": "19.2.5",
     "react-dom": "19.2.5",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.2",
+    "typescript": "^6.0.3",
     "vitest": "^3.2.4"
   }
 }
