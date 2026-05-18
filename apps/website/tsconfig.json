@@ -18,10 +18,10 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+
     "paths": {
       "~/*": ["./*"],
-      "styled-system/*": ["styled-system/*"]
+      "styled-system/*": ["./styled-system/*"]
     }
   },
   "include": [

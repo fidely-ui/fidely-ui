@@ -5,7 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
-    "baseUrl": ".",
+    "rootDir": "src",
     "incremental": true,
     "tsBuildInfoFile": "dist/.tsbuildinfo.json",
     "declaration": true,
