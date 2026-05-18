@@ -34,13 +34,13 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@pandacss/dev": "^1.9.1",
+    "@pandacss/dev": "^1.11.1",
     "@types/node": "^20",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
-    "typescript": "^5",
+    "typescript": "^6.0.3",
     "velite": "^0.3.0"
   }
 }
